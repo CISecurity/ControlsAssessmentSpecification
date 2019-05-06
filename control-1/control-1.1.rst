@@ -1,11 +1,9 @@
-CIS Control 1.1
-===============
+1.1: Utilize an Active Discovery Tool
+=====================================
 
-Utilize an Active Discovery Tool
---------------------------------
 Utilize an active discovery tool to identify devices connected to the organization’s network and update the hardware asset inventory.
 
-.. list-table
+.. list-table::
 	:header-rows: 1
 
 	* - Asset Type 
