@@ -13,29 +13,6 @@ Large, complex enterprises understandably struggle with the challenge of managin
 Managed control of all devices also plays a critical role in planning and executing system backup, incident response, and recovery.
 
 
-Sub-Controls & Implementation Groups
-------------------------------------
-
-+-------------+------------+-------------------+---------------+---------------+-----------------------+
-| Sub-Control | Asset Type | Security Function | Control Title | Control Desc. | Implementation Groups |
-+=============+============+===================+===============+===============+=======================+
-| 1.1         | Devices    | Identify          | Utilize an Active Discovery Tool | TBD |2,3|
-+-------------+------------+-------------------+---------------+---------------+-----------------------+
-| 1.2         | Devices    | Identify          | Use a Passive Asset Discovery Tool | TBD |3|
-+-------------+------------+-------------------+---------------+---------------+-----------------------+
-| 1.3         | Devices    | Identify          | Use DHCP Logging to Update Asset Inventory | TBD |2,3|
-+-------------+------------+-------------------+---------------+---------------+-----------------------+
-| 1.4         | Devices    | Identify          | Maintain Detailed Asset Inventory | TBD |1,2,3|
-+-------------+------------+-------------------+---------------+---------------+-----------------------+
-| 1.5         | Devices    | Identify          | Maintain Asset Inventory Information | TBD |2,3|
-+-------------+------------+-------------------+---------------+---------------+-----------------------+
-| 1.6         | Devices    | Respond           | Address Unauthorized Assets | TBD |1,2,3|
-+-------------+------------+-------------------+---------------+---------------+-----------------------+
-| 1.7         | Devices    | Protect           | Deploy Port Level Access Control | TBD |2,3|
-+-------------+------------+-------------------+---------------+---------------+-----------------------+
-| 1.8         | Devices    | Protect           | Utilize Client Certificates to Authenticate Hardware Assets | TBD |3|
-+-------------+------------+-------------------+---------------+---------------+-----------------------+
-
 .. toctree::
    :maxdepth: 1
    :name: toc-control-1
