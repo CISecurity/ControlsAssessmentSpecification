@@ -1,20 +1,18 @@
 CIS Control 1.1
 ===============
 
-.. list-table:: Sub-Control Properties
+Utilize an Active Discovery Tool
+--------------------------------
+Utilize an active discovery tool to identify devices connected to the organization’s network and update the hardware asset inventory.
+
+.. list-table
 	:header-rows: 1
 
-	* - Property
-	  - Value
-	* - Control Title
-	  - Utilize an Active Discovery Tool
-	* - Control Description
-	  - Utilize an active discovery tool to identify devices connected to the organization’s network and update the hardware asset inventory.
 	* - Asset Type 
-	  - Devices
-	* - Security Function
+	  - Security Function
+	  - Implementation Groups
+	* - Devices
 	  - Identify
-	* - Implementation Groups
 	  - 2, 3
 
 
