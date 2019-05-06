@@ -1,8 +1,5 @@
-CIS Control 1
-=============
-
-Sub-Control 1.2
----------------
+CIS Control 1.2
+===============
 
 TBD
    
