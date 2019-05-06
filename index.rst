@@ -25,23 +25,23 @@ The main documentation for the site is organized into sections for each individu
    :name: cis-controls
 
    CIS Control 1: Inventory and Control of Hardware Assets <control-1/index>
-   CIS Control 2: <control-2/index>
-   CIS Control 3: <control-3/index>
-   CIS Control 4: <control-4/index>
-   CIS Control 5: <control-5/index>
-   CIS Control 6: <control-6/index>
-   CIS Control 7: <control-7/index>
-   CIS Control 8: <control-8/index>
-   CIS Control 9: <control-9/index>
-   CIS Control 10: <control-10/index>
-   CIS Control 11: <control-11/index>
-   CIS Control 12: <control-12/index>
-   CIS Control 13: <control-13/index>
-   CIS Control 14: <control-14/index>
-   CIS Control 15: <control-15/index>
-   CIS Control 16: <control-16/index>
-   CIS Control 17: <control-17/index>
-   CIS Control 18: <control-18/index>
-   CIS Control 19: <control-19/index>
-   CIS Control 20: <control-20/index>
+   CIS Control 2: Inventory and Control of Software Assets <control-2/index>
+   CIS Control 3: Continuous Vulnerability Management <control-3/index>
+   CIS Control 4: Controlled Use of Administrative Privileges <control-4/index>
+   CIS Control 5: Secure Configuration for Hardware and Software on Mobile Devices, Laptops, Workstations and Servers <control-5/index>
+   CIS Control 6: Maintenance, Monitoring and Analysis of Audit Logs <control-6/index>
+   CIS Control 7: Email and Web Browser Protections <control-7/index>
+   CIS Control 8: Malware Defenses <control-8/index>
+   CIS Control 9: Limitation and Control of Network Ports, Protocols and Services <control-9/index>
+   CIS Control 10: Data Recovery Capabilities <control-10/index>
+   CIS Control 11: Secure Configuration for Network Devices, such as Firewalls, Routers and Switches <control-11/index>
+   CIS Control 12: Boundary Defense <control-12/index>
+   CIS Control 13: Data Protection <control-13/index>
+   CIS Control 14: Controlled Access Based on the Need to Know <control-14/index>
+   CIS Control 15: Wireless Access Control <control-15/index>
+   CIS Control 16: Account Monitoring and Control <control-16/index>
+   CIS Control 17: Implement a Security Awareness and Training Program <control-17/index>
+   CIS Control 18: Application Software Security <control-18/index>
+   CIS Control 19: Incident Response and Management <control-19/index>
+   CIS Control 20: Penetration Tests and Red Team Exercises <control-20/index>
 
