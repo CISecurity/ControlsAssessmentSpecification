@@ -13,15 +13,16 @@ The main documentation for the site is organized into sections for each individu
 
 .. toctree::
    :maxdepth: 1
-   :caption: CIS Control 1
-   :name: control-1
+   :caption: General
+   :name: cas-general
 
-   control-1/index
+   about/index
 
 .. toctree::
    :maxdepth: 1
-   :caption: CIS Control 2
-   :name: control-2
+   :caption: CIS Controls
+   :name: cis-controls
 
+   control-1/index
    control-2/index
 
