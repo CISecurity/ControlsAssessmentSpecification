@@ -13,6 +13,9 @@ Utilize an active discovery tool to identify devices connected to the organizati
 	  - Identify
 	  - 2, 3
 
+**Description**
+
+
 **Measures**
 
 
