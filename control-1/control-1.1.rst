@@ -2,6 +2,8 @@ CIS Control 1.1
 ===============
 
 +-----------------------+---------------------------------------------------------------------------+
+| Property              | Value                                                                     |
++=======================+===========================================================================+
 | Control Title         | Utilize an Active Discovery Tool |
 +-----------------------+---------------------------------------------------------------------------+
 | Control Description   | Utilize an active discovery tool to identify devices connected to the organization’s network and update the hardware asset inventory. |
