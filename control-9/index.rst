@@ -17,7 +17,7 @@ available exploitation code.
 
 .. toctree::
    :maxdepth: 1
-   :name: toc-control-x
+   :name: toc-control-9
 
    9.1: Associate Active Ports, Services and Protocols to Asset Inventory <control-9.1>
    9.2: Ensure Only Approved Ports, Protocols and Services are Running <control-9.2>
