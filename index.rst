@@ -6,9 +6,7 @@ CIS Controls Assessment Specification
 
 TBD - Lots of descriptions
 
-The table of contents below and in the sidebar should let you easily access the
-documentation for your topic of interest. You can also use the search function
-in the top left corner.
+The table of contents below and in the sidebar should let you easily access the documentation for your topic of interest. You can also use the search function in the top left corner.
 
 The main documentation for the site is organized into sections for each individual CIS Control.
 
@@ -17,7 +15,9 @@ The main documentation for the site is organized into sections for each individu
    :caption: General
    :name: cas-general
 
-   about/index
+   About <about/index>
+   Methodology <about/methodology>
+   Getting Started <about/getting-started>
 
 .. toctree::
    :maxdepth: 1

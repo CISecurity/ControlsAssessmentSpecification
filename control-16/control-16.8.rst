@@ -1,7 +1,7 @@
-1.6: Address Unauthorized Assets
-================================
+16.8: Disable Any Unassociated Accounts
+=========================================================
 
-Ensure that unauthorized assets are either removed from the network, quarantined or the inventory is updated in a timely manner.
+Disable any account that cannot be associated with a business process or business owner.
 
 .. list-table::
 	:header-rows: 1
@@ -9,7 +9,7 @@ Ensure that unauthorized assets are either removed from the network, quarantined
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - Devices
+	* - Users
 	  - Respond
 	  - 1, 2, 3
 

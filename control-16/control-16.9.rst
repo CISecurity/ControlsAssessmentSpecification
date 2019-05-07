@@ -1,7 +1,7 @@
-1.6: Address Unauthorized Assets
-================================
+16.9: Disable Dormant Accounts
+=================================
 
-Ensure that unauthorized assets are either removed from the network, quarantined or the inventory is updated in a timely manner.
+Automatically disable dormant accounts after a set period of inactivity.
 
 .. list-table::
 	:header-rows: 1
@@ -9,7 +9,7 @@ Ensure that unauthorized assets are either removed from the network, quarantined
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - Devices
+	* - Users
 	  - Respond
 	  - 1, 2, 3
 

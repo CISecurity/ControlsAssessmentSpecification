@@ -1,7 +1,7 @@
-1.6: Address Unauthorized Assets
+2.6: Address Unapproved Software
 ================================
 
-Ensure that unauthorized assets are either removed from the network, quarantined or the inventory is updated in a timely manner.
+Ensure that unauthorized software is either removed or the inventory is updated in a timely manner.
 
 .. list-table::
 	:header-rows: 1
@@ -9,7 +9,7 @@ Ensure that unauthorized assets are either removed from the network, quarantined
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - Devices
+	* - Applications
 	  - Respond
 	  - 1, 2, 3
 

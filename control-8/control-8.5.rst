@@ -1,7 +1,7 @@
-1.6: Address Unauthorized Assets
-================================
+8.5: Configure Devices to Not Auto-Run Content
+=========================================================
 
-Ensure that unauthorized assets are either removed from the network, quarantined or the inventory is updated in a timely manner.
+Configure devices to not auto-run content from removable media.
 
 .. list-table::
 	:header-rows: 1
@@ -10,7 +10,7 @@ Ensure that unauthorized assets are either removed from the network, quarantined
 	  - Security Function
 	  - Implementation Groups
 	* - Devices
-	  - Respond
+	  - Protect
 	  - 1, 2, 3
 
 **Description**
