@@ -11,6 +11,8 @@ Large, complex enterprises understandably struggle with the challenge of managin
 
 Managed control of all devices also plays a critical role in planning and executing system backup, incident response, and recovery.
 
+.. role:: underline
+    :class: underline
 
 .. toctree::
    :maxdepth: 1
