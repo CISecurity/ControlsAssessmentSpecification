@@ -1,3 +1,6 @@
+.. role:: underline
+    :class: underline
+
 1.4: Maintain Detailed Asset Inventory
 ======================================
 
