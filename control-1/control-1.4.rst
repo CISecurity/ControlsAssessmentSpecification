@@ -12,10 +12,10 @@
 	  - 1, 2, 3
 
 **Description**
+
 Maintain an accurate and up-to-date inventory of all technology assets with the potential to store or process information. This inventory shall include all assets, whether connected to the organization’s network or not.
 
-Status: Draft
-
+**Status**: Draft
 
 **Measures**
 
@@ -42,9 +42,13 @@ This subcontrol requires an enterprise to:
 
 *Calculation*: (M1/M2) * 100%
 
+--------
+
 *Question*: How long does it take for an organization to discover a new asset on its network?
 
 *Answer*: The "freshness" metric is a positive decimal value that is greater than or equal to zero. A value of "0" indicates hypothetical instant detection.
+
+*Calculation*: ((M3-M4) / M5)
 
 .. history
 .. authors
