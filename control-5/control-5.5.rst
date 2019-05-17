@@ -13,14 +13,28 @@ Utilize a Security Content Automation Protocol (SCAP) compliant configuration mo
 	  - Detect
 	  - 2, 3
 
-**Description**
+Status
+------
+Draft
+
+Assumptions
+-----------
 
 
-**Measures**
+Measures
+--------
 
 
-**Metrics**
+Metrics
+-------
+.. list-table::
 
+	* - **Question**
+	  - 
+	* - **Answer**
+	  - 
+	* - **Calculation**
+	  - :code:`?`
 
 .. history
 .. authors

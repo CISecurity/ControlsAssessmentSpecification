@@ -1,4 +1,4 @@
-2.2: Ensure Software Is Supported by Vendor
+2.2: Ensure Software is Supported by Vendor
 ===========================================
 Ensure that only software applications or operating systems currently supported and receiving vendor updates are added to the organization’s authorized software inventory.  Unsupported software should be tagged as unsupported in the inventory system.
 

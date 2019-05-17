@@ -1,6 +1,5 @@
 5.1: Establish Secure Configurations
 =====================================
-
 Maintain documented security configuration standards for all authorized operating systems and software.
 
 .. list-table::
@@ -13,14 +12,32 @@ Maintain documented security configuration standards for all authorized operatin
 	  - Protect
 	  - 1, 2, 3
 
-**Description**
+Status
+------
+Draft
 
+Assumptions
+-----------
+None
 
-**Measures**
+Measures
+--------
+* M1 = # of software and OS with security configuration standards
+* M2 = total OS and software
 
+Metrics
+-------
 
-**Metrics**
+Coverage (Quality Measure)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. list-table::
 
+	* - **Question**
+	  - For what percentage of the total OS/Software in an enterprise are security configuration standards documented and maintained?
+	* - **Answer**
+	  - Coverage is measured as a percentage of total OS/Software assets for which security configuration standards are documented by an enterprise.
+	* - **Calculation**
+	  - :code:`(M1/M2) * 100`
 
 .. history
 .. authors

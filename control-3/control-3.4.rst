@@ -1,6 +1,5 @@
 3.4: Deploy Automated Operating System Patch Management Tools
 =============================================================
-
 Deploy automated software update tools in order to ensure that the operating systems are running the most recent security updates provided by the software vendor.
 
 .. list-table::
@@ -13,14 +12,28 @@ Deploy automated software update tools in order to ensure that the operating sys
 	  - Protect
 	  - 1, 2, 3
 
-**Description**
+Status
+------
+Draft
+
+Assumptions
+-----------
 
 
-**Measures**
+Measures
+--------
 
 
-**Metrics**
+Metrics
+-------
+.. list-table::
 
+	* - **Question**
+	  - 
+	* - **Answer**
+	  - 
+	* - **Calculation**
+	  - :code:`?`
 
 .. history
 .. authors

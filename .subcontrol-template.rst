@@ -1,6 +1,5 @@
 C.S: <Sub-Control Title>
 =========================================================
-
 <Sub-Control Description>
 
 .. list-table::
@@ -13,14 +12,28 @@ C.S: <Sub-Control Title>
 	  - (Detect|Protect|Respond|Identify)
 	  - (1|2|3)
 
-**Description**
+Status
+------
+Draft
+
+Assumptions
+-----------
 
 
-**Measures**
+Measures
+--------
 
 
-**Metrics**
+Metrics
+-------
+.. list-table::
 
+	* - **Question**
+	  - 
+	* - **Answer**
+	  - 
+	* - **Calculation**
+	  - :code:`?`
 
 .. history
 .. authors
