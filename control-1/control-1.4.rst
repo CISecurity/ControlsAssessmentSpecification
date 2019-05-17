@@ -11,13 +11,15 @@
 	  - Identify
 	  - 1, 2, 3
 
-**Description**
+Description
+-----------
 
 Maintain an accurate and up-to-date inventory of all technology assets with the potential to store or process information. This inventory shall include all assets, whether connected to the organization’s network or not.
 
 **Status**: Draft
 
-**Measures**
+Measures
+--------
 
 * M1 = number of assets discovered
 * M2 = total number of assets (given)
@@ -25,7 +27,8 @@ Maintain an accurate and up-to-date inventory of all technology assets with the 
 * M4 = time asset appeared (given)
 * M5 = Max time discovery (given)
 
-**Assumptions**
+Assumptions
+-----------
 
 This subcontrol requires an enterprise to:
 
@@ -34,11 +37,13 @@ This subcontrol requires an enterprise to:
 * Ensure the inventory is up-to-date.
 
 
-**Metrics**
+Metrics
+-------
 
-.. list-table:: Coverage
-	:width: 100
+.. list-table:: 
 
+	* - **Metric Type**
+	  - Coverage (Quality Measure)
 	* - **Question**
 	  - What percentage of assets discovered on the network are accounted for in the organization's asset inventory?
 	* - **Answer**
@@ -48,11 +53,16 @@ This subcontrol requires an enterprise to:
 
 --------
 
-*Question*: How long does it take for an organization to discover a new asset on its network?
+.. list-table::
 
-*Answer*: The "freshness" metric is a positive decimal value that is greater than or equal to zero. A value of "0" indicates hypothetical instant detection.
-
-*Calculation*: ((M3-M4) / M5)
+	* - **Metric Type**
+	  - Freshness (Time to Discover)
+	* - **Question**
+	  - How long does it take for an organization to discover a new asset on its network?
+	* - **Answer**
+	  - The "freshness" metric is a positive decimal value that is greater than or equal to zero. A value of "0" indicates hypothetical instant detection.
+	* - **Calculation**
+	  - :code:`((M3-M4) / M5)`
 
 .. history
 .. authors
