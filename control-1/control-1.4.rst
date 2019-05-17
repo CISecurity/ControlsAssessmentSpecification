@@ -37,8 +37,7 @@ This subcontrol requires an enterprise to:
 **Metrics**
 
 .. list-table:: Coverage
-	:width: 100 
-	:widths: 20 40
+	:width: 100
 
 	* - **Question**
 	  - What percentage of assets discovered on the network are accounted for in the organization's asset inventory?
