@@ -16,7 +16,9 @@ Description
 
 Maintain an accurate and up-to-date inventory of all technology assets with the potential to store or process information. This inventory shall include all assets, whether connected to the organization’s network or not.
 
-**Status**: Draft
+Status
+------
+Draft
 
 Measures
 --------
@@ -40,10 +42,11 @@ This subcontrol requires an enterprise to:
 Metrics
 -------
 
+Coverage (Quality Measure)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 .. list-table:: 
 
-	* - **Metric Type**
-	  - Coverage (Quality Measure)
 	* - **Question**
 	  - What percentage of assets discovered on the network are accounted for in the organization's asset inventory?
 	* - **Answer**
@@ -51,12 +54,11 @@ Metrics
 	* - **Calculation**
 	  - :code:`(M1/M2) * 100%`
 
---------
+Freshness (Time to Discover)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. list-table::
 
-	* - **Metric Type**
-	  - Freshness (Time to Discover)
 	* - **Question**
 	  - How long does it take for an organization to discover a new asset on its network?
 	* - **Answer**
