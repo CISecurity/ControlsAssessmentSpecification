@@ -36,14 +36,15 @@ This subcontrol requires an enterprise to:
 
 **Metrics**
 
-.. list-table:: Coverage 
+.. list-table:: Coverage
+	:width: 100 
 	:widths: 20 40
 
-	* - *Question*
+	* - **Question**
 	  - What percentage of assets discovered on the network are accounted for in the organization's asset inventory?
-	* - *Answer*
+	* - **Answer**
 	  - A positive percentage value greater than or equal to 0, and less than or equal to 100%  A value of "0" would indicate that none of the discovered assets have been inventoried; a value of "100" indicates that all assets connected to the organization's network are accounted for in the asset inventory.
-	* - *Calculation*
+	* - **Calculation**
 	  - :code:`(M1/M2) * 100%`
 
 --------
