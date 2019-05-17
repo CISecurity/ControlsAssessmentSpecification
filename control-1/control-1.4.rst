@@ -37,6 +37,7 @@ This subcontrol requires an enterprise to:
 **Metrics**
 
 .. list-table::
+
 	* - *Question*
 	  - What percentage of assets discovered on the network are accounted for in the organization's asset inventory?
 	* - *Answer*
