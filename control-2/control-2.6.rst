@@ -1,6 +1,5 @@
 2.6: Address Unapproved Software
 ================================
-
 Ensure that unauthorized software is either removed or the inventory is updated in a timely manner.
 
 .. list-table::
@@ -13,14 +12,28 @@ Ensure that unauthorized software is either removed or the inventory is updated 
 	  - Respond
 	  - 1, 2, 3
 
-**Description**
+Status
+------
+Draft
+
+Assumptions
+-----------
 
 
-**Measures**
+Measures
+--------
 
 
-**Metrics**
+Metrics
+-------
+.. list-table::
 
+	* - **Question**
+	  - 
+	* - **Answer**
+	  - 
+	* - **Calculation**
+	  - :code:`?`
 
 .. history
 .. authors
