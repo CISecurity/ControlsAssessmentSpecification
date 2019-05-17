@@ -1,5 +1,6 @@
 1.4: Maintain Detailed Asset Inventory
 ======================================
+Maintain an accurate and up-to-date inventory of all technology assets with the potential to store or process information. This inventory shall include all assets, whether connected to the organization’s network or not.
 
 .. list-table::
 	:header-rows: 1
@@ -11,14 +12,17 @@
 	  - Identify
 	  - 1, 2, 3
 
-Description
------------
-
-Maintain an accurate and up-to-date inventory of all technology assets with the potential to store or process information. This inventory shall include all assets, whether connected to the organization’s network or not.
-
 Status
 ------
 Draft
+
+Assumptions
+-----------
+This subcontrol requires an enterprise to:
+
+* Have an inventory of all technology assets capable of storing or processing information, 
+* Ensure the inventory is accurate, and
+* Ensure the inventory is up-to-date.
 
 Measures
 --------
@@ -28,16 +32,6 @@ Measures
 * M3 = time asset discovered
 * M4 = time asset appeared (given)
 * M5 = Max time discovery (given)
-
-Assumptions
------------
-
-This subcontrol requires an enterprise to:
-
-* Have an inventory of all technology assets capable of storing or processing information, 
-* Ensure the inventory is accurate, and
-* Ensure the inventory is up-to-date.
-
 
 Metrics
 -------
