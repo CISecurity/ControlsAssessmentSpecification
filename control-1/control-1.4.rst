@@ -36,7 +36,8 @@ This subcontrol requires an enterprise to:
 
 **Metrics**
 
-.. list-table::
+.. list-table:: Coverage (Quality Measure)
+	:widths: 20 80
 
 	* - *Question*
 	  - What percentage of assets discovered on the network are accounted for in the organization's asset inventory?
