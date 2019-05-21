@@ -5,7 +5,7 @@ Deploy automated software update tools in order to ensure that the operating sys
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Applications
@@ -18,22 +18,38 @@ Draft
 
 Assumptions
 -----------
-
+TBD
 
 Measures
 --------
 
+M1 =  # of recently update applied to OS
+M2 = Total update required in OS
 
 Metrics
 -------
+
+Update Ratio
+^^^^^^^^^^^^
 .. list-table::
 
 	* - **Question**
-	  - 
+	  - What is the ratio of up-to-date operating systems to out-of-date operating systems?
 	* - **Answer**
-	  - 
+	  - TBD
 	* - **Calculation**
-	  - :code:`?`
+	  - :code:`M1/M2`
+
+Freshness
+^^^^^^^^^
+.. list-table:
+
+* - **Question**
+	- How frequently are operating systems updated?
+* - **Answer**
+	- TBD
+* - **Calculation**
+	- :code:`?`
 
 .. history
 .. authors
