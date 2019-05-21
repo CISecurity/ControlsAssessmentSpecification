@@ -18,8 +18,9 @@ Draft
 
 Assumptions
 -----------
-The authorized software list is maintained as the list of anything that's allowed to be installed.  Software inventory implies correlation between
-endpoints and software load.
+* The authorized software list is maintained as the list of anything that's allowed to be installed.  
+* Software inventory implies correlation between endpoints and software load; the inventory tracks the software load by endpoint.
+* We need to know what "Quality" means in this context?
 
 
 Measures

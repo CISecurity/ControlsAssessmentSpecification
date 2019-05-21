@@ -18,7 +18,7 @@ Draft
 
 Assumptions
 -----------
-The assumption is that an inventory of all authorized software is available.
+The assumption is that a list of all authorized software is available, and that this list indicates whether or not the software is currently supported by the vendor.
 
 Measures
 --------
