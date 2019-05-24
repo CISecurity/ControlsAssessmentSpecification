@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+5.3: Securely Store Master Images
 =========================================================
-<Sub-Control Description>
+Store the master images and templates on securely configured servers, validated with integrity monitoring tools, to ensure that only authorized changes to the images are possible.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Applications
+	  - Protect
+	  - 2, 3
 
 Status
 ------

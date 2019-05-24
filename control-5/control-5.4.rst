@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+5.4: Deploy System Configuration Management Tools
 =========================================================
-<Sub-Control Description>
+Deploy system configuration management tools that will automatically enforce and redeploy configuration settings to systems at regularly scheduled intervals.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Applications
+	  - Protect
+	  - 2, 3
 
 Status
 ------
