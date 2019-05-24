@@ -18,11 +18,9 @@ Draft
 
 Assumptions
 -----------
-This subcontrol requires an enterprise to:
-
-* Have an inventory of all technology assets capable of storing or processing information, 
-* Ensure the inventory is accurate, and
-* Ensure the inventory is up-to-date.
+* The list of devices (M2) is known to the organization, 
+* The max asset discovery time (M5) is known to the organization, and 
+* M4 is known since the asset is being connected to the network
 
 Measures
 --------

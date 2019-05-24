@@ -19,7 +19,7 @@ Draft
 
 Assumptions
 -----------
-These measurements assume the total number of assets for a given enterprise is known, and that an active discovery tool is being utilized.
+These measurements assume the total number of assets for a given enterprise is known (M2), and that the max asset discovery time (M5) is known.
 
 Measures
 --------

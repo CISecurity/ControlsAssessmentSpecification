@@ -18,13 +18,12 @@ Draft
 
 Assumptions
 -----------
-* We need to define what "weight" is in this context
-* Calculation below indicates SUM from i to M.  What is "M" in this context?
+* The "weight" indicates the criticality (importance) of an endpoint, and will be defined by the organization
 
 Measures
 --------
-* w_i = weight of machine i
-* a_i = detailed (1) or not detailed (0); "detailed" if and only if all specified information is there.
+* w(i) = weight of machine i
+* a(i) = detailed (1) or not detailed (0); "detailed" if and only if all specified information is there.
 * M1 = # of devices and machines in asset inventory
 * M2 = # of device or machine with connection approval
 
@@ -38,9 +37,20 @@ Asset Inventory Quality
 	* - **Question**
 	  - 
 	* - **Answer**
-	  - 
+	  - Percentage of assets that are tracked in the asset inventory which contain detailed information, such as network address, hardware address, asset owner, etc.
 	* - **Calculation**
-	  - :code:`(SUM from i to M (w_i * a_i)) / M1`
+	  - :code:`(SUM from i to M1 (w(i) * a(i))) / M1`
+
+Asset Inventory Precision
+^^^^^^^^^^^^^^^^^^^^^^^^^
+.. list-table::
+
+	* - **Question**
+	  - 
+	* - **Answer**
+	  - Percentage of devices with connection approval that are currently tracked in the asset inventory
+	* - **Calculation**
+	  - :code:`(M2 / M1) * 100`
 
 .. history
 .. authors
