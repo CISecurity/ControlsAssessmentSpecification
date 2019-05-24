@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+4.7: Limit Access to Scripting Tools
 =========================================================
-<Sub-Control Description>
+Limit access to scripting tools (such as Microsoft® PowerShell and Python) to only administrative or development users with the need to access those capabilities.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Users
+	  - Protect
+	  - 2, 3
 
 Status
 ------

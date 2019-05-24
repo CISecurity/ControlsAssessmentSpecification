@@ -22,9 +22,11 @@ TBD
 
 Measures
 --------
-
-M1 =  # of recently update applied to OS
-M2 = Total update required in OS
+* M1 = # of recently update applied to OS
+* M2 = Total update required in OS
+* M3 = time of installation of last update
+* M4 = release time of last update 
+* M5 = allowed max delay
 
 Metrics
 -------
@@ -34,11 +36,11 @@ Update Ratio
 .. list-table::
 
 	* - **Question**
-	  - What is the ratio of up-to-date operating systems to out-of-date operating systems?
+	  - 
 	* - **Answer**
 	  - TBD
 	* - **Calculation**
-	  - :code:`M1/M2`
+	  - :code:`?`
 
 Freshness
 ^^^^^^^^^

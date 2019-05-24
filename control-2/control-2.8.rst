@@ -22,11 +22,14 @@ Assumptions
 
 Measures
 --------
-M1 = # of libraries with whitelisting enabled
-M2 = # of libraries under consideration
+* M1 = # of libraries with whitelisting enabled
+* M2 = # of libraries under consideration
 
 Metrics
 -------
+
+Quality of software library authorization
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Question**

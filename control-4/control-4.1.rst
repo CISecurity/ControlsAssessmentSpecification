@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+4.1: Maintain Inventory of Administrative Accounts
 =========================================================
-<Sub-Control Description>
+Use automated tools to inventory all administrative accounts, including domain and local accounts, to ensure that only authorized individuals have elevated privileges.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Users
+	  - Detect
+	  - 2, 3
 
 Status
 ------

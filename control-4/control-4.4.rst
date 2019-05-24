@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+4.4: Use Unique Passwords
 =========================================================
-<Sub-Control Description>
+Where multi-factor authentication is not supported (such as local administrator, root, or service accounts), accounts will use passwords that are unique to that system.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Users
+	  - Protect
+	  - 2, 3
 
 Status
 ------

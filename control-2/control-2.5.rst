@@ -24,11 +24,11 @@ Assumptions
 
 Measures
 --------
-* M = list of s/w reported by subcontrol 2.1
-* N = list of h/w reported by subcontrol 1.1
-* M1 = # of s/w without hardware association reported by PUT
-* M2 = # of h/w without software association reported by PUT
-* untracked s/w: s/w inventory that has no associated h/w
+* M = list of software reported by subcontrol 2.1
+* N = list of hardware reported by subcontrol 1.1
+* M1 = # of software without hardware association reported by PUT
+* M2 = # of hardware without software association reported by PUT
+* untracked software: software inventory that has no associated hardware
 
 Metrics
 -------

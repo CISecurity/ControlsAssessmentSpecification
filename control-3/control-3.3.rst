@@ -18,16 +18,14 @@ Draft
 
 Assumptions
 -----------
-This sub-control requires that a specific user account be designated to be used only for authenticated vulnerability scans. No other activities should be performed with this account. Seems that we would need some input from the operator/systems administrator/enterprise.
-
-1. List of vulnerability scanning account names
-2. List of authorized vulnerability scanning machines
+It is assumed that a pre-authorized list of scanning managers is known.
 
 Measures
 --------
-
-1. Vulnerability accounts usage data (traffic/log analysis) for each account
-2. Scanning machine configuration (static IP address assignment)
+* M1 [0|1]: scanning traffic is between a sanning manager and agent/machine
+* M2 [0|1]: scanning managers (senders) are pre-authrized machines/IPs.
+* M3 [0|1]: a dedicated account is used by the manager scanning process.
+* M4 [0|1]: traffic has been authenticated (as subcontrol 3.2)
 
 Metrics
 -------
@@ -41,29 +39,7 @@ Designated Accounts
 	* - **Answer**
 	  - Boolean.
 	* - **Calculation**
-	  - :code:`?`
-
-Account Misuse Ratio
-^^^^^^^^^^^^^^^^^^^^
-.. list-table::
-
-	* - **Question**
-	  - What is the proportion of designated accounts used improperly?
-	* - **Answer**
-	  - Ratio of misused vulnerability scanning accounts to the total number of vulnerability scanning accounts.
-	* - **Calculation**
-	  - :code:`?`
-
-Machine Misconfiguration Ratio
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. list-table::
-
-	* - **Question**
-	  - What is the proportion of vulnerability scanning machines without a static IP assignment?
-	* - **Answer**
-	  - Ratio of misconfigured vulnerability scanning machines to the total number of vulnerability scanning machines.
-	* - **Calculation**
-	  - :code:`?`
+	  - :code:`M1 AND M2 AND M3 AND M4`
 
 .. history
 .. authors

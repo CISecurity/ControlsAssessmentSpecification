@@ -10,7 +10,7 @@ C.S: <Sub-Control Title>
 	  - Implementation Groups
 	* - (Devices|Users|Applications|Network|Data|N/A)
 	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	  - 1, 2, 3
 
 Status
 ------

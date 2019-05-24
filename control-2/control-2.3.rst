@@ -22,18 +22,22 @@ Assumptions
 
 Measures
 --------
-
+M1 = # of softwares with automated documentation
+M2 = total # of softwares in the system
 
 Metrics
 -------
+
+Coverage (Quality Measure)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Question**
 	  - 
 	* - **Answer**
-	  - 
+	  - The calculation will yield a percentage, between 0 and 100, indicating the ratio of software with automated documentation to the total software asset inventory.
 	* - **Calculation**
-	  - :code:`?`
+	  - :code:`(M1 / M2) * 100`
 
 .. history
 .. authors

@@ -13,14 +13,28 @@ Ensure that unauthorized assets are either removed from the network, quarantined
 	  - Respond
 	  - 1, 2, 3
 
-**Description**
+Status
+------
+Draft
+
+Assumptions
+-----------
 
 
-**Measures**
+Measures
+--------
 
 
-**Metrics**
+Metrics
+-------
+.. list-table::
 
+	* - **Question**
+	  - 
+	* - **Answer**
+	  - 
+	* - **Calculation**
+	  - :code:`?`
 
 .. history
 .. authors

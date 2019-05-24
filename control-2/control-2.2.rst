@@ -22,20 +22,36 @@ The assumption is that a list of all authorized software is available, and that 
 
 Measures
 --------
-* M1 = # of authorized software
-* M2 = # of tracked software (tagged as supported or unsupported)
-* M3 = # of unsupported software in authorized list
+* M = The list of software maintained in the software asset inventory (See control 2.1)
+* M1 = # of unsupported software
+* M2 = # of supported software
+* M(U) = 1 if a software asset U is unsupported, but tracked as supported in M
+* M(S) = 1 if a software asset S is supported, but tracked as unsupported in M
 
 Metrics
 -------
+
+Supported Software Accuracy
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Question**
-	  - What percentage of software installed in the enterprise are accounted for, as either supported or unsupported, in the organization's software asset inventory?
+	  - This metric is intended to determine the ratio of software tracked as supported in the software inventory, but is not supported by the vendor.
 	* - **Answer**
-	  - Ideally, all software installed in the enterprise should be accounted for, and tagged as either supported or unsupported.  When all authorized software is tracked (when M1 == M2), this metric illustrates the percentage of software tagged as unsupported.
+	  - The calculation of this metric is made by summing the M(U) value for each software asset tracked in M, and the associated ratio of that sum to the # of unsupported software in the enterprise (M1).
 	* - **Calculation**
-	  - :code:`((M1 - M3) / M1)`
+	  - :code:`(SUM of all M(U) for all U) / M1`
+
+Unsupported Software Accuracy
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. list-table::
+
+	* - **Question**
+	  - This metric is intended to determine the ratio of software tracked as unsupported in the software inventory, but is still supported by the vendor.
+	* - **Answer**
+	  - The calculation of this metric is made by summing the M(S) value for each software asset tracked in M, and the associated ratio of that sum to the # of supported software in the enterprise (M2).
+	* - **Calculation**
+	  - :code:`(SUM of all M(S)) for all U) / M2`
 
 .. history
 .. authors

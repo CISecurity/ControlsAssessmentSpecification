@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+4.9: Log and Alert on Unsuccessful Administrative Account Login
 =========================================================
-<Sub-Control Description>
+Configure systems to issue a log entry and alert on unsuccessful logins to an administrative account.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Users
+	  - Detect
+	  - 2, 3
 
 Status
 ------
