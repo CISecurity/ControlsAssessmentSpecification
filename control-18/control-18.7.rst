@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+18.7: Apply Static and Dynamic Code Analysis Tools
 =========================================================
-<Sub-Control Description>
+Apply static and dynamic analysis tools to verify that secure coding practices are being adhered to for internally developed software.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - N/A
+	  - N/A
+	  - 2, 3
 
 Status
 ------

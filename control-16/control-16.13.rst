@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+16.13: Alert on Account Login Behavior Deviation
 =========================================================
-<Sub-Control Description>
+Alert when users deviate from normal login behavior, such as time-of-day, workstation location, and duration.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Users
+	  - Detect
+	  - 3
 
 Status
 ------

@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+14.3: Disable Workstation-to-Workstation Communication
 =========================================================
-<Sub-Control Description>
+Disable all workstation-to-workstation communication to limit an attacker’s ability to move laterally and compromise neighboring systems, through technologies such as private VLANs or micro segmentation.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Network
+	  - Protect
+	  - 2, 3
 
 Status
 ------

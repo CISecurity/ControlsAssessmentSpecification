@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
-=========================================================
-<Sub-Control Description>
+20.5: Create a Test Bed for Elements Not Typically Tested in Production
+=======================================================================
+Create a test bed that mimics a production environment for specific penetration tests and Red Team attacks against elements that are not typically tested in production, such as attacks against supervisory control and data acquisition and other control systems.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - N/A
+	* - N/A
+	  - 2, 3
 
 Status
 ------

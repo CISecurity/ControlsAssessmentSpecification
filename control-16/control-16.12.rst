@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+16.12: Monitor Attempts to Access Deactivated Accounts
 =========================================================
-<Sub-Control Description>
+Monitor attempts to access deactivated accounts through audit logging.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Users
+	  - Detect
+	  - 2, 3
 
 Status
 ------

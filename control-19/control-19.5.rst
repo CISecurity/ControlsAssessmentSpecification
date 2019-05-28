@@ -1,6 +1,5 @@
 19.5: Maintain Contact Information For Reporting Security Incidents
 ===================================================================
-
 Assemble and maintain information on third-party contact information to be used to report a security incident, such as Law Enforcement, relevant government departments, vendors, and Information Sharing and Analysis Center (ISAC) partners.
 
 .. list-table::
@@ -13,14 +12,28 @@ Assemble and maintain information on third-party contact information to be used 
 	  - N/A
 	  - 1, 2, 3
 
-**Description**
+Status
+------
+Draft
+
+Assumptions
+-----------
 
 
-**Measures**
+Measures
+--------
 
 
-**Metrics**
+Metrics
+-------
+.. list-table::
 
+	* - **Question**
+	  - 
+	* - **Answer**
+	  - 
+	* - **Calculation**
+	  - :code:`?`
 
 .. history
 .. authors

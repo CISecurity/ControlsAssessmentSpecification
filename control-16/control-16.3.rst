@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+16.3: Require Multi-Factor Authentication
 =========================================================
-<Sub-Control Description>
+Require multi-factor authentication for all user accounts, on all systems, whether managed on-site or by a third-party provider.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Users
+	  - Protect
+	  - 2, 3
 
 Status
 ------

@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+14.7: Enforce Access Control to Data Through Automated Tools
 =========================================================
-<Sub-Control Description>
+Use an automated tool, such as host-based Data Loss Prevention, to enforce access controls to data even when the data is copied off a system.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Data
+	  - Protect
+	  - 3
 
 Status
 ------

@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
-=========================================================
-<Sub-Control Description>
+18.2: Ensure That Explicit Error Checking Is Performed for All In-House Developed Software
+==========================================================================================
+For in-house developed software, ensure that explicit error checking is performed and documented for all input, including for size, data type, and acceptable ranges or formats.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - N/A
+	  - N/A
+	  - 2, 3
 
 Status
 ------

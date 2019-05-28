@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
-=========================================================
-<Sub-Control Description>
+15.8: Use Wireless Authentication Protocols That Require Mutual, Multi-Factor Authentication
+============================================================================================
+Ensure that wireless networks use authentication protocols such as Extensible Authentication Protocol-Transport Layer Security (EAP/TLS), that requires mutual, multi-factor authentication.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Network
+	  - Protect
+	  - 3
 
 Status
 ------

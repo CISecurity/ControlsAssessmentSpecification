@@ -1,6 +1,5 @@
 17.8: Train Workforce on Causes of Unintentional Data Exposure
 ==============================================================
-
 Train workforce members to be aware of causes for unintentional data exposures, such as losing their mobile devices or emailing the wrong person due to *autocomplete* in email.
 
 .. list-table::
@@ -13,14 +12,28 @@ Train workforce members to be aware of causes for unintentional data exposures, 
 	  - N/A
 	  - 1, 2, 3
 
-**Description**
+Status
+------
+Draft
+
+Assumptions
+-----------
 
 
-**Measures**
+Measures
+--------
 
 
-**Metrics**
+Metrics
+-------
+.. list-table::
 
+	* - **Question**
+	  - 
+	* - **Answer**
+	  - 
+	* - **Calculation**
+	  - :code:`?`
 
 .. history
 .. authors

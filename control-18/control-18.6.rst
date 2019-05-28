@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
-=========================================================
-<Sub-Control Description>
+18.6: Ensure Software Development Personnel Are Trained in Secure Coding
+========================================================================
+Ensure that all software development personnel receive training in writing secure code for their specific development environment and responsibilities.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - N/A
+	  - N/A
+	  - 2, 3
 
 Status
 ------

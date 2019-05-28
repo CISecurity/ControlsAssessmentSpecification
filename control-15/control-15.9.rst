@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+15.9: Disable Wireless Peripheral Access to Devices
 =========================================================
-<Sub-Control Description>
+Disable wireless peripheral access of devices [such as Bluetooth and Near Field Communication (NFC)], unless such access is required for a business purpose.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Devices
+	  - Protect
+	  - 2, 3
 
 Status
 ------

@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+15.4: Disable Wireless Access on Devices if Not Required
 =========================================================
-<Sub-Control Description>
+Disable wireless access on devices that do not have a business purpose for wireless access.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Devices
+	  - Protect
+	  - 3
 
 Status
 ------

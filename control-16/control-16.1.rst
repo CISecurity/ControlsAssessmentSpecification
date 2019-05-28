@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+16.1: Maintain an Inventory of Authentication Systems
 =========================================================
-<Sub-Control Description>
+Maintain an inventory of each of the organization’s authentication systems, including those located on-site or at a remote service provider.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Users
+	  - Identify
+	  - 2, 3
 
 Status
 ------

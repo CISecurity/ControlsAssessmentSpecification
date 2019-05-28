@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+18.1: Establish Secure Coding Practices
 =========================================================
-<Sub-Control Description>
+Establish secure coding practices appropriate to the programming language and development environment being used.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - N/A
+	  - N/A
+	  - 2, 3
 
 Status
 ------

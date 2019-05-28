@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
-=========================================================
-<Sub-Control Description>
+19.7: Conduct Periodic Incident Scenario Sessions for Personnel
+===============================================================
+Plan and conduct routine incident response exercises and scenarios for the workforce involved in the incident response to maintain awareness and comfort in responding to real-world threats.  Exercises should test communication channels, decision making, and incident responder’s technical capabilities using tools and data available to them.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - N/A
+	  - N/A
+	  - 2, 3
 
 Status
 ------

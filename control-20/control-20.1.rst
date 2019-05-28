@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+20.1: Establish a Penetration Testing Program
 =========================================================
-<Sub-Control Description>
+Establish a program for penetration tests that includes a full scope of blended attacks, such as wireless, client-based, and web application attacks.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - N/A
+	* - N/A
+	  - 2, 3
 
 Status
 ------

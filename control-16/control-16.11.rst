@@ -1,6 +1,5 @@
 16.11: Lock Workstation Sessions After Inactivity
 =========================================================
-
 Automatically lock workstation sessions after a standard period of inactivity.
 
 .. list-table::
@@ -13,14 +12,28 @@ Automatically lock workstation sessions after a standard period of inactivity.
 	  - Protect
 	  - 1, 2, 3
 
-**Description**
+Status
+------
+Draft
+
+Assumptions
+-----------
 
 
-**Measures**
+Measures
+--------
 
 
-**Metrics**
+Metrics
+-------
+.. list-table::
 
+	* - **Question**
+	  - 
+	* - **Answer**
+	  - 
+	* - **Calculation**
+	  - :code:`?`
 
 .. history
 .. authors

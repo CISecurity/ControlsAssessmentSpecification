@@ -1,6 +1,5 @@
 19.1: Document Incident Response Procedures
 =========================================================
-
 Ensure that there are written incident response plans that define roles of personnel as well as phases of incident handling/management.
 
 .. list-table::
@@ -13,14 +12,28 @@ Ensure that there are written incident response plans that define roles of perso
 	  - N/A
 	  - 1, 2, 3
 
-**Description**
+Status
+------
+Draft
+
+Assumptions
+-----------
 
 
-**Measures**
+Measures
+--------
 
 
-**Metrics**
+Metrics
+-------
+.. list-table::
 
+	* - **Question**
+	  - 
+	* - **Answer**
+	  - 
+	* - **Calculation**
+	  - :code:`?`
 
 .. history
 .. authors

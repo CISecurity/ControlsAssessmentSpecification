@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+18.9: Separate Production and Non-Production Systems
 =========================================================
-<Sub-Control Description>
+Maintain separate environments for production and non-production systems. Developers should not have unmonitored access to production environments.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - N/A
+	  - N/A
+	  - 2, 3
 
 Status
 ------

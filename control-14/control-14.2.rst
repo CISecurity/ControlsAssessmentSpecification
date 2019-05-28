@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+14.2: Enable Firewall Filtering Between VLANs
 =========================================================
-<Sub-Control Description>
+Enable firewall filtering between VLANs to ensure that only authorized systems are able to communicate with other systems necessary to fulfill their specific responsibilities.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Network
+	  - Protect
+	  - 2, 3
 
 Status
 ------

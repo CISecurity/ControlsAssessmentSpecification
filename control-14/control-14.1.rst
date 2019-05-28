@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+14.1: Segment the Network Based on Sensitivity
 =========================================================
-<Sub-Control Description>
+Segment the network based on the label or classification level of the information stored on the servers, locate all sensitive information on separated Virtual Local Area Networks (VLANs).
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Network
+	  - Protect
+	  - 2, 3
 
 Status
 ------

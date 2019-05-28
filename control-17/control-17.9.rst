@@ -1,6 +1,5 @@
 17.9: Train Workforce Members on Identifying and Reporting Incidents
 ====================================================================
-
 Train workforce members to be able to identify the most common indicators of an incident and be able to report such an incident.
 
 .. list-table::
@@ -13,14 +12,28 @@ Train workforce members to be able to identify the most common indicators of an 
 	  - N/A
 	  - 1, 2, 3
 
-**Description**
+Status
+------
+Draft
+
+Assumptions
+-----------
 
 
-**Measures**
+Measures
+--------
 
 
-**Metrics**
+Metrics
+-------
+.. list-table::
 
+	* - **Question**
+	  - 
+	* - **Answer**
+	  - 
+	* - **Calculation**
+	  - :code:`?`
 
 .. history
 .. authors

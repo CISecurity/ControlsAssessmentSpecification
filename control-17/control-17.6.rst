@@ -1,6 +1,5 @@
 17.6: Train Workforce on Identifying Social Engineering Attacks
 ===============================================================
-
 Train the workforce on how to identify different forms of social engineering attacks, such as phishing, phone scams, and impersonation calls.
 
 .. list-table::
@@ -13,14 +12,28 @@ Train the workforce on how to identify different forms of social engineering att
 	  - N/A
 	  - 1, 2, 3
 
-**Description**
+Status
+------
+Draft
+
+Assumptions
+-----------
 
 
-**Measures**
+Measures
+--------
 
 
-**Metrics**
+Metrics
+-------
+.. list-table::
 
+	* - **Question**
+	  - 
+	* - **Answer**
+	  - 
+	* - **Calculation**
+	  - :code:`?`
 
 .. history
 .. authors

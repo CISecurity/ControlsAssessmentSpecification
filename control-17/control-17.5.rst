@@ -1,6 +1,5 @@
 17.5: Train Workforce on Secure Authentication
 =========================================================
-
 Train workforce members on the importance of enabling and utilizing secure authentication.
 
 .. list-table::
@@ -13,14 +12,28 @@ Train workforce members on the importance of enabling and utilizing secure authe
 	  - N/A
 	  - 1, 2, 3
 
-**Description**
+Status
+------
+Draft
+
+Assumptions
+-----------
 
 
-**Measures**
+Measures
+--------
 
 
-**Metrics**
+Metrics
+-------
+.. list-table::
 
+	* - **Question**
+	  - 
+	* - **Answer**
+	  - 
+	* - **Calculation**
+	  - :code:`?`
 
 .. history
 .. authors

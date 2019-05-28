@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+16.10: Ensure All Accounts Have An Expiration Date
 =========================================================
-<Sub-Control Description>
+Ensure that all accounts have an expiration date that is monitored and enforced.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Users
+	  - Protect
+	  - 2, 3
 
 Status
 ------

@@ -1,6 +1,5 @@
 15.10: Create Separate Wireless Network for Personal and Untrusted Devices
 ==========================================================================
-
 Create a separate wireless network for personal or untrusted devices. Enterprise access from this network should be treated as untrusted and filtered and audited accordingly.
 
 .. list-table::
@@ -13,14 +12,28 @@ Create a separate wireless network for personal or untrusted devices. Enterprise
 	  - Protect
 	  - 1, 2, 3
 
-**Description**
+Status
+------
+Draft
+
+Assumptions
+-----------
 
 
-**Measures**
+Measures
+--------
 
 
-**Metrics**
+Metrics
+-------
+.. list-table::
 
+	* - **Question**
+	  - 
+	* - **Answer**
+	  - 
+	* - **Calculation**
+	  - :code:`?`
 
 .. history
 .. authors

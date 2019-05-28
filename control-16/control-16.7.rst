@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+16.7: Establish Process for Revoking Access
 =========================================================
-<Sub-Control Description>
+Establish and follow an automated process for revoking system access by disabling accounts immediately upon termination or change of responsibilities of an employee or contractor.  Disabling these accounts, instead of deleting accounts, allows preservation of audit trails.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Users
+	  - Protect
+	  - 2, 3
 
 Status
 ------

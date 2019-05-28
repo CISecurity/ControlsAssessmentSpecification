@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
-=========================================================
-<Sub-Control Description>
+15.6: Disable Peer-to-Peer Wireless Network Capabilities on Wireless Clients
+============================================================================
+Disable peer-to-peer (ad hoc) wireless network capabilities on wireless clients.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Devices
+	  - Protect
+	  - 2, 3
 
 Status
 ------

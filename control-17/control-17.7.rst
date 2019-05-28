@@ -1,6 +1,5 @@
 17.7: Train Workforce on Sensitive Data Handling
 =========================================================
-
 Train workforce members on how to identify and properly store, transfer, archive, and destroy sensitive information.
 
 .. list-table::
@@ -13,14 +12,28 @@ Train workforce members on how to identify and properly store, transfer, archive
 	  - N/A
 	  - 1, 2, 3
 
-**Description**
+Status
+------
+Draft
+
+Assumptions
+-----------
 
 
-**Measures**
+Measures
+--------
 
 
-**Metrics**
+Metrics
+-------
+.. list-table::
 
+	* - **Question**
+	  - 
+	* - **Answer**
+	  - 
+	* - **Calculation**
+	  - :code:`?`
 
 .. history
 .. authors

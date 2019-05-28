@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+17.2: Deliver Training to Fill the Skills Gap
 =========================================================
-<Sub-Control Description>
+Deliver training to address the skills gap identified to positively impact workforce members’ security behavior.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - N/A
+	  - N/A
+	  - 2, 3
 
 Status
 ------

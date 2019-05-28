@@ -1,6 +1,5 @@
 19.3: Designate Management Personnel to Support Incident Handling
 =================================================================
-
 Designate management personnel, as well as backups, who will support the incident handling process by acting in key decision-making roles.
 
 .. list-table::
@@ -13,14 +12,28 @@ Designate management personnel, as well as backups, who will support the inciden
 	  - N/A
 	  - 1, 2, 3
 
-**Description**
+Status
+------
+Draft
+
+Assumptions
+-----------
 
 
-**Measures**
+Measures
+--------
 
 
-**Metrics**
+Metrics
+-------
+.. list-table::
 
+	* - **Question**
+	  - 
+	* - **Answer**
+	  - 
+	* - **Calculation**
+	  - :code:`?`
 
 .. history
 .. authors

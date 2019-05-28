@@ -1,6 +1,5 @@
 15.7: Leverage the Advanced Encryption Standard (AES) to Encrypt Wireless Data
 ==============================================================================
-
 Leverage the Advanced Encryption Standard (AES) to encrypt wireless data in transit.
 
 .. list-table::
@@ -13,14 +12,28 @@ Leverage the Advanced Encryption Standard (AES) to encrypt wireless data in tran
 	  - Protect
 	  - 1, 2, 3
 
-**Description**
+Status
+------
+Draft
+
+Assumptions
+-----------
 
 
-**Measures**
+Measures
+--------
 
 
-**Metrics**
+Metrics
+-------
+.. list-table::
 
+	* - **Question**
+	  - 
+	* - **Answer**
+	  - 
+	* - **Calculation**
+	  - :code:`?`
 
 .. history
 .. authors

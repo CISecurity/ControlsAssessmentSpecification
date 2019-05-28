@@ -1,6 +1,5 @@
 19.6: Publish Information Regarding Reporting Computer Anomalies and Incidents
 ==============================================================================
-
 Publish information for all workforce members, regarding reporting computer anomalies and incidents, to the incident handling team.  Such information should be included in routine employee awareness activities.
 
 .. list-table::
@@ -13,14 +12,28 @@ Publish information for all workforce members, regarding reporting computer anom
 	  - N/A
 	  - 1, 2, 3
 
-**Description**
+Status
+------
+Draft
+
+Assumptions
+-----------
 
 
-**Measures**
+Measures
+--------
 
 
-**Metrics**
+Metrics
+-------
+.. list-table::
 
+	* - **Question**
+	  - 
+	* - **Answer**
+	  - 
+	* - **Calculation**
+	  - :code:`?`
 
 .. history
 .. authors

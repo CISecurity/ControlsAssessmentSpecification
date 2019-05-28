@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+17.4: Update Awareness Content Frequently
 =========================================================
-<Sub-Control Description>
+Ensure that the organization’s security awareness program is updated frequently (at least annually) to address new technologies, threats, standards, and business requirements.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - N/A
+	  - N/A
+	  - 2, 3
 
 Status
 ------

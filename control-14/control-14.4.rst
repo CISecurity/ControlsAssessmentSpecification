@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+14.4: Encrypt All Sensitive Information in Transit
 =========================================================
-<Sub-Control Description>
+Encrypt all sensitive information in transit.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Data
+	  - Protect
+	  - 2, 3
 
 Status
 ------

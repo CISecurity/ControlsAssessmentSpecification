@@ -1,6 +1,5 @@
 16.9: Disable Dormant Accounts
 =================================
-
 Automatically disable dormant accounts after a set period of inactivity.
 
 .. list-table::
@@ -13,14 +12,28 @@ Automatically disable dormant accounts after a set period of inactivity.
 	  - Respond
 	  - 1, 2, 3
 
-**Description**
+Status
+------
+Draft
+
+Assumptions
+-----------
 
 
-**Measures**
+Measures
+--------
 
 
-**Metrics**
+Metrics
+-------
+.. list-table::
 
+	* - **Question**
+	  - 
+	* - **Answer**
+	  - 
+	* - **Calculation**
+	  - :code:`?`
 
 .. history
 .. authors

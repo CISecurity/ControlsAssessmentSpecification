@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+20.3: Perform Periodic Red Team Exercises
 =========================================================
-<Sub-Control Description>
+Perform periodic Red Team exercises to test organizational readiness to identify and stop attacks or to respond quickly and effectively.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - N/A
+	* - N/A
+	  - 3
 
 Status
 ------

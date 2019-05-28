@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
-=========================================================
-<Sub-Control Description>
+15.1: Maintain an Inventory of Authorized Wireless Access Points
+================================================================
+Maintain an inventory of authorized wireless access points connected to the wired network.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Network
+	  - Identify
+	  - 2, 3
 
 Status
 ------

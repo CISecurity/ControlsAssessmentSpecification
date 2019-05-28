@@ -1,6 +1,5 @@
 17.3: Implement a Security Awareness Program
 =========================================================
-
 Create a security awareness program for all workforce members to complete on a regular basis to ensure they understand and exhibit the necessary behaviors and skills to help ensure the security of the organization.  The organization’s security awareness program should be communicated in a continuous and engaging manner.
 
 .. list-table::
@@ -13,14 +12,28 @@ Create a security awareness program for all workforce members to complete on a r
 	  - N/A
 	  - 1, 2, 3
 
-**Description**
+Status
+------
+Draft
+
+Assumptions
+-----------
 
 
-**Measures**
+Measures
+--------
 
 
-**Metrics**
+Metrics
+-------
+.. list-table::
 
+	* - **Question**
+	  - 
+	* - **Answer**
+	  - 
+	* - **Calculation**
+	  - :code:`?`
 
 .. history
 .. authors

@@ -1,6 +1,5 @@
 16.8: Disable Any Unassociated Accounts
 =========================================================
-
 Disable any account that cannot be associated with a business process or business owner.
 
 .. list-table::
@@ -13,14 +12,28 @@ Disable any account that cannot be associated with a business process or busines
 	  - Respond
 	  - 1, 2, 3
 
-**Description**
+Status
+------
+Draft
+
+Assumptions
+-----------
 
 
-**Measures**
+Measures
+--------
 
 
-**Metrics**
+Metrics
+-------
+.. list-table::
 
+	* - **Question**
+	  - 
+	* - **Answer**
+	  - 
+	* - **Calculation**
+	  - :code:`?`
 
 .. history
 .. authors
