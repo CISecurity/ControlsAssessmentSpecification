@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+7.5: Subscribe to URLCategorization Service
 =========================================================
-<Sub-Control Description>
+Subscribe to URL-categorization services to ensure that they are up-to-date with the most recent website category definitions available.  Uncategorized sites shall be blocked by default.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Network
+	  - Protect
+	  - 2, 3
 
 Status
 ------

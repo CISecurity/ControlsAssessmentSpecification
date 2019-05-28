@@ -1,6 +1,5 @@
 10.5: Ensure All Backups Have at Least One Offline Backup Destination
 =====================================================================
-
 Ensure that all backups have at least one offline (i.e., not accessible via a network connection) backup destination.
 
 .. list-table::
@@ -13,14 +12,28 @@ Ensure that all backups have at least one offline (i.e., not accessible via a ne
 	  - Protect
 	  - 1, 2, 3
 
-**Description**
+Status
+------
+Draft
+
+Assumptions
+-----------
 
 
-**Measures**
+Measures
+--------
 
 
-**Metrics**
+Metrics
+-------
+.. list-table::
 
+	* - **Question**
+	  - 
+	* - **Answer**
+	  - 
+	* - **Calculation**
+	  - :code:`?`
 
 .. history
 .. authors

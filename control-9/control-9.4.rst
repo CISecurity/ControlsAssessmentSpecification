@@ -1,6 +1,5 @@
 9.4: Apply Host-Based Firewalls or Port-Filtering
 =========================================================
-
 Apply host-based firewalls or port-filtering tools on end systems, with a default-deny rule that drops all traffic except those services and ports that are explicitly allowed.
 
 .. list-table::
@@ -13,14 +12,28 @@ Apply host-based firewalls or port-filtering tools on end systems, with a defaul
 	  - Protect
 	  - 1, 2, 3
 
-**Description**
+Status
+------
+Draft
+
+Assumptions
+-----------
 
 
-**Measures**
+Measures
+--------
 
 
-**Metrics**
+Metrics
+-------
+.. list-table::
 
+	* - **Question**
+	  - 
+	* - **Answer**
+	  - 
+	* - **Calculation**
+	  - :code:`?`
 
 .. history
 .. authors

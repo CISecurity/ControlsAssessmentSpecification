@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+6.5: Central Log Management
 =========================================================
-<Sub-Control Description>
+Ensure that appropriate logs are being aggregated to a central log management system for analysis and review.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Network
+	  - Detect
+	  - 2, 3
 
 Status
 ------

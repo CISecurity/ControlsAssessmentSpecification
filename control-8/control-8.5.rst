@@ -1,6 +1,5 @@
 8.5: Configure Devices to Not Auto-Run Content
 =========================================================
-
 Configure devices to not auto-run content from removable media.
 
 .. list-table::
@@ -13,14 +12,28 @@ Configure devices to not auto-run content from removable media.
 	  - Protect
 	  - 1, 2, 3
 
-**Description**
+Status
+------
+Draft
+
+Assumptions
+-----------
 
 
-**Measures**
+Measures
+--------
 
 
-**Metrics**
+Metrics
+-------
+.. list-table::
 
+	* - **Question**
+	  - 
+	* - **Answer**
+	  - 
+	* - **Calculation**
+	  - :code:`?`
 
 .. history
 .. authors

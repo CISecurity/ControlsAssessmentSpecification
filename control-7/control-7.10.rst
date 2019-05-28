@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+7.10: Sandbox All Email Attachments
 =========================================================
-<Sub-Control Description>
+Use sandboxing to analyze and block inbound email attachments with malicious behavior.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Network
+	  - Protect
+	  - 3
 
 Status
 ------

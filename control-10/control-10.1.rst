@@ -1,6 +1,5 @@
 10.1: Ensure Regular Automated Backups
 =======================================
-
 Ensure that all system data is automatically backed up on a regular basis.
 
 .. list-table::
@@ -13,14 +12,28 @@ Ensure that all system data is automatically backed up on a regular basis.
 	  - Protect
 	  - 1, 2, 3
 
-**Description**
+Status
+------
+Draft
+
+Assumptions
+-----------
 
 
-**Measures**
+Measures
+--------
 
 
-**Metrics**
+Metrics
+-------
+.. list-table::
 
+	* - **Question**
+	  - 
+	* - **Answer**
+	  - 
+	* - **Calculation**
+	  - :code:`?`
 
 .. history
 .. authors

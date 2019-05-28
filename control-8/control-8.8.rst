@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+8.8: Enable Command-Line Audit Logging
 =========================================================
-<Sub-Control Description>
+Enable command-line audit logging for command shells, such as Microsoft PowerShell and Bash.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Devices
+	  - Detect
+	  - 2, 3
 
 Status
 ------

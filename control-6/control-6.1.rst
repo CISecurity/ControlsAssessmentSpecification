@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+6.1: Utilize Three Synchronized Time Sources
 =========================================================
-<Sub-Control Description>
+Use at least three synchronized time sources from which all servers and network devices retrieve time information on a regular basis so that timestamps in logs are consistent.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Network
+	  - Detect
+	  - 2, 3
 
 Status
 ------

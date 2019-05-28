@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+7.4: Maintain and Enforce Network-Based URL Filters
 =========================================================
-<Sub-Control Description>
+Enforce network-based URL filters that limit a system’s ability to connect to websites not approved by the organization. This filtering shall be enforced for each of the organization’s systems, whether they are physically at an organization’s facilities or not.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Network
+	  - Protect
+	  - 2, 3
 
 Status
 ------

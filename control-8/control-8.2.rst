@@ -1,6 +1,5 @@
 8.2: Ensure Anti-Malware Software and Signatures Are Updated
 ============================================================
-
 Ensure that the organization’s anti-malware software updates its scanning engine and signature database on a regular basis.
 
 .. list-table::
@@ -13,14 +12,28 @@ Ensure that the organization’s anti-malware software updates its scanning engi
 	  - Protect
 	  - 1, 2, 3
 
-**Description**
+Status
+------
+Draft
+
+Assumptions
+-----------
 
 
-**Measures**
+Measures
+--------
 
 
-**Metrics**
+Metrics
+-------
+.. list-table::
 
+	* - **Question**
+	  - 
+	* - **Answer**
+	  - 
+	* - **Calculation**
+	  - :code:`?`
 
 .. history
 .. authors

@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+11.5: Manage Network Devices Using Multi-Factor Authentication and Encrypted Sessions
 =========================================================
-<Sub-Control Description>
+Manage all network devices using multi-factor authentication and encrypted sessions.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Network
+	  - Protect
+	  - 2, 3
 
 Status
 ------

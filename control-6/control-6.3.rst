@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+6.3: Enable Detailed Logging
 =========================================================
-<Sub-Control Description>
+Enable system logging to include detailed information such as an event source, date, user, timestamp, source addresses, destination addresses, and other useful elements.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Network
+	  - Detect
+	  - 2, 3
 
 Status
 ------

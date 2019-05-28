@@ -1,6 +1,5 @@
 13.1: Maintain an Inventory of Sensitive Information
 =========================================================
-
 Maintain an inventory of all sensitive information stored, processed, or transmitted by the organization’s technology systems, including those located on-site or at a remote service provider.
 
 .. list-table::
@@ -13,14 +12,28 @@ Maintain an inventory of all sensitive information stored, processed, or transmi
 	  - Identify
 	  - 1, 2, 3
 
-**Description**
+Status
+------
+Draft
+
+Assumptions
+-----------
 
 
-**Measures**
+Measures
+--------
 
 
-**Metrics**
+Metrics
+-------
+.. list-table::
 
+	* - **Question**
+	  - 
+	* - **Answer**
+	  - 
+	* - **Calculation**
+	  - :code:`?`
 
 .. history
 .. authors

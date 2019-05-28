@@ -1,6 +1,5 @@
 7.1: Ensure Use of Only Fully Supported Browsers and Email Clients
 ==================================================================
-
 Ensure that only fully supported web browsers and email clients are allowed to execute in the organization, ideally only using the latest version of the browsers and email clients provided by the vendor.
 
 .. list-table::
@@ -13,14 +12,28 @@ Ensure that only fully supported web browsers and email clients are allowed to e
 	  - Protect
 	  - 1, 2, 3
 
-**Description**
+Status
+------
+Draft
+
+Assumptions
+-----------
 
 
-**Measures**
+Measures
+--------
 
 
-**Metrics**
+Metrics
+-------
+.. list-table::
 
+	* - **Question**
+	  - 
+	* - **Answer**
+	  - 
+	* - **Calculation**
+	  - :code:`?`
 
 .. history
 .. authors

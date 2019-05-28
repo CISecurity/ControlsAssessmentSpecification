@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
-=========================================================
-<Sub-Control Description>
+12.12: Manage All Devices Remotely Logging Into Internal Network
+================================================================
+Scan all enterprise devices remotely logging into the organization’s network prior to accessing the network to ensure that each of the organization’s security policies has been enforced in the same manner as local network devices.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Devices
+	  - Protect
+	  - 3
 
 Status
 ------

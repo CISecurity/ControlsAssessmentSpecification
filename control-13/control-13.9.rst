@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+13.9: Encrypt Data on USB Storage Devices
 =========================================================
-<Sub-Control Description>
+If USB storage devices are required, all data stored on such devices must be encrypted while at rest.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Data
+	  - Protect
+	  - 3
 
 Status
 ------

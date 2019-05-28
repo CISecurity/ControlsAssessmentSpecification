@@ -1,6 +1,5 @@
 12.1: Maintain an Inventory of Network Boundaries
 =========================================================
-
 Maintain an up-to-date inventory of all of the organization’s network boundaries.
 
 .. list-table::
@@ -13,14 +12,28 @@ Maintain an up-to-date inventory of all of the organization’s network boundari
 	  - Identify
 	  - 1, 2, 3
 
-**Description**
+Status
+------
+Draft
+
+Assumptions
+-----------
 
 
-**Measures**
+Measures
+--------
 
 
-**Metrics**
+Metrics
+-------
+.. list-table::
 
+	* - **Question**
+	  - 
+	* - **Answer**
+	  - 
+	* - **Calculation**
+	  - :code:`?`
 
 .. history
 .. authors

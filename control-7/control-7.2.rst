@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
-=========================================================
-<Sub-Control Description>
+7.2: Disable Unnecessary or Unauthorized Browser or Email Client Plugins
+========================================================================
+Uninstall or disable any unauthorized browser or email client plugins or add-on applications.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Applications
+	  - Protect
+	  - 2, 3
 
 Status
 ------

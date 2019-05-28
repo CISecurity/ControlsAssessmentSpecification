@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
-=========================================================
-<Sub-Control Description>
+7.3: Limit Use of Scripting Languages in Web Browsers and Email Clients
+=======================================================================
+Ensure that only authorized scripting languages are able to run in all web browsers and email clients.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Applications
+	  - Protect
+	  - 2, 3
 
 Status
 ------

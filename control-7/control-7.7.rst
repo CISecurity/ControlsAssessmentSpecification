@@ -1,6 +1,5 @@
 7.7: Use of DNS Filtering Services
 ===================================
-
 Use Domain Name System (DNS) filtering services to help block access to known malicious domains.
 
 .. list-table::
@@ -13,14 +12,28 @@ Use Domain Name System (DNS) filtering services to help block access to known ma
 	  - Protect
 	  - 1, 2, 3
 
-**Description**
+Status
+------
+Draft
+
+Assumptions
+-----------
 
 
-**Measures**
+Measures
+--------
 
 
-**Metrics**
+Metrics
+-------
+.. list-table::
 
+	* - **Question**
+	  - 
+	* - **Answer**
+	  - 
+	* - **Calculation**
+	  - :code:`?`
 
 .. history
 .. authors

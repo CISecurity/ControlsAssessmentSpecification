@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+6.8: Regularly Tune SIEM
 =========================================================
-<Sub-Control Description>
+On a regular basis, tune your SIEM system to better identify actionable events and decrease event noise.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Network
+	  - Detect
+	  - 3
 
 Status
 ------

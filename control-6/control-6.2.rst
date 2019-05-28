@@ -1,6 +1,5 @@
 6.2: Activate Audit Logging
 =========================================================
-
 Ensure that local logging has been enabled on all systems and networking devices.
 
 .. list-table::
@@ -13,14 +12,28 @@ Ensure that local logging has been enabled on all systems and networking devices
 	  - Detect
 	  - 1, 2, 3
 
-**Description**
+Status
+------
+Draft
+
+Assumptions
+-----------
 
 
-**Measures**
+Measures
+--------
 
 
-**Metrics**
+Metrics
+-------
+.. list-table::
 
+	* - **Question**
+	  - 
+	* - **Answer**
+	  - 
+	* - **Calculation**
+	  - :code:`?`
 
 .. history
 .. authors

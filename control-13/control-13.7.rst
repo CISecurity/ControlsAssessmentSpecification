@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+13.7: Manage USB Devices
 =========================================================
-<Sub-Control Description>
+If USB storage devices are required, enterprise software should be used that can configure systems to allow the use of specific devices.  An inventory of such devices should be maintained.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Data
+	  - Protect
+	  - 2, 3
 
 Status
 ------

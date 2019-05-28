@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+8.7: Enable DNS Query Logging
 =========================================================
-<Sub-Control Description>
+Enable Domain Name System (DNS) query logging to detect hostname lookups for known malicious domains.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Network
+	  - Detect
+	  - 2, 3
 
 Status
 ------

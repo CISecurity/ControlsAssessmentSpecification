@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+13.3: Monitor and Block Unauthorized Network Traffic
 =========================================================
-<Sub-Control Description>
+Deploy an automated tool on network perimeters that monitors for unauthorized transfer of sensitive information and blocks such transfers while alerting information security professionals.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Data
+	  - Detect
+	  - 3
 
 Status
 ------

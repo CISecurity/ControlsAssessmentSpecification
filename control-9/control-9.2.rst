@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
-=========================================================
-<Sub-Control Description>
+9.2: Ensure Only Approved Ports, Protocols, and Services Are Running
+====================================================================
+Ensure that only network ports, protocols, and services listening on a system with validated business needs are running on each system.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Devices
+	  - Protect
+	  - 2, 3
 
 Status
 ------

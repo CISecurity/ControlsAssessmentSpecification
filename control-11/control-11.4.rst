@@ -1,6 +1,5 @@
 11.4: Install the Latest Stable Version of Any Security-Related Updates on All Network Devices
 ==============================================================================================
-
 Install the latest stable version of any security-related updates on all network devices.
 
 .. list-table::
@@ -13,14 +12,28 @@ Install the latest stable version of any security-related updates on all network
 	  - Protect
 	  - 1, 2, 3
 
-**Description**
+Status
+------
+Draft
+
+Assumptions
+-----------
 
 
-**Measures**
+Measures
+--------
 
 
-**Metrics**
+Metrics
+-------
+.. list-table::
 
+	* - **Question**
+	  - 
+	* - **Answer**
+	  - 
+	* - **Calculation**
+	  - :code:`?`
 
 .. history
 .. authors

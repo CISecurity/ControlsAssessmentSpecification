@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+10.3: Test Data on Backup Media
 =========================================================
-<Sub-Control Description>
+Test data integrity on backup media on a regular basis by performing a data restoration process to ensure that the backup is properly working.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Data
+	  - Protect
+	  - 2, 3
 
 Status
 ------

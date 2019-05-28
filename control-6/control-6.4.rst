@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+6.4: Ensure Adequate Storage for Logs
 =========================================================
-<Sub-Control Description>
+Ensure that all systems that store logs have adequate storage space for the logs generated.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Network
+	  - Detect
+	  - 2, 3
 
 Status
 ------

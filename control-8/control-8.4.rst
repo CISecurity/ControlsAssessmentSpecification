@@ -1,6 +1,5 @@
 8.4: Configure Anti-Malware Scanning of Removable Media
 =========================================================
-
 Configure devices so that they automatically conduct an anti-malware scan of removable media when inserted or connected.
 
 .. list-table::
@@ -13,14 +12,28 @@ Configure devices so that they automatically conduct an anti-malware scan of rem
 	  - Detect
 	  - 1, 2, 3
 
-**Description**
+Status
+------
+Draft
+
+Assumptions
+-----------
 
 
-**Measures**
+Measures
+--------
 
 
-**Metrics**
+Metrics
+-------
+.. list-table::
 
+	* - **Question**
+	  - 
+	* - **Answer**
+	  - 
+	* - **Calculation**
+	  - :code:`?`
 
 .. history
 .. authors

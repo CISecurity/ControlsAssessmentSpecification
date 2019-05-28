@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+7.9: Block Unnecessary File Types
 =========================================================
-<Sub-Control Description>
+Block all email attachments entering the organization’s email gateway if the file types are unnecessary for the organization’s business.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Network
+	  - Protect
+	  - 2, 3
 
 Status
 ------

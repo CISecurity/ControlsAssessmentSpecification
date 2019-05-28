@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+12.10: Decrypt Network Traffic at Proxy
 =========================================================
-<Sub-Control Description>
+Decrypt all encrypted network traffic at the boundary proxy prior to analyzing the content.  However, the organization may use whitelists of allowed sites that can be accessed through the proxy without decrypting the traffic.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Network
+	  - Detect
+	  - 3
 
 Status
 ------

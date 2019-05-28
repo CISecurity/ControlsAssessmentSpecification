@@ -1,6 +1,6 @@
-C.S: <Sub-Control Title>
+9.3: Perform Regular Automated Port Scans
 =========================================================
-<Sub-Control Description>
+Perform automated port scans on a regular basis against all systems and alert if unauthorized ports are detected on a system.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ C.S: <Sub-Control Title>
 	* - Asset Type 
 	  - Security Function
 	  - Implementation Groups
-	* - (Devices|Users|Applications|Network|Data|N/A)
-	  - (Detect|Protect|Respond|Identify)
-	  - (1|2|3)
+	* - Devices
+	  - Detect
+	  - 2, 3
 
 Status
 ------
