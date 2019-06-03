@@ -18,22 +18,26 @@ Draft
 
 Assumptions
 -----------
-
+* A "securely configured server" assumes the application of numerous subcontrols governing deployment of secure configuration settings, proper administrative access, and network isolation.
 
 Measures
 --------
-
+* M1 = # of validated images
+* M2 = # of total images
 
 Metrics
 -------
+
+Validated Image Ratio
+^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Question**
-	  - 
+	  - Determine the percentage of total images which are valid according to integrity monitoring tools.
 	* - **Answer**
-	  - 
+	  - The calculation will yield a percentage, from 0 to 100, indicating the ratio of total images to those images deemed valid.
 	* - **Calculation**
-	  - :code:`?`
+	  - :code:`(M1/M2) * 100`
 
 .. history
 .. authors

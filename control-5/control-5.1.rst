@@ -18,7 +18,7 @@ Draft
 
 Assumptions
 -----------
-None
+* Documentation of secure configuration standards should include any approved deviations/exceptions from industry-standard security baselines such as CIS benchmarks, DISA Security Technical Implementation Guides (STIGs), or U.S. government configuration baselines (USGCB).
 
 Measures
 --------
