@@ -22,7 +22,7 @@ TBD
 
 Measures
 --------
-* M1 = # of recently update applied to OS
+* M1 = # of updates recently applied to OS
 * M2 = Total update required in OS
 * M3 = time of installation of last update
 * M4 = release time of last update 
