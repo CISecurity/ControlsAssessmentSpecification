@@ -14,9 +14,9 @@ Utilize port level access control, following 802.1x standards, to control which 
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
 
 

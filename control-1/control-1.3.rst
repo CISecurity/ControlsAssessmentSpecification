@@ -17,9 +17,9 @@ hardware asset inventory.
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
 
 

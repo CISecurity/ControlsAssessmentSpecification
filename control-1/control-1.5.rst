@@ -14,11 +14,11 @@ Ensure that the hardware asset inventory records the network address, hardware a
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
-* The "weight" indicates the criticality (importance) of an endpoint, and will be defined by the organization
+#. The "weight" indicates the criticality (importance) of an endpoint, and will be defined by the organization
 
 Measures
 --------

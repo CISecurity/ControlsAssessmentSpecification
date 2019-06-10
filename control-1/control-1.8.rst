@@ -14,9 +14,9 @@ Use client certificates to authenticate hardware assets connecting to the organi
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
 
 
