@@ -23,7 +23,6 @@ Inputs
 #. A write-up of the procedure for adding or removing assets to or from the inventory - only for manual review.
 
 If Input 1 is not provided, this sub-control is measured at a 0 (complete fail).
-
 If Input 2 is not provided, no true accuracy measurement can be made for this sub-control.
 
 
