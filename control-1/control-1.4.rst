@@ -16,47 +16,41 @@ Status
 ------
 Draft
 
-Assumptions
+Inputs
 -----------
-* The list of devices (M2) is known to the organization, 
-* The max asset discovery time (M5) is known to the organization, and 
-* M4 is known since the asset is being connected to the network
+#. The organization's current inventory list (the "to be checked" list) in a predetermined format; this could be a manual spreadsheet, query results from an inventory tool, or aggregated output from more than one source.
+#. A "ground truth" inventory list to compare with input 1, in the same predetermined format.  This list would be enhanced by manual verification, but a tool-generated or aggregated list could be substituted here.  This should be an aggregation of the devices detected over a period of time, preferably not from a single scan.
+#. A write-up of the procedure for adding or removing assets to or from the inventory - only for manual review.
+
+If Input 1 is not provided, this sub-control is measured at a 0 (complete fail).
+
+If Input 2 is not provided, no true accuracy measurement can be made for this sub-control.
+
 
 Measures
 --------
-
-* M1 = number of assets discovered
-* M2 = total number of assets (given)
-* M3 = time asset discovered
-* M4 = time asset appeared (given)
-* M5 = Max time discovery (given)
+* M1 = The number of items in the intersection of Input 1 and Input 2
+* M2 = The number of items in Input 2
 
 Metrics
 -------
 
-Coverage (Quality Measure)
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+Accuracy Score
+^^^^^^^^^^^^^^
 
 .. list-table:: 
 
 	* - **Question**
-	  - What percentage of assets discovered on the network are accounted for in the organization's asset inventory?
+	  - What percentage of the "ground truth" inventory is accounted for in the organization's current asset inventory?
 	* - **Answer**
 	  - A positive percentage value greater than or equal to 0, and less than or equal to 100%  A value of "0" would indicate that none of the discovered assets have been inventoried; a value of "100" indicates that all assets connected to the organization's network are accounted for in the asset inventory.
 	* - **Calculation**
 	  - :code:`(M1/M2) * 100%`
 
-Freshness (Time to Discover)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Procedure Review
+^^^^^^^^^^^^^^^^
+Second, manual review/rating of the inventory procedures, to include adding and removing assets, and the time allowable or expected, after acquisition or disposal of assets.
 
-.. list-table::
-
-	* - **Question**
-	  - How long does it take for an organization to discover a new asset on its network?
-	* - **Answer**
-	  - The "freshness" metric is a positive decimal value that is greater than or equal to zero. A value of "0" indicates hypothetical instant detection.
-	* - **Calculation**
-	  - :code:`((M3-M4) / M5)`
 
 .. history
 .. authors
