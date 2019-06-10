@@ -22,12 +22,10 @@ Inputs
 #. A "ground truth" inventory list to compare with input 1, in the same predetermined format.  This list would be enhanced by manual verification, but a tool-generated or aggregated list could be substituted here.  This should be an aggregation of the devices detected over a period of time, preferably not from a single scan.
 #. A write-up of the procedure for adding or removing assets to or from the inventory - only for manual review.
 
-If Input 1 is not provided, this sub-control is measured at a 0 (complete fail).
-If Input 2 is not provided, no true accuracy measurement can be made for this sub-control.
-
-
 Measures
 --------
+* If Input 1 is not provided, this sub-control is measured at a 0 (complete fail).
+* If Input 2 is not provided, no true accuracy measurement can be made for this sub-control.
 * M1 = The number of items in the intersection of Input 1 and Input 2
 * M2 = The number of items in Input 2
 
