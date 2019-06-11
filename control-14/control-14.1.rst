@@ -14,11 +14,15 @@ Segment the network based on the label or classification level of the informatio
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

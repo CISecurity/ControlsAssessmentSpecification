@@ -14,11 +14,15 @@ Train the workforce on how to identify different forms of social engineering att
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

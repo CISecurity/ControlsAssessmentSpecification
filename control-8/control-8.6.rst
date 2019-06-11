@@ -14,11 +14,15 @@ Send all malware detection events to enterprise anti-malware administration tool
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

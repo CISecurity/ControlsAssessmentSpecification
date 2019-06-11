@@ -14,11 +14,15 @@ Encrypt all sensitive information in transit.
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

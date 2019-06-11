@@ -14,11 +14,15 @@ Disable wireless access on devices that do not have a business purpose for wirel
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

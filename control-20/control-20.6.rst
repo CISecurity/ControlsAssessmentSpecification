@@ -14,11 +14,15 @@ Use vulnerability scanning and penetration testing tools in concert. The results
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

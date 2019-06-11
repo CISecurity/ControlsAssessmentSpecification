@@ -14,11 +14,15 @@ Configure systems to issue a log entry and alert when an account is added to or 
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
------------
-It is assumed that the number of endpoints under test for an organization (N) is known or accessible via query of an asset inventory.
+Inputs
+------
+#. It is assumed that the number of endpoints under test for an organization (N) is known or accessible via query of an asset inventory.
+
+Operations
+----------
+#. 
 
 Measures
 --------
@@ -35,9 +39,11 @@ Log and Alert Enabled
 .. list-table::
 
 	* - **Question**
-	  - What percentage of endpoints in the organization have properly configured logging and alerting for modifications to administrative groups?
+	  - | What percentage of endpoints in the organization have properly configured logging
+	    | and alerting for modifications to administrative groups?
 	* - **Answer**
-	  - The calculation will yield a percentage, from 0 to 100, of those endpoints which have configured logging and alerting correctly.
+	  - | The calculation will yield a percentage, from 0 to 100, of those endpoints which have
+	    | configured logging and alerting correctly.
 	* - **Calculation**
 	  - :code:`((SUM from 1 to N { M1=1 AND M2=1 AND M3=1 AND M4=1 }) / N) * 100`
 

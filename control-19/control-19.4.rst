@@ -14,11 +14,15 @@ Devise organization-wide standards for the time required for system administrato
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

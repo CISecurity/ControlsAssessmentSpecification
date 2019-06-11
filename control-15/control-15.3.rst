@@ -14,11 +14,15 @@ Use a wireless intrusion detection system (WIDS) to detect and alert on unauthor
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

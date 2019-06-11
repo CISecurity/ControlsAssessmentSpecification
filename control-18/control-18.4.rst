@@ -14,11 +14,15 @@ Only use up-to-date and trusted third-party components for the software develope
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

@@ -14,11 +14,15 @@ Ensure that there are written incident response plans that define roles of perso
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

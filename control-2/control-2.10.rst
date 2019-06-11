@@ -14,11 +14,15 @@ Physically or logically segregated systems should be used to isolate and run sof
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
------------
+Inputs
+------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

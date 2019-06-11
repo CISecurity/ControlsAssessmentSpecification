@@ -14,11 +14,15 @@ Utilize an active discovery tool to identify all sensitive information stored, p
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

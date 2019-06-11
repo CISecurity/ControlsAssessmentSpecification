@@ -14,11 +14,15 @@ Configure wireless access on client machines that do have an essential wireless 
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

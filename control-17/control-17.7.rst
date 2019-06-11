@@ -14,11 +14,15 @@ Train workforce members on how to identify and properly store, transfer, archive
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

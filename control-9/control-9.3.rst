@@ -14,11 +14,15 @@ Perform automated port scans on a regular basis against all systems and alert if
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

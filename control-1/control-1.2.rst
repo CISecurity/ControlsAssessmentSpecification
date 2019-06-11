@@ -21,6 +21,9 @@ Inputs
 -----------
 #. These measurements assume the total number of assets for a given enterprise is known (M2), and that the max asset discovery time (M5) is known.
 
+Operations
+----------
+
 Measures
 --------
 * M1 = number of assets discovered
@@ -37,9 +40,11 @@ Coverage (Quality Measure)
 .. list-table::
 
 	* - **Question**
-	  - Given the total inventory of assets, what percentage of those assets are discovered in the enterprise?
+	  - | Given the total inventory of assets, what percentage of those assets are discovered
+	    | in the enterprise?
 	* - **Answer**
-	  - This metric intends to determine the percentage of discovered assets in the enterprise that are accounted for in that enterprise's asset inventory.
+	  - | This metric intends to determine the percentage of discovered assets in the enterprise
+	    | that are accounted for in that enterprise's asset inventory.
 	* - **Calculation**
 	  - :code:`(M1/M2) * 100`
 
@@ -50,7 +55,10 @@ Freshness (Time to Discover)
 	* - **Question**
 	  - How quickly are new assets discovered, once added to the enterprise's network?
 	* - **Answer**
-	  - This metric will yield a positive value, generally between 0 and 1 but potentially greater than 1.  A value of 0 indicates the asset was immediately discovered, while a value greater than or equal to 1 indicates the asset requried at least the current maximium time to discover the asset.
+	  - | This metric will yield a positive value, generally between 0 and 1 but potentially
+	    | greater than 1.  A value of 0 indicates the asset was immediately discovered, while
+	    | a value greater than or equal to 1 indicates the asset requried at least the current
+	    | maximium time to discover the asset.
 	* - **Calculation**
 	  - :code:`(M3-M4)/M5`
 

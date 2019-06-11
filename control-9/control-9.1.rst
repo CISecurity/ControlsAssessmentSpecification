@@ -14,11 +14,15 @@ Associate active ports, services, and protocols to the hardware assets in the as
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

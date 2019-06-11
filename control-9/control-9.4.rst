@@ -14,26 +14,41 @@ Apply host-based firewalls or port-filtering tools on end systems, with a defaul
 
 Status
 ------
-Draft
+In Development
+
+Inputs
+------
+#. 
 
 Assumptions
------------
+^^^^^^^^^^^
+* It is assumed that, as part of an asset inventory, the list of ports allowed to be open for a given endpoint, is available.
+* It is assumed that an active testing tool is available to query an endpoint's listing of open ports.
 
+Operations
+----------
+#. 
 
 Measures
 --------
-
+* M1 = Listing of ports allowed to be open
+* M2 = Listing of open ports
 
 Metrics
 -------
+
+Unallowed Ports
+^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Question**
-	  - 
+	  - | This metric is intended to convey if any unallowed ports are open on a given endpoint
+	    | under test.
 	* - **Answer**
-	  - 
+	  - | The calculation of this metric is determined via comparison of the list of open ports
+	    | to the allowed list.
 	* - **Calculation**
-	  - :code:`?`
+	  - :code:`If M2-M1`
 
 .. history
 .. authors

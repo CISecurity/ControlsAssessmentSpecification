@@ -14,11 +14,15 @@ Use an automated tool, such as host-based Data Loss Prevention, to enforce acces
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

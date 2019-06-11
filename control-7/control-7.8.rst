@@ -14,11 +14,15 @@ To lower the chance of spoofed or modified emails from valid domains, implement 
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
------------
+Inputs
+------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

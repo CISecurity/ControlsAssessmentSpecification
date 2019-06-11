@@ -14,11 +14,19 @@ Maintain documented security configuration standards for all authorized operatin
 
 Status
 ------
-Draft
+In Development
+
+Inputs
+------
+#. 
 
 Assumptions
------------
+^^^^^^^^^^^
 * Documentation of secure configuration standards should include any approved deviations/exceptions from industry-standard security baselines such as CIS benchmarks, DISA Security Technical Implementation Guides (STIGs), or U.S. government configuration baselines (USGCB).
+
+Operations
+----------
+#. 
 
 Measures
 --------
@@ -33,9 +41,11 @@ Coverage (Quality Measure)
 .. list-table::
 
 	* - **Question**
-	  - For what percentage of the total OS/Software in an enterprise are security configuration standards documented and maintained?
+	  - | For what percentage of the total OS/Software in an enterprise are security configuration
+	    | standards documented and maintained?
 	* - **Answer**
-	  - Coverage is measured as a percentage of total OS/Software assets for which security configuration standards are documented by an enterprise.
+	  - | Coverage is measured as a percentage of total OS/Software assets for which security
+	    | configuration standards are documented by an enterprise.
 	* - **Calculation**
 	  - :code:`(M1/M2) * 100`
 

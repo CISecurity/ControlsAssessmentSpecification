@@ -14,11 +14,15 @@ Deploy automated software update tools in order to ensure that the operating sys
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
------------
-TBD
+Inputs
+------
+#. 
+
+Operations
+----------
+#. 
 
 Measures
 --------

@@ -14,11 +14,15 @@ Maintain separate environments for production and non-production systems. Develo
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

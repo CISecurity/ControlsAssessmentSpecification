@@ -14,11 +14,15 @@ Establish a process to accept and address reports of software vulnerabilities, i
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

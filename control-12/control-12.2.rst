@@ -14,11 +14,15 @@ Perform regular scans from outside each trusted network boundary to detect any u
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

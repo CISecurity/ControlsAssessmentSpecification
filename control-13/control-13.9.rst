@@ -14,11 +14,15 @@ If USB storage devices are required, all data stored on such devices must be enc
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

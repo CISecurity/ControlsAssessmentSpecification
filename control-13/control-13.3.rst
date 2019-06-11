@@ -14,11 +14,15 @@ Deploy an automated tool on network perimeters that monitors for unauthorized tr
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

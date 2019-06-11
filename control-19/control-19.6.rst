@@ -14,11 +14,15 @@ Publish information for all workforce members, regarding reporting computer anom
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

@@ -14,11 +14,15 @@ Log all URL requests from each of the organization’s systems, whether on-site 
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
------------
+Inputs
+------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

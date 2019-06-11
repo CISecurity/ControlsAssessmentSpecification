@@ -14,11 +14,15 @@ Ensure that all software development personnel receive training in writing secur
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

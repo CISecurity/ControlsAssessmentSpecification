@@ -14,11 +14,15 @@ Maintain documented security configuration standards for all authorized network 
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

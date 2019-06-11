@@ -14,11 +14,15 @@ Encrypt all sensitive information at rest using a tool that requires a secondary
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

@@ -14,11 +14,15 @@ Deploy network-based Intrusion Detection Systems (IDS) sensors to look for unusu
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

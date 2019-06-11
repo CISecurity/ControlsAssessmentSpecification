@@ -14,11 +14,15 @@ Ensure that only authorized scripting languages are able to run in all web brows
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
------------
+Inputs
+------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

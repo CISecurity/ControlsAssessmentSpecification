@@ -14,11 +14,15 @@ Alert when users deviate from normal login behavior, such as time-of-day, workst
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

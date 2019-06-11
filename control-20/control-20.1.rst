@@ -14,11 +14,15 @@ Establish a program for penetration tests that includes a full scope of blended 
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

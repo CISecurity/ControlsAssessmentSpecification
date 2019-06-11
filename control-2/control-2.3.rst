@@ -14,11 +14,15 @@ Utilize software inventory tools throughout the organization to automate the doc
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
------------
+Inputs
+------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------
@@ -35,7 +39,8 @@ Coverage (Quality Measure)
 	* - **Question**
 	  - 
 	* - **Answer**
-	  - The calculation will yield a percentage, between 0 and 100, indicating the ratio of software with automated documentation to the total software asset inventory.
+	  - | The calculation will yield a percentage, between 0 and 100, indicating the ratio
+	    | of software with automated documentation to the total software asset inventory.
 	* - **Calculation**
 	  - :code:`(M1 / M2) * 100`
 

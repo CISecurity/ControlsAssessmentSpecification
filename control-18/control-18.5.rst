@@ -14,11 +14,15 @@ Use only standardized, currently accepted, and extensively reviewed encryption a
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

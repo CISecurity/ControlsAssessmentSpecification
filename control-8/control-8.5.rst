@@ -14,11 +14,15 @@ Configure devices to not auto-run content from removable media.
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

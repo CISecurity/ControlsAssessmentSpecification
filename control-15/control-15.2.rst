@@ -14,11 +14,15 @@ Configure network vulnerability scanning tools to detect and alert on unauthoriz
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

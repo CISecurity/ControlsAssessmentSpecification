@@ -14,13 +14,17 @@ The software inventory system should be tied into the hardware asset inventory s
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
------------
+Inputs
+------
 * Subcontrol 1.1 has been implemented, allowing for a queryable hardware inventory
 * Subcontrol 2.1 has been implemented, allowing for a queryable software inventory
 * If there are two separate systems for hardware and software inventory, then there needs to be a link, or relationship, between the two. Then, we need: 1) software inventory, 2) hardware inventory, and a reconciliation between them.
+
+Operations
+----------
+#. 
 
 Measures
 --------
@@ -40,7 +44,8 @@ Hardware Association Ratio
 	* - **Question**
 	  - 
 	* - **Answer**
-	  - The result of the calculation is the percentage of hardware assets in the hardware inventory with associated software in the software inventory.
+	  - | The result of the calculation is the percentage of hardware assets in the hardware
+	    | inventory with associated software in the software inventory.
 	* - **Calculation**
 	  - :code:`((N - M2) / N) * 100`
 
@@ -51,7 +56,8 @@ Software Association Ratio
 	* - **Question**
 	  - 
 	* - **Answer**
-	  - The result of the calculation is the percentage of software assets in the software inventory with associated hardware in the hardware inventory.
+	  - | The result of the calculation is the percentage of software assets in the software
+	    | inventory with associated hardware in the hardware inventory.
 	* - **Calculation**
 	  - :code:`((M - M1) / M) * 100`
 

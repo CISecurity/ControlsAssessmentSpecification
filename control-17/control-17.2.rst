@@ -14,11 +14,15 @@ Deliver training to address the skills gap identified to positively impact workf
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

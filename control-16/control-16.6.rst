@@ -14,11 +14,15 @@ Maintain an inventory of all accounts organized by authentication system.
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

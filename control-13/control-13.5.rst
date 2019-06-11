@@ -14,11 +14,15 @@ Monitor all traffic leaving the organization and detect any unauthorized use of 
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

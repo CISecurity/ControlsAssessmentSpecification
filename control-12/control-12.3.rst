@@ -14,11 +14,15 @@ Deny communications with known malicious or unused Internet IP addresses and lim
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

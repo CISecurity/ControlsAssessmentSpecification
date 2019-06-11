@@ -14,11 +14,15 @@ Use a dedicated account for authenticated vulnerability scans, which should not 
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
------------
-It is assumed that a pre-authorized list of scanning managers is known.
+Inputs
+------
+#. It is assumed that a pre-authorized list of scanning managers is known.
+
+Operations
+----------
+#. 
 
 Measures
 --------

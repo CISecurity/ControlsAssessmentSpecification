@@ -14,11 +14,15 @@ Use sandboxing to analyze and block inbound email attachments with malicious beh
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
------------
+Inputs
+------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

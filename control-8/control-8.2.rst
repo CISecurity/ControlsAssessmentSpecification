@@ -14,11 +14,15 @@ Ensure that the organization’s anti-malware software updates its scanning engi
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

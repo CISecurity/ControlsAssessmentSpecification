@@ -14,11 +14,15 @@ Ensure that the organization’s security awareness program is updated frequentl
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

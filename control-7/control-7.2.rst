@@ -14,11 +14,15 @@ Uninstall or disable any unauthorized browser or email client plugins or add-on 
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
------------
+Inputs
+------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

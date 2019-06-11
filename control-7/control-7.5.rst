@@ -14,11 +14,15 @@ Subscribe to URL-categorization services to ensure that they are up-to-date with
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
------------
+Inputs
+------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

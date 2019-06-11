@@ -14,11 +14,15 @@ Maintain an inventory of all sensitive information stored, processed, or transmi
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

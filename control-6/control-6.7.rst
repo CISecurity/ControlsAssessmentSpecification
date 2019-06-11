@@ -14,11 +14,15 @@ On a regular basis, review logs to identify anomalies or abnormal events.
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
------------
+Inputs
+------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

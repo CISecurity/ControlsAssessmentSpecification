@@ -14,11 +14,15 @@ Scan all enterprise devices remotely logging into the organization’s network p
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

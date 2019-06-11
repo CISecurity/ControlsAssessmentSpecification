@@ -14,11 +14,15 @@ Disable peer-to-peer (ad hoc) wireless network capabilities on wireless clients.
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

@@ -14,11 +14,15 @@ Maintain an up-to-date inventory of all of the organization’s network boundari
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

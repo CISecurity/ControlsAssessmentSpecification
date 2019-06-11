@@ -14,11 +14,15 @@ Enable system logging to include detailed information such as an event source, d
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
------------
+Inputs
+------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

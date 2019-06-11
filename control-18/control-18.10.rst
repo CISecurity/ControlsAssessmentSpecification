@@ -14,11 +14,15 @@ Protect web applications by deploying web application firewalls (WAFs) that insp
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

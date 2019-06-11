@@ -14,11 +14,15 @@ Ensure that all of the organization’s key systems are backed up as a complete 
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

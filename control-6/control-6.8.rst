@@ -14,11 +14,15 @@ On a regular basis, tune your SIEM system to better identify actionable events a
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
------------
+Inputs
+------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

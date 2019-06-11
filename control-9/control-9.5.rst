@@ -14,11 +14,15 @@ Place application firewalls in front of any critical servers to verify and valid
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

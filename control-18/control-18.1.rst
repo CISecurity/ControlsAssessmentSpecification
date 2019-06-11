@@ -14,11 +14,15 @@ Establish secure coding practices appropriate to the programming language and de
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

@@ -14,11 +14,15 @@ Ensure that appropriate logs are being aggregated to a central log management sy
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
------------
+Inputs
+------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

@@ -14,11 +14,15 @@ Disable all workstation-to-workstation communication to limit an attacker’s ab
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

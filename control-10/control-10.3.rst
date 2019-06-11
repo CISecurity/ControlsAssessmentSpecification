@@ -14,11 +14,15 @@ Test data integrity on backup media on a regular basis by performing a data rest
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

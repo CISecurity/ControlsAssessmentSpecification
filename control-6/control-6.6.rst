@@ -14,11 +14,15 @@ Deploy Security Information and Event Management (SIEM) or log analytic tools fo
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
------------
+Inputs
+------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

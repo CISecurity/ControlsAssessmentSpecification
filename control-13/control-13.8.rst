@@ -14,11 +14,15 @@ Configure systems not to write data to external removable media, if there is no 
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

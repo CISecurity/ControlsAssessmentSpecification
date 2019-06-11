@@ -14,11 +14,15 @@ Designate management personnel, as well as backups, who will support the inciden
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

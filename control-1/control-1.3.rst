@@ -22,6 +22,8 @@ In Development
 Inputs
 -----------
 
+Operations
+----------
 
 Measures
 --------
@@ -38,7 +40,8 @@ DHCP Log Ratio
 	* - **Question**
 	  - What percentage of DHCP servers in the enterprise have logging enabled?
 	* - **Answer**
-	  - This metric yields a percentage value, from 0 to 100%, indicating the ratio of DHCP servers to those with logging enabled.
+	  - | This metric yields a percentage value, from 0 to 100%, indicating the ratio of DHCP
+	    | servers to those with logging enabled.
 	* - **Calculation**
 	  - :code:`(M1/M2) * 100`
 

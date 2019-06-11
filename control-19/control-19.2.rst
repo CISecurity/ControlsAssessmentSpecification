@@ -14,11 +14,15 @@ Assign job titles and duties for handling computer and network incidents to spec
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

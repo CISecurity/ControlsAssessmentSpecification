@@ -14,11 +14,15 @@ Ensure that only fully supported web browsers and email clients are allowed to e
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
------------
+Inputs
+------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

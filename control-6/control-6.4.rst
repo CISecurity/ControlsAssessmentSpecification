@@ -14,11 +14,15 @@ Ensure that all systems that store logs have adequate storage space for the logs
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
------------
+Inputs
+------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

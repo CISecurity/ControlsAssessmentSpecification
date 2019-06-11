@@ -14,11 +14,15 @@ Install the latest stable version of any security-related updates on all network
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

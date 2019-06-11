@@ -14,11 +14,15 @@ Ensure that local logging has been enabled on all systems and networking devices
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
------------
+Inputs
+------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

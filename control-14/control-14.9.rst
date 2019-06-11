@@ -14,11 +14,15 @@ Enforce detailed audit logging for access to sensitive data or changes to sensit
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

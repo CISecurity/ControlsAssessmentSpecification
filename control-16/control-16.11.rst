@@ -14,11 +14,15 @@ Automatically lock workstation sessions after a standard period of inactivity.
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

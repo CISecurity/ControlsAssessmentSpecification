@@ -14,11 +14,15 @@ Utilize approved cryptographic mechanisms to protect enterprise data stored on a
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

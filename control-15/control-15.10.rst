@@ -14,11 +14,15 @@ Create a separate wireless network for personal or untrusted devices. Enterprise
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

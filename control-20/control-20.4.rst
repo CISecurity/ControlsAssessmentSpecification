@@ -14,11 +14,15 @@ Include tests for the presence of unprotected system information and artifacts t
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

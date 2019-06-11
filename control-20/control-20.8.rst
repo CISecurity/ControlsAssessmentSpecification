@@ -14,11 +14,15 @@ Any user or system accounts used to perform penetration testing should be contro
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

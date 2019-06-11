@@ -14,11 +14,15 @@ Train workforce members to be able to identify the most common indicators of an 
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

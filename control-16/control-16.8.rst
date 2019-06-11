@@ -14,11 +14,15 @@ Disable any account that cannot be associated with a business process or busines
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

@@ -14,11 +14,15 @@ Use multi-factor authentication and encrypted channels for all administrative ac
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
------------
+Inputs
+------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

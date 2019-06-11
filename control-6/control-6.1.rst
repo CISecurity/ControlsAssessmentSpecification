@@ -14,11 +14,15 @@ Use at least three synchronized time sources from which all servers and network 
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
------------
+Inputs
+------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

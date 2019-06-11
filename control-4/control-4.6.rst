@@ -14,11 +14,15 @@ Ensure administrators use a dedicated machine for all administrative tasks or ta
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
------------
+Inputs
+------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

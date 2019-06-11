@@ -14,11 +14,15 @@ All configuration rules that allow traffic to flow through network devices shoul
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

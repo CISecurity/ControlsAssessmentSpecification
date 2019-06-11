@@ -14,11 +14,15 @@ Train workforce members to be aware of causes for unintentional data exposures, 
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

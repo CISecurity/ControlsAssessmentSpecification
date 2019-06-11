@@ -14,11 +14,15 @@ Enable anti-exploitation features such as Data Execution Prevention (DEP) and Ad
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

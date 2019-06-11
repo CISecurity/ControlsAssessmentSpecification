@@ -14,11 +14,15 @@ Block all email attachments entering the organization’s email gateway if the f
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
------------
+Inputs
+------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

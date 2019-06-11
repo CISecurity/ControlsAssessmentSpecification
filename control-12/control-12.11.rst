@@ -14,11 +14,15 @@ Require all remote login access to the organization’s network to encrypt data 
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

@@ -14,11 +14,15 @@ Limit access to scripting tools (such as Microsoft® PowerShell and Python) to o
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
------------
+Inputs
+------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

@@ -14,11 +14,15 @@ Enable firewall filtering between VLANs to ensure that only authorized systems a
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

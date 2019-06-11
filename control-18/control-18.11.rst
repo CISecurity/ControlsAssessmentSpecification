@@ -14,11 +14,15 @@ For applications that rely on a database, use standard hardening configuration t
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

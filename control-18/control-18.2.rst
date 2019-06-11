@@ -14,11 +14,15 @@ For in-house developed software, ensure that explicit error checking is performe
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

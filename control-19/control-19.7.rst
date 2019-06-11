@@ -14,11 +14,15 @@ Plan and conduct routine incident response exercises and scenarios for the workf
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

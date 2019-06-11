@@ -14,11 +14,15 @@ Apply static and dynamic analysis tools to verify that secure coding practices a
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

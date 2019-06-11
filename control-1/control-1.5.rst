@@ -20,6 +20,9 @@ Inputs
 -----------
 #. The "weight" indicates the criticality (importance) of an endpoint, and will be defined by the organization
 
+Operations
+----------
+
 Measures
 --------
 * w(i) = weight of machine i
@@ -37,7 +40,8 @@ Asset Inventory Quality
 	* - **Question**
 	  - 
 	* - **Answer**
-	  - Percentage of assets that are tracked in the asset inventory which contain detailed information, such as network address, hardware address, asset owner, etc.
+	  - | Percentage of assets that are tracked in the asset inventory which contain detailed
+	    | information, such as network address, hardware address, asset owner, etc.
 	* - **Calculation**
 	  - :code:`(SUM from i to M1 (w(i) * a(i))) / M1`
 

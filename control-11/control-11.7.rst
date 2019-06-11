@@ -14,11 +14,15 @@ Manage the network infrastructure across network connections that are separated 
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

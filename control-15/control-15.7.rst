@@ -14,11 +14,15 @@ Leverage the Advanced Encryption Standard (AES) to encrypt wireless data in tran
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

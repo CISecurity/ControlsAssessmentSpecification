@@ -14,11 +14,15 @@ Ensure that all account usernames and authentication credentials are transmitted
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

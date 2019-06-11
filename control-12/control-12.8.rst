@@ -14,11 +14,15 @@ Enable the collection of NetFlow and logging data on all network boundary device
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

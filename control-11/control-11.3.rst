@@ -14,11 +14,15 @@ Compare all network device configurations against approved security configuratio
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

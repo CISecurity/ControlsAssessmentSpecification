@@ -14,11 +14,15 @@ Decrypt all encrypted network traffic at the boundary proxy prior to analyzing t
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

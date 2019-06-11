@@ -18,12 +18,11 @@ In Development
 
 Inputs
 ------
-1. 
-2. 
+#. 
 
-Assumptions
-^^^^^^^^^^^
-
+Operations
+----------
+#. 
 
 Measures
 --------

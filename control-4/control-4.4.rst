@@ -14,11 +14,15 @@ Where multi-factor authentication is not supported (such as local administrator,
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
------------
+Inputs
+------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

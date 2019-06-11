@@ -14,11 +14,15 @@ Utilize application whitelisting technology on all assets to ensure that only au
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
------------
+Inputs
+------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------
@@ -36,7 +40,8 @@ Quality of Software Authorization
 	* - **Question**
 	  - What percentage of an enterprise's assets have application whitelisting enabled?
 	* - **Answer**
-	  - This measurement indicates a percentage, from 0 to 100%, of assets enabling application whitelisting.
+	  - | This measurement indicates a percentage, from 0 to 100%, of assets enabling application
+	    | whitelisting.
 	* - **Calculation**
 	  - :code:`(M1/M2) * 100`
 

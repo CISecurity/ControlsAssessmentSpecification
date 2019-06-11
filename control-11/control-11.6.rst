@@ -14,11 +14,15 @@ Ensure network engineers use a dedicated machine for all administrative tasks or
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

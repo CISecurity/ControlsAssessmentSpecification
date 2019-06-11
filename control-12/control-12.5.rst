@@ -14,11 +14,15 @@ Configure monitoring systems to record network packets passing through the bound
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

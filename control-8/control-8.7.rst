@@ -14,11 +14,15 @@ Enable Domain Name System (DNS) query logging to detect hostname lookups for kno
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

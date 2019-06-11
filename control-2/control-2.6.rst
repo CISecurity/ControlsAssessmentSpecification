@@ -14,11 +14,15 @@ Ensure that unauthorized software is either removed or the inventory is updated 
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
------------
+Inputs
+------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

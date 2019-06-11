@@ -14,11 +14,15 @@ Utilize a risk-rating process to prioritize the remediation of discovered vulner
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
------------
-TBD
+Inputs
+------
+#. 
+
+Operations
+----------
+#. 
 
 Measures
 --------

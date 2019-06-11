@@ -14,11 +14,15 @@ Ensure that all network traffic to or from the Internet passes through an authen
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

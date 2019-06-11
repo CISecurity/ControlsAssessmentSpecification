@@ -14,11 +14,15 @@ Deploy network-based Intrusion Prevention Systems (IPS) to block malicious netwo
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

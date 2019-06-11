@@ -14,13 +14,16 @@ Deploy automated software update tools in order to ensure that third-party softw
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
------------
-Does this sub-control cover software components comprising that piece of software (such as 3d party libraries used by the software, like OpenSSL)
+Inputs
+------
+#. Does this sub-control cover software components comprising that piece of software (such as 3d party libraries used by the software, like OpenSSL)
 We're gonna say "NO" to this one.
 
+Operations
+----------
+#. 
 
 Measures
 --------

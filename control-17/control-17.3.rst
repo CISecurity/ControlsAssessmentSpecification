@@ -14,11 +14,15 @@ Create a security awareness program for all workforce members to complete on a r
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

@@ -14,11 +14,15 @@ The organization’s application whitelisting software must ensure that only aut
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
------------
-The assumption is made that
+Inputs
+------
+#. 
+
+Operations
+----------
+#. 
 
 Measures
 --------
@@ -33,9 +37,11 @@ Quality of script authorization
 .. list-table::
 
 	* - **Question**
-	  - What percentage of authorized scripts are allowed to be executed per application whitelisting protocols?
+	  - | What percentage of authorized scripts are allowed to be executed per application
+	    | whitelisting protocols?
 	* - **Answer**
-	  - The calculation of this metric yields a percentage, from 0 to 100%, indicating the ratio of scripts that are whitelisted to the total number of scripts.
+	  - | The calculation of this metric yields a percentage, from 0 to 100%, indicating the
+	    | ratio of scripts that are whitelisted to the total number of scripts.
 	* - **Calculation**
 	  - :code:`(M1/M2) * 100`
 

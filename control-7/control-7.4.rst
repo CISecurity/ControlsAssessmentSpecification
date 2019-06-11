@@ -14,11 +14,15 @@ Enforce network-based URL filters that limit a system’s ability to connect to 
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
------------
+Inputs
+------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

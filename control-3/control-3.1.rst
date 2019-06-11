@@ -14,14 +14,17 @@ Utilize an up-to-date Security Content Automation Protocol (SCAP) compliant vuln
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
------------
+Inputs
+------
+#. A list of known SCAP-validated vulnerability scanners is available
+#. Inventory of vulnerability scanners is up-to-date
+#. Enterprise-specific scanning frequency (not to be less frequent than weekly) is known
 
-1. A list of known SCAP-validated vulnerability scanners is available
-2. Inventory of vulnerability scanners is up-to-date
-3. Enterprise-specific scanning frequency (not to be less frequent than weekly) is known
+Operations
+----------
+#. 
 
 Measures
 --------
@@ -39,9 +42,11 @@ Freshness
 .. list-table::
 
 	* - **Question**
-	  - This metric is intended to determine if vulnerability scans are being performed within a reasonable time frame.
+	  - | This metric is intended to determine if vulnerability scans are being performed
+	    | within a reasonable time frame.
 	* - **Answer**
-	  - This calculation results in a TRUE/FALSE answer, indicating whether or not consecutive vulnerability scans (M1 and M2) are performed within the maximum allowed delay (M3)
+	  - | This calculation results in a TRUE/FALSE answer, indicating whether or not consecutive
+	    | vulnerability scans (M1 and M2) are performed within the maximum allowed delay (M3).
 	* - **Calculation**
 	  - :code:`TRUE if (M2 - M1) <= M3; FALSE otherwise`
 
@@ -50,9 +55,11 @@ Coverage Quality
 .. list-table::
 
 	* - **Question**
-	  - This metric is intended to determine the ratio of the number of devices on the network to those being regularly scanned for vulnerabilities.
+	  - | This metric is intended to determine the ratio of the number of devices on the network
+	    | to those being regularly scanned for vulnerabilities.
 	* - **Answer**
-	  - The calculation of this metric results in a percentage, between 0 and 100, indicating the vulnerability scanning coverage for an enterprise.
+	  - | The calculation of this metric results in a percentage, between 0 and 100, indicating
+	    | the vulnerability scanning coverage for an enterprise.
 	* - **Calculation**
 	  - :code:`(M5/M4) * 100`
 

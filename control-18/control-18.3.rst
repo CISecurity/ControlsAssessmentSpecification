@@ -14,11 +14,15 @@ Verify that the version of all software acquired from outside your organization 
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

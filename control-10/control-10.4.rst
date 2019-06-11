@@ -14,11 +14,15 @@ Ensure that backups are properly protected via physical security or encryption w
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

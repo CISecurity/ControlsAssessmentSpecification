@@ -14,11 +14,15 @@ Train workforce members on the importance of enabling and utilizing secure authe
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

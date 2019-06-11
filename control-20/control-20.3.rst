@@ -14,11 +14,15 @@ Perform periodic Red Team exercises to test organizational readiness to identify
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

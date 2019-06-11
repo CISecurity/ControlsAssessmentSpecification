@@ -14,11 +14,15 @@ Wherever possible, ensure that Red Team results are documented using open, machi
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

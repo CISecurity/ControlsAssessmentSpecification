@@ -14,11 +14,15 @@ Configure devices so that they automatically conduct an anti-malware scan of rem
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

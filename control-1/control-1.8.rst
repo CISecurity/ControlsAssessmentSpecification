@@ -19,6 +19,8 @@ In Development
 Inputs
 -----------
 
+Operations
+----------
 
 Measures
 --------

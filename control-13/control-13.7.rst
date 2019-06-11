@@ -14,11 +14,15 @@ If USB storage devices are required, enterprise software should be used that can
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

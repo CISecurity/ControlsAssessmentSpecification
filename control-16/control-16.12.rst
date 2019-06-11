@@ -14,11 +14,15 @@ Monitor attempts to access deactivated accounts through audit logging.
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

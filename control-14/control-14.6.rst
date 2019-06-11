@@ -14,11 +14,15 @@ Protect all information stored on systems with file system, network share, claim
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

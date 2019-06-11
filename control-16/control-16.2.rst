@@ -14,11 +14,15 @@ Configure access for all accounts through as few centralized points of authentic
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

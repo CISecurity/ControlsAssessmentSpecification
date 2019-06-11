@@ -14,11 +14,15 @@ Ensure that wireless networks use authentication protocols such as Extensible Au
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

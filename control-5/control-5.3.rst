@@ -14,11 +14,15 @@ Store the master images and templates on securely configured servers, validated 
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
------------
-* A "securely configured server" assumes the application of numerous subcontrols governing deployment of secure configuration settings, proper administrative access, and network isolation.
+Inputs
+------
+#. A "securely configured server" assumes the application of numerous subcontrols governing deployment of secure configuration settings, proper administrative access, and network isolation.
+
+Operations
+----------
+#. 
 
 Measures
 --------
@@ -33,9 +37,11 @@ Validated Image Ratio
 .. list-table::
 
 	* - **Question**
-	  - Determine the percentage of total images which are valid according to integrity monitoring tools.
+	  - | Determine the percentage of total images which are valid according to integrity
+	    | monitoring tools.
 	* - **Answer**
-	  - The calculation will yield a percentage, from 0 to 100, indicating the ratio of total images to those images deemed valid.
+	  - | The calculation will yield a percentage, from 0 to 100, indicating the ratio of
+	    | total images to those images deemed valid.
 	* - **Calculation**
 	  - :code:`(M1/M2) * 100`
 

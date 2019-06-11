@@ -14,11 +14,15 @@ Encrypt or hash with a salt all authentication credentials when stored.
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

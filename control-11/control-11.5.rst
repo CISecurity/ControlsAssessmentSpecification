@@ -14,11 +14,15 @@ Manage all network devices using multi-factor authentication and encrypted sessi
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

@@ -14,11 +14,15 @@ Remove sensitive data or systems not regularly accessed by the organization from
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

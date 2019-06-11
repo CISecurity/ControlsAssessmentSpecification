@@ -14,11 +14,15 @@ Enable command-line audit logging for command shells, such as Microsoft PowerShe
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

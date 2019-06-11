@@ -14,11 +14,15 @@ Ensure that only software applications or operating systems currently supported 
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
------------
-The assumption is that a list of all authorized software is available, and that this list indicates whether or not the software is currently supported by the vendor.
+Inputs
+------
+#. The assumption is that a list of all authorized software is available, and that this list indicates whether or not the software is currently supported by the vendor.
+
+Operations
+----------
+#. 
 
 Measures
 --------
@@ -36,9 +40,12 @@ Supported Software Accuracy
 .. list-table::
 
 	* - **Question**
-	  - This metric is intended to determine the ratio of software tracked as supported in the software inventory, but is not supported by the vendor.
+	  - | This metric is intended to determine the ratio of software tracked as supported
+	    | in the software inventory, but is not supported by the vendor.
 	* - **Answer**
-	  - The calculation of this metric is made by summing the M(U) value for each software asset tracked in M, and the associated ratio of that sum to the # of unsupported software in the enterprise (M1).
+	  - | The calculation of this metric is made by summing the M(U) value for each software
+	    | asset tracked in M, and the associated ratio of that sum to the # of unsupported
+	    | software in the enterprise (M1).
 	* - **Calculation**
 	  - :code:`(SUM of all M(U) for all U) / M1`
 
@@ -47,9 +54,12 @@ Unsupported Software Accuracy
 .. list-table::
 
 	* - **Question**
-	  - This metric is intended to determine the ratio of software tracked as unsupported in the software inventory, but is still supported by the vendor.
+	  - | This metric is intended to determine the ratio of software tracked as unsupported
+	    | in the software inventory, but is still supported by the vendor.
 	* - **Answer**
-	  - The calculation of this metric is made by summing the M(S) value for each software asset tracked in M, and the associated ratio of that sum to the # of supported software in the enterprise (M2).
+	  - | The calculation of this metric is made by summing the M(S) value for each software
+	    | asset tracked in M, and the associated ratio of that sum to the # of supported software
+	    | in the enterprise (M2).
 	* - **Calculation**
 	  - :code:`(SUM of all M(S)) for all U) / M2`
 

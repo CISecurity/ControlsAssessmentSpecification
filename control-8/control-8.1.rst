@@ -14,11 +14,15 @@ Utilize centrally managed anti-malware software to continuously monitor and defe
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

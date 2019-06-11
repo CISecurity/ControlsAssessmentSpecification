@@ -14,11 +14,15 @@ Regularly compare the results from consecutive vulnerability scans to verify tha
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
------------
+Inputs
+------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

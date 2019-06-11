@@ -14,11 +14,15 @@ Require multi-factor authentication for all user accounts, on all systems, wheth
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

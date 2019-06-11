@@ -14,11 +14,15 @@ Maintain an inventory of authorized wireless access points connected to the wire
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

@@ -14,11 +14,15 @@ Deny communication over unauthorized TCP or UDP ports or application traffic to 
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

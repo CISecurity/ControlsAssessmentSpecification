@@ -14,11 +14,15 @@ Maintain an inventory of each of the organization’s authentication systems, in
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

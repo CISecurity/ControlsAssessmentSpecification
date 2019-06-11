@@ -14,11 +14,15 @@ Ensure that only network ports, protocols, and services listening on a system wi
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

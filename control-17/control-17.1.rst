@@ -14,11 +14,15 @@ Perform a skills gap analysis to understand the skills and behaviors workforce m
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

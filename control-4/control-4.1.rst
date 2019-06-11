@@ -14,11 +14,15 @@ Use automated tools to inventory all administrative accounts, including domain a
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
------------
+Inputs
+------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

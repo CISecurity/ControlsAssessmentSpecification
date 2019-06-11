@@ -14,16 +14,18 @@ Perform authenticated vulnerability scanning with agents running locally on each
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
------------
+Inputs
+------
+#. 
 
-TBD
+Operations
+----------
+#. 
 
 Measures
 --------
-
 TBD
 
 Metrics

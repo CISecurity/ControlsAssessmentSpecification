@@ -14,11 +14,15 @@ Configure systems to issue a log entry and alert on unsuccessful logins to an ad
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
------------
+Inputs
+------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------
@@ -33,7 +37,8 @@ Log and Alert Enabled
 .. list-table::
 
 	* - **Question**
-	  - This measurement is meant to determine if a log entry and alert are generated when an unsuccessful administrative login attempt is made.
+	  - | This measurement is meant to determine if a log entry and alert are generated when an
+	    | unsuccessful administrative login attempt is made.
 	* - **Answer**
 	  - The calculation results in TRUE if both log entry and alert are generated.
 	* - **Calculation**

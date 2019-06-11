@@ -14,11 +14,15 @@ Create incident scoring and prioritization schema based on known or potential im
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

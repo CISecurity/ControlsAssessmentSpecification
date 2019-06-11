@@ -14,11 +14,15 @@ Only allow access to authorized cloud storage or email providers.
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

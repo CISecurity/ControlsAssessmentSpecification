@@ -14,11 +14,15 @@ Ensure that all backups have at least one offline (i.e., not accessible via a ne
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

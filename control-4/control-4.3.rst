@@ -18,11 +18,15 @@ This control is NOT saying no network activity at all.  There's definitely some 
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
------------
+Inputs
+------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

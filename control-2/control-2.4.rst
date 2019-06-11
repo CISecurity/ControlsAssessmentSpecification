@@ -14,11 +14,15 @@ The software inventory system should track the name, version, publisher, and ins
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
------------
-* Need to define what "weight" is in this context
+Inputs
+------
+#. Need to define what "weight" is in this context
+
+Operations
+----------
+#. 
 
 Measures
 --------
@@ -34,9 +38,11 @@ Inventory Quality
 .. list-table::
 
 	* - **Question**
-	  - What percentage of the software inventory tracks appropriate information about the software?
+	  - | What percentage of the software inventory tracks appropriate information about the
+	    | software?
 	* - **Answer**
-	  - A percentage value, between 0 and 100%, indicating the quality of information tracked in an organization's software inventory.
+	  - | A percentage value, between 0 and 100%, indicating the quality of information tracked
+	    | in an organization's software inventory.
 	* - **Calculation**
 	  - :code:`((SUM from i to n of (w(i) * d(i))) / n) * 100`
 

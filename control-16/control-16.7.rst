@@ -14,11 +14,15 @@ Establish and follow an automated process for revoking system access by disablin
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

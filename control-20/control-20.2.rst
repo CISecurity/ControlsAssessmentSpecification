@@ -14,11 +14,15 @@ Conduct regular external and internal penetration tests to identify vulnerabilit
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

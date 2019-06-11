@@ -14,11 +14,15 @@ Disable wireless peripheral access of devices [such as Bluetooth and Near Field 
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------

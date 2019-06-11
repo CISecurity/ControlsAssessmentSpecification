@@ -14,11 +14,15 @@ Automatically disable dormant accounts after a set period of inactivity.
 
 Status
 ------
-Draft
+In Development
 
-Assumptions
+Inputs
 -----------
+#. 
 
+Operations
+----------
+#. 
 
 Measures
 --------
