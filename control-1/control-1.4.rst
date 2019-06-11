@@ -22,6 +22,10 @@ Inputs
 #. A "ground truth" inventory list to compare with input 1.  This list would be enhanced by manual verification, but a tool-generated or aggregated list could be substituted here.  This should be an aggregation of the devices detected over a period of time, preferably not from a single scan.
 #. A write-up of the procedure for adding or removing assets to or from the inventory - only for manual review.
 
+Assumptions
+^^^^^^^^^^^
+* Devices belonging to the organization, but not connected to the organization's network, require manual discovery in order to be included in the "ground truth" inventory.
+
 Operations
 ----------
 * If Input 1 is not provided, this sub-control is measured at a 0 (complete fail).
