@@ -25,7 +25,7 @@ Inputs
 
 Operations
 ----------
-If optional disposition list is provided, the checkes would be tailored to those dispositions.  For the following, assume no disposition list is available:
+If the optional disposition list is provided, the checkes would be tailored to those dispositions.  For the following, assume no disposition list is available:
 
 #. At the timeframe specified by Input 3, for each unauthorized asset (Input 1), check to see if the asset is present in the updated asset inventory (Input 2).
 #. For those Input 1 items that are not in Input 2, scan the network to determine if the item is still reachable on the network.
@@ -44,9 +44,9 @@ Metrics
 .. list-table::
 
 	* - **Question**
-	  - 
+	  - TBD
 	* - **Answer**
-	  - 
+	  - TBD
 	* - **Calculation**
 	  - | If the value of M2 is 0, there are no unauthorized assets that remain unaccounted for.
 	    | In this case, the value of the metric is 1.  Otherwise, the value is :code:`(M2 - M1) / M2`

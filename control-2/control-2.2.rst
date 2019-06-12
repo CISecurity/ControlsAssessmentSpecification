@@ -14,54 +14,36 @@ Ensure that only software applications or operating systems currently supported 
 
 Status
 ------
-In Development
+Draft
 
 Inputs
 ------
-#. The assumption is that a list of all authorized software is available, and that this list indicates whether or not the software is currently supported by the vendor.
+#. The authorized software list with a notation of "supported" or "unsupported" for each entry.
+#. Access to a database containing supported/unsupported information by product.
 
 Operations
 ----------
-#. 
+#. For each entry in Input 1 that is labeled "supported", perform a lookup in Input 2 to verify.
 
 Measures
 --------
-* M = The list of software maintained in the software asset inventory (See control 2.1)
-* M1 = # of unsupported software
-* M2 = # of supported software
-* M(U) = 1 if a software asset U is unsupported, but tracked as supported in M
-* M(S) = 1 if a software asset S is supported, but tracked as unsupported in M
+* M1 = # of items in Input 1 that are unsupported (combination of Operation 1 results and those initially marked as unsupported in Input 1)
+* M2 = Total # of authorized software (from Input 1)
 
 Metrics
 -------
 
-Supported Software Accuracy
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Percentage of Unsupported Software in Use
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Question**
-	  - | This metric is intended to determine the ratio of software tracked as supported
-	    | in the software inventory, but is not supported by the vendor.
+	  - | What percentage of authorized software in use is unsupported?
 	* - **Answer**
-	  - | The calculation of this metric is made by summing the M(U) value for each software
-	    | asset tracked in M, and the associated ratio of that sum to the # of unsupported
-	    | software in the enterprise (M1).
+	  - | The calculation of this metric is determined by the ratio of 
+	    | unsupported software to the total authorized software in use.
 	* - **Calculation**
-	  - :code:`(SUM of all M(U) for all U) / M1`
-
-Unsupported Software Accuracy
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. list-table::
-
-	* - **Question**
-	  - | This metric is intended to determine the ratio of software tracked as unsupported
-	    | in the software inventory, but is still supported by the vendor.
-	* - **Answer**
-	  - | The calculation of this metric is made by summing the M(S) value for each software
-	    | asset tracked in M, and the associated ratio of that sum to the # of supported software
-	    | in the enterprise (M2).
-	* - **Calculation**
-	  - :code:`(SUM of all M(S)) for all U) / M2`
+	  - :code:`(M2 - M1) / M2`
 
 .. history
 .. authors
