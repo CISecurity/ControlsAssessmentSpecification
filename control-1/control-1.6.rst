@@ -18,7 +18,7 @@ Draft
 
 Inputs
 -----------
-#. A list of unauthorized assets (potentially the output from discovery tools used for implementation of sub-controls 1.1 and/or 1.2).
+#. A list of discovered assets not currently present in the asset inventory ("unauthorized" assets).
 #. An updated asset inventory
 #. An organizationally defined timeframe for "timely"
 #. (Optional) Measurement results would be more useful if the disposition of the items (removed, added to inventory, quarantined, etc.) was provided to be verified, but this is not absolutely necessary.

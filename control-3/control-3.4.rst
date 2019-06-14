@@ -27,7 +27,7 @@ Operations
 ----------
 #. For each endpoint in Input 3, compare that endpoint's auto-update configuration to that provided in Input 1 and generate a score based on the logic provided by Input 1 (M1).
 #. For each endpoint in Input 3, retrieve a list of installed OS updates (M2) and compare that endpoint's installed updates to the required updates provided by Input 2.  The list of matching updates is M3.
-#. 
+#. (Optional) If timing metrics are desired, for each endpoint, also determine the elapsed time between the update release date provided in Input 2 and the install date for each of the corresponding updates on the endpoint; this information could be added as another field attached to each update entry in M3.
 
 Measures
 --------
@@ -40,27 +40,22 @@ Measures
 Metrics
 -------
 
-Update Ratio
-^^^^^^^^^^^^
+Update Effectiveness (Per Endpoint)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Question**
-	  - TBD
+	  - | For a given endpoint, calculate the ratio of installed OS updates to the total
+	    | number of OS updates required.
 	* - **Answer**
-	  - TBD
+	  - This metric is calculated by a simple ratio.
 	* - **Calculation**
-	  - :code:`?`
+	  - | If M4 = 0, this indicates the endpoint requires no OS updates.
+	    | Otherwise, this metric is calculated as :code:`M5 / M4`
 
-Freshness
-^^^^^^^^^
-.. list-table:
-
-* - **Question**
-	- TBD
-* - **Answer**
-	- TBD
-* - **Calculation**
-	- :code:`?`
+Update Effectiveness (Organizational)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The organizational metric is calculated by averaging the results of the "per endpoint" metric above.
 
 .. history
 .. authors

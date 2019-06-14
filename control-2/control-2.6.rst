@@ -22,16 +22,18 @@ Inputs
 #. An organizationally defined allowable timeframe for resolution of discovered unauthorized software
 #. The list of endpoints to be checked
 #. The updated authorized software list, following the timeframe defined by Input 2
+#. The "scanning threshold"; the time period between scan 1 and scan 2
 
 Assumptions
 ^^^^^^^^^^^
-The assumption is made, for Input 4, that the authorized software list may have been updated after a manual review of unauthorized software based on user requests, etc.
+* For Input 4, that the authorized software list may have been updated after a manual review of unauthorized software based on user requests, etc.
+* For Input 5, that the scanning threshold time period is greater than Input 2 (resolution timeframe).
 
 Operations
 ----------
 #. For each endpoint in Input 3, scan the installed software present on that endpoint.
 #. Compare the installed software list for each endpoint (M1) to the authorized software list (Input 1) to generate the unauthorized software list for that endpoint (M2).
-#. Wait the allowable timeframe for resolution (Input 2) and rescan the endpoints specified by Input 3.
+#. Wait the "scanning threshold" time period (Input 5) and rescan the endpoints specified by Input 3.
 #. For each software on the M2 list, determine if that software is still present in the Operation 3 scan.
 #. For those that are still present, check Input 4 to determine if the software is now present on the updated authorized software list (Input 4).  Software that remains installed on the machine, but does not appear on the updated authorized software list is added to the unaddressed software list for that endpoint (M3).
 
@@ -45,15 +47,24 @@ Measures
 
 Metrics
 -------
+
+Unauthorized Software (Per Endpoint)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Question**
-	  - TBD
+	  - Given a single endpoint, ensure unauthorized software installations are addressed.
 	* - **Answer**
-	  - TBD
+	  - | The calculation of this metric, per endpoint, relies on two scans of installed
+	    | software, and is the ratio of unauthorized software installed on the endpoint to
+	    | the software remaining unaddressed in the authorized software list.
 	* - **Calculation**
 	  - | If M4 = 0, this indicates no unauthorized software is installed on a given endpoint.
 	    | Otherwise, this metric is calculated as :code:`(M4 - M5) / M4`
+
+Unauthorized Software (Organizational)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The organizational metric is calculated by averaging the results of the "per endpoint" metric above.
 
 .. history
 .. authors
