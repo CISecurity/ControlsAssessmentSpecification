@@ -14,11 +14,12 @@ Maintain documented security configuration standards for all authorized operatin
 
 Status
 ------
-In Development
+Draft
 
 Inputs
 ------
-#. 
+#. The list of authorized software, per Control 2.
+#. The list of enterprise security configuration standards.
 
 Assumptions
 ^^^^^^^^^^^
@@ -26,12 +27,14 @@ Assumptions
 
 Operations
 ----------
-#. 
+#. Perform a set calculation, computing the Intersection (M1) of Input 1 and Input 2
 
 Measures
 --------
-* M1 = # of software and OS with security configuration standards
-* M2 = total OS and software
+* M1 = The intersection of Input 1 and Input 2.  This intersection measures those authorized software with security configuration standards.
+* M2 = The "left" side of the set calculation measures the number of authorized software without security configuration standards.
+* M3 = The "right" side of the set calculation measures the number of security configuration standards without any authorized software to which they are associated.
+* M4 = The number of authorized software.
 
 Metrics
 -------
@@ -47,7 +50,7 @@ Coverage (Quality Measure)
 	  - | Coverage is measured as a percentage of total OS/Software assets for which security
 	    | configuration standards are documented by an enterprise.
 	* - **Calculation**
-	  - :code:`(M1/M2) * 100`
+	  - :code:`(M4 - M2) / M4`
 
 .. history
 .. authors
