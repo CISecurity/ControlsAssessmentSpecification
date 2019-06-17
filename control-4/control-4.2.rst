@@ -14,43 +14,56 @@ Before deploying any new asset, change all default passwords to have values cons
 
 Status
 ------
-In Development
+Draft
 
 Inputs
 ------
-There are really two parts to this measure: 
-
-1. default passwords are not in use, and 
-2. the non-default password is compliant with enterprise standards (i.e. a password policy).
-
-This metric is concerned with number 1, above.
-
-Consideration needs to be made for software applications that require credentials - applying this measure and password policies at the application level is also important (in addition to the OS level).
+#. The organization's inventory of endpoints which utilize credentials, either at the OS level or at the application software level
+#. An authoritative source of known default password hashes
+#. The organization's defined password policy configuration
 
 Operations
 ----------
-#. 
+#. For each endpoint, enumerate the available logins, including hashed credentials (M1)
+#. For each login, compare the password hash to the authoritative source of known default password hashes
+#. For each endpoint, collect the applied password policy configuration
+#. For each endpoint, compare the password policy configuration to the organizationally defined password policy recommendations (including password length, complexity requirements, etc.)
 
 Measures
 --------
-* M1 = # of total account 
-* M2 = # of account with default password
+* M1 = The enumerated list of available logins for endpoints which utilized credentialed accounts
+* M2 = The number of available logins who's password hash matches a known default password hash
+* M3 = The enumerated list of the sampled endpoint password policy configurations
+* M4 = The number of sampled password policy configurations that do not match organizationally defined recommendations.
 
 
 Metrics
 -------
 
-Coverage (Quality Measure)
+Default Password Usage
+^^^^^^^^^^^^^^^^^^^^^^
+.. list-table::
+
+	* - **Question**
+	  - | What percentage of credentials have been changed from the default value?
+	* - **Answer**
+	  - | This metric yields the ratio of credentials which have been changed from
+	    | the default to the total number of credentials.
+	* - **Calculation**
+	  - | * If M2 = 0, then no accounts remain configured with the default password.
+	    | * Otherwise, the value of this metric is :code:`(M1 - M2) / M1`
+
+Password Policy Compliance
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Question**
-	  - | What percentage of total accounts remain configured with default passwords?
+	  - | What percentage of total accounts comply with the organization's password policies?
 	* - **Answer**
-	  - | This metric yields a positive percentage value indicating what percentage of accounts
-	    | remain configured with a default password.
+	  - | This metric yields the ratio of compliant accounts to the total number of accounts.
 	* - **Calculation**
-	  - :code:`100 - (((M1-M2)/M1) * 100)`
+	  - | * If M4 = 0, then no accounts deviate from the organization's password policies.
+	    | * Otherwise, the value of this metric is :code:`(M3 - M4) / M3`
 
 .. history
 .. authors
