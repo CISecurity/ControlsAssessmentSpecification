@@ -14,56 +14,41 @@ Use Domain Name System (DNS) filtering services to help block access to known ma
 
 Status
 ------
-In Development
+Draft
 
 Inputs
 ------
-#. 
-
-Assumptions
-^^^^^^^^^^^
-* An authoritative source of blacklisted URLs is available, i.e. phishtank
-* M2 (below) is available via formal analytics or AT
+#. The list of endpoints to be audited.
+#. The list of accepted DNS filtering services, such as Quad-9.
 
 Operations
 ----------
-#. 
+#. For each endpoint in Input 1, collect it's DNS configuration setting.
 
 Measures
 --------
-* M1 = # of blacklisted URLs from authoritative source
-* M2 = # of blocked URLs
-* M3 = time new URL "U1" available in authoritative source
-* M4 = time that URL "U1" is added to DNS filter
+* M1 = 1 if an endpoint audited in Operation 1 is configured correctly; 0 otherwise.
+* M2 = Total number of endpoints audited.
 
 Metrics
 -------
 
-Coverage
-^^^^^^^^
+DNS Filtering Coverage
+^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Question**
-	  - | Determine the percentage of blocked URLs which are currently blacklisted by an
-	    | authoritative source.
+	  - | Determine the ratio of endpoints configured to use accepted DNS filtering services
+	    | to the total number of endpoints which utilize DNS.
 	* - **Answer**
 	  - | The calculation will yield a percentage, from 0 to 100, indicating the ratio of
-	    | blocked URLs to those currently blacklisted.
+	    | correctly configured endpoints to the total number of endpoints.
 	* - **Calculation**
-	  - :code:`(M2/M1) * 100`
+	  - :code:`(SUM(M1)) / M2`
 
-Freshness
-^^^^^^^^^
-.. list-table::
-
-	* - **Question**
-	  - | How much time is required to include a newly blacklisted URL in an organization's
-	    | DNS filters?
-	* - **Answer**
-	  - | The calculation will provide a numeric value, with "larger" values indicating a longer
-	    | timespan between URL blacklisting and inclusion in DNS filters.
-	* - **Calculation**
-	  - :code:`(M3/M4)`
+Traffic Analysis
+^^^^^^^^^^^^^^^^
+**NOTE** A second measurement could utilize traffic analysis to determine if any traffic is *not* being sent through the prescribed DNS services.
 
 .. history
 .. authors
