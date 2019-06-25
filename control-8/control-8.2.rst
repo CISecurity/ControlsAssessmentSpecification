@@ -14,30 +14,63 @@ Ensure that the organization’s anti-malware software updates its scanning engi
 
 Status
 ------
-In Development
+Draft
 
 Inputs
 -----------
-#. 
+#. Endpoint inventory (with entry for each endpoint indicating whether that endpoint can support anti-malware software or not)
+#. Anti-malware software version information (this is a list of acceptable versions for the scanning engines and the signature databases for any anti-malware products in use on endpoints in Input 1; this version information needs to be updated frequently to reflect current version information and age off outdated versions)
+#. Maximum time allowed for anti-malware software updates to be applied to endpoints
+
+Assumptions
+^^^^^^^^^^^
+* Some endpoints, such as network devices, may not support anti-malware software. Whether an endpoint supports anti-malware software is provided as part of Input 1. Devices that cannot support anti-malware software are removed from the list of endpoints to be checked during Operation 1, and these devices are not counted in the metric below.
 
 Operations
 ----------
-#. 
+#. Refine the endpoint inventory (Input 1) to only contain endpoints that can support anti-malware software endpoint inventory - this reduced list of endpoints becomes M1
+#. For each endpoint in M1, generate a list of those endpoints that have an acceptable version of anti-malware software installed and enabled (both scanning engine and signature database) according to the information provided in Input 2 (M2) and a list of those endpoints that do not have an acceptable version of anti-malware software installed and enabled (M3).
+#. For each endpoint in M1, generate a list of those endpoints that have been updated within the time-frame specified by Input 3 (M4), and a list of those endpoints that have not been updated within that time-frame (M5)
 
 Measures
 --------
-
+* M1 = List of endpoints capable of supporting anti-malware software
+* M2 = List of endpoints with an acceptable version of anti-malware software installed and enabled (version compliant list)
+* M3 = List of endpoints that do not have an acceptable version of anti-malware software installed and enabled (version non-compliant list)
+* M4 = List of endpoints that have had their anti-malware software updated within the specified time-frame (time compliant list)
+* M5 = List of endpoints that have not had their anti-malware software updated within the specified time-frame (time non-compliant list)
+* M6 = Number of endpoints in M1 (number of endpoints capable of supporting anti-malware software)
+* M7 = Number of endpoints in M2 (number of version compliant endpoints)
+* M8 = Number of endpoints in M4 (number of time compliant endpoints)
 
 Metrics
 -------
+
+Coverage
+^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Question**
-	  - 
+	  - | What is the ratio of anti-malware software version compliant endpoints to the total
+	    | number of endpoints capable of supporting anti-malware software?
 	* - **Answer**
 	  - 
 	* - **Calculation**
-	  - :code:`?`
+	  - :code:`M7 / M8`
+
+Freshness
+^^^^^^^^^^^^^^
+.. list-table::
+
+	* - **Question**
+	  - | What is the ratio of endpoints whose anti-malware software has been updated within
+	    | the specified timeframe?
+	* - **Answer**
+	  - 
+	* - **Calculation**
+	  - :code:`M8 / M6`
+
+**NOTE**: Comparing the coverage metric to the freshness metric can serve as a useful check - for instance, if the coverage metric tends to be high, while the freshness metric is low, that would suggest that Input 2 might not have been updated recently enough (that is, outdated versions are being considered acceptable)?
 
 .. history
 .. authors
