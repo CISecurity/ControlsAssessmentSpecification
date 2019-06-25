@@ -14,30 +14,41 @@ Create a separate wireless network for personal or untrusted devices. Enterprise
 
 Status
 ------
-In Development
+Draft
 
 Inputs
 -----------
-#. 
+#. Isolated wireless network SSID(s)
+#. List of corporate wireless network SSID(s)
 
 Operations
 ----------
-#. 
+#. For each corporate wireless network SSID, attempt to connect non-corporate device (M2)
+#. Determine access policy for other wireless network
 
 Measures
 --------
-
+* M1 = 1 if the separate wireless network exists for personal/non-corporate devices; 0 otherwise.
+* M2 = Number of corporate wireless network SSID(s) accepting non-corporate devices
+* M3 = Number of corporate wireless network SSID(s)
 
 Metrics
 -------
+
+Logical Isolation
+^^^^^^^^^^^^^^^^^
+The overall measure fails if there is no separate network for personal/non-corporate devices (M1 = 0)
+
+Coverage
+^^^^^^^^
 .. list-table::
 
 	* - **Question**
-	  - 
+	  - What percentage of the total number of wireless networks exist but are misconfigured?
 	* - **Answer**
 	  - 
 	* - **Calculation**
-	  - :code:`?`
+	  - :code:`M2 / M3`
 
 .. history
 .. authors

@@ -14,30 +14,39 @@ Protect all information stored on systems with file system, network share, claim
 
 Status
 ------
-In Development
+Draft
 
 Inputs
 -----------
-#. 
+#. List of endpoints (Endpoint Inventory)
+#. Access control configuration policy
 
 Operations
 ----------
-#. 
+#. For each endpoint in Input 1, collect the "ground truth" access policy for that endpoint and compare it to the access control configuration policy in Input 2. Generate a list of endpoints which comply with the specified access control configuration policy (M1) and a list of endpoints that do not comply with the specified policy (M2)
 
 Measures
 --------
-
+* M1 = List of endpoints that comply with access control configuration policy (compliant list)
+* M2 = List of endpoints that do not comply with access control configuration policy (non-compliant list)
+* M3 = Number of endpoints in M1 (number of compliant endpoints)
+* M4 = Number of endpoints in M2 (number of non-compliant endpoints)
+* M5 = Number of endpoints in Input 1 (total number of endpoints to check)
 
 Metrics
 -------
+
+Coverage
+^^^^^^^^
 .. list-table::
 
 	* - **Question**
-	  - 
+	  - | What is the percentage of endpoints which are compliant with the organization's
+	    | access control policy?
 	* - **Answer**
 	  - 
 	* - **Calculation**
-	  - :code:`?`
+	  - :code:`M3 / M5`
 
 .. history
 .. authors
