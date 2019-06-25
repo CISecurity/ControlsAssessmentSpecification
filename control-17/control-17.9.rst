@@ -14,30 +14,40 @@ Train workforce members to be able to identify the most common indicators of an 
 
 Status
 ------
-In Development
+Draft
 
 Inputs
 -----------
-#. 
+#. List of workforce members
+#. List of most recent security awareness training completion dates for each workforce member
+#. Required frequency of training (at least annually)
 
 Operations
 ----------
-#. 
+#. For each workforce member in Input 1, check Input 2 to see if that workforce member's most recent security awareness training completion date was within the time frame specified by Input 3 (if the workforce member is not listed in Input 2, assume the workforce member is not compliant). Generate a list of compliant workforce members (M1) and a list of non-compliant workforce members (M2).
 
 Measures
 --------
-
+* M1 = List of workforce members who have completed the security awareness training within the specified time frame (compliant list)
+* M2 = List of workforce members who have not completed the security awareness training within the specified time frame (non-compliant list)
+* M3 = Number of workforce members in the compliant list (M1)
+* M4 = Number of workforce members in the non-compliant list (M2)
+* M5 = Total number of workforce members in Input 1
 
 Metrics
 -------
+
+Coverage
+^^^^^^^^
 .. list-table::
 
 	* - **Question**
-	  - 
+	  - | What percentage of workforce members have completed the security awareness training
+	    | module within the specified timeframe?
 	* - **Answer**
 	  - 
 	* - **Calculation**
-	  - :code:`?`
+	  - :code:`M3 / M5`
 
 .. history
 .. authors
