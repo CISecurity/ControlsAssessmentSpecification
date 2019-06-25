@@ -14,30 +14,33 @@ Assemble and maintain information on third-party contact information to be used 
 
 Status
 ------
-In Development
+Draft
 
 Inputs
 -----------
-#. 
+#. Incident response plan
+#. List of relevant third-party incident reporting entities
 
 Operations
 ----------
-#. 
+#. Determine whether incident response plan exists (becomes M1)
+#. If it exists, then manual review of incident response plan (determine M2)
 
 Measures
 --------
-
+* M1 = A plan exists
+* M2 = The plan includes information on third-party contacts for incident reporting (M1 includes Input 2)
 
 Metrics
 -------
 .. list-table::
 
 	* - **Question**
-	  - 
+	  - Is information on third-party contact information maintained, for use in incident handling?
 	* - **Answer**
 	  - 
 	* - **Calculation**
-	  - :code:`?`
+	  - :code:`M1 AND M2`
 
 .. history
 .. authors

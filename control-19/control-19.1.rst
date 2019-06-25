@@ -14,30 +14,37 @@ Ensure that there are written incident response plans that define roles of perso
 
 Status
 ------
-In Development
+Draft
 
 Inputs
 -----------
-#. 
+#. Incident response plan
 
 Operations
 ----------
-#. 
+#. Determine whether incident response plan exists (becomes M1)
+#. If it exists, then manual review of incident response plan (determine M2 and M3)
 
 Measures
 --------
-
+* M1 = A plan exists
+* M2 = The plan defines incident response roles
+* M3 = The plan defines incident handling/management phases
 
 Metrics
 -------
+
+Existence
+^^^^^^^^^
 .. list-table::
 
 	* - **Question**
-	  - 
+	  - | Ensure that there are written incident response plans that define roles of personnel
+	    | as well as phases of incident handling/management.
 	* - **Answer**
 	  - 
 	* - **Calculation**
-	  - :code:`?`
+	  - :code:`M1 AND M2 AND M3`
 
 .. history
 .. authors

@@ -14,30 +14,37 @@ Publish information for all workforce members, regarding reporting computer anom
 
 Status
 ------
-In Development
+Draft
 
 Inputs
 -----------
-#. 
+#. Incident response plan
+#. Security awareness program documentation
 
 Operations
 ----------
-#. 
+#. Determine whether incident response plan exists (becomes M1)
+#. Determine whether the security awareness documentation exists (becomes M2)
+#. If both exist, then review the security awareness plan (determine M3 and M4)
 
 Measures
 --------
-
+* M1 = An incident response plan exists
+* M2 = A security awareness program exists
+* M3 = The incident response plan requires publishing incident reporting information for all workforce members as part of the organization's security awareness program
+* M4 = The security awareness program publishes incident reporting information for all workforce members
 
 Metrics
 -------
 .. list-table::
 
 	* - **Question**
-	  - 
+	  - | Is information regarding reporting of computer anomalies and incidents published
+	    | for all workforce members?
 	* - **Answer**
 	  - 
 	* - **Calculation**
-	  - :code:`?`
+	  - :code:`M1 AND M2 AND M3 AND M4`
 
 .. history
 .. authors
