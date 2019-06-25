@@ -36,7 +36,7 @@ Assumptions
 
 Measures
 --------
-* M1 = The number of items from Input 1 **NOT** passing either Test 1 or Test 2
+* M1 = The number of items from Input 1 **NOT** passing either Operation 1 or Operation 2
 * M2 = The total number of items in Input 1
 
 Metrics
