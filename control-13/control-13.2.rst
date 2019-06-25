@@ -14,30 +14,43 @@ Remove sensitive data or systems not regularly accessed by the organization from
 
 Status
 ------
-In Development
+Draft
 
 Inputs
 -----------
-#. 
+#. List of sensitive systems
+#. The access frequency for any sensitive systems
+#. An organizationally-defined access frequency threshold
+
+Assumptions
+^^^^^^^^^^^
+* Access to sensitive data takes place through some system, therefore the system, when processing, storing, or transmitting sensitive data, is a sensitive system.
+* Isolation/exposure score of zero is assumed ideal
 
 Operations
 ----------
-#. 
+#. Determine subset of sensitive systems that are infrequently used (using all Inputs)
+#. For each infrequently used sensitive system, calculate isolation/exposure
 
 Measures
 --------
+* M1 = Set of infrequently used sensitive systems
+* M2 = Number of infrequently used sensitive systems with isolation/exposure scores greater than 0
 
 
 Metrics
 -------
+
+Coverage
+^^^^^^^^
 .. list-table::
 
 	* - **Question**
-	  - 
+	  - What percentage of infrequently used sensitive systems are not properly isolated?
 	* - **Answer**
 	  - 
 	* - **Calculation**
-	  - :code:`?`
+	  - :code:`M2 / M1`
 
 .. history
 .. authors
