@@ -14,30 +14,32 @@ Disable any account that cannot be associated with a business process or busines
 
 Status
 ------
-In Development
+Draft
 
 Inputs
 -----------
-#. 
+#. Inventory of accounts
+#. Inventory of business processes and/or business owners
 
 Operations
 ----------
-#. 
+#. For each account, enumerate any associated business processes or ownership
 
 Measures
 --------
-
+* M1 = Number of accounts not associated with any business process or ownership
+* M2 = Number of accounts
 
 Metrics
 -------
 .. list-table::
 
 	* - **Question**
-	  - 
+	  - What percentage of accounts are *not* associated with any business process or ownership?
 	* - **Answer**
 	  - 
 	* - **Calculation**
-	  - :code:`?`
+	  - :code:`M1 / M2`
 
 .. history
 .. authors

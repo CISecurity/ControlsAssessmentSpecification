@@ -14,30 +14,50 @@ Automatically lock workstation sessions after a standard period of inactivity.
 
 Status
 ------
-In Development
+Draft
 
 Inputs
 -----------
-#. 
+#. List of workstations which have enabled automatic workstation locking
+#. List of workstations
+#. The workstation configuration policy establishing the organization's workstation locking time threshold
 
 Operations
 ----------
-#. 
+#. For each workstation with locking enabled, collect the locking time threshold
+#. Collect the list of workstations whose locking time threshold exceeds the value specified by Input 3
 
 Measures
 --------
-
+* M1 = Number of workstations which have enabled automatic workstation locking
+* M2 = Number of workstations which have enabled automatic locking exceeding the organization's threshold (the count from Operation 2).
+* M3 = Number of workstations
 
 Metrics
 -------
+
+Misconfigured Workstations
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Question**
-	  - 
+	  - | What percentage of automatic locking enabled workstations are configured outside
+	    | the locking time threshold?
 	* - **Answer**
 	  - 
 	* - **Calculation**
-	  - :code:`?`
+	  - :code:`M2 / M1`
+
+Unconfigured Workstations
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. list-table::
+
+	* - **Question**
+	  - How many workstations do *not* have automatic locking enabled?
+	* - **Answer**
+	  - 
+	* - **Calculation**
+	  - :code:`M3 - M1`
 
 .. history
 .. authors
