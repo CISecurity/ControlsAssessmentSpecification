@@ -14,38 +14,86 @@ Configure systems to issue a log entry and alert when an account is added to or 
 
 Status
 ------
-In Development
+Draft
 
 Inputs
 ------
-#. It is assumed that the number of endpoints under test for an organization (N) is known or accessible via query of an asset inventory.
+#. Endpoint inventory
+#. Approved configuration(s) for logging of accounts being added to groups with administrative privileges
+#. Approved configuration(s) for logging of accounts being removed from groups with administrative privileges
+#. Approved configuration(s) for alerting when accounts are added to groups with administrative privileges
+#. Approved configuration(s) for alerting when accounts are removed from groups with administrative privileges
+
+**Note**: there may be multiple configurations for Inputs 2 - 5 to account for various groups/types of endpoints.
 
 Operations
 ----------
-#. 
+#. For each endpoint in Input 1, select the appropriate approved configuration from Inputs 2 - 5 in turn for that endpoint and check to see if that endpoint's actual configuration complies with the approved configuration for each Input. Record this information as M1 - a list of endpoints annotated with whether that endpoint is compliant or non-compliant with the appropriate approved configuration from each of the four inputs (Input 2 - Input 5).
+#. For each of the Inputs 2 - 5, generate a count of compliant endpoints from M1 and record these as M2, M3, M4, and M5 respectively
+#. Count the number of endpoints that are compliant with all 4 inputs and record this as M6
 
 Measures
 --------
-* M1 = log enabled for account addition to group with admin privileges (1 = Enabled; 0 = Disabled)
-* M2 = log enabled for account removal from group with admin privileges (1 = Enabled; 0 = Disabled)
-* M3 = alert enabled for account addition to group with admin privileges (1 = Enabled; 0 = Disabled)
-* M4 = alert enabled for account removal from group with admin privileges (1 = Enabled; 0 = Disabled)
+* M1 = List of endpoints with each endpoint entry labeled with compliance or non-compliance for each of the 4 logging/alerting configurations from Inputs 2 - 5
+* M2 = Number of compliant endpoints based on Input 2 configurations
+* M3 = Number of compliant endpoints based on Input 3 configurations
+* M4 = Number of compliant endpoints based on Input 4 configurations
+* M5 = Number of compliant endpoints based on Input 5 configurations
+* M6 = Number of endpoints that are compliant with configurations from all 4 inputs
+* M7 = Total number of endpoints from Input 1
 
 Metrics
 -------
 
-Log and Alert Enabled
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+Logging of Accounts Added to Groups
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
-	  - | What percentage of endpoints in the organization have properly configured logging
-	    | and alerting for modifications to administrative groups?
-	* - **Answer**
-	  - | The calculation will yield a percentage, from 0 to 100, of those endpoints which have
-	    | configured logging and alerting correctly.
+	* - **Metric**
+	  - | The ratio of endpoints logging when accounts are added to groups to the total number
+	    | of endpoints
 	* - **Calculation**
-	  - :code:`((SUM from 1 to N { M1=1 AND M2=1 AND M3=1 AND M4=1 }) / N) * 100`
+	  - :code:`M2 / M7`
+
+Logging of Accounts Removed from Groups
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. list-table::
+
+	* - **Metric**
+	  - | The ratio of endpoints logging when accounts are removed from groups to the total number
+	    | of endpoints
+	* - **Calculation**
+	  - :code:`M3 / M7`
+
+Alerting of Accounts Added to Groups
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. list-table::
+
+	* - **Metric**
+	  - | The ratio of endpoints alerting when accounts are added to groups to the total number
+	    | of endpoints
+	* - **Calculation**
+	  - :code:`M4 / M7`
+
+Alerting of Accounts Removed from Groups
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. list-table::
+
+	* - **Metric**
+	  - | The ratio of endpoints alerting when accounts are removed from groups to the total
+	    | number of endpoints
+	* - **Calculation**
+	  - :code:`M5 / M7`
+
+Combined Compliance
+^^^^^^^^^^^^^^^^^^^
+.. list-table::
+
+	* - **Metric**
+	  - | The ratio of endpoints both alerting and logging when accounts are both added and 
+	    | removed to the total number of endpoints
+	* - **Calculation**
+	  - :code:`M6 / M7`
 
 .. history
 .. authors

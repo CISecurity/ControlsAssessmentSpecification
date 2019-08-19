@@ -45,13 +45,9 @@ Administrative User Accounts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
+	* - **Metric**
 	  - | This metric is intended to determine whether those users identified as Administrative-level
 	    | have at least one Administrative-level and one non-Administrative level user account.
-	* - **Answer**
-	  - | Operation 1 above should result in a list of users defined as Administrators mapped to
-	    | Administrative user accounts tied to that user.  All Administrative-level users must be
-	    | assigned at least one secondary Administrative user account.
 	* - **Calculation**
 	  - | The mapping performed by Operation 1 must show that, for each Administrative-level
 	    | user, at least 1 Administrative-level user account and at least 1
@@ -61,14 +57,11 @@ Unauthorized User Accounts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
+	* - **Metric**
 	  - | This metric is intended to illustrate any non-Administrative-level users that
 	    | have been assigned an Administrative-level user account.
-	* - **Answer**
-	  - | Operation 2 above should result in a list of any non-Administrative-level users
-	    | that have been assigned an Administrative-level user account.
 	* - **Calculation**
-	  - If any users exist in the mapping M3, then :code:`FAIL`; otherwise :code:`PASS`
+	  - If :code:`M3 > 0`, then :code:`FAIL`; otherwise :code:`PASS`
 
 .. history
 .. authors

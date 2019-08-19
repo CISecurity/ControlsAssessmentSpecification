@@ -44,11 +44,8 @@ Default Password Usage
 ^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
+	* - **Metric**
 	  - | What percentage of credentials have been changed from the default value?
-	* - **Answer**
-	  - | This metric yields the ratio of credentials which have been changed from
-	    | the default to the total number of credentials.
 	* - **Calculation**
 	  - | * If M2 = 0, then no accounts remain configured with the default password.
 	    | * Otherwise, the value of this metric is :code:`(M1 - M2) / M1`
@@ -57,10 +54,8 @@ Password Policy Compliance
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
+	* - **Metric**
 	  - | What percentage of total accounts comply with the organization's password policies?
-	* - **Answer**
-	  - | This metric yields the ratio of compliant accounts to the total number of accounts.
 	* - **Calculation**
 	  - | * If M4 = 0, then no accounts deviate from the organization's password policies.
 	    | * Otherwise, the value of this metric is :code:`(M3 - M4) / M3`

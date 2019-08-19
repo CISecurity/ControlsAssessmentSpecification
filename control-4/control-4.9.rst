@@ -14,35 +14,63 @@ Configure systems to issue a log entry and alert on unsuccessful logins to an ad
 
 Status
 ------
-In Development
+Draft
 
 Inputs
 ------
-#. 
+#. Endpoint inventory
+#. Approved configuration(s) for logging on unsuccessful login attempts to administrative accounts
+#. Approved configuration(s) for alerting on unsuccessful login attempts to administrative accounts
+
+**Note**: there may be multiple configurations for Inputs 2 and 3 to account for various groups/types of endpoints.
 
 Operations
 ----------
-#. 
+#. For each endpoint in Input 1, select the appropriate approved configuration from Inputs 2 and 3 in turn for that endpoint and check to see if that endpoint's actual configuration complies with the approved configuration for each Input. Record this information as M1 - a list of endpoints annotated with whether that endpoint is compliant or non-compliant with the appropriate approved configuration from each of the two inputs (Input 2 and Input 3).
+#. For Input 2, and for Input 3, generate a count of compliant endpoints from M1 and record these as M2 and M3 respectively.
+#. Count the number of endpoints that are compliant with both inputs and record this as M4
 
 Measures
 --------
-* M1 = Log enabled for unsuccessful login attempt with admin account
-* M2 = Alert enabled for unsuccessful login attempt with admin account
+* M1 = List of endpoints with each endpoint entry labeled with compliance or non-compliance for both Input 2 and Input 3
+* M2 = Number of compliant endpoints based on Input 2 configurations
+* M3 = Number of compliant endpoints based on Input 3 configurations
+* M4 = Number of endpoints that are compliant with configurations from both inputs
+* M5 = Total number of endpoints from Input 1
 
 Metrics
 -------
 
-Log and Alert Enabled
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+Logging Unsuccessful Login Attempts
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
-	  - | This measurement is meant to determine if a log entry and alert are generated when an
-	    | unsuccessful administrative login attempt is made.
-	* - **Answer**
-	  - The calculation results in TRUE if both log entry and alert are generated.
+	* - **Metric**
+	  - | The ratio of endpoints logging when unsuccessful login attempts are made, to the total
+	    | number of endpoints
 	* - **Calculation**
-	  - :code:`M1 AND M2`
+	  - :code:`?`
+
+Alerting Unsuccessful Login Attempts
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. list-table::
+
+	* - **Metric**
+	  - | The ratio of endpoints alerting when unsuccessful login attempts are made, to the total
+	    | number of endpoints
+	* - **Calculation**
+	  - :code:`?`
+
+
+Combined Compliance
+^^^^^^^^^^^^^^^^^^^
+.. list-table::
+
+	* - **Metric**
+	  - | The ratio of endpoints both alerting and logging unsuccessful login attempts are made,
+	    | to the total number of endpoints
+	* - **Calculation**
+	  - :code:`?`
 
 .. history
 .. authors
