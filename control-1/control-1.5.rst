@@ -44,14 +44,19 @@ Endpoint Inventory Quality
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **The ratio of endpoints with all detailed information to the total number of inventoried endpoints**
+	* - **Metric**
+	  - | The ratio of endpoints with all detailed information to the total number of inventoried 
+	    | endpoints
+	* - **Calculation**
 	  - :code:`M3 / M1`
 
 Endpoint Inventory Authorization Quality
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **The ratio of endpoints with approval to connect to the network**
+	* - **Metric**
+	  - | The ratio of endpoints with approval to connect to the network
+	* - **Calculation**
 	  - :code:`M2 / M1`
 
 .. history

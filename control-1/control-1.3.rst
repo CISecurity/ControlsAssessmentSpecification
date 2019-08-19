@@ -46,13 +46,19 @@ DHCP Logging Quality
 ^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Ratio of appropriately configured DHCP logging enabled to known DHCP servers**
+	* - **Metric**
+	  - | Ratio of appropriately configured DHCP logging enabled to known DHCP servers
+	* - **Calculation**
 	  - :code:`M2 / M1`
 
-^^^^^^^^^^^^^^
+CMDB Configuration Quality
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Ratio of appropriately configured CMDB servers using DHCP logging to update IP addresses**
+	* - **Metric**
+	  - | Ratio of appropriately configured CMDB servers using DHCP logging to update 
+	    | IP addresses
+	* - **Calculation**
 	  - :code:`M4 / M3`
 
 .. history

@@ -44,19 +44,34 @@ Measures
 
 Metrics
 -------
+
+802.1x Deployment
+^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Is 802.1x deployed?**
+	* - **Metric**
+	  - | Is 802.1x deployed?
+	* - **Calculation**
 	  - :code:`M1 AND M2`
 
+Authenticator Coverage
+^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Ratio of improperly configured 802.1x authenticators to total number of 802.1x authenticators**
+	* - **Metric**
+	  - | Ratio of improperly configured 802.1x authenticators to total number of 802.1x 
+	    | authenticators
+	* - **Calculation**
 	  - :code:`M3 / M4`
 
+Authentication Server Coverage
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Ratio of improperly configured 802.1x authentication servers to total number of 802.1x authentication servers**
+	* - **Metric**
+	  - | Ratio of improperly configured 802.1x authentication servers to total number of 
+	    | 802.1x authentication servers
+	* - **Calculation**
 	  - :code:`M5 / M6`
 
 .. history

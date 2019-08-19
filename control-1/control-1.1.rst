@@ -55,14 +55,18 @@ Asset Discovery Coverage
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Asset Discovery Coverage**
+	* - **Metric**
+	  - | Asset Discovery Coverage
+	* - **Calculation**
 	  - :code:`M5 / M7`
 
 Tool Compliance Ratio
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Tool Compliance Ratio**
+	* - **Metric**
+	  - | Tool Compliance Ratio
+	* - **Calculation**
 	  - :code:`M6 / M8`
 
 .. history
