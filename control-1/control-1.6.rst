@@ -41,12 +41,14 @@ Measures
 
 Metrics
 -------
+
+Unauthorized Asset Remediation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
-	  - TBD
-	* - **Answer**
-	  - TBD
+	* - **Metric**
+	  - | The ratio of unaccounted for, unauthorized assets, to the total assets in the asset 
+	    | inventory
 	* - **Calculation**
 	  - | If the value of M2 is 0, there are no unauthorized assets that remain unaccounted for.
 	    | In this case, the value of the metric is 1.  Otherwise, the value is :code:`(M2 - M1) / M2`

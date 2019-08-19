@@ -43,16 +43,11 @@ Accuracy Score
 ^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
+	* - **Metric**
 	  - | What percentage of the "ground truth" inventory is accounted for in the organization's 
 	    | current asset inventory?
-	* - **Answer**
-	  - | A positive percentage value greater than or equal to 0, and less than or equal to 100%.
-	    | A value of "0" would indicate that none of the discovered assets have been inventoried; 
-	    | a value of "100" indicates that all assets connected to the organization's network are 
-	    | accounted for in the asset inventory.
 	* - **Calculation**
-	  - :code:`(M1/M2) * 100%`
+	  - :code:`M1 / M2`
 
 
 Procedure Review
