@@ -1,9 +1,6 @@
 1.3: Use DHCP Logging to Update Asset Inventory
 =========================================================
-Use Dynamic Host Configuration Protocol
-(DHCP) logging on all DHCP servers or IP address
-management tools to update the organization’s
-hardware asset inventory.
+Use Dynamic Host Configuration Protocol (DHCP) logging on all DHCP servers or IP address management tools to update the organization’s hardware asset inventory.
 
 .. list-table::
 	:header-rows: 1
@@ -17,33 +14,46 @@ hardware asset inventory.
 
 Status
 ------
-In Development
+Draft
 
 Inputs
 -----------
+#. The list of DHCP servers
+#. The list of CMDB servers (i.e. asset inventory systems)
 
 Operations
 ----------
+#. For each DHCP server, check whether DHCP logging is enabled
+#. For each CMDB server, check whether DHCP logs are used to update IP addresses
+
+Assumptions
+^^^^^^^^^^^
+* CMDB servers are configured to pull from DHCP logs
 
 Measures
 --------
-* M1 = # of log enabled DHCP server
-* M2 = # of total DHCP server
+* M1 = Count of DHCP servers
+* M2 = Count of DHCP servers with logging enabled
+* M3 = Count of CMDB servers
+* M4 = Count of CMDB servers configured to use DHCP logs to update IP addresses
+* M5 = Number of devices in the DHCP server logs that are not included in the CMDB servers
 
 Metrics
 -------
+* M5 > 0 indicates a non up-to-date asset inventory
 
-DHCP Log Ratio
+DHCP Logging Quality
+^^^^^^^^^^^^^^^^^^^^
+.. list-table::
+
+	* - **Ratio of appropriately configured DHCP logging enabled to known DHCP servers**
+	  - :code:`M2 / M1`
+
 ^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
-	  - What percentage of DHCP servers in the enterprise have logging enabled?
-	* - **Answer**
-	  - | This metric yields a percentage value, from 0 to 100%, indicating the ratio of DHCP
-	    | servers to those with logging enabled.
-	* - **Calculation**
-	  - :code:`(M1/M2) * 100`
+	* - **Ratio of appropriately configured CMDB servers using DHCP logging to update IP addresses**
+	  - :code:`M4 / M3`
 
 .. history
 .. authors

@@ -14,47 +14,45 @@ Ensure that the hardware asset inventory records the network address, hardware a
 
 Status
 ------
-In Development
+Draft
 
 Inputs
 -----------
-#. The "weight" indicates the criticality (importance) of an endpoint, and will be defined by the organization
+#. Detailed endpoint inventory
 
 Operations
 ----------
+#. For each endpoint, identify detailed information, such as:
+	* Network Address
+	* Hardware Address (applies to virtual endpoints)
+	* Machine name
+	* Data asset owner
+	* Assigned department
+#. Identify endpoints with all detailed information identified
+#. For each endpoint, identify network connection approval
 
 Measures
 --------
-* w(i) = weight of machine i
-* a(i) = detailed (1) or not detailed (0); "detailed" if and only if all specified information is there.
-* M1 = # of devices and machines in asset inventory
-* M2 = # of device or machine with connection approval
+* M1 = Count of endpoints in inventory
+* M2 = Count of endpoints with network connection approval
+* M3 = Count of endpoints with all detailed information
 
 Metrics
 -------
 
-Asset Inventory Quality
-^^^^^^^^^^^^^^^^^^^^^^^
+Endpoint Inventory Quality
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
-	  - 
-	* - **Answer**
-	  - | Percentage of assets that are tracked in the asset inventory which contain detailed
-	    | information, such as network address, hardware address, asset owner, etc.
-	* - **Calculation**
-	  - :code:`(SUM from i to M1 (w(i) * a(i))) / M1`
+	* - **The ratio of endpoints with all detailed information to the total number of inventoried endpoints**
+	  - :code:`M3 / M1`
 
-Asset Inventory Precision
-^^^^^^^^^^^^^^^^^^^^^^^^^
+Endpoint Inventory Authorization Quality
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
-	  - 
-	* - **Answer**
-	  - Percentage of devices with connection approval that are currently tracked in the asset inventory
-	* - **Calculation**
-	  - :code:`(M2 / M1) * 100`
+	* - **The ratio of endpoints with approval to connect to the network**
+	  - :code:`M2 / M1`
 
 .. history
 .. authors
