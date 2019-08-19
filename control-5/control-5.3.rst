@@ -14,36 +14,47 @@ Store the master images and templates on securely configured servers, validated 
 
 Status
 ------
-In Development
+Draft
 
 Inputs
 ------
-#. A "securely configured server" assumes the application of numerous subcontrols governing deployment of secure configuration settings, proper administrative access, and network isolation.
+#. The list of master images/templates
+#. An available integrity monitoring tool
+#. The inventory of master images mapped to the output of the integrity monitoring tool's identifying information (such as a hash).
+#. A documented procedure detailing authorizations required for updates to the master images/templates
 
 Operations
 ----------
-#. 
+#. Collect the list of master images/templates' integrity monitoring identifying information (i.e. for each master image, collect the hash).
+#. Determine whether the update procedure documentation exists (M3)
 
 Measures
 --------
-* M1 = # of validated images
-* M2 = # of total images
+* M1 = The number of master images/templates
+* M2 = The number of master images/templates identified by integrity monitoring tools
+* M3 = 1 if the documented master image update procedure exists; 0 otherwise.
 
 Metrics
 -------
 
-Validated Image Ratio
-^^^^^^^^^^^^^^^^^^^^^^
+Integrity Monitoring Coverage
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
-	  - | Determine the percentage of total images which are valid according to integrity
-	    | monitoring tools.
-	* - **Answer**
-	  - | The calculation will yield a percentage, from 0 to 100, indicating the ratio of
-	    | total images to those images deemed valid.
+	* - **Metric**
+	  - | The ratio of master images/templates identified by integrity monitoring tools, 
+	    | to the total number of images/templates.
 	* - **Calculation**
-	  - :code:`(M1/M2) * 100`
+	  - :code:`M2 / M1`
+
+Update Procedures
+^^^^^^^^^^^^^^^^^
+.. list-table::
+
+	* - **Metric**
+	  - | Determine if the documented master image update procedure exists
+	* - **Calculation**
+	  - :code:`M3 == 1`
 
 .. history
 .. authors

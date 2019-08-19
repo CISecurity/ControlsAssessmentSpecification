@@ -14,54 +14,48 @@ Maintain secure images or templates for all systems in the enterprise based on t
 
 Status
 ------
-In Development
+Draft
 
 Inputs
 ------
-#. 
-
-Assumptions
-^^^^^^^^^^^
-* Documented, standard security configuration standards exist per control 5.1
-* Images/templates for a given system could encompass one-to-many security configuration standards, i.e. an operating system configuration standard plus a browser configuration standard
+#. The list of the organization's approved configuration standards, per implementation of sub-control 5.1
+#. The inventory of systems
+#. The mapping of systems in the inventory to any secure configurations that should be applied. This input assumes that multiple configurations could apply to a single system in the inventory.
+#. The inventory of images
 
 Operations
 ----------
-#. 
+#. For each system in the inventory, determine the list of systems which have had an image taken and the list of systems without a corresponding image.
+#. For each system with a corresponding image, compare the image's configuration with the configuration standard(s) mapped to that system.
 
 Measures
 --------
-* M1 = # of systems with image taken
-* M2 = # of total system
-* M3 = # of system with approved configuration
+* M1 = The number of systems in the inventory
+* M2 = The number of systems with a corresponding image taken
+* M3 = 1 if an image is configured according to the standards mapped to that system; 0 otherwise.
 
 Metrics
 -------
 
-Coverage (Quality Measure)
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+Image Coverage
+^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
-	  - Determine the percentage of total systems from which an image has been taken.
-	* - **Answer**
-	  - | The calculation will yield a percentage, from 0 to 100, indicating the ratio of
-	    | total systems to those with images taken.
+	* - **Metric**
+	  - | The ratio of systems with a corresponding image taken to the total number of inventoried
+	    | systems
 	* - **Calculation**
-	  - :code:`(M1/M2) * 100`
+	  - :code:`M2 / M1`
 
-Configuration Quality
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+Configuration Coverage
+^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
-	  - | Determine the percentage of total systems to which approved configurations have
-	    | been applied.
-	* - **Answer**
-	  - | The calculation will yield a percentage, from 0 to 100, indicating the ratio of total
-	    | systems to those with approved configurations applied.
+	* - **Metric**
+	  - | The ratio of all systems with a corresponding image taken to those configured according
+	    | to the standards mapped to that system
 	* - **Calculation**
-	  - :code:`(M3/M2) * 100`
+	  - :code:`(SUM from 1..M2 (M3)) / M2`
 
 .. history
 .. authors

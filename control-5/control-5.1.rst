@@ -39,16 +39,13 @@ Measures
 Metrics
 -------
 
-Coverage (Quality Measure)
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+Security Configuration Standards Coverage
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
-	  - | For what percentage of the total OS/Software in an enterprise are security configuration
+	* - **Metric**
+	  - | For what percentage of the total OS/Software in an enterprise, are security configuration
 	    | standards documented and maintained?
-	* - **Answer**
-	  - | Coverage is measured as a percentage of total OS/Software assets for which security
-	    | configuration standards are documented by an enterprise.
 	* - **Calculation**
 	  - :code:`(M4 - M2) / M4`
 

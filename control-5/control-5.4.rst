@@ -14,52 +14,66 @@ Deploy system configuration management tools that will automatically enforce and
 
 Status
 ------
-In Development
+Draft
 
 Inputs
 ------
-#. The configuration management system has access to and authority to apply configuration settings to the systems under test.
+#. The organization's configuration monitoring system
+#. The list of endpoints
+#. The inventory and mappings of secure configuration policy(ies) to the list of endpoints
+#. The organization's approved configuration scanning interval (at least weekly)
+
+Assumptions
+^^^^^^^^^^^
+#. A timestamp "t" is defined as the time of a given configuration assessment
+#. A subsequent assessment, following the approved scanning interval (Input 4), is noted as "t+1"
 
 Operations
 ----------
-#. 
+#. For each endpoint, obtain the configuration assessment results using Input 1.  Note this as M1(t).
+#. Following the time period specified by Input 4, re-assess to obtain a comparative assessment result.  Note this as M1(t+1)
+
+Assumptions
+^^^^^^^^^^^
+* The assumption is that remediation/redeployment of configuration settings is occurring based on the improvement of scores over time and subsequent assessments.
 
 Measures
 --------
-* M1 = number of configurations that are enforced
-* M2 = number of total configurations in the system
-* M3 = last deployment time
-* M4 = current time
-* M5 = deployment interval threshhold
+* M1(t) = (For each endpoint) The number of non-compliant recommendations resulting from Operation 1
+* M1(t+1) = (For each endpoint) The number of non-compliant recommendations resulting from Operation 2
+* M2 = (For each endpoint) The number of recommendations assessed
+* M3 = The number of endpoints
 
 Metrics
 -------
 
-Enforcement Quality
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+Initial Non-Compliance
+^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
-	  - | Determine the percentage of total system configurations which are currently being
-	    | enforced.
-	* - **Answer**
-	  - | The calculation will yield a percentage, from 0 to 100, indicating the ratio of total
-	    | system configurations to those currently being enforced.
+	* - **Metric**
+	  - | The ratio of non-compliant recommendations at time "t", to the total recommendations
+	    | assessed.
 	* - **Calculation**
-	  - :code:`((M1 - M2) / M1) * 100`
+	  - :code:`M1(t) / M2`
 
-Enforcement Freshness
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+Subsequent Non-Compliance
+^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
-	  - Ensure configuration enforcement is occurring at a regular interval.
-	* - **Answer**
-	  - | The calculation will yield a true or false answer for each system under test.  If
-	    | configurations are enforced on the system within the (re)deployment threshold,
-	    | enforcement is considered "fresh".
+	* - **Metric**
+	  - | The ratio of non-compliant recommendations at time "t+1" ()
 	* - **Calculation**
-	  - :code:`if ((M4 - M3) <= M5) then TRUE; otherwise FALSE`
+	  - :code:`M1(t+1) / M2`
+
+Overall Compliance
+^^^^^^^^^^^^^^^^^^
+.. list-table::
+
+	* - **Metric**
+	  - | What is the average overall compliance for all assessed endpoints at time "t"
+	* - **Calculation**
+	  - :code:`(SUM from 1..M3 (M1(t) / M2)) / M3`
 
 .. history
 .. authors
