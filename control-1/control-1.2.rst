@@ -23,6 +23,7 @@ Inputs
 
 Operations
 ----------
+N/A
 
 Measures
 --------

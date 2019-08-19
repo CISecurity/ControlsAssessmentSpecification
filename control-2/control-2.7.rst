@@ -26,24 +26,17 @@ Operations
 
 Measures
 --------
-* M1 = # of assets with whitelisting enabled
-* M2 = # of assets
+
 
 Metrics
 -------
 
-Quality of Software Authorization
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 .. list-table::
 
-	* - **Question**
-	  - What percentage of an enterprise's assets have application whitelisting enabled?
-	* - **Answer**
-	  - | This measurement indicates a percentage, from 0 to 100%, of assets enabling application
-	    | whitelisting.
+	* - **Metric**
+	  - | 
 	* - **Calculation**
-	  - :code:`(M1/M2) * 100`
+	  - :code:`?`
 
 .. history
 .. authors

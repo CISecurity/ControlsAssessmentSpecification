@@ -14,54 +14,72 @@ Utilize an up-to-date Security Content Automation Protocol (SCAP) compliant vuln
 
 Status
 ------
-In Development
+Draft
 
 Inputs
 ------
-#. A list of known SCAP-validated vulnerability scanners is available
-#. Inventory of vulnerability scanners is up-to-date
-#. Enterprise-specific scanning frequency (not to be less frequent than weekly) is known
+#. List of endpoints
+#. List of vulnerability scanning tools
+#. List of SCAP-validated vulnerability scanning tools
+#. Most recent scan results for each vulnerability scanning tool
 
 Operations
 ----------
-#. 
+#. For each vulnerability scanning tool, enumerate the set of covered endpoints
+#. Union the set of covered endpoints
+#. For each vulnerability scanning tool, inspect tool configuration for at least weekly scans
+#. For each vulnerability scanning tool, inspect tool results/logs for at least weekly scans
 
 Measures
 --------
-* M1 = 1st scan time
-* M2 = 2nd scan time
-* M3 = max allowed delay in consecutive scans (given)
-* M4 = # of devices in the network
-* M5 = # of scanned devices(from the vulnerability scanning report)
+* M1 = Count of endpoints covered by vulnerability scanning tools (count of operation 2)
+* M2 = Total number of endpoints
+* M3 = Count of vulnerability scanning tools configured to scan at least weekly
+* M4 = Count of vulnerability scanning results having occurred in at least the past week
+* M5 = Count of SCAP-validated vulnerability scanning tools
+* M6 = Count of vulnerability scanning tools
 
 Metrics
 -------
 
-Freshness
-^^^^^^^^^^^^^^^^^^
+Vulnerability Scanning Coverage
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
-	  - | This metric is intended to determine if vulnerability scans are being performed
-	    | within a reasonable time frame.
-	* - **Answer**
-	  - | This calculation results in a TRUE/FALSE answer, indicating whether or not consecutive
-	    | vulnerability scans (M1 and M2) are performed within the maximum allowed delay (M3).
+	* - **Metric**
+	  - | The ratio of endpoints covered by at least one vulnerability scanning tool to the total 
+	    | number of endpoints
 	* - **Calculation**
-	  - :code:`TRUE if (M2 - M1) <= M3; FALSE otherwise`
+	  - :code:`M1 / M2`
 
-Coverage Quality
-^^^^^^^^^^^^^^^^^^
+Vulnerability Scanner Configuration Quality
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
-	  - | This metric is intended to determine the ratio of the number of devices on the network
-	    | to those being regularly scanned for vulnerabilities.
-	* - **Answer**
-	  - | The calculation of this metric results in a percentage, between 0 and 100, indicating
-	    | the vulnerability scanning coverage for an enterprise.
+	* - **Metric**
+	  - | The ratio of correctly configured vulnerability scanners to the total number of 
+	    | vulnerability scanners
 	* - **Calculation**
-	  - :code:`(M5/M4) * 100`
+	  - :code:`M3 / M6`
+
+Vulnerability Scan Timeliness
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. list-table::
+
+	* - **Metric**
+	  - | The ratio of scanners having actually scanned in at least the past week to the total 
+	    | number of vulnerability scanners
+	* - **Calculation**
+	  - :code:`M4 / M6`
+
+SCAP-Validated Vulnerability Scanner Coverage
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. list-table::
+
+	* - **Metric**
+	  - | The ratio of SCAP-validated scanners to the total number of vulnerability scanners
+	* - **Calculation**
+	  - :code:`M5 / M6`
 
 .. history
 .. authors

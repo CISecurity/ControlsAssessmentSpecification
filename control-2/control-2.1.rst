@@ -40,11 +40,8 @@ Update Quality
 ^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
+	* - **Metric**
 	  - | Is the authorized software list present and up-to-date?
-	* - **Answer**
-	  - | This metric is a boolean indicator describing that the authorized software list 
-	    | is both present and up-to-date within a certain time threshold.
 	* - **Calculation**
 	  - :code:`M1 AND M2`
 

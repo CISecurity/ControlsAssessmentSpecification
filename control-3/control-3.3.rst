@@ -14,36 +14,35 @@ Use a dedicated account for authenticated vulnerability scans, which should not 
 
 Status
 ------
-In Development
+Draft
 
 Inputs
 ------
-#. It is assumed that a pre-authorized list of scanning managers is known.
+#. List of vulnerability scanning accounts
+#. List of vulnerability scanning machines
 
 Operations
 ----------
-#. 
+#. For each vulnerability scanning account, ensure account configuration to log in only to one or more of the vulnerability scanning machines
 
 Measures
 --------
-* M1 [0|1]: scanning traffic is between a sanning manager and agent/machine
-* M2 [0|1]: scanning managers (senders) are pre-authrized machines/IPs.
-* M3 [0|1]: a dedicated account is used by the manager scanning process.
-* M4 [0|1]: traffic has been authenticated (as subcontrol 3.2)
+* M1 = Total number of vulnerability scanning accounts
+* M2 = Number of vulnerability scanning accounts configured to log in only to one or more of the vulnerability scanning machines
+
 
 Metrics
 -------
 
-Designated Accounts
-^^^^^^^^^^^^^^^^^^^
+Misconfigured Account Ratio
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
-	  - Does the enterprise use dedicated accounts for vulnerability scans?
-	* - **Answer**
-	  - Boolean.
+	* - **Metric**
+	  - | Ratio of misconfigured vulnerability scanning accounts to the total number of 
+	    | vulnerability scanning accounts
 	* - **Calculation**
-	  - :code:`M1 AND M2 AND M3 AND M4`
+	  - :code:`(M1 - M2) / M1`
 
 .. history
 .. authors

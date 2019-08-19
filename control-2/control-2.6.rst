@@ -52,15 +52,10 @@ Unauthorized Software (Per Endpoint)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
-	  - Given a single endpoint, ensure unauthorized software installations are addressed.
-	* - **Answer**
-	  - | The calculation of this metric, per endpoint, relies on two scans of installed
-	    | software, and is the ratio of unauthorized software installed on the endpoint to
-	    | the software remaining unaddressed in the authorized software list.
+	* - **Metric**
+	  - | Ensure unauthorized software installations are addressed
 	* - **Calculation**
-	  - | If M4 = 0, this indicates no unauthorized software is installed on a given endpoint.
-	    | Otherwise, this metric is calculated as :code:`(M4 - M5) / M4`
+	  - :code:`(M4 - M5) / M4`
 
 Unauthorized Software (Organizational)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

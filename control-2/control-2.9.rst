@@ -26,24 +26,17 @@ Operations
 
 Measures
 --------
-* M1 = # of scripts allowed in whitelisting tool
-* M2 = # of assets under consideration
+
 
 Metrics
 -------
 
-Quality of script authorization
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
-	  - | What percentage of authorized scripts are allowed to be executed per application
-	    | whitelisting protocols?
-	* - **Answer**
-	  - | The calculation of this metric yields a percentage, from 0 to 100%, indicating the
-	    | ratio of scripts that are whitelisted to the total number of scripts.
+	* - **Metric**
+	  - | 
 	* - **Calculation**
-	  - :code:`(M1/M2) * 100`
+	  - :code:`?`
 
 .. history
 .. authors

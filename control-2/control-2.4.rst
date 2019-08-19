@@ -14,21 +14,27 @@ The software inventory system should track the name, version, publisher, and ins
 
 Status
 ------
-In Development
+Draft
 
 Inputs
 ------
-#. Need to define what "weight" is in this context
+#. Detailed software inventory
 
 Operations
 ----------
-#. 
+#. For each entry in the software inventory, including operating systems, identify detailed information such as:
+	* Software name (market name)
+	* Software version (market version)
+	* Software publisher
+	* Installation date (timestamp)
+#. For each entry in the software inventory, including operating systems, identify authorization state
+#. Identify software with all detailed information identified
 
 Measures
 --------
-* w(i) = weight of software i
-* d(i) = tracked information for software i is detailed (1) or not detailed (0); "detailed" if and only if all specified information is present for software i.
-* n = # of software for a specific machine
+* M1 = Count of entries in software inventory
+* M2 = Count of entries authorized for installation
+* M3 = Count of entries with all detailed information
 
 Metrics
 -------
@@ -37,14 +43,19 @@ Inventory Quality
 ^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
-	  - | What percentage of the software inventory tracks appropriate information about the
-	    | software?
-	* - **Answer**
-	  - | A percentage value, between 0 and 100%, indicating the quality of information tracked
-	    | in an organization's software inventory.
+	* - **Metric**
+	  - | The ratio of entries with all detailed information to the total number of entries
 	* - **Calculation**
-	  - :code:`((SUM from i to n of (w(i) * d(i))) / n) * 100`
+	  - :code:`M3 / M1`
+
+Inventory Authorization Quality
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. list-table::
+
+	* - **Metric**
+	  - | The ratio of entries authorized to be installed to the total number of entries
+	* - **Calculation**
+	  - :code:`M2 / M1`
 
 .. history
 .. authors

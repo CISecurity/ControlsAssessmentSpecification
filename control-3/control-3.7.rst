@@ -14,32 +14,33 @@ Utilize a risk-rating process to prioritize the remediation of discovered vulner
 
 Status
 ------
-In Development
+Draft
 
 Inputs
 ------
-#. 
+#. Security program vulnerability management policy
 
 Operations
 ----------
-#. 
+#. Review vulnerability management policy for risk-rating process description
+#. Review risk-rating process description to ensure risk-rating is used for prioritization
 
 Measures
 --------
-TBD
+* M1 (Boolean) = Risk-rating process exists or does not exist
+* M2 (Boolean) = Risk-rating process is used for prioritization
 
 Metrics
 -------
-TBD
 
+Risk-Rating Process
+^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
-	  -
-	* - **Answer**
-	  -
+	* - **Metric**
+	  - | Manual review: Does a risk-rating process exist and is it utilized for prioritization?
 	* - **Calculation**
-	  - :code:`?`
+	  - :code:`M1 AND M2`
 
 .. history
 .. authors

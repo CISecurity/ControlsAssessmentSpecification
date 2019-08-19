@@ -26,25 +26,17 @@ Operations
 
 Measures
 --------
-* M1 = # of libraries with whitelisting enabled
-* M2 = # of libraries under consideration
+
 
 Metrics
 -------
 
-Quality of software library authorization
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
-	  - | What percentage of authorized software libraries are allowed to be loaded per
-	    | application whitelisting protocols?
-	* - **Answer**
-	  - | The calculation of this metric yields a percentage, from 0 to 100%, indicating the
-	    | ratio of software libraries that are whitelisted to the total number of software
-	    | libraries.
+	* - **Metric**
+	  - | 
 	* - **Calculation**
-	  - :code:`(M1/M2) * 100`
+	  - :code:`?`
 
 .. history
 .. authors

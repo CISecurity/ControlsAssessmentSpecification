@@ -14,35 +14,51 @@ Utilize software inventory tools throughout the organization to automate the doc
 
 Status
 ------
-In Development
+Draft
+
+Assumptions
+^^^^^^^^^^^
+* The documentation referenced by this sub-control intends to mean an enumeration of software load on endpoints capable of running installed software
+* A business system is any endpoint owned or operated by the enterprise/organization
+* The CMDB does not contain and up-to-date software load for each endpoint in its inventory
 
 Inputs
 ------
-#. 
+#. Endpoint inventory
+#. List of software inventory tools
 
 Operations
 ----------
-#. 
+#. For each software inventory, count covered endpoints and calculate the aggregate (becomes M2)
+#. Count number of endpoints loadable with software (becomes M3)
 
 Measures
 --------
-M1 = # of softwares with automated documentation
-M2 = total # of softwares in the system
+* M1 = The number of software inventory tools
+* M2 = The number of endpoints covered by software inventory tools
+* M3 = The number of endpoints loadable with software
 
 Metrics
 -------
 
-Coverage (Quality Measure)
+Software Inventory Tool Usage
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. list-table::
+
+	* - **Metric**
+	  - | Are software inventory tools used?
+	* - **Calculation**
+	  - :code:`(M1 == 0) OR (M1 == 1)`
+
+Inventory Tool Coverage
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
-	  - 
-	* - **Answer**
-	  - | The calculation will yield a percentage, between 0 and 100, indicating the ratio
-	    | of software with automated documentation to the total software asset inventory.
+	* - **Metric**
+	  - | The ratio of endpoints covered by automated software inventory tools to the total 
+	    | number of applicable endpoints
 	* - **Calculation**
-	  - :code:`(M1 / M2) * 100`
+	  - :code:`M2 / M3`
 
 .. history
 .. authors

@@ -42,15 +42,12 @@ Update Effectiveness (Per Endpoint)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
+	* - **Metric**
 	  - | For a given endpoint, calculate the ratio of installed software updates to the
 	    | total number of required software updates.
-	* - **Answer**
-	  - | This metric is calculated by the ratio of installed, non-excepted out-of-date
-	    | software, to the total software load on the endpoint.
 	* - **Calculation**
 	  - | * If M1 = 0, this indicates the endpoint requires no software updates.
-	    | * If (M1 - M3) = 0, this indicates the endpoint requires software updates, 
+	    | * If (M1 - M3) == 0, this indicates the endpoint requires software updates, 
 	    | but the out-of-date software has an approved exception.
 	    | * Otherwise, this metric is calculated as :code:`(M1 - M3) / M2`
 

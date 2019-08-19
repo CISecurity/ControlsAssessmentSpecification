@@ -41,11 +41,8 @@ Percentage of Unsupported Software in Use
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
+	* - **Metric**
 	  - | What percentage of authorized software in use is unsupported?
-	* - **Answer**
-	  - | The calculation of this metric is determined by the ratio of 
-	    | unsupported software to the total authorized software in use.
 	* - **Calculation**
 	  - :code:`(M2 - M1) / M2`
 
@@ -53,11 +50,8 @@ Rate of False Positives
 ^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
+	* - **Metric**
 	  - | What percentage of software listed as supported is actually not supported?
-	* - **Answer**
-	  - | The calculation of this metric is determined by the ratio of software labeled
-	    |  "supported" but found to be unsupported, to the total authorized software in use.
 	* - **Calculation**
 	  - :code:`(M2 - M3) / M2`
 
@@ -65,11 +59,8 @@ Rate of False Negatives
 ^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
+	* - **Metric**
 	  - | What percentage of software listed as unsupported is actually supported?
-	* - **Answer**
-	  - | The calculation of this metric is determined by the ratio of software labeled
-	    |  "unsupported" but found to be supported, to the total authorized software in use.
 	* - **Calculation**
 	  - :code:`(M2 - M4) / M2`
 

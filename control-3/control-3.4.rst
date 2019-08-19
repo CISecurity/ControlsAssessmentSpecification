@@ -44,11 +44,9 @@ Update Effectiveness (Per Endpoint)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
+	* - **Metric**
 	  - | For a given endpoint, calculate the ratio of installed OS updates to the total
 	    | number of OS updates required.
-	* - **Answer**
-	  - This metric is calculated by a simple ratio.
 	* - **Calculation**
 	  - | If M4 = 0, this indicates the endpoint requires no OS updates.
 	    | Otherwise, this metric is calculated as :code:`M5 / M4`
