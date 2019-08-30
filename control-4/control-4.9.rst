@@ -49,7 +49,7 @@ Logging Unsuccessful Login Attempts
 	  - | The ratio of endpoints logging when unsuccessful login attempts are made, to the total
 	    | number of endpoints
 	* - **Calculation**
-	  - :code:`?`
+	  - :code:`M2 / M5`
 
 Alerting Unsuccessful Login Attempts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -59,7 +59,7 @@ Alerting Unsuccessful Login Attempts
 	  - | The ratio of endpoints alerting when unsuccessful login attempts are made, to the total
 	    | number of endpoints
 	* - **Calculation**
-	  - :code:`?`
+	  - :code:`M3 / M5`
 
 
 Combined Compliance
@@ -70,7 +70,7 @@ Combined Compliance
 	  - | The ratio of endpoints both alerting and logging unsuccessful login attempts are made,
 	    | to the total number of endpoints
 	* - **Calculation**
-	  - :code:`?`
+	  - :code:`M4 / M5`
 
 .. history
 .. authors
