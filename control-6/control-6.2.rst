@@ -16,6 +16,10 @@ Status
 ------
 Draft
 
+Dependencies
+------------
+* TBD
+
 Inputs
 ------
 #. The list of endpoints.
@@ -42,12 +46,9 @@ Logging Policy Coverage
 ^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
+	* - **Metric**
 	  - | Determine the ratio of endpoints implementing the prescribed event logging policy
 	    | to the total number of endpoints.
-	* - **Answer**
-	  - | Summing the value of M1 across all endpoints indicates the total count of endpoints
-	    | correctly enforcing the event logging policy.
 	* - **Calculation**
 	  - :code:`(SUM(M1) / M2)`
 

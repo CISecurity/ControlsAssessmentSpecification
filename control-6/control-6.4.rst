@@ -14,30 +14,39 @@ Ensure that all systems that store logs have adequate storage space for the logs
 
 Status
 ------
-In Development
+Draft
+
+Dependencies
+------------
+* Subcontrol 1.5: Maintain Asset Inventory Information
 
 Inputs
 ------
-#. 
+#. The list of endpoints (subject to system logging configuration)
+#. The organization's logging configuration policy, outlining log rotation policy, maximum log storage size, etc.
 
 Operations
 ----------
-#. 
+#. For each endpoint, collect the system logging configuration
 
 Measures
 --------
+* M1(i) = (For each endpoint "i") 1 if an endpoint's logging configuration complies with the organizations logging policy; 0 otherwise.
+* M2 = The number of endpoints from Input 1
 
 
 Metrics
 -------
+
+Logging Storage Coverage
+^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
-	  - 
-	* - **Answer**
-	  - 
+	* - **Metric**
+	  - | The ratio of endpoints compliant with the organization's logging policy to the total 
+	    | number of endpoints.
 	* - **Calculation**
-	  - :code:`?`
+	  - :code:`(SUM from i=1..M2 (M1(i))) / M2`
 
 .. history
 .. authors

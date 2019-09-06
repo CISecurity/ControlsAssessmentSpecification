@@ -14,30 +14,38 @@ Ensure that appropriate logs are being aggregated to a central log management sy
 
 Status
 ------
-In Development
+Draft
+
+Dependencies
+------------
+* TBD
 
 Inputs
 ------
-#. 
+#. The total number of log producers (M1)
+#. The number of sensors correlated in a central service (M2)
 
 Operations
 ----------
-#. 
+N/A
 
 Measures
 --------
-
+* M1 = The total number of log producers
+* M2 = The number of sensors correlated in a central service
 
 Metrics
 -------
+
+Quality of Log correlation/aggregation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
-	  - 
-	* - **Answer**
-	  - 
+	* - **Metric**
+	  - | The ratio of log producers correlated in a central service to the total number 
+	    | of log producers.
 	* - **Calculation**
-	  - :code:`?`
+	  - :code:`M2 / M1`
 
 .. history
 .. authors

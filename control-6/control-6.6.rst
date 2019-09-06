@@ -14,30 +14,39 @@ Deploy Security Information and Event Management (SIEM) or log analytic tools fo
 
 Status
 ------
-In Development
+Draft
+
+Dependencies
+------------
+* TBD
 
 Inputs
 ------
-#. 
+#. Install location of SIEM or log analytic tool
+#. The number of log producers correlated by a SIEM
+#. The total number of log producers
 
 Operations
 ----------
-#. 
+N/A 
 
 Measures
 --------
-
+* M1 = 1 if a SIEM or other log analytics tool is installed/present; 0 otherwise
+* M2 = The number of log producers correlated by a SIEM
+* M3 = The total number of log producers
 
 Metrics
 -------
+
+Quality of SIEM Correlation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
-	  - 
-	* - **Answer**
-	  - 
+	* - **Metric**
+	  - | The ratio of log producers correlated by a SIEM to the total number of log producers
 	* - **Calculation**
-	  - :code:`?`
+	  - :code:`IF M1 == 1 THEN M2 / M3; OTHERWISE 0`
 
 .. history
 .. authors

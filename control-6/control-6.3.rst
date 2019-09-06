@@ -14,30 +14,38 @@ Enable system logging to include detailed information such as an event source, d
 
 Status
 ------
-In Development
+Draft
+
+Dependencies
+------------
+* Subcontrol 1.5: Maintain Asset Inventory Information
 
 Inputs
 ------
-#. 
+#. The list of endpoints (subject to system logging configuration)
+#. The organization's logging configuration policy, outlining the detailed information to be written to system logs
 
 Operations
 ----------
-#. 
+#. For each endpoint, collect the system logging configuration
 
 Measures
 --------
-
+* M1(i) = (For each endpoint "i") 1 if the endpoint's logging configuration complies with the organizations logging policy; 0 otherwise.
+* M2 = The number of endpoints from Input 1
 
 Metrics
 -------
+
+Logging Coverage
+^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
-	  - 
-	* - **Answer**
-	  - 
+	* - **Metric**
+	  - | The ratio of endpoints configured to enable detailed system logging to the total number
+	    | of endpoints.
 	* - **Calculation**
-	  - :code:`?`
+	  - :code:`(SUM from i=1..M2 (M1(i))) / M2`
 
 .. history
 .. authors
