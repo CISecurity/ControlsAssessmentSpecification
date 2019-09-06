@@ -16,6 +16,10 @@ Status
 ------
 Draft
 
+Dependencies
+------------
+* Subcontrol 2.1: Maintain Inventory of Authorized Software
+
 Inputs
 ------
 #. From the authorized software list, the inventory of web browser and email client software with a notation of "supported" or "unsupported" for each entry.
@@ -41,9 +45,7 @@ Percentage of Unsupported Web Browser/Email Client Software in Use
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
-	  - | What percentage of authorized web browser/email client software in use is unsupported?
-	* - **Answer**
+	* - **Metric**
 	  - | The calculation of this metric is determined by the ratio of unsupported web
 	    | browser/email client software to the total authorized web browser/email client software
 	    | in use.
@@ -54,10 +56,7 @@ Rate of False Positives
 ^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
-	  - | What percentage of web browser/email client software listed as supported is actually
-	    | not supported?
-	* - **Answer**
+	* - **Metric**
 	  - | The calculation of this metric is determined by the ratio of web browser/email client
 	    | software labeled "supported" but found to be unsupported, to the total authorized web
 	    | browser/email client software in use.
@@ -68,10 +67,7 @@ Rate of False Negatives
 ^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
-	  - | What percentage of web browser/email client software listed as unsupported is actually
-	    | supported?
-	* - **Answer**
+	* - **Metric**
 	  - | The calculation of this metric is determined by the ratio of web browser/email client
 	    | software labeled "unsupported" but found to be supported, to the total authorized web
 	    | browser/email client software in use.

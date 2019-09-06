@@ -14,30 +14,42 @@ Enforce network-based URL filters that limit a system’s ability to connect to 
 
 Status
 ------
-In Development
+Draft
+
+Dependencies
+------------
+* Subcontrol 2.5: Integration Software and Hardware Asset Inventories
 
 Inputs
 ------
-#. 
+#. List of web clients/browsers installed in the organization by endpoint
+#. Approved configuration(s) covering each web browser/client in Input 1 indicating whether or not the browser must utilize URL filtering
 
 Operations
 ----------
-#. 
+#. For each application instance (web browser/client) in Input 1, check the application's configuration against the appropriate approved configuration(s) from Input 2.
+#. Create a list of the application instances that meet the approved configuration (M1)
+#. Create a list of the application instances that that do not meet the approved configuration (M2) noting each deviation.
 
 Measures
 --------
-
+* M1 = List of application instances (web browser/client) that meet the approved configuration (compliant list)
+* M2 = List of application instances (web browser or email client) that do not meet the approved configuration (non-compliant list)
+* M3 = Count of compliant application instances (count of M1)
+* M4 = Count of non-compliant application instances (count of M2)
+* M5 = Total count of installed web browser and email client instances (count of Input 1)
 
 Metrics
 -------
+
+Coverage
+^^^^^^^^
 .. list-table::
 
-	* - **Question**
-	  - 
-	* - **Answer**
-	  - 
+	* - **Metric**
+	  - | Calculate the quality of URL-filter enforcement.
 	* - **Calculation**
-	  - :code:`?`
+	  - :code:`M3 / M5`
 
 .. history
 .. authors

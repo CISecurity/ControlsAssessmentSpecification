@@ -14,30 +14,47 @@ To lower the chance of spoofed or modified emails from valid domains, implement 
 
 Status
 ------
-In Development
+Draft
+
+Dependencies
+------------
+N/A
 
 Inputs
 ------
-#. 
+#. DMARC policy
+#. TXT record published in DNS
+#. The Mail Transfer Agent used by the organization (this could indiate DKIM is used to sign outgoing messages)
+#. The Mail User Agent used by the organization (this could indicate DKIM is used to verify incoming messages)
+
+Assumptions
+^^^^^^^^^^^
+* The DMARC configuration policy includes instructions to produce either Aggregate (rua) or Forensic (ruf) reports.
+* The organization has access to these reports either daily (for Aggregate) or in real-time (for Forensic).
 
 Operations
 ----------
-#. 
+#. Examine the TXT records in DNS for a :code:`v` value indicating DMARC
+#. Examine the TXT records in DNS for a :code:`v` value indicating SPF
+#. Examine the TXT records in DNS for a :code:`v` value indicating DKIM
 
 Measures
 --------
-
+* M1 = 1 if Input 1 exists and Operation 1 indicates the use of DMARC
+* M2 = 1 if Operation 2 indicates the use of SPF
+* M3 = 1 if Operation 3 indicates the use of DKIM
 
 Metrics
 -------
+
+DMARC Usage
+^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
-	  - 
-	* - **Answer**
-	  - 
+	* - **Metric**
+	  - | Ensure usage and proper configuration of DMARC/SPF/DKIM
 	* - **Calculation**
-	  - :code:`?`
+	  - :code:`M1 AND M2 AND M3`
 
 .. history
 .. authors

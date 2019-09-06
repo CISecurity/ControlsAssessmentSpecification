@@ -16,6 +16,10 @@ Status
 ------
 In Development
 
+Dependencies
+------------
+* 
+
 Inputs
 ------
 #. 
@@ -26,16 +30,15 @@ Operations
 
 Measures
 --------
-
+* 
 
 Metrics
 -------
+
 .. list-table::
 
-	* - **Question**
-	  - 
-	* - **Answer**
-	  - 
+	* - **Metric**
+	  - | 
 	* - **Calculation**
 	  - :code:`?`
 

@@ -16,6 +16,10 @@ Status
 ------
 Draft
 
+Dependencies
+------------
+* Subcontrol 1.5: Maintain Asset Inventory Information
+
 Inputs
 ------
 #. The list of endpoints to be audited.
@@ -27,7 +31,7 @@ Operations
 
 Measures
 --------
-* M1 = 1 if an endpoint audited in Operation 1 is configured correctly; 0 otherwise.
+* M1(i) = For each endpoint "i", 1 if the endpoint audited in Operation 1 is configured correctly; 0 otherwise.
 * M2 = Total number of endpoints audited.
 
 Metrics
@@ -37,14 +41,11 @@ DNS Filtering Coverage
 ^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
+	* - **Metric**
 	  - | Determine the ratio of endpoints configured to use accepted DNS filtering services
 	    | to the total number of endpoints which utilize DNS.
-	* - **Answer**
-	  - | The calculation will yield a percentage, from 0 to 100, indicating the ratio of
-	    | correctly configured endpoints to the total number of endpoints.
 	* - **Calculation**
-	  - :code:`(SUM(M1)) / M2`
+	  - :code:`(SUM from i=1..M2(M1(i))) / M2`
 
 Traffic Analysis
 ^^^^^^^^^^^^^^^^

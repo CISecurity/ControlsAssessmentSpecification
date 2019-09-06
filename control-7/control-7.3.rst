@@ -14,30 +14,42 @@ Ensure that only authorized scripting languages are able to run in all web brows
 
 Status
 ------
-In Development
+Draft
+
+Dependencies
+------------
+* Subcontrol 2.5: Integration Software and Hardware Asset Inventories
 
 Inputs
 ------
-#. 
+#. List of web browsers and email clients installed in the organization by endpoint
+#. Approved configuration(s) covering each web browser and email client in Input 1 to restrict the scripting languages that can run to only the authorized scripting languages
 
 Operations
 ----------
-#. 
+#. For each application instance (web browser or email client) in Input 1, check the application's configuration against the appropriate approved configuration(s) from Input 2.
+#. Create a list of the application instances that meet the approved configuration (M1)
+#. Create a list of the application instances that that do not meet the approved configuration (M2) noting each deviation.
 
 Measures
 --------
-
+* M1 = List of application instances (web browser or email client) that meet the approved configuration (compliant list)
+* M2 = List of application instances (web browser or email client) that do not meet the approved configuration (non-compliant list)
+* M3 = Count of compliant application instances (count of M1)
+* M4 = Count of non-compliant application instances (count of M2)
+* M5 = Total count of installed web browser and email client instances (count of Input 1)
 
 Metrics
 -------
+
+Coverage
+^^^^^^^^
 .. list-table::
 
-	* - **Question**
-	  - 
-	* - **Answer**
-	  - 
+	* - **Metric**
+	  - | Ratio of compliant web browser and email client instances
 	* - **Calculation**
-	  - :code:`?`
+	  - :code:`M3 / M5`
 
 .. history
 .. authors
