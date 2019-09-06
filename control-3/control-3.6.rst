@@ -14,39 +14,59 @@ Regularly compare the results from consecutive vulnerability scans to verify tha
 
 Status
 ------
-In Development
+Draft
+
+Dependencies
+------------
+* Subcontrol 1.5: Maintain Asset Inventory Information
 
 Inputs
 ------
-#. 
+#. The list of endpoints
+#. Previous vulnerability scan results for all covered endpoints
+#. Current vulnerability scan results for all covered endpoints
 
 Operations
 ----------
-#. 
+#. For each covered endpoint:
+	#. Intersection of previous scan results with current scan results (Assumption: this should result in the complete set of results from the previous scan and set aside the new vulnerability checks introduced in the current scan)
+	#. Identify set of detected vulnerabilities from previous scan, based on intersection
+	#. Identify set of detected vulnerabilities from current scan, based on intersection
+#. Count endpoints in the set of covered endpoints eligible for back-to-back comparisons
+
+Assumption
+^^^^^^^^^^
+* The first operation carries the assumption that the intersection of previous scan results with current scan results yields the complete set of results from the previous scan and sets aside any new vulnerability checks introduced in the current scan. Doing so should also accommodate the dynamic enterprise that is adding and removing assets as a matter of course.
 
 Measures
 --------
-We need to know how many of the discovered vulnerabilities been fixed/patched and how soon these are fixed.
-
-* V : Number of all discovered vulnerabilities in the last scan
-* v_i: 1 if a vulnerability is patched, otherwise 0
-* p_i: patch time for vulnerability i
-* t_i: discovery time of vulnerability i
+* M1 = Set of previously detected vulnerabilities
+* M2 = Set of currently detected vulnerabilities
+* M3 = Count of previously detected vulnerabilities
+* M4 = Count of currently detected vulnerabilities
+* M5 = Count of covered endpoints with back-to-back comparisons
+* M6 = Count of endpoints in inventory eligible for back-to-back comparisons
 
 Metrics
 -------
 
-Patching Quality
-^^^^^^^^^^^^^^^^
-
+Unmitigated Vulnerabilities
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
-	  - How well are vulnerabilities covered based on time and coverage?
-	* - **Answer**
-	  - TBD
+	* - **Metric**
+	  - | Count of vulnerabilities previously discovered that are still discovered.
 	* - **Calculation**
-	  - :code:`(\sum v_i*(1-p_i - t_i)) / V`
+	  - :code:`M3 - M4`
+
+Coverage
+^^^^^^^^
+.. list-table::
+
+	* - **Metric**
+	  - | Coverage of back-to-back comparisons against eligible endpoints
+	* - **Calculation**
+	  - :code:`M5 / M6`
 
 .. history
 .. authors
