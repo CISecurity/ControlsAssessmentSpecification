@@ -16,6 +16,10 @@ Status
 ------
 Draft
 
+Dependencies
+------------
+* Subcontrol 2.5: Integrate Software and Hardware Asset Inventories
+
 Inputs
 -----------
 #. Endpoint inventory (with entry for each endpoint indicating whether that endpoint can support anti-malware software or not)
@@ -42,11 +46,9 @@ Coverage
 ^^^^^^^^
 .. list-table::
 
-	* - **Question**
+	* - **Metric**
 	  - | What is the ratio of endpoints compliant with the desired anti-malware configuration
 	    | to the total number of endpoints capable of supporting anti-malware software?
-	* - **Answer**
-	  - 
 	* - **Calculation**
 	  - :code:`M5 / M4`
 

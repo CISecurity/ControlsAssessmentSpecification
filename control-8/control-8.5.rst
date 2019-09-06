@@ -16,6 +16,10 @@ Status
 ------
 Draft
 
+Dependencies
+------------
+* Subcontrol 1.5: Maintain Details Asset Inventory
+
 Inputs
 -----------
 #. Endpoint inventory
@@ -41,10 +45,8 @@ Metrics
 -------
 .. list-table::
 
-	* - **Question**
-	  - What is the ratio of endpoints properly disabling auto-run to the total number of endpoints?
-	* - **Answer**
-	  - 
+	* - **Metric**
+	  - The ratio of endpoints properly disabling auto-run to the total number of endpoints?
 	* - **Calculation**
 	  - :code:`M3 / M5`
 
