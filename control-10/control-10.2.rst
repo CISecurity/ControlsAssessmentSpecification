@@ -16,6 +16,11 @@ Status
 ------
 Draft
 
+Dependencies
+------------
+* Subcontrol 1.4: Maintain Detailed Asset Inventory
+* Subcontrol 1.5: Maintain Asset Inventory Information
+
 Inputs
 -----------
 #. The list of "key systems" identified by the organization
@@ -31,7 +36,7 @@ Operations
 
 Measures
 --------
-* M1 = 1 if "key system" backup configuration policy meets policy requirements; 0 otherwise
+* M1(i) = (For each key system "i") 1 if "key system" backup configuration policy meets policy requirements; 0 otherwise
 * M2 = The total number of endpoints defined as "key systems"
 
 
@@ -42,12 +47,10 @@ Coverage
 ^^^^^^^^
 .. list-table::
 
-	* - **Question**
+	* - **Metric**
 	  - What percentage of key systems are successfully backed up as a complete system?
-	* - **Answer**
-	  - 
 	* - **Calculation**
-	  - :code:`(SUM of M1 from 1..M2) / M2`
+	  - :code:`(SUM of M1 from i=1..M2 (M1(i))) / M2`
 
 .. history
 .. authors

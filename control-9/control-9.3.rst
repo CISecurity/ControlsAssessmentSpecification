@@ -40,7 +40,7 @@ Measures
 * M1 (the average of port scans) = :code:`SUM from i=1..N  ( t(i+1) - t(i) ) / N`
 * M2 (Regularity Measure of Port Scan) = :code:`(SUM from i=1..N  ( (t(i+1) - t(i) - M1)^2 / N ) / M`
 * M3 (Threshold-based Regularity Measure of Port Scan) = :code:`(SUM from i=1..N ( ( t(i+1) - t(i) - T )^2 / N ) / M`
-* M4 (The Probability of detecting an anomaly in port scans) = D / L
+* M4 (The Probability of detecting an anomaly in port scans) = :code:`D / L`
 * M5 = The number of alerts received due to unauthorized ports
 * M6 = The number of unauthorized ports
 
@@ -53,7 +53,7 @@ Quality of Port Scan
 
 	* - **Metric**
 	  - | Quality of review is high if and only if the review is highly regular and the potential
-	    | is detecting anomalies (at least one per review) is also high.
+	    | for detecting anomalies (at least one per review) is also high.
 	* - **Calculation**
 	  - :code:`(1 - M2) * M4` or (if M3) :code:`(1 - M3) * M4`
 

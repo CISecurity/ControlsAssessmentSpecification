@@ -16,6 +16,11 @@ Status
 ------
 Draft
 
+Dependencies
+------------
+* Subcontrol 1.4: Maintain Detailed Asset Inventory
+* Subcontrol 1.5: Maintain Asset Inventory Information
+
 Inputs
 -----------
 #. The list of endpoints configured for periodic backup
@@ -32,7 +37,7 @@ Operations
 
 Measures
 --------
-* M1 = 1 if an endpoint's backup configuration policy ensures the backup is encrypted; 0 otherwise
+* M1(i) = (For each endpoint "i") 1 if an endpoint's backup configuration policy ensures the backup is encrypted; 0 otherwise
 * M2 = The total number of endpoints configured for periodic backup
 
 Metrics
@@ -42,12 +47,10 @@ Coverage
 ^^^^^^^^
 .. list-table::
 
-	* - **Question**
+	* - **Metric**
 	  - What percentage backups are protected via physical security/encryption?
-	* - **Answer**
-	  - 
 	* - **Calculation**
-	  - :code:`(SUM of M1 from 1..M2) / M2`
+	  - :code:`(SUM of M1 from i=1..M2(M1(i))) / M2`
 
 .. history
 .. authors

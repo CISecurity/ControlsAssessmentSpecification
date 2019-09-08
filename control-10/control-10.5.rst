@@ -16,6 +16,11 @@ Status
 ------
 Draft
 
+Dependencies
+------------
+* Subcontrol 1.4: Maintain Detailed Asset Inventory
+* Subcontrol 1.5: Maintain Asset Inventory Information
+
 Inputs
 -----------
 #. List of endpoints
@@ -38,10 +43,8 @@ Coverage
 ^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
+	* - **Metric**
 	  - What is the ratio of endpoints matching the backup configuration policy to the total number of endpoints?
-	* - **Answer**
-	  - 
 	* - **Calculation**
 	  - :code:`M1 / M3`
 
@@ -49,10 +52,8 @@ Lack of Coverage
 ^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
+	* - **Metric**
 	  - What is the ratio of endpoints *not* matching the backup configuration policy to the total number of endpoints?
-	* - **Answer**
-	  - 
 	* - **Calculation**
 	  - :code:`M2 / M3`
 

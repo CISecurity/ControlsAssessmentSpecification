@@ -16,6 +16,11 @@ Status
 ------
 Draft
 
+Dependencies
+------------
+* Subcontrol 1.4: Maintain Detailed Asset Inventory
+* Subcontrol 1.5: Maintain Asset Inventory Information
+
 Inputs
 -----------
 #. Backup configuration policy is available
@@ -30,8 +35,8 @@ Operations
 
 Measures
 --------
-* M1 = 1 if endpoint backup configuration policy meets policy requirements; 0 otherwise
-* M2 = 1 if last successful backup is within the "staleness" threshold; 0 otherwise
+* M1(i) = (For each endpoint "i") 1 if endpoint backup configuration policy meets policy requirements; 0 otherwise
+* M2(i) = (For each endpoint "i") 1 if last successful backup is within the "staleness" threshold; 0 otherwise
 * M3 = Total number of endpoints
 
 Metrics
@@ -41,12 +46,10 @@ Coverage
 ^^^^^^^^
 .. list-table::
 
-	* - **Question**
+	* - **Metric**
 	  - What percentage of endpoints are successfully backing up system data on a regular basis?
-	* - **Answer**
-	  - 
 	* - **Calculation**
-	  - :code:`(SUM from 1..M3 (M1 AND M2)) / M3`
+	  - :code:`(SUM from i=1..M3 (M1(i) AND M2(i))) / M3`
 
 .. history
 .. authors
