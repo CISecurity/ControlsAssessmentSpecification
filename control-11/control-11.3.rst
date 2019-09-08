@@ -14,30 +14,41 @@ Compare all network device configurations against approved security configuratio
 
 Status
 ------
-In Development
+Draft
+
+Dependencies
+------------
+* Subcontrol 1.4: Maintain Detailed Asset Inventory
+* Subcontrol 1.5: Maintain Asset Inventory Information
+* Subcontrol 2.1: Maintain Inventory of Authorized Software
 
 Inputs
------------
-#. 
+------
+#. The organization's configuration monitoring system
+#. The list of network devices
+#. The inventory and mappings of secure configuration policy(ies) to the list of network devices
 
 Operations
 ----------
-#. 
+#. For each network devices, obtain the configuration assessment results using Input 1
 
 Measures
 --------
-
+* M1(i) = (For each network device "i") The number of non-compliant recommendations resulting from Operation 1
+* M2(i) = (For each network device "i") The number of recommendations assessed
 
 Metrics
 -------
+
+Non-Compliance Ratio
+^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
-	  - 
-	* - **Answer**
-	  - 
+	* - **Metric**
+	  - | The ratio of network devices not in compliance with secure configuration policies to the
+	    | total number of network devices.
 	* - **Calculation**
-	  - :code:`?`
+	  - :code:`(SUM from i=1..M2 (M1(i))) / M2`
 
 .. history
 .. authors

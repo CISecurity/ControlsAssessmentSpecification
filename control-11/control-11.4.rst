@@ -16,6 +16,11 @@ Status
 ------
 Draft
 
+Dependencies
+------------
+* Subcontrol 1.4: Maintain Detailed Asset Inventory
+* Subcontrol 1.5: Maintain Asset Inventory Information
+
 Inputs
 -----------
 #. Network device inventory
@@ -23,7 +28,9 @@ Inputs
 
 Operations
 ----------
-#. For each network device in Input 1, compare the network device's version to the allowable versions from Input 2. Generate a list of those network devices that match an allowable version (M1) and a list of those network devices that do not match an allowable version (M2).
+#. For each network device in Input 1, compare the network device's version to the allowable versions from Input 2. 
+#. Generate a list of those network devices that match an allowable version (M1)
+#. Generate a list of those network devices that do not match an allowable version (M2).
 
 Measures
 --------
@@ -38,13 +45,11 @@ Coverage
 ^^^^^^^^
 .. list-table::
 
-	* - **Question**
+	* - **Metric**
 	  - | What percentage of inventoried network devices match the allowable version for that
 	    | device/OS?
-	* - **Answer**
-	  - 
 	* - **Calculation**
-	  - If M3 > 0, then :code:`M1 / M3`; otherwise `0`
+	  - If M3 > 0, then :code:`M1 / M3`; otherwise :code:`0`
 
 .. history
 .. authors

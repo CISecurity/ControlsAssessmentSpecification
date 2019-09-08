@@ -14,30 +14,40 @@ Ensure network engineers use a dedicated machine for all administrative tasks or
 
 Status
 ------
-In Development
+Draft
+
+Dependencies
+------------
+* Subcontrol 1.4: Maintain Detailed Asset Inventory
+* Subcontrol 1.5: Maintain Asset Inventory Information
 
 Inputs
------------
-#. 
+------
+#. The set of devices used for administrative purposes
+#. The access control configuration
 
 Operations
 ----------
-#. 
+N/A
 
 Measures
 --------
-
+* M1(i) = (For each machine "i") 1 if an administrative device has internet access; 0 otherwise.
+* M2(i) = (For each machine "i") 1 if administrative device can run any application that is not administrative; 0 otherwise.
+* M3 = The number of administrative devices 
 
 Metrics
 -------
+
+Administrative Device Configuration
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
-	  - 
-	* - **Answer**
-	  - 
+	* - **Metric**
+	  - | The ratio of improperly configured administrative devices to the total number of
+	    | administrative devices.
 	* - **Calculation**
-	  - :code:`?`
+	  - :code:`(SUM from i=1..M3 (M1(i) AND M2(i))) / M3`
 
 .. history
 .. authors
