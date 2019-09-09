@@ -16,6 +16,11 @@ Status
 ------
 Draft
 
+Dependencies
+------------
+* Subcontrol 1.4: Maintain Detailed Asset Inventory
+* Subcontrol 1.5: Maintain Asset Inventory Information
+
 Inputs
 -----------
 #. An inventory of expected boundary devices (M1)
@@ -38,11 +43,9 @@ Coverage
 ^^^^^^^^
 .. list-table::
 
-	* - **Question**
+	* - **Metric**
 	  - | What is the ratio of non-inventoried boundary devices to expected boundary devices?
 	    | If the calculated value is greater than zero, the inventory is not current.
-	* - **Answer**
-	  - 
 	* - **Calculation**
 	  - :code:`M3 / M1`
 

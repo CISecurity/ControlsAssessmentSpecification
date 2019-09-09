@@ -16,6 +16,11 @@ Status
 ------
 Draft
 
+Dependencies
+------------
+* Subcontrol 1.4: Maintain Detailed Asset Inventory
+* Subcontrol 1.5: Maintain Asset Inventory Information
+
 Inputs
 -----------
 #. List of endpoints to scan (assumed capable of hosting firewall/port-filtering software)
@@ -28,21 +33,19 @@ Operations
 
 Measures
 --------
-* M1 = For an endpoint's firewall policy, 1 if all of the described open ports are in the allowed list
-* M2 = For an endpoint's firewall policy, 1 if a default deny rule exists and is enforced.
+* M1(i) = (For each endpoint "i") 1 if all of the described open ports are in the allowed list; 0 otherwise
+* M2(i) = (For each endpoint "i") 1 if a default deny rule exists and is enforced; 0 otherwise
 * M3 = Total number of endpoints
-* M4 = Logical AND of M1 and M2 for that endpoint
+* M4(i) = (For each endpoint "i") The logical :code:`M1(i) AND M2(i)`
 
 Metrics
 -------
 .. list-table::
 
-	* - **Question**
+	* - **Metric**
 	  - What is the ratio of correctly configured endpoints to the total number of endpoints?
-	* - **Answer**
-	  - 
 	* - **Calculation**
-	  - :code:`SUM from 1..M3 (M4) / M3`
+	  - :code:`(SUM from i=1..M3 (M4(i))) / M3`
 
 .. history
 .. authors

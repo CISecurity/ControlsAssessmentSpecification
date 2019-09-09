@@ -10,11 +10,15 @@ Ensure that all network traffic to or from the Internet passes through an authen
 	  - Implementation Groups
 	* - Network
 	  - Detect
-	  - 2, 3
+	  - 3
 
 Status
 ------
 In Development
+
+Dependencies
+------------
+* 
 
 Inputs
 -----------
@@ -30,12 +34,11 @@ Measures
 
 Metrics
 -------
+
 .. list-table::
 
-	* - **Question**
-	  - 
-	* - **Answer**
-	  - 
+	* - **Metric**
+	  - | 
 	* - **Calculation**
 	  - :code:`?`
 
