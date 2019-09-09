@@ -16,6 +16,11 @@ Status
 ------
 In Development
 
+Dependencies
+------------
+* Subcontrol 1.4: Maintain Detailed Asset Inventory
+* Subcontrol 1.5: Maintain Asset Inventory Information
+
 Inputs
 -----------
 #. 
@@ -26,16 +31,15 @@ Operations
 
 Measures
 --------
-
+* 
 
 Metrics
 -------
+
 .. list-table::
 
-	* - **Question**
-	  - 
-	* - **Answer**
-	  - 
+	* - **Metric**
+	  - | 
 	* - **Calculation**
 	  - :code:`?`
 

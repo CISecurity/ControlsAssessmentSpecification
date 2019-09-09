@@ -16,6 +16,10 @@ Status
 ------
 Draft
 
+Dependencies
+------------
+* TBD
+
 Inputs
 -----------
 #. The organizationally-defined classification scheme
@@ -39,11 +43,9 @@ Existence
 ^^^^^^^^^
 .. list-table::
 
-	* - **Question**
+	* - **Metric**
 	  - | Ensure the inventory of all sensitive information, cross-referenced with the systems
 	    | on which that information is kept, exists.
-	* - **Answer**
-	  - 
 	* - **Calculation**
 	  - :code:`M1 AND M2`
 

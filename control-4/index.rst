@@ -30,7 +30,7 @@ privileges.
    :maxdepth: 1
    :name: toc-control-4
 
-   4.1: Maintain Inventory of Administratove Accounts <control-4.1>
+   4.1: Maintain Inventory of Administrative Accounts <control-4.1>
    4.2: Change Default Passwords <control-4.2>
    4.3: Ensure the Use of Dedicated Administrative Accounts <control-4.3>
    4.4: Use Unique Passwords <control-4.4>

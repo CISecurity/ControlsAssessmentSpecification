@@ -16,6 +16,11 @@ Status
 ------
 Draft
 
+Dependencies
+------------
+* Subcontrol 1.4: Maintain Detailed Asset Inventory
+* Subcontrol 1.5: Maintain Asset Inventory Information
+
 Inputs
 -----------
 #. The list of approved mobile devices
@@ -40,11 +45,9 @@ Installed Software Coverage
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
+	* - **Metric**
 	  - | What percentage of approved mobile devices are equipped with approved encryption
 	    | software?
-	* - **Answer**
-	  - 
 	* - **Calculation**
 	  - :code:`M2 / M1`
 
@@ -52,11 +55,9 @@ Appropriately Configured Devices
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
+	* - **Metric**
 	  - | What percentage of approved mobile devices equipped with approved encryption software
 	    | meet or exceed the approved configuration policy?
-	* - **Answer**
-	  - 
 	* - **Calculation**
 	  - :code:`M3 / M1`
 

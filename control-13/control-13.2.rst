@@ -16,6 +16,10 @@ Status
 ------
 Draft
 
+Dependencies
+------------
+* Subcontrol 13.1: Maintain an Inventory of Sensitive Information
+
 Inputs
 -----------
 #. List of sensitive systems
@@ -45,10 +49,8 @@ Coverage
 ^^^^^^^^
 .. list-table::
 
-	* - **Question**
+	* - **Metric**
 	  - What percentage of infrequently used sensitive systems are not properly isolated?
-	* - **Answer**
-	  - 
 	* - **Calculation**
 	  - :code:`M2 / M1`
 
