@@ -16,6 +16,11 @@ Status
 ------
 Draft
 
+Dependencies
+------------
+* Subcontrol 1.4: Maintain Detailed Asset Inventory
+* Subcontrol 1.5: Maintain Asset Inventory Information
+
 Inputs
 -----------
 #. Isolated wireless network SSID(s)
@@ -43,10 +48,8 @@ Coverage
 ^^^^^^^^
 .. list-table::
 
-	* - **Question**
+	* - **Metric**
 	  - What percentage of the total number of wireless networks exist but are misconfigured?
-	* - **Answer**
-	  - 
 	* - **Calculation**
 	  - :code:`M2 / M3`
 

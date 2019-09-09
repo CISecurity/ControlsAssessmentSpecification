@@ -16,6 +16,11 @@ Status
 ------
 Draft
 
+Dependencies
+------------
+* Subcontrol 1.4: Maintain Detailed Asset Inventory
+* Subcontrol 1.5: Maintain Asset Inventory Information
+
 Inputs
 -----------
 #. List of wireless devices
@@ -37,10 +42,8 @@ Coverage
 ^^^^^^^^
 .. list-table::
 
-	* - **Question**
+	* - **Metric**
 	  - What percentage of AES-capable devices still support less-than-secure cipher suites?
-	* - **Answer**
-	  - 
 	* - **Calculation**
 	  - :code:`M1 / M2`
 
