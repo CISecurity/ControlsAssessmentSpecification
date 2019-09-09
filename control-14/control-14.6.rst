@@ -16,9 +16,14 @@ Status
 ------
 Draft
 
+Dependencies
+------------
+* Subcontrol 1.4: Maintain Detailed Asset Inventory
+* Subcontrol 1.5: Maintain Asset Inventory Information
+
 Inputs
 -----------
-#. List of endpoints (Endpoint Inventory)
+#. The list of endpoints
 #. Access control configuration policy
 
 Operations
@@ -40,11 +45,9 @@ Coverage
 ^^^^^^^^
 .. list-table::
 
-	* - **Question**
+	* - **Metric**
 	  - | What is the percentage of endpoints which are compliant with the organization's
 	    | access control policy?
-	* - **Answer**
-	  - 
 	* - **Calculation**
 	  - :code:`M3 / M5`
 
