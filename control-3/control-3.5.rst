@@ -5,7 +5,7 @@ Deploy automated software update tools in order to ensure that third-party softw
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Applications
@@ -16,9 +16,13 @@ Status
 ------
 Draft
 
+Dependencies
+------------
+* Sub-control 2.1: Maintain Inventory of Authorized Software 
+
 Inputs
 ------
-#. From the authorized software list, information on the current authorized version.
+#. From the authorized software list (ASL; sub-control 2.1), information on the current authorized version.
 #. Access to an authoritative source of information indicating version details by product.
 #. A list of approved exceptions, noting any reasons that an authorized software package does not match the latest version.
 
@@ -31,6 +35,13 @@ Operations
 
 Measures
 --------
+* M1 = List of authorized software products installed on the endpoint which are not at the latest version.
+* M2 = Count of M1
+* M3 = List of authorized software products installed on the endpoint.
+* M4 = Count of M3
+* M5 = List of authorized software products installed on the endpoint which are not at the latest version, but have approved exceptions.
+* M6 = Count of M5
+
 * M1 = The number of authorized software products installed on the endpoint which are not at the latest version.
 * M2 = The number of authorized software products installed on the endpoint (software load).
 * M3 = The number of authorized software products installed on the endpoint which are not at the latest version, but have approved exceptions.
@@ -46,10 +57,10 @@ Update Effectiveness (Per Endpoint)
 	  - | For a given endpoint, calculate the ratio of installed software updates to the
 	    | total number of required software updates.
 	* - **Calculation**
-	  - | * If M1 = 0, this indicates the endpoint requires no software updates.
-	    | * If (M1 - M3) == 0, this indicates the endpoint requires software updates, 
+	  - | * If M2 = 0, this indicates the endpoint requires no software updates.
+	    | * If (M2 - M5) == 0, this indicates the endpoint requires software updates,
 	    | but the out-of-date software has an approved exception.
-	    | * Otherwise, this metric is calculated as :code:`(M1 - M3) / M2`
+	    | * Otherwise, this metric is calculated as :code:`(M2 - M5) / M4`
 
 Update Effectiveness (Organizational)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

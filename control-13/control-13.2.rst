@@ -5,7 +5,7 @@ Remove sensitive data or systems not regularly accessed by the organization from
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Data
@@ -18,11 +18,12 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 13.1: Maintain an Inventory of Sensitive Information
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 13.1: Maintain an Inventory of Sensitive Information
 
 Inputs
 -----------
-#. List of sensitive systems
+#. List of sensitive systems (ideally using the endpoint inventory; see sub-control 1.4)
 #. The access frequency for any sensitive systems
 #. An organizationally-defined access frequency threshold
 
@@ -38,9 +39,12 @@ Operations
 
 Measures
 --------
-* M1 = Set of infrequently used sensitive systems
-* M2 = Number of infrequently used sensitive systems with isolation/exposure scores greater than 0
-
+* M1 = List of all systems used to process sensitive information
+* M2 = Count of M1
+* M3 = Set of infrequently used sensitive systems
+* M4 = Count of infrequently used sensitive systems
+* M5 = List of infrequently used sensitive systems with isolation/exposure scores greater than 0
+* M6 = Count of M4
 
 Metrics
 -------
@@ -52,7 +56,7 @@ Coverage
 	* - **Metric**
 	  - What percentage of infrequently used sensitive systems are not properly isolated?
 	* - **Calculation**
-	  - :code:`M2 / M1`
+	  - :code:`M6 / M4`
 
 .. history
 .. authors

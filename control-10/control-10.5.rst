@@ -5,7 +5,7 @@ Ensure that all backups have at least one offline (i.e., not accessible via a ne
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Data
@@ -18,12 +18,12 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
 
 Inputs
 -----------
-#. List of endpoints
+#. EI: List of endpoints
 #. Backup configuration policy assuming inclusion of "offline" backup destination
 
 Operations
@@ -32,9 +32,12 @@ Operations
 
 Measures
 --------
-* M1 = count of endpoints matching
-* M2 = count of endpoints not matching
-* M3 = total count of endpoints (M1 + M2 needs to equal M3)
+* M1 = List of endpoints
+* M2 = Count of M1
+* M3 = List of endpoints matching policy
+* M4 = Count of M3
+* M5 = List of endpoints not matching policy
+* M6 = Count of M5
 
 Metrics
 -------
@@ -46,7 +49,7 @@ Coverage
 	* - **Metric**
 	  - What is the ratio of endpoints matching the backup configuration policy to the total number of endpoints?
 	* - **Calculation**
-	  - :code:`M1 / M3`
+	  - :code:`M4 / M2`
 
 Lack of Coverage
 ^^^^^^^^^^^^^^
@@ -55,7 +58,7 @@ Lack of Coverage
 	* - **Metric**
 	  - What is the ratio of endpoints *not* matching the backup configuration policy to the total number of endpoints?
 	* - **Calculation**
-	  - :code:`M2 / M3`
+	  - :code:`M5 / M2`
 
 .. history
 .. authors

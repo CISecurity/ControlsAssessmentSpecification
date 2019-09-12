@@ -5,7 +5,7 @@ Maintain an inventory of all sensitive information stored, processed, or transmi
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Data
@@ -18,13 +18,13 @@ Draft
 
 Dependencies
 ------------
-* TBD
+* Sub-control 1.4: Maintain Detailed Asset Inventory
 
 Inputs
 -----------
-#. The organizationally-defined classification scheme
+#. CS: The organizationally-defined classification scheme
 #. The data set of sensitive information for which the organization is responsible, mapped to the classification scheme defined by Input 1
-#. A mapping of an organization's endpoints/systems containing sensitive information classified by Input 2.
+#. A mapping of an organization's endpoints/systems containing sensitive information classified by Input 2 (ideally using the endpoint inventory; see sub-control 1.4)
 
 Operations
 ----------

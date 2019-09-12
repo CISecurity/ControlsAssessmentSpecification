@@ -5,7 +5,7 @@ Before deploying any new asset, change all default passwords to have values cons
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Users
@@ -16,9 +16,13 @@ Status
 ------
 Draft
 
+Dependencies
+------------
+* Sub-control 2.4: Track Software Inventory Information
+
 Inputs
 ------
-#. The organization's inventory of endpoints which utilize credentials, either at the OS level or at the application software level
+#. The organization's inventory of endpoints which utilize credentials, either at the OS level or at the application software level (ideally software inventory from sub-control 2.4)
 #. An authoritative source of known default password hashes
 #. The organization's defined password policy configuration
 
@@ -31,11 +35,16 @@ Operations
 
 Measures
 --------
-* M1 = The enumerated list of available logins for endpoints which utilized credentialed accounts
-* M2 = The number of available logins who's password hash matches a known default password hash
-* M3 = The enumerated list of the sampled endpoint password policy configurations
-* M4 = The number of sampled password policy configurations that do not match organizationally defined recommendations.
-
+* M1 = The list of available logins for endpoints which utilized credentialed accounts
+* M2 = The count of M1
+* M3 = The list of enumerated logins who's password has matches a known default password hash
+* M4 = The count of M3
+* M5 = The list of the sampled endpoint password policy configurations
+* M6 = The count of M5
+* M7 = The list of sampled password policy configurations that do not match organizationally defined recommendations
+* M8 = The count of M7
+* M9 = The list of sampled password policy configurations that do match organizationally defined recommendations
+* M10 = The count of M9
 
 Metrics
 -------
@@ -47,8 +56,8 @@ Default Password Usage
 	* - **Metric**
 	  - | What percentage of credentials have been changed from the default value?
 	* - **Calculation**
-	  - | * If M2 = 0, then no accounts remain configured with the default password.
-	    | * Otherwise, the value of this metric is :code:`(M1 - M2) / M1`
+	  - | * If M4 = 0, then no accounts remain configured with the default password.
+	    | * Otherwise, the value of this metric is :code:`(M2 - M4) / M2`
 
 Password Policy Compliance
 ^^^^^^^^^^^^^^^^^^^^^^^^^^

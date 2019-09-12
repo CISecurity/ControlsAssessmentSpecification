@@ -16,12 +16,16 @@ Status
 ------
 Draft
 
+Dependencies
+------------
+* None
+
 Inputs
 ------
 #. The required OS auto-update configuration (this could vary by organization, by product, by security tool, etc.). It could be 1 setting or multiple settings. It would need to be determined if partial settings are creditable, potential weighting of settings, any dependencies, etc. Such logic should all be part of Input 1.
 #. The list of required updates (this could be pulled from the vendor's website, or could be an organization's selected subset of updates). *Optional Field*: If time metrics are desired, this list would also need a date when each update on the list was released by the vendor.
 #. The list of endpoints to be checked.
-#. *Optional*: If time metrics are desired, the allowable timeframe for installation of an update after its release.
+#. *Optional*: If time metrics are desired, the allowable time frame for installation of an update after its release (recommend at least 30 days)
 
 Operations
 ----------

@@ -5,7 +5,7 @@ Configure devices so that they automatically conduct an anti-malware scan of rem
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Devices
@@ -18,13 +18,16 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 2.5: Integrate Software and Hardware Asset Inventories
+* Sub-control 1.4: Maintain Detailed Asset Inventory
 
 Inputs
 -----------
-#. Endpoint inventory (with entry for each endpoint indicating whether that endpoint can support anti-malware software or not)
+#. EI: Endpoint inventory (with entry for each endpoint indicating whether that endpoint can support anti-malware software or not)
 #. Desired anti-malware configuration (to automatically scan removable media when inserted/connected)
-Assumption: Some endpoints, such as network devices, may not support anti-malware software. Whether an endpoint supports anti-malware software is provided as part of Input 1. Devices that cannot support anti-malware software are removed from the list of endpoints to be checked during Operation 1, and these devices are not counted in the metric below.
+
+Assumptions
+-----------
+Some endpoints, such as network devices, may not support anti-malware software. Whether an endpoint supports anti-malware software is provided as part of Input 1. Devices that cannot support anti-malware software are removed from the list of endpoints to be checked during Operation 1, and these devices are not counted in the metric below.
 
 Operations
 ----------
@@ -36,8 +39,9 @@ Measures
 * M1 = List of endpoints capable of supporting anti-malware software
 * M2 = List of endpoints with anti-malware software installed, enabled, and properly configured to scan removable media (compliant list)
 * M3 = List of endpoints not adhering to the specified configuration (non-compliant list)
-* M4 = Number of endpoints in M1 (number of endpoints capable of supporting anti-malware software)
-* M5 = Number of endpoints in M2 (number of compliant endpoints)
+* M4 = Count of endpoints in M1 (number of endpoints capable of supporting anti-malware software)
+* M5 = Count of endpoints in M2 (number of compliant endpoints)
+* M6 = Count of endpoints in M3 (number of non-compliant endpoints)
 
 Metrics
 -------

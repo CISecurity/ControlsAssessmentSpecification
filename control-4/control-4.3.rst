@@ -5,7 +5,7 @@ Ensure that all users with administrative account access use a dedicated or seco
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Users
@@ -15,6 +15,10 @@ Ensure that all users with administrative account access use a dedicated or seco
 Status
 ------
 Draft
+
+Dependencies
+------------
+* None
 
 Inputs
 ------
@@ -33,6 +37,13 @@ Operations
 
 Measures
 --------
+* M1 = The list of defined Administrative users
+* M2 = The count of M1
+* M3 = The list of users collected in Operation 1
+* M4 = The count of M3
+* M5 = The list of users collected in Operation 2
+* M6 = The count of M5
+
 * M1 = The number of users defined as Administrators
 * M2 = For each user, this measure describes the number of user accounts identified by Operation 1
 * M3 = For each user, this measure describes the number of user accounts identified by Operation 2
@@ -61,7 +72,7 @@ Unauthorized User Accounts
 	  - | This metric is intended to illustrate any non-Administrative-level users that
 	    | have been assigned an Administrative-level user account.
 	* - **Calculation**
-	  - If :code:`M3 > 0`, then :code:`FAIL`; otherwise :code:`PASS`
+	  - If :code:`M6 > 0`, then :code:`FAIL`; otherwise :code:`PASS`
 
 .. history
 .. authors

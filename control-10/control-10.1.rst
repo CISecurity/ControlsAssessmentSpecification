@@ -5,7 +5,7 @@ Ensure that all system data is automatically backed up on a regular basis.
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Data
@@ -18,26 +18,37 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
 
 Inputs
 -----------
+#. EI: Endpoint Inventory
 #. Backup configuration policy is available
-#. Backup software (either OS or 3d party) configuration is available and queryable
-#. Backup software logs are available and queryable
-#. Successful backup "staleness" threshold is defined (a maximum time period allowed between backups)
+#. Backup software (either OS or 3d party) configuration is available and able to be queried
+#. Backup software logs are available and can be queried
+#. Successful backup staleness threshold is defined (a maximum time period allowed between backups; recommended value of at least weekly)
 
 Operations
 ----------
+#. For each endpoint, examine its backup configuration with the available configuration policy (noting appropriately configured and inappropriately configured endpoints along the way), and examine its logs to determine the most recent successful backup completion time (noting whether it was run within the enterprise-defined staleness threshold).
+# Enumerate the endpoints that are both appropriately configured and do not have stale backups
+
 #. Compare an endpoints backup configuration with available configuration policy
 #. Interrogate logs to determine most recent successful backup completion time
 
 Measures
 --------
-* M1(i) = (For each endpoint "i") 1 if endpoint backup configuration policy meets policy requirements; 0 otherwise
-* M2(i) = (For each endpoint "i") 1 if last successful backup is within the "staleness" threshold; 0 otherwise
-* M3 = Total number of endpoints
+* M1 = List of endpoints
+* M2 = Count of M1
+* M3 = List of appropriately configured endpoints
+* M4 = Count of M3
+* M5 = List of inappropriately configured endpoints
+* M6 = Count of M5
+* M7 = List of endpoints both appropriately configured and without stale backups
+* M8 = Count of M7
+* M9 = List of endpoints either inappropriately configured or without stale backups
+* M10 = Count of M9
 
 Metrics
 -------
@@ -49,7 +60,7 @@ Coverage
 	* - **Metric**
 	  - What percentage of endpoints are successfully backing up system data on a regular basis?
 	* - **Calculation**
-	  - :code:`(SUM from i=1..M3 (M1(i) AND M2(i))) / M3`
+	  - :code:`M8 / M2`
 
 .. history
 .. authors

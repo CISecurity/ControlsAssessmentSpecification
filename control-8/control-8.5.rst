@@ -5,7 +5,7 @@ Configure devices to not auto-run content from removable media.
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Devices
@@ -18,11 +18,11 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.5: Maintain Details Asset Inventory
+* Sub-control 1.4: Maintain Detailed Asset Inventory
 
 Inputs
 -----------
-#. Endpoint inventory
+#. EI: Endpoint inventory
 #. Desired configuration(s) to disable auto-run. There may be multiple configurations targeted at different types of endpoints (for instance, a different configuration might be provided for each type of operating system used on the endpoints in the provided inventory). If the endpoints are capable of performing multiple types of auto-run behavior (i.e., auto-run vs. auto-play), appropriate configurations should be provided for each type.
 
 Operations
@@ -37,9 +37,9 @@ Measures
 --------
 * M1 = List of endpoints adhering to the specified configuration (compliant list)
 * M2 = List of endpoints not adhering to the specified configuration (non-compliant list)
-* M3 = Number of endpoints in M1 (number of compliant endpoints)
-* M4 = Number of endpoints in M2 (number of non-compliant endpoints)
-* M5 = Number of endpoints in the endpoint inventory (Input 1)
+* M3 = Count of endpoints in M1 (number of compliant endpoints)
+* M4 = Count of endpoints in M2 (number of non-compliant endpoints)
+* M5 = Count of endpoints in the endpoint inventory (Input 1)
 
 Metrics
 -------

@@ -5,7 +5,7 @@ Maintain documented security configuration standards for all authorized operatin
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Applications
@@ -16,10 +16,14 @@ Status
 ------
 Draft
 
+Dependencies
+------------
+* Sub-control 2.1: Maintain Inventory of Authorized Software
+
 Inputs
 ------
-#. The list of authorized software, per Control 2.
-#. The list of enterprise security configuration standards.
+#. ASL: The list of authorized software (sub-control 2.1).
+#. SCS: The list of enterprise security configuration standards.
 
 Assumptions
 ^^^^^^^^^^^
@@ -31,10 +35,14 @@ Operations
 
 Measures
 --------
-* M1 = The intersection of Input 1 and Input 2.  This intersection measures those authorized software with security configuration standards.
-* M2 = The "left" side of the set calculation measures the number of authorized software without security configuration standards.
-* M3 = The "right" side of the set calculation measures the number of security configuration standards without any authorized software to which they are associated.
-* M4 = The number of authorized software.
+* M1 = The list of authorized software with associated enterprise security configuration standards
+* M2 = Count of M1
+* M3 = The list of authorized software without enterprise security configuration standards (the "left" side of the set calculation)
+* M4 = Count of M3
+* M5 = The list of enterprise security configuration standards without associated authorized software (the "right" side of the set calculation)
+* M6 = Count of M5
+* M7 = The list of authorized software
+* M8 = Count of M7
 
 Metrics
 -------
@@ -47,7 +55,7 @@ Security Configuration Standards Coverage
 	  - | For what percentage of the total OS/Software in an enterprise, are security configuration
 	    | standards documented and maintained?
 	* - **Calculation**
-	  - :code:`(M4 - M2) / M4`
+	  - :code:`(M8 - M4) / M8`
 
 .. history
 .. authors

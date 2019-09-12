@@ -5,7 +5,7 @@ Use Domain Name System (DNS) filtering services to help block access to known ma
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Network
@@ -18,21 +18,25 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.5: Maintain Asset Inventory Information
+* Sub-control 1.5: Maintain Asset Inventory Information
 
 Inputs
 ------
-#. The list of endpoints to be audited.
+#. EI: The list of endpoints to be audited (sub-control 1.5).
 #. The list of accepted DNS filtering services, such as Quad-9.
 
 Operations
 ----------
-#. For each endpoint in Input 1, collect it's DNS configuration setting.
+#. For each endpoint in Input 1, collect it's DNS configuration setting noting appropriately and inappropriately configured endpoints.
 
 Measures
 --------
-* M1(i) = For each endpoint "i", 1 if the endpoint audited in Operation 1 is configured correctly; 0 otherwise.
-* M2 = Total number of endpoints audited.
+* M1 = List of audited endpoints
+* M2 = Count of M1
+* M3 = List of appropriately configured endpoints
+* M4 = Count of M3
+* M5 = List of inappropriately configured endpoints
+* M6 = Count of M5
 
 Metrics
 -------
@@ -45,7 +49,7 @@ DNS Filtering Coverage
 	  - | Determine the ratio of endpoints configured to use accepted DNS filtering services
 	    | to the total number of endpoints which utilize DNS.
 	* - **Calculation**
-	  - :code:`(SUM from i=1..M2(M1(i))) / M2`
+	  - :code:`M4 / M2`
 
 Traffic Analysis
 ^^^^^^^^^^^^^^^^

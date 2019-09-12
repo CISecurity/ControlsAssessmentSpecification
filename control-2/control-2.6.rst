@@ -5,7 +5,7 @@ Ensure that unauthorized software is either removed or the inventory is updated 
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Applications
@@ -16,24 +16,29 @@ Status
 ------
 Draft
 
+Dependencies
+------------
+* Sub-control 2.1: Maintain Inventory of Authorzied Software
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+
 Inputs
 ------
-#. The list of authorized software
-#. An organizationally defined allowable timeframe for resolution of discovered unauthorized software
-#. The list of endpoints to be checked
-#. The updated authorized software list, following the timeframe defined by Input 2
+#. ASL\ :sub:`i`\ : The previous list of authorized software
+#. An organizationally defined allowable time frame for resolution of discovered unauthorized software (recommend at least monthly)
+#. SCE: The list of endpoints to be checked (derived from hardware inventory; see sub-control 1.4)
+#. ASL\ :sub:`i+1`\ : The updated authorized software list, following the time frame defined by Input 2
 #. The "scanning threshold"; the time period between scan 1 and scan 2
 
 Assumptions
 ^^^^^^^^^^^
 * For Input 4, that the authorized software list may have been updated after a manual review of unauthorized software based on user requests, etc.
-* For Input 5, that the scanning threshold time period is greater than Input 2 (resolution timeframe).
+* For Input 5, that the scanning threshold time period is greater than Input 2 (resolution time frame).
 
 Operations
 ----------
 #. For each endpoint in Input 3, scan the installed software present on that endpoint.
 #. Compare the installed software list for each endpoint (M1) to the authorized software list (Input 1) to generate the unauthorized software list for that endpoint (M2).
-#. Wait the "scanning threshold" time period (Input 5) and rescan the endpoints specified by Input 3.
+#. Wait the "scanning threshold" time period (Input 5) and re-scan the endpoints specified by Input 3.
 #. For each software on the M2 list, determine if that software is still present in the Operation 3 scan.
 #. For those that are still present, check Input 4 to determine if the software is now present on the updated authorized software list (Input 4).  Software that remains installed on the machine, but does not appear on the updated authorized software list is added to the unaddressed software list for that endpoint (M3).
 

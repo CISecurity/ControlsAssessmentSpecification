@@ -5,7 +5,7 @@ Maintain an up-to-date list of all authorized software that is required in the e
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Applications
@@ -16,10 +16,14 @@ Status
 ------
 Draft
 
+Dependencies
+------------
+* None
+
 Inputs
 ------
-#. The authorized software list (containing a timestamp indicating both last updated and last verified values).
-#. An organizationally defined acceptable timeframe for "up-to-date"
+#. ASL: The authorized software list (containing a timestamp indicating both last updated and last verified values).
+#. An organizationally defined acceptable timeframe for "up-to-date" (recommend at least monthly)
 
 Operations
 ----------

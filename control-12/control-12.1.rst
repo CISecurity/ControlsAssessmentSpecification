@@ -5,7 +5,7 @@ Maintain an up-to-date inventory of all of the organization’s network boundari
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Network
@@ -18,12 +18,12 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
 
 Inputs
 -----------
-#. An inventory of expected boundary devices (M1)
+#. An inventory of expected boundary devices (M1) as derived from the endpoint inventory (see sub-control 1.4)
 
 Operations
 ----------
@@ -32,9 +32,12 @@ Operations
 
 Measures
 --------
-* M1 = The number of expected network boundary devices
-* M2 = The number of discovered network boundary devices
-* M3 = Number of non-inventoried boundary devices
+* M1 = List of expected network boundary devices
+* M2 = Count of M1
+* M3 = List of discovered network boundary devices
+* M4 = Count of M3
+* M5 = List of non-inventoried boundary devices
+* M6 = Count of M5
 
 Metrics
 -------
@@ -47,7 +50,7 @@ Coverage
 	  - | What is the ratio of non-inventoried boundary devices to expected boundary devices?
 	    | If the calculated value is greater than zero, the inventory is not current.
 	* - **Calculation**
-	  - :code:`M3 / M1`
+	  - :code:`M6 / M2`
 
 .. history
 .. authors

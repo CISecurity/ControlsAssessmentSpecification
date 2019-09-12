@@ -5,7 +5,7 @@ Ensure that all of the organization’s key systems are backed up as a complete 
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Data
@@ -18,12 +18,12 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
 
 Inputs
 -----------
-#. The list of "key systems" identified by the organization
+#. KS: The list of "key systems" identified by the organization, as derived from the endpoint inventory (see sub-control 1.4)
 #. The organization's backup/imaging configuration policy
 
 Assumptions
@@ -32,13 +32,16 @@ Assumptions
 
 Operations
 ----------
-#. Compare each "key system"'s backup configuration with available configuration policy.
+#. For each endpoint in the list of "key systems", examine its backup configuration against the available backup configuration policy, noting appropriately and inappropriately configured endpoints along the way.
 
 Measures
 --------
-* M1(i) = (For each key system "i") 1 if "key system" backup configuration policy meets policy requirements; 0 otherwise
-* M2 = The total number of endpoints defined as "key systems"
-
+* M1 = List of "key system" endpoints
+* M2 = Count of M1
+* M3 = List of appropriately configured "key systems"
+* M4 = Count of M3
+* M5 = List of inappropriately configured "key systems"
+* M6 = Count of M5
 
 Metrics
 -------
@@ -50,7 +53,7 @@ Coverage
 	* - **Metric**
 	  - What percentage of key systems are successfully backed up as a complete system?
 	* - **Calculation**
-	  - :code:`(SUM of M1 from i=1..M2 (M1(i))) / M2`
+	  - :code:`M4 / M2`
 
 .. history
 .. authors
