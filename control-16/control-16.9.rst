@@ -16,6 +16,10 @@ Status
 ------
 Draft
 
+Dependencies
+------------
+* TBD
+
 Inputs
 -----------
 #. The list of all accounts created in the enterprise
@@ -45,10 +49,8 @@ Dormant Accounts
 ^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
+	* - **Metric**
 	  - What percentage of all accounts are currently dormant but still enabled?
-	* - **Answer**
-	  - 
 	* - **Calculation**
 	  - :code:`M3 / M1`
 
@@ -56,10 +58,8 @@ Enabled Dormant Accounts
 ^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
+	* - **Metric**
 	  - What percentage of accounts marked enabled are currently dormant and still enabled?
-	* - **Answer**
-	  - 
 	* - **Calculation**
 	  - :code:`M3 / M2`
 

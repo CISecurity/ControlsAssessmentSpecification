@@ -14,30 +14,38 @@ Establish and follow an automated process for revoking system access by disablin
 
 Status
 ------
-In Development
+Draft
+
+Dependencies
+------------
+* TBD
 
 Inputs
 -----------
-#. 
+#. The inventory of employee accounts
+#. A given time period for analysis
 
 Operations
 ----------
-#. 
+#. For each employee terminated or changed responsibilities within the Input 2 time period, enumerate the employee's accounts (a given employee may have a number of accounts)
 
 Measures
 --------
-
+* M1 = The number of employee accounts collected by Operation 1
+* M2 = The number of employee accounts disabled within the Input 2 time period
 
 Metrics
 -------
+
+Enforcement Quality
+^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
-	  - 
-	* - **Answer**
-	  - 
+	* - **Metric**
+	  - | The ratio of employee accounts that have been terminated/revoked within the acceptable
+	    | timeframe.
 	* - **Calculation**
-	  - :code:`?`
+	  - :code:`M1 / M2`
 
 .. history
 .. authors

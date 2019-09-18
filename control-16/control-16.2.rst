@@ -14,30 +14,43 @@ Configure access for all accounts through as few centralized points of authentic
 
 Status
 ------
-In Development
+Draft
+
+Dependencies
+------------
+* Subcontrol 1.4: Maintain Detailed Asset Inventory
+* Subcontrol 1.5: Maintain Asset Inventory Information
 
 Inputs
 -----------
-#. 
+#. The list of endpoints
 
 Operations
 ----------
-#. 
+#. Enumerate centralized authentication points in inventory
+#. For each identified centralized authentication point to determine necessity (i.e. can a given authentication system be consolidated with another?)
+#. Enumerate the list of unnecessary centralized authentication points 
 
 Measures
 --------
-
+* M1 = List of centralized authentication points in inventory
+* M2 = List of unnecessary centralized authentication points
+* M3 = The number of centralized authentication points in the inventory (The count of M1)
+* M4 = The number of unnecessary centralized authentication points (The count of M2)
+* M5 = M3 - M4 (the target number of centralized authentication points)
 
 Metrics
 -------
+
+Coverage
+^^^^^^^^
 .. list-table::
 
-	* - **Question**
-	  - 
-	* - **Answer**
-	  - 
+	* - **Metric**
+	  - | The ratio of desired centralized authentication points to actual authentication
+	    | points, where the goal is for M5 / M3 = 1.
 	* - **Calculation**
-	  - :code:`?`
+	  - :code:`M5 / M3`
 
 .. history
 .. authors

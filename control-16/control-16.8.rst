@@ -16,6 +16,10 @@ Status
 ------
 Draft
 
+Dependencies
+------------
+* TBD
+
 Inputs
 -----------
 #. Inventory of accounts
@@ -32,12 +36,13 @@ Measures
 
 Metrics
 -------
+
+Coverage
+^^^^^^^^
 .. list-table::
 
-	* - **Question**
+	* - **Metric**
 	  - What percentage of accounts are *not* associated with any business process or ownership?
-	* - **Answer**
-	  - 
 	* - **Calculation**
 	  - :code:`M1 / M2`
 

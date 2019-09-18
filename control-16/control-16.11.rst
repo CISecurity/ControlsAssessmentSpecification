@@ -16,6 +16,11 @@ Status
 ------
 Draft
 
+Dependencies
+------------
+* Subcontrol 1.4: Maintain Detailed Asset Inventory
+* Subcontrol 1.5: Maintain Asset Inventory Information
+
 Inputs
 -----------
 #. List of workstations which have enabled automatic workstation locking
@@ -40,11 +45,9 @@ Misconfigured Workstations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
+	* - **Metric**
 	  - | What percentage of automatic locking enabled workstations are configured outside
 	    | the locking time threshold?
-	* - **Answer**
-	  - 
 	* - **Calculation**
 	  - :code:`M2 / M1`
 
@@ -52,10 +55,8 @@ Unconfigured Workstations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
-	* - **Question**
+	* - **Metric**
 	  - How many workstations do *not* have automatic locking enabled?
-	* - **Answer**
-	  - 
 	* - **Calculation**
 	  - :code:`M3 - M1`
 
