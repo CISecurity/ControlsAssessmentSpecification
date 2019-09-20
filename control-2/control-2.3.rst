@@ -5,7 +5,7 @@ Utilize software inventory tools throughout the organization to automate the doc
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Applications
@@ -15,6 +15,10 @@ Utilize software inventory tools throughout the organization to automate the doc
 Status
 ------
 Draft
+
+Dependencies
+------------
+* Sub-control 1.4: Maintain Detailed Asset Inventory
 
 Assumptions
 ^^^^^^^^^^^
@@ -34,9 +38,16 @@ Operations
 
 Measures
 --------
-* M1 = The number of software inventory tools
-* M2 = The number of endpoints covered by software inventory tools
-* M3 = The number of endpoints loadable with software
+* M1 = Count of software inventory tools (from Input 2)
+* M2 = List of endpoints covered by software inventory tools
+* M3 = Count of M2
+* M4 = List of endpoints not covered by software inventory tools
+* M5 = Count of M4
+* M6 = List of endpoints loadable with software
+* M7 = Count of M6
+* M8 = List of endpoints not loadable with software
+* M9 = Count of M8
+
 
 Metrics
 -------
@@ -55,10 +66,10 @@ Inventory Tool Coverage
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of endpoints covered by automated software inventory tools to the total 
+	  - | The ratio of endpoints covered by automated software inventory tools to the total
 	    | number of applicable endpoints
 	* - **Calculation**
-	  - :code:`M2 / M3`
+	  - :code:`M3 / M7`
 
 .. history
 .. authors
