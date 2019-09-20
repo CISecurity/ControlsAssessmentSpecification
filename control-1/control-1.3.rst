@@ -5,7 +5,7 @@ Use Dynamic Host Configuration Protocol (DHCP) logging on all DHCP servers or IP
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Devices
@@ -15,6 +15,10 @@ Use Dynamic Host Configuration Protocol (DHCP) logging on all DHCP servers or IP
 Status
 ------
 Draft
+
+Dependencies
+------------
+* Sub-control 1.4: Maintain Detailed Asset Inventory
 
 Inputs
 -----------
@@ -32,11 +36,16 @@ Assumptions
 
 Measures
 --------
-* M1 = Count of DHCP servers
-* M2 = Count of DHCP servers with logging enabled
-* M3 = Count of CMDB servers
-* M4 = Count of CMDB servers configured to use DHCP logs to update IP addresses
-* M5 = Number of devices in the DHCP server logs that are not included in the CMDB servers
+* M1 = Count of DHCP servers (using Input 1)
+* M2 = List of DHCP servers with logging enabled
+* M3 = Count of M2
+* M4 = Count of CMDB servers (using Input 2)
+* M5 = List of CMDB servers configured to use DHCP logs to update IP addresses
+* M6 = Count of M5
+* M7 = List of devices in the DHCP server logs that are not included in the CMDB servers
+* M8 = Count of M7
+* M9 = List of devices in the DHCP server logs that are included in the CMDB servers
+* M10 = Count of M9
 
 Metrics
 -------
@@ -49,17 +58,17 @@ DHCP Logging Quality
 	* - **Metric**
 	  - | Ratio of appropriately configured DHCP logging enabled to known DHCP servers
 	* - **Calculation**
-	  - :code:`M2 / M1`
+	  - :code:`M3 / M1`
 
 CMDB Configuration Quality
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | Ratio of appropriately configured CMDB servers using DHCP logging to update 
+	  - | Ratio of appropriately configured CMDB servers using DHCP logging to update
 	    | IP addresses
 	* - **Calculation**
-	  - :code:`M4 / M3`
+	  - :code:`M6 / M4`
 
 .. history
 .. authors

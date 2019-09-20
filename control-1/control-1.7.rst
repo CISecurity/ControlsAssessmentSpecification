@@ -5,7 +5,7 @@ Utilize port level access control, following 802.1x standards, to control which 
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Devices
@@ -15,6 +15,11 @@ Utilize port level access control, following 802.1x standards, to control which 
 Status
 ------
 Draft
+
+Dependencies
+------------
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
 
 Assumptions
 ^^^^^^^^^^^
@@ -37,10 +42,16 @@ Measures
 --------
 * M1 = Boolean: 802.1x authenticators are in use
 * M2 = Boolean: 802.1x authentication servers are in use
-* M3 = Count of improperly configured 802.1x authenticators
-* M4 = Count of 802.1x authenticators
-* M5 = Count of improperly configured 802.1x authentication servers
-* M6 = Count of 802.1x authentication servers
+* M3 = List of inappropriately configured 802.1x authenticators
+* M4 = Count of M3
+* M5 = List of appropriately configured 802.1x authenticators
+* M6 = Count of M5
+* M7 = List of inappropriately configured 802.1x authentication servers
+* M8 = Count of M7
+* M9 = List of appropriately configured 802.1x authentication servers
+* M10 = Count of M9
+* M11 = Count of 802.1x authentication servers (from Input 2)
+* M12 = Count of 802.1x authenticators (from Input 1)
 
 Metrics
 -------
@@ -59,20 +70,20 @@ Authenticator Coverage
 .. list-table::
 
 	* - **Metric**
-	  - | Ratio of improperly configured 802.1x authenticators to total number of 802.1x 
+	  - | Ratio of improperly configured 802.1x authenticators to total number of 802.1x
 	    | authenticators
 	* - **Calculation**
-	  - :code:`M3 / M4`
+	  - :code:`M4 / M12`
 
 Authentication Server Coverage
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | Ratio of improperly configured 802.1x authentication servers to total number of 
+	  - | Ratio of improperly configured 802.1x authentication servers to total number of
 	    | 802.1x authentication servers
 	* - **Calculation**
-	  - :code:`M5 / M6`
+	  - :code:`M8 / M11`
 
 .. history
 .. authors

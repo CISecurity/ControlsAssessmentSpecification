@@ -5,7 +5,7 @@ Ensure that the hardware asset inventory records the network address, hardware a
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Devices
@@ -15,6 +15,10 @@ Ensure that the hardware asset inventory records the network address, hardware a
 Status
 ------
 Draft
+
+Dependencies
+------------
+* Sub-control 1.4: Maintain Detailed Asset Inventory
 
 Inputs
 -----------
@@ -33,9 +37,12 @@ Operations
 
 Measures
 --------
-* M1 = Count of endpoints in inventory
-* M2 = Count of endpoints with network connection approval
-* M3 = Count of endpoints with all detailed information
+* M1 = List of endpoints in inventory
+* M2 = Count of M1
+* M3 = List of endpoints with network connection approval
+* M4 = Count of M3
+* M5 = List of endpoints with all detailed information
+* M6 = Count of M5
 
 Metrics
 -------
@@ -45,10 +52,10 @@ Endpoint Inventory Quality
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of endpoints with all detailed information to the total number of inventoried 
+	  - | The ratio of endpoints with all detailed information to the total number of inventoried
 	    | endpoints
 	* - **Calculation**
-	  - :code:`M3 / M1`
+	  - :code:`M6 / M2`
 
 Endpoint Inventory Authorization Quality
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -57,7 +64,7 @@ Endpoint Inventory Authorization Quality
 	* - **Metric**
 	  - | The ratio of endpoints with approval to connect to the network
 	* - **Calculation**
-	  - :code:`M2 / M1`
+	  - :code:`M4 / M2`
 
 .. history
 .. authors

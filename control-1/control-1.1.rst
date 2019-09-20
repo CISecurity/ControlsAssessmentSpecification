@@ -6,7 +6,7 @@ Utilize an active discovery tool to identify devices connected to the organizati
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Devices
@@ -17,13 +17,17 @@ Status
 ------
 Draft
 
+Dependencies
+------------
+* None
+
 Inputs
 -----------
 #. The hardware asset inventory
 #. The asset discovery tool(s) used by the organization
 #. The most recent scan results from the asset discovery tool(s)
 #. Configuration information for the asset discovery tool(s)
-#. Approved configuration(s) to all tools to interface wtih the hardware asset inventory
+#. Approved configuration(s) to all tools to interface with the hardware asset inventory
 
 Assumptions
 ^^^^^^^^^^^
