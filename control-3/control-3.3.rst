@@ -16,6 +16,10 @@ Status
 ------
 Draft
 
+Dependencies
+------------
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+
 Inputs
 ------
 #. List of vulnerability scanning accounts
@@ -27,9 +31,11 @@ Operations
 
 Measures
 --------
-* M1 = Total number of vulnerability scanning accounts
-* M2 = Number of vulnerability scanning accounts configured to log in only to one or more of the vulnerability scanning machines
-
+* M1 = Total number of vulnerability scanning accounts (from Input 1)
+* M2 = List of vulnerability scanning accounts configured to log in only to one or more of the vulnerability scanning machines
+* M3 = Count of M2
+* M4 = List of vulnerability scanning account configured to log in to any machine other than one of the vulnerability scanning machines
+* M5 = Count of M4
 
 Metrics
 -------
@@ -39,10 +45,10 @@ Misconfigured Account Ratio
 .. list-table::
 
 	* - **Metric**
-	  - | Ratio of misconfigured vulnerability scanning accounts to the total number of 
+	  - | Ratio of misconfigured vulnerability scanning accounts to the total number of
 	    | vulnerability scanning accounts
 	* - **Calculation**
-	  - :code:`(M1 - M2) / M1`
+	  - :code:`(M1 - M3) / M1`
 
 .. history
 .. authors

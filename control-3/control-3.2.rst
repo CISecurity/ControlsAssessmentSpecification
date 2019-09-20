@@ -18,7 +18,7 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 2.1: Maintain Inventory of Authorized Software
+* Sub-control 2.1: Maintain Inventory of Authorized Software
 
 Inputs
 ------
@@ -28,7 +28,7 @@ Inputs
 
 Operations
 ----------
-#. For each deployed vulnerability scanner, check whether it is in the list of authenticated vulnerability scanners
+#. For each deployed vulnerability scanner, check whether it is in the list of authenticated vulnerability scanners, noting those that are and those that are not
 #. For each deployed vulnerability scanner, verify that it has been used within time threshold
 #. For each authorized vulnerability scanner
 	#. Enumerate endpoints covered
@@ -38,12 +38,21 @@ Operations
 
 Measures
 --------
-* M1 = Number of deployed vulnerability scanning tools
-* M2 = Count of unauthenticated vulnerability scanning tools
-* M3 = Count of authenticated vulnerability scanning tools
-* M4 = Count of vulnerability scanning tools recently used
-* M5 = Count of endpoints covered by authenticated vulnerability scanners
-* M6 = Count of endpoints scanned in an authenticated manner
+* M1 = Count of deployed vulnerability scanning tools (from Input 1)
+* M2 = List of unauthenticated vulnerability scanning tools
+* M3 = Count of M2
+* M4 = List of authenticated vulnerability scanning tools
+* M5 = Count of M4
+* M6 = List of vulnerability scanning tools recently used
+* M7 = Count of M6
+* M8 = List of vulnerability scanning tools not recently used
+* M9 = Count of M8
+* M10 = List of endpoints covered by at least one authenticated vulnerability scanner
+* M11 = Count of M10
+* M12 = List of endpoints scanned in an authenticated manner
+* M13 = Count of M12
+* M14 = List of endpoints not scanned in an authenticated manner
+* M15 = Count of M14
 
 Metrics
 -------
@@ -55,7 +64,7 @@ Authenticated Vulnerability Scanning Tool Coverage
 	* - **Metric**
 	  - | Percentage of authenticated vulnerability scanning tools (100% is desired)
 	* - **Calculation**
-	  - :code:`(M1 - M3) / M1`
+	  - :code:`(M1 - M5) / M1`
 
 Recently Used Vulnerability Scanning Tools
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -64,7 +73,7 @@ Recently Used Vulnerability Scanning Tools
 	* - **Metric**
 	  - | Percentage of vulnerability scanning tools recently used
 	* - **Calculation**
-	  - :code:`(M1 - M4) / M1`
+	  - :code:`(M1 - M7) / M1`
 
 Coverage
 ^^^^^^^^
@@ -73,7 +82,7 @@ Coverage
 	* - **Metric**
 	  - | Authenticated scanning coverage
 	* - **Calculation**
-	  - :code:`M6 / M5`
+	  - :code:`M13 / M11`
 
 .. history
 .. authors

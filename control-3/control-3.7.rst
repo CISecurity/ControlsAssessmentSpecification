@@ -16,6 +16,10 @@ Status
 ------
 Draft
 
+Dependencies
+------------
+* None
+
 Inputs
 ------
 #. Security program vulnerability management policy

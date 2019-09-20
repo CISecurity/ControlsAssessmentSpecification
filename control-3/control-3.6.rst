@@ -18,7 +18,7 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.5: Maintain Asset Inventory Information
+* Sub-control 1.5: Maintain Asset Inventory Information
 
 Inputs
 ------
@@ -44,8 +44,10 @@ Measures
 * M2 = Set of currently detected vulnerabilities
 * M3 = Count of previously detected vulnerabilities
 * M4 = Count of currently detected vulnerabilities
-* M5 = Count of covered endpoints with back-to-back comparisons
-* M6 = Count of endpoints in inventory eligible for back-to-back comparisons
+* M5 = List of covered endpoints with back-to-back comparisons
+* M6 = Count of M5
+* M7 = List of endpoints in inventory eligible for back-to-back comparisons
+* M8 = Count of M7
 
 Metrics
 -------
@@ -66,7 +68,7 @@ Coverage
 	* - **Metric**
 	  - | Coverage of back-to-back comparisons against eligible endpoints
 	* - **Calculation**
-	  - :code:`M5 / M6`
+	  - :code:`M6 / M8`
 
 .. history
 .. authors
