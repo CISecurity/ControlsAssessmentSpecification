@@ -5,7 +5,7 @@ Assemble and maintain information on third-party contact information to be used 
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - N/A
@@ -15,6 +15,10 @@ Assemble and maintain information on third-party contact information to be used 
 Status
 ------
 Draft
+
+Dependencies
+------------
+* Sub-control 19.1: Document Incident Response Procedures
 
 Inputs
 -----------
@@ -38,7 +42,7 @@ Metrics
 	* - **Question**
 	  - Is information on third-party contact information maintained, for use in incident handling?
 	* - **Answer**
-	  - 
+	  -
 	* - **Calculation**
 	  - :code:`M1 AND M2`
 

@@ -5,7 +5,7 @@ Automatically lock workstation sessions after a standard period of inactivity.
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Users
@@ -18,8 +18,8 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
 
 Inputs
 -----------
@@ -34,9 +34,14 @@ Operations
 
 Measures
 --------
-* M1 = Number of workstations which have enabled automatic workstation locking
-* M2 = Number of workstations which have enabled automatic locking exceeding the organization's threshold (the count from Operation 2).
-* M3 = Number of workstations
+* M1 = List of workstations
+* M2 = Count of M1
+* M3 = List of workstations having enabled automatic workstation locking
+* M4 = Count of M3
+* M5 = List of appropriately configured workstations
+* M6 = Count of M5
+* M7 = List of inappropriately configured workstations
+* M8 = Count of M7
 
 Metrics
 -------
@@ -46,10 +51,10 @@ Misconfigured Workstations
 .. list-table::
 
 	* - **Metric**
-	  - | What percentage of automatic locking enabled workstations are configured outside
+	  - | What percentage of automatic locking enabled workstations are configured within
 	    | the locking time threshold?
 	* - **Calculation**
-	  - :code:`M2 / M1`
+	  - :code:`M6 / M2`
 
 Unconfigured Workstations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -58,7 +63,7 @@ Unconfigured Workstations
 	* - **Metric**
 	  - How many workstations do *not* have automatic locking enabled?
 	* - **Calculation**
-	  - :code:`M3 - M1`
+	  - :code:`M2 - M4`
 
 .. history
 .. authors

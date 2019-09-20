@@ -5,7 +5,7 @@ Create a separate wireless network for personal or untrusted devices. Enterprise
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Network
@@ -18,8 +18,8 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
 
 Inputs
 -----------
@@ -34,8 +34,10 @@ Operations
 Measures
 --------
 * M1 = 1 if the separate wireless network exists for personal/non-corporate devices; 0 otherwise.
-* M2 = Number of corporate wireless network SSID(s) accepting non-corporate devices
-* M3 = Number of corporate wireless network SSID(s)
+* M2 = List of corporate wireless network SSID(s) accepting non-corporate devices
+* M3 = Count of M2
+* M4 = List of corporate wireless network SSID(s)
+* M5 = Count of M4
 
 Metrics
 -------
@@ -51,7 +53,7 @@ Coverage
 	* - **Metric**
 	  - What percentage of the total number of wireless networks exist but are misconfigured?
 	* - **Calculation**
-	  - :code:`M2 / M3`
+	  - :code:`M3 / M5`
 
 .. history
 .. authors

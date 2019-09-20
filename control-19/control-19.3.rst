@@ -5,7 +5,7 @@ Designate management personnel, as well as backups, who will support the inciden
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - N/A
@@ -15,6 +15,10 @@ Designate management personnel, as well as backups, who will support the inciden
 Status
 ------
 Draft
+
+Dependencies
+------------
+* Sub-control 19.1: Document Incident Response Procedures
 
 Inputs
 -----------
@@ -38,7 +42,7 @@ Metrics
 	* - **Question**
 	  - Are personnel, including backups, designated to support the incident handling process?
 	* - **Answer**
-	  - 
+	  -
 	* - **Calculation**
 	  - :code:`M1 AND M2 AND M3`
 

@@ -5,7 +5,7 @@ Publish information for all workforce members, regarding reporting computer anom
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - N/A
@@ -15,6 +15,10 @@ Publish information for all workforce members, regarding reporting computer anom
 Status
 ------
 Draft
+
+Dependencies
+------------
+* Sub-control 19.1: Document Incident Response Procedures
 
 Inputs
 -----------
@@ -42,7 +46,7 @@ Metrics
 	  - | Is information regarding reporting of computer anomalies and incidents published
 	    | for all workforce members?
 	* - **Answer**
-	  - 
+	  -
 	* - **Calculation**
 	  - :code:`M1 AND M2 AND M3 AND M4`
 

@@ -5,7 +5,7 @@ Automatically disable dormant accounts after a set period of inactivity.
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Users
@@ -18,12 +18,12 @@ Draft
 
 Dependencies
 ------------
-* TBD
+* None
 
 Inputs
 -----------
 #. The list of all accounts created in the enterprise
-#. An organizationally defined policy indicating a "dormant threshold"; the period of inactivity after which the account is considered dormant.
+#. An organizationally defined policy indicating a "dormant threshold"; the period of inactivity after which the account is considered dormant (recommended value 1 month)
 
 Assumptions
 ^^^^^^^^^^^
@@ -38,9 +38,12 @@ Operations
 
 Measures
 --------
-* M1 = The total number of accounts
-* M2 = The total number of accounts marked as enabled
-* M3 = The total number of accounts collected by Operation 3
+* M1 = List of Accounts
+* M2 = Count of M1
+* M3 = List of accounts marked as enabled
+* M4 = Count of M3
+* M5 = List of accounts enabled and not used for a time period outside the dormant threshold
+* M6 = Count of M5
 
 Metrics
 -------
@@ -52,7 +55,7 @@ Dormant Accounts
 	* - **Metric**
 	  - What percentage of all accounts are currently dormant but still enabled?
 	* - **Calculation**
-	  - :code:`M3 / M1`
+	  - :code:`M6 / M2`
 
 Enabled Dormant Accounts
 ^^^^^^^^^^^^^^^^^^^^^^^^

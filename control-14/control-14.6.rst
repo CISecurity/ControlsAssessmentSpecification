@@ -5,7 +5,7 @@ Protect all information stored on systems with file system, network share, claim
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Data
@@ -18,12 +18,12 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
 
 Inputs
 -----------
-#. The list of endpoints
+#. Endpoint Inventory
 #. Access control configuration policy
 
 Operations
@@ -34,9 +34,9 @@ Measures
 --------
 * M1 = List of endpoints that comply with access control configuration policy (compliant list)
 * M2 = List of endpoints that do not comply with access control configuration policy (non-compliant list)
-* M3 = Number of endpoints in M1 (number of compliant endpoints)
-* M4 = Number of endpoints in M2 (number of non-compliant endpoints)
-* M5 = Number of endpoints in Input 1 (total number of endpoints to check)
+* M3 = Count of endpoints in M1 (number of compliant endpoints)
+* M4 = Count of endpoints in M2 (number of non-compliant endpoints)
+* M5 = Count of endpoints in Input 1 (total number of endpoints to check)
 
 Metrics
 -------

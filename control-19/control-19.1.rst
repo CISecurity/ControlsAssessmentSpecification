@@ -5,7 +5,7 @@ Ensure that there are written incident response plans that define roles of perso
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - N/A
@@ -15,6 +15,10 @@ Ensure that there are written incident response plans that define roles of perso
 Status
 ------
 Draft
+
+Dependencies
+------------
+* None
 
 Inputs
 -----------
@@ -42,7 +46,7 @@ Existence
 	  - | Ensure that there are written incident response plans that define roles of personnel
 	    | as well as phases of incident handling/management.
 	* - **Answer**
-	  - 
+	  -
 	* - **Calculation**
 	  - :code:`M1 AND M2 AND M3`
 

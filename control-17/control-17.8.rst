@@ -5,7 +5,7 @@ Train workforce members to be aware of causes for unintentional data exposures, 
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - N/A
@@ -15,6 +15,10 @@ Train workforce members to be aware of causes for unintentional data exposures, 
 Status
 ------
 Draft
+
+Dependencies
+------------
+* None
 
 Inputs
 -----------
@@ -43,9 +47,9 @@ Coverage
 
 	* - **Question**
 	  - | What percentage of workforce members have completed the security awareness training
-	    | module within the specified timeframe?
+	    | module within the specified time frame?
 	* - **Answer**
-	  - 
+	  -
 	* - **Calculation**
 	  - :code:`M3 / M5`
 
