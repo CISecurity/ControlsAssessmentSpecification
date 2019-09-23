@@ -21,6 +21,7 @@ Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory
 * Sub-control 2.4: Track Software Inventory Information
+* Sub-control 5.1: Establish Secure Configurations
 
 Inputs
 ------

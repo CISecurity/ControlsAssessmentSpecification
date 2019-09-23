@@ -20,6 +20,7 @@ Dependencies
 ------------
 * Sub-control 2.1: Maintain Inventory of Authorized Software
 * Sub-control 16.6: Maintain an Inventory of Accounts
+* Sub-control 5.1: Establish Secure Configurations
 
 Inputs
 ------
