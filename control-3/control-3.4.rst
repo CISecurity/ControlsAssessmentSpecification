@@ -18,7 +18,7 @@ Draft
 
 Dependencies
 ------------
-* None
+* Sub-control 5.1: Establish Secure Configurations
 
 Inputs
 ------

@@ -5,7 +5,7 @@ To lower the chance of spoofed or modified emails from valid domains, implement 
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Network
@@ -18,13 +18,13 @@ Draft
 
 Dependencies
 ------------
-N/A
+* Sub-control 2.4: Track Software Inventory Information
 
 Inputs
 ------
 #. DMARC policy
 #. TXT record published in DNS
-#. The Mail Transfer Agent used by the organization (this could indiate DKIM is used to sign outgoing messages)
+#. The Mail Transfer Agent used by the organization (this could indicate DKIM is used to sign outgoing messages)
 #. The Mail User Agent used by the organization (this could indicate DKIM is used to verify incoming messages)
 
 Assumptions

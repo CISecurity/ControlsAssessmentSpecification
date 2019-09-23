@@ -5,7 +5,7 @@ On a regular basis, review logs to identify anomalies or abnormal events.
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Network
@@ -18,7 +18,7 @@ Draft
 
 Dependencies
 ------------
-* TBD
+* None
 
 Inputs
 ------
@@ -59,7 +59,7 @@ Quality of Log Review
 .. list-table::
 
 	* - **Metric**
-	  - | The quality of review is high if-and-only-if the review is highly regular and the 
+	  - | The quality of review is high if-and-only-if the review is highly regular and the
 	    | potential for detecting anomalies (at least one per review) is also high.
 	* - **Calculation**
 	  - :code:`(1-M2) * M3`

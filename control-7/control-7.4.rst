@@ -5,7 +5,7 @@ Enforce network-based URL filters that limit a system’s ability to connect to 
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Network
@@ -18,7 +18,8 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 2.5: Integration Software and Hardware Asset Inventories
+* Sub-control 2.5: Integration Software and Hardware Asset Inventories
+* Sub-control 5.1: Establish Secure Configurations
 
 Inputs
 ------

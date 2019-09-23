@@ -5,7 +5,7 @@ Uninstall or disable any unauthorized browser or email client plugins or add-on 
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Applications
@@ -18,8 +18,8 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.5: Maintain Asset Inventory Information
-* Subcontrol 2.1: Maintain Inventory of Authorized Software
+* Sub-control 1.5: Maintain Asset Inventory Information
+* Sub-control 2.1: Maintain Inventory of Authorized Software
 
 Inputs
 ------
@@ -37,10 +37,10 @@ Operations
 
 Measures
 --------
-* M1 = The number of endpoints subject to browser/email plugin restrictions
-* M2(i) = (For each endpoint "i") The number of installed browser plugins not in the approved list (The count resulting from Operation 4)
+* M1 = Count of endpoints subject to browser/email plugin restrictions
+* M2(i) = (For each endpoint "i") Count of installed browser plugins not in the approved list (The count resulting from Operation 4)
 * M3(i) = 0 if, for each endpoint "i", the value of M2 > 0; 1 if the value of M2 == 0
-* M4(i) = (For each endpoint "i") The number of installed email client plugins not in the approved list (The count resulting from Operation 5)
+* M4(i) = (For each endpoint "i") Count of installed email client plugins not in the approved list (The count resulting from Operation 5)
 * M5(i) = 0 if, for each endpoint "i", the value of M4 > 0; 1 if the value of M4 == 0
 
 Metrics
@@ -51,7 +51,7 @@ Browser Plugin Enforcement Quality
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of endpoints utilizing browser plugins on the approved list to the total 
+	  - | The ratio of endpoints utilizing browser plugins on the approved list to the total
 	    | number of endpoints.
 	* - **Calculation**
 	  - :code:`(SUM from i=1..M1 (M3(i))) / M1`
@@ -61,7 +61,7 @@ Email Client Plugin Enforcement Quality
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of endpoints utilizing email client plugins on the approved list to the 
+	  - | The ratio of endpoints utilizing email client plugins on the approved list to the
 	    | total number of endpoints.
 	* - **Calculation**
 	  - :code:`(SUM from i=1..M1 (M5(i))) / M1`

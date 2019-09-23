@@ -5,7 +5,7 @@ Deploy Security Information and Event Management (SIEM) or log analytic tools fo
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Network
@@ -18,7 +18,7 @@ Draft
 
 Dependencies
 ------------
-* TBD
+* Sub-control 2.4: Track Software Inventory Information
 
 Inputs
 ------
@@ -28,13 +28,15 @@ Inputs
 
 Operations
 ----------
-N/A 
+N/A
 
 Measures
 --------
 * M1 = 1 if a SIEM or other log analytics tool is installed/present; 0 otherwise
-* M2 = The number of log producers correlated by a SIEM
-* M3 = The total number of log producers
+* M2 = Count of log producers correlated by a SIEM
+* M3 = Count of log producers
+* M4 = List of log producers correlated by a SIEM
+* M5 = List of log producers not correlated by a SIEM
 
 Metrics
 -------

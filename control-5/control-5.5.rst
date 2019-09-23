@@ -6,7 +6,7 @@ Utilize a Security Content Automation Protocol (SCAP) compliant configuration mo
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Applications
@@ -16,6 +16,12 @@ Utilize a Security Content Automation Protocol (SCAP) compliant configuration mo
 Status
 ------
 Draft
+
+Dependencies
+------------
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 2.4: Track Software Inventory Information
+* Sub-control 5.1: Establish Secure Configurations
 
 Inputs
 ------
@@ -81,7 +87,7 @@ Initial Exception Coverage (Per Endpoint)
 .. list-table::
 
 	* - **Metric**
-	  - | Per endpoint, the ratio of non-compliant recommendations with approved exceptions, to 
+	  - | Per endpoint, the ratio of non-compliant recommendations with approved exceptions, to
 	    | the total recommendations assessed.
 	* - **Calculation**
 	  - :code:`(M7 - M3) / M7`

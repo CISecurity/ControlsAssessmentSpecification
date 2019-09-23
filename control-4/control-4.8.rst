@@ -5,7 +5,7 @@ Configure systems to issue a log entry and alert when an account is added to or 
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Users
@@ -15,6 +15,11 @@ Configure systems to issue a log entry and alert when an account is added to or 
 Status
 ------
 Draft
+
+Dependencies
+------------
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 5.1: Establish Secure Configurations
 
 Inputs
 ------
@@ -35,12 +40,25 @@ Operations
 Measures
 --------
 * M1 = List of endpoints with each endpoint entry labeled with compliance or non-compliance for each of the 4 logging/alerting configurations from Inputs 2 - 5
-* M2 = Number of compliant endpoints based on Input 2 configurations
-* M3 = Number of compliant endpoints based on Input 3 configurations
-* M4 = Number of compliant endpoints based on Input 4 configurations
-* M5 = Number of compliant endpoints based on Input 5 configurations
-* M6 = Number of endpoints that are compliant with configurations from all 4 inputs
-* M7 = Total number of endpoints from Input 1
+* M2 = Count of compliant endpoints based on Input 2 configurations
+* M3 = Count of compliant endpoints based on Input 3 configurations
+* M4 = Count of compliant endpoints based on Input 4 configurations
+* M5 = Count of compliant endpoints based on Input 5 configurations
+* M6 = Count of endpoints that are compliant with configurations from all 4 inputs
+* M7 = Count of endpoints from Input 1
+* M8 = List of compliant endpoints based on Input 2 configurations
+* M9 = List of non-compliant endpoints based on Input 2 configurations
+* M10 = List of compliant endpoints based on Input 3 configurations
+* M11 = List of non-compliant endpoints based on Input 3 configurations
+* M12 = List of compliant endpoints based on Input 4 configurations
+* M13 = List of non-compliant endpoints based on Input 4 configurations
+* M14 = List of compliant endpoints based on Input 5 configurations
+* M15 = List of non-compliant endpoints based on Input 5 configurations
+* M16 = Count of non-compliant endpoints based on Input 2 configurations
+* M16 = Count of non-compliant endpoints based on Input 3 configurations
+* M16 = Count of non-compliant endpoints based on Input 4 configurations
+* M16 = Count of non-compliant endpoints based on Input 5 configurations
+
 
 Metrics
 -------
@@ -90,7 +108,7 @@ Combined Compliance
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of endpoints both alerting and logging when accounts are both added and 
+	  - | The ratio of endpoints both alerting and logging when accounts are both added and
 	    | removed to the total number of endpoints
 	* - **Calculation**
 	  - :code:`M6 / M7`

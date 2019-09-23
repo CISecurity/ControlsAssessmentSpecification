@@ -5,7 +5,7 @@ Store the master images and templates on securely configured servers, validated 
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Applications
@@ -15,6 +15,10 @@ Store the master images and templates on securely configured servers, validated 
 Status
 ------
 Draft
+
+Dependencies
+------------
+* None
 
 Inputs
 ------
@@ -30,9 +34,12 @@ Operations
 
 Measures
 --------
-* M1 = The number of master images/templates
-* M2 = The number of master images/templates identified by integrity monitoring tools
+* M1 = Count of master images/templates (from Input 3)
+* M2 = Count of master images/templates identified by integrity monitoring tools
 * M3 = 1 if the documented master image update procedure exists; 0 otherwise.
+* M4 = List of master images/templates identified by integrity monitoring tools
+* M5 = List of master images/templates unidentified by integrity monitoring tools
+* M6 = Count of master images/templates unidentified by integrity monitoring tools (M5)
 
 Metrics
 -------
@@ -42,7 +49,7 @@ Integrity Monitoring Coverage
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of master images/templates identified by integrity monitoring tools, 
+	  - | The ratio of master images/templates identified by integrity monitoring tools,
 	    | to the total number of images/templates.
 	* - **Calculation**
 	  - :code:`M2 / M1`

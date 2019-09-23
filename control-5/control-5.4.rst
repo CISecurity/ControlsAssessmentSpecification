@@ -5,7 +5,7 @@ Deploy system configuration management tools that will automatically enforce and
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Applications
@@ -15,6 +15,12 @@ Deploy system configuration management tools that will automatically enforce and
 Status
 ------
 Draft
+
+Dependencies
+------------
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 2.4: Track Software Inventory Information
+* Sub-control 5.1: Establish Secure Configurations
 
 Inputs
 ------
@@ -39,10 +45,12 @@ Assumptions
 
 Measures
 --------
-* M1(t) = (For each endpoint) The number of non-compliant recommendations resulting from Operation 1
-* M1(t+1) = (For each endpoint) The number of non-compliant recommendations resulting from Operation 2
-* M2 = (For each endpoint) The number of recommendations assessed
+* M1(t) = (For each endpoint) Count of non-compliant recommendations resulting from Operation 1
+* M1(t+1) = (For each endpoint) Count of non-compliant recommendations resulting from Operation 2
+* M2 = (For each endpoint) Count of recommendations assessed
 * M3 = The number of endpoints
+* M4 = List of non-compliant endpoints resulting from Operation 1
+* M5 = List of non-compliant endpoints resulting from Operation 2
 
 Metrics
 -------
