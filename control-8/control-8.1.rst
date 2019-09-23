@@ -5,7 +5,7 @@ Utilize centrally managed anti-malware software to continuously monitor and defe
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Devices
@@ -18,9 +18,9 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
-* Subcontrol 2.1: Maintain Inventory of Authorized Software
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
+* Sub-control 2.1: Maintain Inventory of Authorized Software
 
 Assumption(s)
 ^^^^^^^^^^^^^
@@ -40,10 +40,14 @@ Operations
 
 Measures
 --------
-* M1 = Base count of anti-malware solutions in use
+* M1 = Count of anti-malware solutions in use
 * M2 = Count of anti-malware solutions that are centrally managed
 * M3 = Total number of endpoints covered by anti-malware solutions
 * M4 = Total number of endpoints eligible for anti-malware coverage
+* M5 = List of anti-malware solutions that are centrally managed
+* M6 = List of anti-malware solutions that are not centrally managed
+* M7 = List of endpoints covered by anti-malware solutions
+* M8 = List of endpoints not covered by anti-malware solutions 
 
 Metrics
 -------

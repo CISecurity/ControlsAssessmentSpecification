@@ -5,7 +5,7 @@ Perform automated port scans on a regular basis against all systems and alert if
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Devices
@@ -18,7 +18,7 @@ Draft
 
 Dependencies
 ------------
-* TBD
+2.5: Integrate Software and Hardware Asset Inventories
 
 Inputs
 ------
@@ -26,14 +26,17 @@ Inputs
 #. N: the number of port scans (timestamps) taken so far
 #. M: the maximum possible irregularity (can be fixed as 30 day)
 #. T: (optional) target/desirable review interval threshold
-#. D: the number of port scan in which at least one anomaly was detected 
+#. D: the number of port scan in which at least one anomaly was detected
 #. L: The total number of port scans
 #. UP: The number of alerts received due to unauthorized ports (M5)
 #. NP: The number of unauthorized ports (M6)
 
 Operations
 ----------
-N/A
+* Enumerate endpoints and identify port scanning software
+* Calculate measures M1 - M6 for each port scanning software, tracking endpoints covered
+* Enumerate set of endpoints covered by port scanning software
+* Compare enumeration of covered endpoints against the list of all endpoints to identify those endpoints that are not covered
 
 Measures
 --------
@@ -41,8 +44,12 @@ Measures
 * M2 (Regularity Measure of Port Scan) = :code:`(SUM from i=1..N  ( (t(i+1) - t(i) - M1)^2 / N ) / M`
 * M3 (Threshold-based Regularity Measure of Port Scan) = :code:`(SUM from i=1..N ( ( t(i+1) - t(i) - T )^2 / N ) / M`
 * M4 (The Probability of detecting an anomaly in port scans) = :code:`D / L`
-* M5 = The number of alerts received due to unauthorized ports
-* M6 = The number of unauthorized ports
+* M5 = Count of alerts received due to unauthorized ports
+* M6 = Count of unauthorized ports
+* M7 = List of endpoints covered by port scanning tools
+* M8 = List of endpoints not covered by port scanning tools
+* M9 = Count of endpoints covered by port scanning tools
+* M10 = Count of endpoints
 
 Metrics
 -------
@@ -65,6 +72,15 @@ Quality
 	  - | Ratio of unauthorized ports reported
 	* - **Calculation**
 	  - :code:`M5 / M6`
+
+Coverage
+^^^^^^^^
+.. list-table::
+
+	* - **Metric**
+	  - | Ratio of covered endpoints to the total number of endpoints
+	* - **Calculation**
+	  - :code:`M9 / M10`
 
 .. history
 .. authors

@@ -5,7 +5,7 @@ Enable anti-exploitation features such as Data Execution Prevention (DEP) and Ad
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Devices
@@ -18,8 +18,9 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
+* Sub-control 5.1: Establish Secure Configurations
 
 Inputs
 -----------
@@ -34,17 +35,19 @@ Operations
 
 Measures
 --------
-* M1 = The count of endpoints that meet the approved anti-exploitation configurations, such as DEP, ASLR or similar technologies (compliant list)
-* M2 = The total number of endpoints
-* M3 (Optional) = List of endpoints that do not meet the approved anti-exploitation configurations, such as DEP, ASLR or similar technologies (non-compliant list)
-* M4 (Optional) = Count of non-compliant endpoints (M2 - M1)
+* M1 = Count of endpoints that meet the approved anti-exploitation configurations, such as DEP, ASLR or similar technologies (compliant list)
+* M2 = Count of endpoints
+* M3 (Optional) = List of endpoints that meet the approved anti-exploitation configurations, such as DEP, ASLR or similar technologies (compliant list)
+* M4 (Optional) = List of endpoints that do not meet the approved anti-exploitation configurations, such as DEP, ASLR or similar technologies (non-compliant list)
+* M5 (Optional) = Count of non-compliant endpoints (M2 - M1)
+* M6 = List of non-compliant endpoints
 
 Metrics
 -------
 .. list-table::
 
 	* - **Metric**
-	  - | Ratio of endpoints compliant with anti-exploitation configurations to the total 
+	  - | Ratio of endpoints compliant with anti-exploitation configurations to the total
 	    | number of endpoints
 	* - **Calculation**
 	  - :code:`M1 / M2`

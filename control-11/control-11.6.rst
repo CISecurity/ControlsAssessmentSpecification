@@ -5,7 +5,7 @@ Ensure network engineers use a dedicated machine for all administrative tasks or
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Network
@@ -18,8 +18,8 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
 
 Inputs
 ------
@@ -34,7 +34,7 @@ Measures
 --------
 * M1(i) = (For each machine "i") 1 if an administrative device has internet access; 0 otherwise.
 * M2(i) = (For each machine "i") 1 if administrative device can run any application that is not administrative; 0 otherwise.
-* M3 = The number of administrative devices 
+* M3 = Count of administrative devices
 
 Metrics
 -------

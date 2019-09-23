@@ -5,7 +5,7 @@ Enable command-line audit logging for command shells, such as Microsoft PowerShe
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Devices
@@ -18,7 +18,8 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 5.1: Establish Secure Configurations
 
 Inputs
 ------
@@ -34,7 +35,7 @@ Operations
 Measures
 --------
 * M1 = List of endpoints that meet the approved command shell logging configurations (compliant list)
-* M2 = Total number of endpoints (count of Input 1)
+* M2 = Count of endpoints (count of Input 1)
 * M3 (Optional) = List of endpoints that do not meet the approved command shell logging configurations (non-compliant list)
 * M4 (Optional) = Count of non-compliant endpoints (count of M3)
 
@@ -46,7 +47,7 @@ Coverage
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of endpoints compliant with command shell logging configurations to the 
+	  - | The ratio of endpoints compliant with command shell logging configurations to the
 	    | total number of endpoints
 	* - **Calculation**
 	  - :code:`M1 / M2`

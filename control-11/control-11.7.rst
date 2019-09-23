@@ -5,7 +5,7 @@ Manage the network infrastructure across network connections that are separated 
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Network
@@ -18,7 +18,7 @@ Draft
 
 Dependencies
 ------------
-* TBD
+* None
 
 Inputs
 ------

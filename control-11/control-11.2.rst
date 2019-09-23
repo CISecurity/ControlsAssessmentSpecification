@@ -5,7 +5,7 @@ All configuration rules that allow traffic to flow through network devices shoul
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Network
@@ -18,8 +18,8 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
 
 Inputs
 ------
@@ -36,9 +36,9 @@ Measures
 * M1 = The intersection of Input 1 and Input 2.  This intersection measures which of the inventoried configuration rules are contained in the enterprise's security configuration standards.
 * M2 = The "left" side of the set calculation measures the traffic flow configuration which are not documented in the inventory.
 * M3 = The "right" side of the set calculation measures any configuration rules in the inventory which are not currently configured on the network device.
-* M4 = The number of traffic flow configuration rules in the inventory.
+* M4 = Count of traffic flow configuration rules in the inventory.
 * M5 = The current traffic flow configuration for the network device
-* M6 = The number of traffic flow rules in the inventory that are incomplete
+* M6 = Count of traffic flow rules in the inventory that are incomplete
 
 Metrics
 -------
@@ -51,7 +51,7 @@ Coverage
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of undocumented traffic flow configurations to the current total traffic 
+	  - | The ratio of undocumented traffic flow configurations to the current total traffic
 	    | flow configurations
 	* - **Calculation**
 	  - :code:`M2 / M5`

@@ -5,7 +5,7 @@ Ensure that only network ports, protocols, and services listening on a system wi
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Devices
@@ -18,8 +18,8 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
 
 Inputs
 ------
@@ -42,11 +42,11 @@ Operations
 
 Measures
 --------
-* M1 = set of open ports
-* M2 = set of unauthorized ports
-* M3 = set of discovered services
-* M4 = set of unauthorized services
-* M5 = set of unexpected protocols discovered on open ports
+* M1 = Set of open ports
+* M2 = Set of unauthorized ports
+* M3 = Set of discovered services
+* M4 = Set of unauthorized services
+* M5 = Set of unexpected protocols discovered on open ports
 
 Metrics
 -------

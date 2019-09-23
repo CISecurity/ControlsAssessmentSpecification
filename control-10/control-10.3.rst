@@ -5,7 +5,7 @@ Test data integrity on backup media on a regular basis by performing a data rest
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Data
@@ -18,8 +18,8 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
 
 Inputs
 -----------
@@ -28,7 +28,7 @@ Inputs
 #. N: the number of backup restorations (timestamps) performed so far
 #. M: the maximum possible irregularity (can be fixed as 30 day)
 #. T: (optional) target/desirable review interval threshold
-#. D: the number of backup restorations in which at least one anomaly was detected 
+#. D: the number of backup restorations in which at least one anomaly was detected
 #. L: The total number of backup restorations
 
 Operations
@@ -41,8 +41,8 @@ Assumption
 
 Measures
 --------
-* M1 = The number of backups under test
-* M2 = The number of restored backups deemed "properly working" following restoration
+* M1 = Count of backups under test
+* M2 = Count of restored backups deemed "properly working" following restoration
 * M3 = The average of backup restorations = :code:`SUM from i=1..N ( t(i+1) - t(i) ) / N`
 * M4 (Regularity Measure of Backup Restoration) = :code:`(SUM from i=1..N ((t(i+1) - t(i)) - M3)^2 / N ) / M`
 * M5 (Threshold-based Regularity Measure of Backup Restoration) = :code:`(SUM from i=1..N ((t(i+1) - t(i) - T)^2 / N ) / M`
@@ -65,8 +65,8 @@ Quality of Backup Restoration
 .. list-table::
 
 	* - **Metric**
-	  - | Quality of backup restoration is high if and only if the backup restoration is 
-	    | highly regular and the potential for detecting anomalies (at least one per review) 
+	  - | Quality of backup restoration is high if and only if the backup restoration is
+	    | highly regular and the potential for detecting anomalies (at least one per review)
 	    | is also high.
 	* - **Calculation**
 	  - :code:`(1-M4) * M6` or (if M5) :code:`(1 - M5) / M6

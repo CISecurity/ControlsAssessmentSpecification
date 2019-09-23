@@ -5,7 +5,7 @@ Maintain documented security configuration standards for all authorized network 
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Network
@@ -18,8 +18,8 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
 
 Inputs
 ------
@@ -39,7 +39,7 @@ Measures
 * M1 = The intersection of Input 1 and Input 2. This intersection measures those authorized network devices with security configuration standards.
 * M2 = The "left" side of the set calculation measures the number of authorized network devices without security configuration standards.
 * M3 = The "right" side of the set calculation measures the number of security configuration standards without any authorized network devices to which they are associated.
-* M4 = The number of authorized network devices.
+* M4 = Count of authorized network devices.
 
 Metrics
 -------
@@ -49,7 +49,7 @@ Coverage
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of network devices to which standard, documented security configuration 
+	  - | The ratio of network devices to which standard, documented security configuration
 	    | standards exist to the total number of network devices
 	* - **Calculation**
 	  - :code:`(M4 - M2) / M4`
