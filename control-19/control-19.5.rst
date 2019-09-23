@@ -18,7 +18,7 @@ Draft
 
 Dependencies
 ------------
-* Sub-control 19.1: Document Incident Response Procedures
+* Subcontrol 19.1: Document Incident Response Procedures
 
 Inputs
 -----------
@@ -32,7 +32,7 @@ Operations
 
 Measures
 --------
-* M1 = A plan exists
+* M1 = Boolean value indicating whether an incident response plan exists; 1 if an incident response plan exists, 0 otherwise.
 * M2 = The plan includes information on third-party contacts for incident reporting (M1 includes Input 2)
 
 Metrics

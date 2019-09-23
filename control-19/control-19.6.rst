@@ -18,7 +18,7 @@ Draft
 
 Dependencies
 ------------
-* Sub-control 19.1: Document Incident Response Procedures
+* Subcontrol 19.1: Document Incident Response Procedures
 
 Inputs
 -----------
@@ -33,8 +33,8 @@ Operations
 
 Measures
 --------
-* M1 = An incident response plan exists
-* M2 = A security awareness program exists
+* M1 = Boolean value indicating whether an incident response plan exists; 1 if an incident response plan exists, 0 otherwise.
+* M2 = Boolean value indicating whether a security awareness program exists; 1 if an incident response plan exists, 0 otherwise.
 * M3 = The incident response plan requires publishing incident reporting information for all workforce members as part of the organization's security awareness program
 * M4 = The security awareness program publishes incident reporting information for all workforce members
 

@@ -18,7 +18,7 @@ Draft
 
 Dependencies
 ------------
-* TBD
+* Subcontrol 19.1: Document Incident Response Procedures
 
 Inputs
 -----------
@@ -32,10 +32,10 @@ Operations
 
 Measures
 --------
-* M1 = binary value indicating if the most recent incident response exercise was within the required time frame; 1 if so, 0 if not
-* M2 = binary value indicating if the most recent incident response exercise After Action Report contains information about the exercise's testing of communication channels; 1 if so, 0 if not
-* M3 = binary value indicating if the most recent incident response exercise After Action Report contains information about the exercise's testing of decision making; 1 if so, 0 if not
-* M4 = binary value indicating if the most recent incident response exercise After Action Report contains information about the exercise's testing of incident responder's technical capabilities using the tools and data available to them; 1 if so, 0 if not
+* M1 = Boolean value indicating if the most recent incident response exercise was within the required time frame; 1 if so, 0 if not
+* M2 = Boolean value indicating if the most recent incident response exercise After Action Report contains information about the exercise's testing of communication channels; 1 if so, 0 if not
+* M3 = Boolean value indicating if the most recent incident response exercise After Action Report contains information about the exercise's testing of decision making; 1 if so, 0 if not
+* M4 = Boolean value indicating if the most recent incident response exercise After Action Report contains information about the exercise's testing of incident responder's technical capabilities using the tools and data available to them; 1 if so, 0 if not
 
 Metrics
 -------
