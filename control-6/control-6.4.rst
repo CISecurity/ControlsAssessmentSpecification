@@ -5,7 +5,7 @@ Ensure that all systems that store logs have adequate storage space for the logs
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Network
@@ -18,7 +18,7 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.5: Maintain Asset Inventory Information
+* Sub-control 1.5: Maintain Asset Inventory Information
 
 Inputs
 ------
@@ -33,6 +33,8 @@ Measures
 --------
 * M1(i) = (For each endpoint "i") 1 if an endpoint's logging configuration complies with the organizations logging policy; 0 otherwise.
 * M2 = The number of endpoints from Input 1
+* M3 = List of compliant endpoints
+* M4 = List of non-compliant endpoints
 
 
 Metrics
@@ -43,7 +45,7 @@ Logging Storage Coverage
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of endpoints compliant with the organization's logging policy to the total 
+	  - | The ratio of endpoints compliant with the organization's logging policy to the total
 	    | number of endpoints.
 	* - **Calculation**
 	  - :code:`(SUM from i=1..M2 (M1(i))) / M2`

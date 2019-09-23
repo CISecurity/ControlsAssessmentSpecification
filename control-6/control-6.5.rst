@@ -5,7 +5,7 @@ Ensure that appropriate logs are being aggregated to a central log management sy
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Network
@@ -18,7 +18,7 @@ Draft
 
 Dependencies
 ------------
-* TBD
+* Sub-control 2.4: Track Software Inventory Information
 
 Inputs
 ------
@@ -31,8 +31,8 @@ N/A
 
 Measures
 --------
-* M1 = The total number of log producers
-* M2 = The number of sensors correlated in a central service
+* M1 = Count log producers
+* M2 = Count of sensors correlated in a central service
 
 Metrics
 -------
@@ -42,7 +42,7 @@ Quality of Log correlation/aggregation
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of log producers correlated in a central service to the total number 
+	  - | The ratio of log producers correlated in a central service to the total number
 	    | of log producers.
 	* - **Calculation**
 	  - :code:`M2 / M1`

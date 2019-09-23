@@ -5,7 +5,7 @@ Use at least three synchronized time sources from which all servers and network 
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Network
@@ -18,7 +18,7 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.5: Maintain Asset Inventory Information
+* Sub-control 1.5: Maintain Asset Inventory Information
 
 Inputs
 ------
@@ -33,10 +33,12 @@ Operations
 
 Measures
 --------
-* M1 = The number of endpoints
-* M2 = The number of endpoints configured to synchronize with NTP servers
-* M3 = The number of endpoints whose network time configuration does not include an approved network time source
+* M1 = Count of endpoints
+* M2 = Count of endpoints configured to synchronize with NTP servers
+* M3 = Count of endpoints whose network time configuration does not include an approved network time source
 * M4(i) = (For each endpoint "i" collected in Operation 1) 1 when the number of configured NTP servers >= 3; 0 otherwise.
+* M5 = List of endpoints configured to synchronize with NTP servers
+* M6 = List of endpoints whose network time configuration does not include an approved network time source
 
 Metrics
 -------
@@ -46,7 +48,7 @@ NTP Compliance Coverage
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of endpoints using at least 3 synchronized time sources to the total 
+	  - | The ratio of endpoints using at least 3 synchronized time sources to the total
 	    | set of endpoints
 	* - **Calculation**
 	  - :code:`(SUM from i=1..M2 (M4(i)) / M2)`
