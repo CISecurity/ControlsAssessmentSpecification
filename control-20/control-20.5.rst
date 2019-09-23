@@ -18,29 +18,38 @@ Draft
 
 Dependencies
 ------------
-* 
+* None
 
 Inputs
 -----------
-#. 
+#. List of penetration tests and Red Team attacks and associated elements that are not typically tested in production (i.e. SCADA systems)
+#. Description of test bed(s) that have been setup to mimic these production environments
 
 Operations
 ----------
-#. 
+#. For each penetration test and Red Team attack in Input 1, manually review the Inputs to see that there is at least one appropriate test bed in Input 2 to cover that test or attack.
+	#. Those tests/attacks that have at least one matching test bed will be included in list M1
+	#. Those tests/attacks that do not have at least one matching test bed will be included in list M2
 
 Measures
 --------
-* 
+* M1 = List of penetration tests and Red Team attacks that have at least one matching test bed
+* M2 = List of penetration tests and Red Team attacks that do not have at least one matching test bed
+* M3 = Count of tests/attacks that do have a matching test bed (count of M1)
+* M4 = Total count of tests/attacks in Input 1
 
 Metrics
 -------
 
+Coverage
+^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | 
+	  - | The ratio of tests/attacks not typically tested in production that have a matching test
+	    | bed
 	* - **Calculation**
-	  - :code:`?`
+	  - :code:`M3 / M4`
 
 .. history
 .. authors

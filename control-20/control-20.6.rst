@@ -18,29 +18,32 @@ Draft
 
 Dependencies
 ------------
-* 
+* Subcontrol 20.1: Establish a Penetration Testing Program
 
 Inputs
 -----------
-#. 
+#. Penetration Testing Program document
 
 Operations
 ----------
-#. 
+#. Manually review the Penetration Testing Program document (Input 1) to verify that it instructs the organization to use vulnerability scan results to inform penetration testing efforts. The presence or absence of this instruction becomes M1.
 
 Measures
 --------
-* 
+* M1 = Boolean value indicating if the Penetration Testing Program document includes instructions for using vulnerability scan results to inform penetration testing efforts; 1 if instructions are included, 0 otherwise.
 
 Metrics
 -------
 
+Presence
+^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | 
+	  - | Presence or absence of instructions to use vulnerability scan results to inform 
+	    | penetration testing efforts
 	* - **Calculation**
-	  - :code:`?`
+	  - :code:`M1`
 
 .. history
 .. authors
