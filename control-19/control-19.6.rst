@@ -42,11 +42,9 @@ Metrics
 -------
 .. list-table::
 
-	* - **Question**
+	* - **Metric**
 	  - | Is information regarding reporting of computer anomalies and incidents published
 	    | for all workforce members?
-	* - **Answer**
-	  -
 	* - **Calculation**
 	  - :code:`M1 AND M2 AND M3 AND M4`
 
