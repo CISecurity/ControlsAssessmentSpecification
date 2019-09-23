@@ -5,7 +5,7 @@ Maintain secure images or templates for all systems in the enterprise based on t
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Applications
@@ -15,6 +15,11 @@ Maintain secure images or templates for all systems in the enterprise based on t
 Status
 ------
 Draft
+
+Dependencies
+------------
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 5.1: Maintain Inventory of Authorized Software
 
 Inputs
 ------
@@ -30,9 +35,11 @@ Operations
 
 Measures
 --------
-* M1 = The number of systems in the inventory
-* M2 = The number of systems with a corresponding image taken
+* M1 = Count of systems in the inventory (from Input 2)
+* M2 = Count of systems with a corresponding image taken
 * M3 = 1 if an image is configured according to the standards mapped to that system; 0 otherwise.
+* M4 = List of systems with a corresponding image taken
+* M5 = List of systems without a corresponding image taken
 
 Metrics
 -------
