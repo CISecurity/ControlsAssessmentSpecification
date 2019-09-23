@@ -18,29 +18,42 @@ Draft
 
 Dependencies
 ------------
-* 
+* Subcontrol 2.1: Maintain Inventory of Authorized Software
 
 Inputs
 -----------
-#. 
+#. The inventory of authorized software
 
 Operations
 ----------
-#. 
+#. Enumerate all in-house owned and operated software (i.e. applications in the software inventory that are developed in-house and/or acquired) for which there is an application-level firewall technology exists
+#. Enumerate all application-level firewalls (including WAF and host-based firewalls)
+#. For each application-level firewall, enumerate covered software applications
+#. Complement the set of software applications identified in the first operation with the covered software applications
 
 Measures
 --------
-* 
+* M1 = Enumerated list of all software in the inventory for which an application-level firewall technology exists
+* M2 = Enumerated list of all application-level firewalls
+* M3 = Enumerated list of applications covered by application-level firewalls
+* M4 = Enumerated list of applications not covered by software applications (fourth operation)
+* M5 = The number of software for which an application-level firewall technology exists (count of M1)
+* M6 = The number of application-level firewalls (count of M2)
+* M7 = The number of applications covered by application-level firewalls (count of M3)
+* M8 = The number of applications not covered by software applications (count of M4)
 
 Metrics
 -------
 
+Coverage
+^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | 
+	  - | The ratio of the number of applications covered by an application-level firewall to the
+	    | number of eligible applications in the enterprise.
 	* - **Calculation**
-	  - :code:`?`
+	  - :code:`M7 / M5`
 
 .. history
 .. authors
