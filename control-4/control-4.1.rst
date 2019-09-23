@@ -5,7 +5,7 @@ Use automated tools to inventory all administrative accounts, including domain a
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Users
@@ -15,6 +15,10 @@ Use automated tools to inventory all administrative accounts, including domain a
 Status
 ------
 Draft
+
+Dependencies
+------------
+* None
 
 Inputs
 ------
@@ -29,12 +33,12 @@ Operations
 
 Measures
 --------
-* M1 = Number of authorized administrative accounts in Input 1 (count of Input 1)
+* M1 = Count of authorized administrative accounts in Input 1
 * M2 = A binary value, 1 if the automated tool(s) provided at least 1 administrative account (Input 2); 0 if the automated tool(s) did not provide any administrative accounts (Input 2)
 * M3 = List of discovered authorized administrative accounts
 * M4 = List of discovered unauthorized administrative accounts
-* M5 = Number of discovered authorized administrative accounts (count of M3)
-* M6 = Number of discovered unauthorized administrative accounts (count of M4)
+* M5 = Count of discovered authorized administrative accounts
+* M6 = Count of discovered unauthorized administrative accounts
 
 Metrics
 -------
@@ -44,7 +48,7 @@ Administrative Account Inventory
 .. list-table::
 
 	* - **Metric**
-	  - | Ensure the administrative account inventory exists.  If :code:`M1 == 0`, this metric 
+	  - | Ensure the administrative account inventory exists.  If :code:`M1 == 0`, this metric
 	    | fails and the remaining metrics are not applicable.
 	* - **Calculation**
 	  - :code:`M1`
@@ -73,7 +77,7 @@ Unauthorized Accounts
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of discovered unauthorized administrative accounts to total discovered 
+	  - | The ratio of discovered unauthorized administrative accounts to total discovered
 	    | administrative accounts
 	* - **Calculation**
 	  - :code:`M6 / (M5 + M6)`

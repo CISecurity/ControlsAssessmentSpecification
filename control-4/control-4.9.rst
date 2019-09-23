@@ -5,7 +5,7 @@ Configure systems to issue a log entry and alert on unsuccessful logins to an ad
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Users
@@ -15,6 +15,10 @@ Configure systems to issue a log entry and alert on unsuccessful logins to an ad
 Status
 ------
 Draft
+
+Dependencies
+------------
+* Sub-control 1.4: Maintain Detailed Asset Inventory
 
 Inputs
 ------
@@ -33,10 +37,17 @@ Operations
 Measures
 --------
 * M1 = List of endpoints with each endpoint entry labeled with compliance or non-compliance for both Input 2 and Input 3
-* M2 = Number of compliant endpoints based on Input 2 configurations
-* M3 = Number of compliant endpoints based on Input 3 configurations
-* M4 = Number of endpoints that are compliant with configurations from both inputs
+* M2 = Count of compliant endpoints based on Input 2 configurations
+* M3 = Count of compliant endpoints based on Input 3 configurations
+* M4 = Count of endpoints that are compliant with configurations from both inputs
 * M5 = Total number of endpoints from Input 1
+* M6 = List of compliant endpoints based on Input 2 configurations
+* M7 = List of non-compliant endpoints based on Input 2 configurations
+* M8 = List of compliant endpoints based on Input 3 configurations
+* M9 = List of non-compliant endpoints based on Input 3 configurations
+* M10 = Count of non-compliant endpoints based on Input 2 configurations
+* M11 = Count of non-compliant endpoints based on Input 3 configurations
+
 
 Metrics
 -------

@@ -5,7 +5,7 @@ Limit access to scripting tools (such as Microsoft® PowerShell and Python) to o
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Users
@@ -18,8 +18,8 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 2.1: Maintain Inventory of Authorized Software
-* Subcontrol 16.6: Maintain an Inventory of Accounts
+* Sub-control 2.1: Maintain Inventory of Authorized Software
+* Sub-control 16.6: Maintain an Inventory of Accounts
 
 Inputs
 ------

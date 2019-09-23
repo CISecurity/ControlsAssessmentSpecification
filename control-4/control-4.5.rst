@@ -5,7 +5,7 @@ Use multi-factor authentication and encrypted channels for all administrative ac
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Users
@@ -15,6 +15,11 @@ Use multi-factor authentication and encrypted channels for all administrative ac
 Status
 ------
 Draft
+
+Dependencies
+------------
+* Sub-control 2.4: Track Software Inventory Information
+* Sub-control 4.1: Maintain Inventory of Administrative Accounts
 
 Inputs
 ------
@@ -45,7 +50,7 @@ Multi-Factor Compliance
 .. list-table::
 
 	* - **Metric**
-	  - | Calculate the ratio of administrative accounts configured to use multi-factor 
+	  - | Calculate the ratio of administrative accounts configured to use multi-factor
 	    | authentication to the total number of administrative accounts
 	* - **Calculation**
 	  - :code:`M5 / M7`
@@ -55,7 +60,7 @@ Encrypted Channel Compliance
 .. list-table::
 
 	* - **Metric**
-	  - | Calculate the ratio of administrative accounts configured to use encrypted channels to 
+	  - | Calculate the ratio of administrative accounts configured to use encrypted channels to
 	    | the total number of administrative accounts
 	* - **Calculation**
 	  - :code:`M6 / M7`

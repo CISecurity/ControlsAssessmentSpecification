@@ -5,7 +5,7 @@ Where multi-factor authentication is not supported (such as local administrator,
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Users
@@ -15,6 +15,10 @@ Where multi-factor authentication is not supported (such as local administrator,
 Status
 ------
 Draft
+
+Dependencies
+------------
+* None
 
 Inputs
 ------
