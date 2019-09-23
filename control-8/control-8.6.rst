@@ -5,7 +5,7 @@ Send all malware detection events to enterprise anti-malware administration tool
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Devices
@@ -18,7 +18,8 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 2.1: Maintain Inventory of Authorized Software
+* Sub-control 2.1: Maintain Inventory of Authorized Software
+* Sub-control 5.1: Establish Secure Configurations
 
 Inputs
 ------
@@ -39,8 +40,8 @@ Measures
 * M2 = List of software instances that are not properly configured for the sending/receiving of malware detection events (non-compliant list)
 * M3 = Count of properly configured software instances (count of M1)
 * M4 = Total count of software instances that need to be configured to properly send/receive malware detection events (count of Input 1)
-* M5 = The total number of malware detection events
-* M6 = The number of alerts being correlated in a central service
+* M5 = Count of malware detection events
+* M6 = Count of alerts being correlated in a central service
 
 Metrics
 -------

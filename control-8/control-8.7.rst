@@ -5,7 +5,7 @@ Enable Domain Name System (DNS) query logging to detect hostname lookups for kno
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Network
@@ -19,6 +19,7 @@ Draft
 Dependencies
 ------------
 * Subcontrol 2.5: Integrate Software and Hardware Asset Inventories
+* Sub-control 5.1: Establish Secure Configurations
 
 Inputs
 ------
@@ -35,8 +36,10 @@ Operations
 
 Measures
 --------
-* M1 = The number of internal DNS servers
-* M2 = The number of internal DNS servers matching the organization's configuration policy
+* M1 = Count of internal DNS servers
+* M2 = Count of internal DNS servers matching the organization's configuration policy
+* M3 = List of compliant DNS servers
+* M4 = List of non-compliant DNS servers
 
 Metrics
 -------
@@ -46,7 +49,7 @@ DNS Configuration Coverage
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of internal DNS servers matching the approved configuration to the 
+	  - | The ratio of internal DNS servers matching the approved configuration to the
 	    | total number of internal DNS servers.
 	* - **Calculation**
 	  - :code:`M2 / M1`
