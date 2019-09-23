@@ -5,7 +5,7 @@ Log all URL requests from each of the organization’s systems, whether on-site 
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Network
@@ -18,7 +18,8 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.5: Maintain Asset Inventory Information
+* Sub-control 1.5: Maintain Asset Inventory Information
+* Sub-control 5.1: Establish Secure Configurations
 
 Inputs
 ------
@@ -32,7 +33,7 @@ Operations
 Measures
 --------
 * M1(i) = (For each endpoint "i") 1 if the endpoint's logging configuration complies with the organizations logging policy; 0 otherwise.
-* M2 = The number of endpoints from Input 1
+* M2 = Count of endpoints from Input 1
 
 Metrics
 -------

@@ -5,7 +5,7 @@ Block all email attachments entering the organization’s email gateway if the f
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Network
@@ -18,7 +18,8 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 2.5: Integration Software and Hardware Asset Inventories
+* Sub-control 2.5: Integration Software and Hardware Asset Inventories
+* Sub-control 5.1: Establish Secure Configurations
 
 Inputs
 ------
@@ -33,7 +34,7 @@ Operations
 Measures
 --------
 * M1(i) = (For each email gateway "i") 1 if the email gateway's configuration complies with the organizations attachment blocking policy; 0 otherwise.
-* M2 = The number of email gateways
+* M2 = Count of email gateways
 
 Metrics
 -------
@@ -43,7 +44,7 @@ Coverage
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of endpoints configured as email gateways that are properly configured to 
+	  - | The ratio of endpoints configured as email gateways that are properly configured to
 	    | the total number of email gateway endpoints
 	* - **Calculation**
 	  - :code:`(SUM from i=1..M2 (M1(i))) / M2`

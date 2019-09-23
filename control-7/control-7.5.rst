@@ -5,7 +5,7 @@ Subscribe to URL-categorization services to ensure that they are up-to-date with
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Network
@@ -18,7 +18,7 @@ Draft
 
 Dependencies
 ------------
-N/A
+* None
 
 Inputs
 ------
@@ -26,7 +26,7 @@ Inputs
 
 Assumptions
 ^^^^^^^^^^^
-* Subscription to a URL categorization service provides an organization the ability to intercept a user's intended URL, determine if it has been categorized, and allow/prevent access to that URL based on the (lack of) categorization. Potentially a browser plugin? Potentially some filtering method on a network device or the organization's network perimeter? 
+* Subscription to a URL categorization service provides an organization the ability to intercept a user's intended URL, determine if it has been categorized, and allow/prevent access to that URL based on the (lack of) categorization. Potentially a browser plugin? Potentially some filtering method on a network device or the organization's network perimeter?
 
 Operations
 ----------

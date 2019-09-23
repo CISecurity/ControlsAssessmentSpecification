@@ -5,7 +5,7 @@ Ensure that only authorized scripting languages are able to run in all web brows
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Applications
@@ -18,7 +18,8 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 2.5: Integration Software and Hardware Asset Inventories
+* Sub-control 2.5: Integration Software and Hardware Asset Inventories
+* Sub-control 5.1: Establish Secure Configurations
 
 Inputs
 ------
