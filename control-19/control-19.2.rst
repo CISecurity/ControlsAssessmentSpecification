@@ -14,7 +14,11 @@ Assign job titles and duties for handling computer and network incidents to spec
 
 Status
 ------
-In Development
+Draft
+
+Dependencies
+------------
+* 
 
 Inputs
 -----------
@@ -26,16 +30,15 @@ Operations
 
 Measures
 --------
-
+* 
 
 Metrics
 -------
+
 .. list-table::
 
-	* - **Question**
-	  - 
-	* - **Answer**
-	  - 
+	* - **Metric**
+	  - | 
 	* - **Calculation**
 	  - :code:`?`
 

@@ -42,11 +42,9 @@ Existence
 ^^^^^^^^^
 .. list-table::
 
-	* - **Question**
+	* - **Metric**
 	  - | Ensure that there are written incident response plans that define roles of personnel
 	    | as well as phases of incident handling/management.
-	* - **Answer**
-	  -
 	* - **Calculation**
 	  - :code:`M1 AND M2 AND M3`
 

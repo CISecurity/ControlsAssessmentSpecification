@@ -14,7 +14,11 @@ Establish a process to accept and address reports of software vulnerabilities, i
 
 Status
 ------
-In Development
+Draft
+
+Dependencies
+------------
+* 
 
 Inputs
 -----------
@@ -26,16 +30,15 @@ Operations
 
 Measures
 --------
-
+* 
 
 Metrics
 -------
+
 .. list-table::
 
-	* - **Question**
-	  - 
-	* - **Answer**
-	  - 
+	* - **Metric**
+	  - | 
 	* - **Calculation**
 	  - :code:`?`
 

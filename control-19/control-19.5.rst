@@ -39,10 +39,8 @@ Metrics
 -------
 .. list-table::
 
-	* - **Question**
+	* - **Metric**
 	  - Is information on third-party contact information maintained, for use in incident handling?
-	* - **Answer**
-	  -
 	* - **Calculation**
 	  - :code:`M1 AND M2`
 

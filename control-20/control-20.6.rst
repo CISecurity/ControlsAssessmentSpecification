@@ -14,7 +14,11 @@ Use vulnerability scanning and penetration testing tools in concert. The results
 
 Status
 ------
-In Development
+Draft
+
+Dependencies
+------------
+* 
 
 Inputs
 -----------
@@ -26,16 +30,15 @@ Operations
 
 Measures
 --------
-
+* 
 
 Metrics
 -------
+
 .. list-table::
 
-	* - **Question**
-	  - 
-	* - **Answer**
-	  - 
+	* - **Metric**
+	  - | 
 	* - **Calculation**
 	  - :code:`?`
 

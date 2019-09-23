@@ -14,7 +14,11 @@ Conduct regular external and internal penetration tests to identify vulnerabilit
 
 Status
 ------
-In Development
+Draft
+
+Dependencies
+------------
+* 
 
 Inputs
 -----------
@@ -26,16 +30,15 @@ Operations
 
 Measures
 --------
-
+* 
 
 Metrics
 -------
+
 .. list-table::
 
-	* - **Question**
-	  - 
-	* - **Answer**
-	  - 
+	* - **Metric**
+	  - | 
 	* - **Calculation**
 	  - :code:`?`
 

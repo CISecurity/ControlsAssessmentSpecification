@@ -14,7 +14,11 @@ Verify that the version of all software acquired from outside your organization 
 
 Status
 ------
-In Development
+Draft
+
+Dependencies
+------------
+* 
 
 Inputs
 -----------
@@ -26,16 +30,15 @@ Operations
 
 Measures
 --------
-
+* 
 
 Metrics
 -------
+
 .. list-table::
 
-	* - **Question**
-	  - 
-	* - **Answer**
-	  - 
+	* - **Metric**
+	  - | 
 	* - **Calculation**
 	  - :code:`?`
 

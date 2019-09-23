@@ -39,10 +39,8 @@ Metrics
 -------
 .. list-table::
 
-	* - **Question**
+	* - **Metric**
 	  - Are personnel, including backups, designated to support the incident handling process?
-	* - **Answer**
-	  -
 	* - **Calculation**
 	  - :code:`M1 AND M2 AND M3`
 
