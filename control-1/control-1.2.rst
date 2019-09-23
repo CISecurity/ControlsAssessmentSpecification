@@ -15,45 +15,48 @@ Utilize a passive discovery tool to identify devices connected to the organizati
 
 Status
 ------
-In Development
+Draft
+
+Dependencies
+------------
+* Subcontrol 12.1: Maintain an Inventory of Network Boundaries
 
 Inputs
------------
-#. These measurements assume the total number of assets for a given enterprise is known (M2), and that the max asset discovery time (M5) is known.
+------
+#. The list of the organization's networks
+#. The list of passive asset discovery tools in use by the organization. For each, include the location of the tool's configuration information and which networks it covers.
+#. Approved configuration(s) for each passive asset discovery tool. Configurations should include the settings necessary for the tool to be able to update the organization's hardware asset inventory.
 
 Operations
 ----------
-N/A
+#. For each passive asset discovery tool provided in Input 2, check the tool's configuration against the appropriate approved configuration from Input 3.
+	#. Create a list of those tools that are properly configured (M1)
+	#. Create a list of those tools that are improperly configured (M2) noting the deviations from proper configuration
+#. For each of the organization's networks provided in Input 1, check Input 2 and M1 to ensure that at least one properly configured passive asset discovery tool covers that network.
+	#. Create a list of the organization's networks that have coverage from at least one properly configured passive asset discovery tool (M3)
+	#. Create a list of the organization's networks that do not have coverage from any properly configured passive asset discovery tools (M4)
 
 Measures
 --------
-* M1 = number of assets discovered
-* M2 = total number of assets (given)
-* M3 = time asset discovered
-* M4 = time asset appeared (given)
-* M5 = max time discovery (given)
+* M1 = List of properly configured passive asset discovery tools (compliant tool list)
+* M2 = List of improperly configured passive asset discovery tools (non-compliant tool list)
+* M3 = List of organization's networks with coverage from at least one properly configured passive asset discovery tool (compliant network list)
+* M4 = List of organization's networks that do not have coverage from any properly configured passive asset discovery tool (non-compliant network list)
+* M5 = Count of networks with coverage from at least one properly configured passive asset discovery tool (count of M3)
+* M6 = Total count of the organization's networks (count of Input 1)
 
 Metrics
 -------
 
-Coverage (Quality Measure)
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+Coverage
+^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | Given the total inventory of assets, what percentage of those assets are discovered
-	    | in the enterprise?
+	  - | The ratio of the organization's networks with coverage from at least one properly 
+	    | configured passive asset discovery tool to the total number of networks
 	* - **Calculation**
-	  - :code:`M1 / M2`
-
-Freshness (Time to Discover)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. list-table::
-
-	* - **Metric**
-	  - | How quickly are new assets discovered, once added to the enterprise's network?
-	* - **Calculation**
-	  - :code:`(M3 - M4) / M5`
+	  - :code:`M5 / M6`
 
 .. history
 .. authors

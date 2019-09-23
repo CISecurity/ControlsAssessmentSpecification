@@ -14,29 +14,46 @@ The software inventory system should be tied into the hardware asset inventory s
 
 Status
 ------
-In Development
+Draft
+
+Dependencies
+------------
+* Subcontrol 1.4: Maintain Detailed Asset Inventory
+* Subcontrol 1.5: Maintain Asset Inventory Information
 
 Inputs
 ------
-#. 
+#. The list of endpoints
 
 Operations
 ----------
-#. 
+#. Enumerate software inventory systems from the endpoint inventory
+#. Enumerate hardware inventory systems from the endpoint inventory
+#. For each software inventory system, examine its configuration to ensure that it is tied to at least one hardware inventory system, noting appropriately and inappropriately configured software inventory systems
 
 Measures
 --------
-
+* M1 = List of software inventory systems
+* M2 = List of hardware inventory systems
+* M3 = List of appropriately configured software inventory systems
+* M4 = List of inappropriately configured software inventory systems
+* M5 = The number of software inventory systems (count of M1)
+* M6 = The number of hardware inventory systems (count of M2)
+* M7 = The number of appropriately configured software inventory systems (count of M3)
+* M8 = The number of inappropriately configured software inventory systems (count of M4)
 
 Metrics
 -------
 
+Coverage
+^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | 
+	  - | The ratio of appropriately configured software inventory systems to the number of 
+	    | software inventory systems
 	* - **Calculation**
-	  - :code:`?`
+	  - :code:`M7 / M5`
 
 .. history
 .. authors
