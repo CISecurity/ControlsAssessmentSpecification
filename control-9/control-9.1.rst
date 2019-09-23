@@ -5,7 +5,7 @@ Associate active ports, services, and protocols to the hardware assets in the as
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Devices
@@ -18,8 +18,8 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
 
 Inputs
 ------
@@ -37,6 +37,9 @@ Measures
 --------
 * M1 = Count of endpoints in inventory
 * M2 = Count of endpoints with all detailed information
+* M3 = List of endpoints with all detailed information
+* M4 = List of endpoints missing at least one piece of detailed information
+* M5 = Count of endpoints missing at least one piece of detailed information 
 
 Metrics
 -------
