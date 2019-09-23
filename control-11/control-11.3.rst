@@ -5,7 +5,7 @@ Compare all network device configurations against approved security configuratio
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Network
@@ -18,9 +18,9 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
-* Subcontrol 2.1: Maintain Inventory of Authorized Software
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
+* Sub-control 2.1: Maintain Inventory of Authorized Software
 
 Inputs
 ------
@@ -34,8 +34,8 @@ Operations
 
 Measures
 --------
-* M1(i) = (For each network device "i") The number of non-compliant recommendations resulting from Operation 1
-* M2(i) = (For each network device "i") The number of recommendations assessed
+* M1(i) = (For each network device "i") Count of non-compliant recommendations resulting from Operation 1
+* M2(i) = (For each network device "i") Count of recommendations assessed
 
 Metrics
 -------

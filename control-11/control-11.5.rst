@@ -5,7 +5,7 @@ Manage all network devices using multi-factor authentication and encrypted sessi
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Network
@@ -18,8 +18,8 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
 
 Inputs
 ------
@@ -37,7 +37,7 @@ Operations
 
 Measures
 --------
-* M1 = The number of network devices
+* M1 = Count of network devices
 * M2(i) = (For each network device "i") 1 if the network device's running configuration matches the configuration policy for use of multi-factor authentication (Operation 1); 0 otherwise
 * M3(i) = (For each network device "i") 1 if the network device's running configuration matches the configuration policy for use of encrypted sessions (Operation 1); 0 otherwise 
 
