@@ -18,7 +18,7 @@ Draft
 
 Dependencies
 ------------
-* TBD
+* None
 
 Inputs
 -----------
@@ -45,7 +45,7 @@ Update Timeliness
 	* - **Metric**
 	  - | Is the organization's security awareness program updated within acceptable time frame?
 	* - **Calculation**
-	  - :code:`M1 and M2`
+	  - :code:`M1 AND M2`
 
 .. history
 .. authors
