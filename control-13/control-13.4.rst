@@ -5,7 +5,7 @@ Only allow access to authorized cloud storage or email providers.
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Data
@@ -18,8 +18,8 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
 
 Inputs
 -----------
@@ -40,7 +40,7 @@ Measures
 * M1 = List of reachable cloud storage providers by configuration location
 * M2 = List of reachable cloud email providers by configuration location
 * M3 = Count of endpoints for which all their configuration locations are compliant
-* M4 = Total count of endpoints (count of Input 1)
+* M4 = Count of endpoints (count of Input 1)
 * M5 = Score resulting from the manual review of the cloud provider access policy
 
 Metrics
@@ -61,7 +61,7 @@ Manual Review
 .. list-table::
 
 	* - **Metric**
-	  - | Manual policy review included for this Sub-Control because it is not feasible to 
+	  - | Manual policy review included for this Sub-Control because it is not feasible to
 	    | identify (and therefore check for) all cloud storage and email providers.
 	* - **Calculation**
 	  - :code:`M5`

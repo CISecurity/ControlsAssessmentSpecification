@@ -5,7 +5,7 @@ If USB storage devices are required, enterprise software should be used that can
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Data
@@ -18,10 +18,10 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
-* Subcontrol 2.1: Maintain Inventory of Authorized Software
-* Subcontrol 2.5: Integrate Software and Hardware Asset Inventories
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
+* Sub-control 2.1: Maintain Inventory of Authorized Software
+* Sub-control 2.5: Integrate Software and Hardware Asset Inventories
 
 Inputs
 -----------
@@ -37,7 +37,7 @@ Operations
 
 Measures
 --------
-* M1 = The number of endpoints
+* M1 = Count of endpoints
 * M2(i) = (For each endpoint "i") 1 if Operation 1 indicates the appropriate software is installed on device "i"; 0 otherwise
 * M3 = (For each endpoint) The number of USB devices allowed
 * M4 = (For each endpoint) The number of USB devices contained in the whitelist which are not in the authorized USB device inventory
@@ -71,7 +71,7 @@ Full Coverage
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of endpoints with inventoried USB storage device capability and USB 
+	  - | The ratio of endpoints with inventoried USB storage device capability and USB
 	    | whitelisting software installed to the total number of endpoints.
 	* - **Calculation**
 	  - :code:`(SUM from i=1..M1 (M2(i) * M5(i))) / M1`
