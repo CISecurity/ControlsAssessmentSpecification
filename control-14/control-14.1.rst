@@ -5,7 +5,7 @@ Segment the network based on the label or classification level of the informatio
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Network
@@ -18,7 +18,7 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 13.1: Maintain an Inventory of Sensitive Information
+* Sub-control 13.1: Maintain an Inventory of Sensitive Information
 
 Inputs
 -----------

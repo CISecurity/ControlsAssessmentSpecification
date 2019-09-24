@@ -5,7 +5,7 @@ Encrypt all sensitive information in transit.
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Data
@@ -18,7 +18,7 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 13.1: Maintain an Inventory of Sensitive Information
+* Sub-control 13.1: Maintain an Inventory of Sensitive Information
 
 Inputs
 -----------
@@ -46,7 +46,7 @@ Coverage
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of sensitive information types properly configured to be encrypted in 
+	  - | The ratio of sensitive information types properly configured to be encrypted in
 	    | transit to the total set of sensitive information types.
 	* - **Calculation**
 	  - :code:`M3 / M4`
