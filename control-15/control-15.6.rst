@@ -5,7 +5,7 @@ Disable peer-to-peer (ad hoc) wireless network capabilities on wireless clients.
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Devices
@@ -18,8 +18,8 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
 
 Inputs
 -----------
@@ -28,7 +28,7 @@ Inputs
 
 Operations
 ----------
-#. For each wireless client in Input 1, compare its configuration against the appropriate approved configuration(s) from Input 2.  
+#. For each wireless client in Input 1, compare its configuration against the appropriate approved configuration(s) from Input 2.
 #. Make a list of wireless clients that adhere to the approved configurations (M1)
 #. Make a list of wireless clients that do not (M2), noting the deviations from the approved configurations.
 

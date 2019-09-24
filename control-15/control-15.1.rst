@@ -5,7 +5,7 @@ Maintain an inventory of authorized wireless access points connected to the wire
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Network
@@ -18,8 +18,8 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
 
 Inputs
 -----------
@@ -34,11 +34,15 @@ Operations
 
 Measures
 --------
-* M1 = The number of wireless access points in the inventory
-* M2 = The number of discovered wireless access points, from Operation 1
-* M3 = The number of non-inventoried wireless access points, as discovered by Operation 2
-* M4 = The number of inventoried wireless access points, as discovered by Operation 3
-* M5 = The number of discovered but non-authorized wireless access points, as discovered by Operation 4
+* M1 = Count of wireless access points in the inventory (from Input 1)
+* M2 = List of discovered wireless access points, from Operation 1
+* M3 = Count of M2
+* M4 = List of non-inventoried wireless access points, as discovered by Operation 2
+* M5 = Count of M4
+* M6 = List of inventoried wireless access points, as discovered by Operation 3
+* M7 = Count of M6
+* M8 = List of discovered, but unauthorized, wireless access points, as discovered by Operation 4
+* M9 = Count of M8
 
 Metrics
 -------
@@ -48,10 +52,10 @@ Coverage
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of discovered wireless access points to the total inventoried list of 
+	  - | The ratio of discovered wireless access points to the total inventoried list of
 	    | wireless access points.
 	* - **Calculation**
-	  - :code:`(M2 - M1) / M1`
+	  - :code:`(M3 - M1) / M1`
 
 
 Inventory Gap
@@ -62,17 +66,17 @@ Inventory Gap
 	  - | Are there any discovered wireless access points that are *not* contained in the
 	    | inventory?
 	* - **Calculation**
-	  - :code:`M3 > 0`
+	  - :code:`M5 > 0`
 
 Unauthorized Usage
 ^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | Are there any discovered wireless access points which are contained in the 
+	  - | Are there any discovered wireless access points which are contained in the
 	    | inventory but are noted as *not* authorized?
 	* - **Calculation**
-	  - :code:`M5 > 0`
+	  - :code:`M9 > 0`
 
 .. history
 .. authors

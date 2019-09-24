@@ -5,7 +5,7 @@ Use a wireless intrusion detection system (WIDS) to detect and alert on unauthor
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Network
@@ -18,8 +18,8 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
 
 Inputs
 -----------
@@ -32,9 +32,12 @@ Operations
 
 Measures
 --------
-* M1 - Count of approved wireless access points
-* M2 - Count of WIDS sensors
-* M3 - Count of approved wireless access points covered by WIDS sensors
+* M1 - Count of approved wireless access points (from Input 1)
+* M2 - Count of WIDS sensors (from Input 2)
+* M3 = List of approved wireless access points covered by WIDS sensors
+* M4 = Count of M3
+* M5 = List of approved wireless access points not covered by WIDS sensors
+* M6 = Count of M5
 
 Metrics
 -------
@@ -44,9 +47,9 @@ Coverage
 .. list-table::
 
 	* - **Metric**
-	  - | Percentage of wireless access points not covered by WIDS sensors
+	  - | Ratio of wireless access points covered by WIDS sensors to the total number of wireless access points
 	* - **Calculation**
-	  - :code:`(M1 - M3) / M1`
+	  - :code:`M4 / M1`
 
 .. history
 .. authors

@@ -5,7 +5,7 @@ Configure network vulnerability scanning tools to detect and alert on unauthoriz
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Network
@@ -18,7 +18,7 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 2.1: Maintain Inventory of Authorized Software
+* Sub-control 2.1: Maintain Inventory of Authorized Software
 
 Inputs
 -----------
@@ -75,7 +75,7 @@ Full Coverage
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of network vulnerability scanning tools correctly configured for both 
+	  - | The ratio of network vulnerability scanning tools correctly configured for both
 	    | detecting and alerting on unauthorized WAPs
 	* - **Calculation**
 	  - :code:`M9 / M7`
