@@ -5,7 +5,7 @@ Create incident scoring and prioritization schema based on known or potential im
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - N/A
@@ -18,7 +18,7 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 19.1: Document Incident Response Procedures
+* Sub-control 19.1: Document Incident Response Procedures
 
 Inputs
 -----------

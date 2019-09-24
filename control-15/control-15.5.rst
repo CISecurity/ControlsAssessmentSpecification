@@ -5,7 +5,7 @@ Configure wireless access on client machines that do have an essential wireless 
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Devices
@@ -18,8 +18,8 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
 
 Inputs
 -----------
@@ -46,11 +46,11 @@ Measures
 * M3 = List of endpoints authorized for wireless access
 * M4 = List of appropriately configured endpoints
 * M5 = List of inappropriately configured endpoints
-* M6 = The number of wireless-client-capable endpoints (count of M1)
-* M7 = The number of authorized wireless networks (count of M2)
-* M8 = The number of endpoints authorized for wireless access (count of M3)
-* M9 = The number of appropriately configured endpoints (count of M4)
-* M10 = The number of inappropriately configured endpoints (count of M5)
+* M6 = Count of wireless-client-capable endpoints (count of M1)
+* M7 = Count of authorized wireless networks (count of M2)
+* M8 = Count of endpoints authorized for wireless access (count of M3)
+* M9 = Count of appropriately configured endpoints (count of M4)
+* M10 = Count of inappropriately configured endpoints (count of M5)
 
 Metrics
 -------
@@ -60,7 +60,7 @@ Configuration Coverage
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of appropriately configured endpoints to the total number of authorized 
+	  - | The ratio of appropriately configured endpoints to the total number of authorized
 	    | wireless-client-capable endpoints
 	* - **Calculation**
 	  - :code:`M9 / M8`

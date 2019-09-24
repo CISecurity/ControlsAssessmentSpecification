@@ -5,7 +5,7 @@ Use an automated tool, such as host-based Data Loss Prevention, to enforce acces
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Data
@@ -18,10 +18,10 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
-* Subcontrol 2.1: Maintain Inventory of Authorized Software
-* Subcontrol 2.5: Integrate Software and Hardware Asset Inventories
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
+* Sub-control 2.1: Maintain Inventory of Authorized Software
+* Sub-control 2.5: Integrate Software and Hardware Asset Inventories
 
 Inputs
 -----------
@@ -43,10 +43,10 @@ Measures
 * M2 = List of DLP software instances
 * M3 = List of all endpoints covered by the set of DLP software
 * M4 = List of all endpoints not covered by the set of DLP software
-* M5 = The number of endpoints capable of storing data (count of M1)
-* M6 = The number of DLP software instances (count of M2)
-* M7 = The number of endpoints covered by the set of DLP software (count of M3)
-* M8 = The number of endpoints not covered by the set of DLP software (count of M4)
+* M5 = Count of endpoints capable of storing data (count of M1)
+* M6 = Count of DLP software instances (count of M2)
+* M7 = Count of endpoints covered by the set of DLP software (count of M3)
+* M8 = Count of endpoints not covered by the set of DLP software (count of M4)
 
 Metrics
 -------

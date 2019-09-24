@@ -5,7 +5,7 @@ Only use up-to-date and trusted third-party components for the software develope
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - N/A
@@ -18,7 +18,7 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 2.1: Maintain Inventory of Authorized Software
+* Sub-control 2.1: Maintain Inventory of Authorized Software
 
 Inputs
 -----------
@@ -39,9 +39,9 @@ Measures
 * M1 = List of all third-party components being used
 * M2 = List of all third-party components that are up-to-date and explicitly trusted
 * M3 = List of all third-party components that are not up-to-date or not explicitly trusted
-* M4 = The number of third-party components being used (count of M1)
-* M5 = The number of third-party components that are up-to-date and explicitly trusted (count of M2)
-* M6 = The number of third-party components that are not up-to-date or not explicitly trusted (count of M3)
+* M4 = Count of third-party components being used (count of M1)
+* M5 = Count of third-party components that are up-to-date and explicitly trusted (count of M2)
+* M6 = Count of third-party components that are not up-to-date or not explicitly trusted (count of M3)
 
 Metrics
 -------

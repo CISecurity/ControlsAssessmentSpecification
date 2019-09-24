@@ -5,7 +5,7 @@ Utilize an active discovery tool to identify all sensitive information stored, p
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Data
@@ -18,10 +18,10 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
-* Subcontrol 2.1: Maintain Inventory of Authorized Software
-* Subcontrol 2.5: Integrate Software and Hardware Asset Inventories
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
+* Sub-control 2.1: Maintain Inventory of Authorized Software
+* Sub-control 2.5: Integrate Software and Hardware Asset Inventories
 
 Inputs
 -----------
@@ -52,12 +52,12 @@ Measures
 * M4 = List of monitoring tools inappropriately configured
 * M5 = List of endpoints covered by at least one monitoring tool
 * M6 = List of endpoints not covered by at least one monitoring tool
-* M7 = The number of endpoints storing, processing, or transmitting sensitive information (count of M1)
-* M8 = The number of sensitive information monitoring tools (count of M2)
-* M9 = The number of monitoring tools appropriately configured (count of M3)
-* M10 = The number of monitoring tools inappropriately configured (count of M4)
-* M11 = The number of endpoints covered by at least one monitoring tool (count of M5)
-* M12 = The number of endpoints not covered by at least one monitoring tool (count of M6)
+* M7 = Count of endpoints storing, processing, or transmitting sensitive information (count of M1)
+* M8 = Count of sensitive information monitoring tools (count of M2)
+* M9 = Count of monitoring tools appropriately configured (count of M3)
+* M10 = Count of monitoring tools inappropriately configured (count of M4)
+* M11 = Count of endpoints covered by at least one monitoring tool (count of M5)
+* M12 = Count of endpoints not covered by at least one monitoring tool (count of M6)
 
 Metrics
 -------

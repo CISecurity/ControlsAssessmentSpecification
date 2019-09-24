@@ -5,7 +5,7 @@ Encrypt all sensitive information at rest using a tool that requires a secondary
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Data
@@ -18,10 +18,10 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
-* Subcontrol 2.1: Maintain Inventory of Authorized Software
-* Subcontrol 2.5: Integrate Software and Hardware Asset Inventories
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
+* Sub-control 2.1: Maintain Inventory of Authorized Software
+* Sub-control 2.5: Integrate Software and Hardware Asset Inventories
 
 Inputs
 -----------
@@ -45,10 +45,10 @@ Measures
 * M2 = List of all endpoints storing sensitive information
 * M3 = List of all endpoints covered by at least one encryption tool
 * M4 = List of all endpoints not covered by at least one encryption tool
-* M5 = The number of encryption tools that require secondary authentication (count of M1)
-* M6 = The number of endpoints storing sensitive information (count of M2)
-* M7 = The number of endpoints covered by at least one encryption tool (count of M3)
-* M8 = The number of endpoints not covered by at least one encryption tool (count of M4)
+* M5 = Count of encryption tools that require secondary authentication (count of M1)
+* M6 = Count of endpoints storing sensitive information (count of M2)
+* M7 = Count of endpoints covered by at least one encryption tool (count of M3)
+* M8 = Count of endpoints not covered by at least one encryption tool (count of M4)
 
 
 Metrics

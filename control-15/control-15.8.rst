@@ -5,7 +5,7 @@ Ensure that wireless networks use authentication protocols such as Extensible Au
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Network
@@ -18,8 +18,8 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
 
 Inputs
 -----------
@@ -39,9 +39,9 @@ Measures
 * M1 = List of all wireless access points
 * M2 = List of appropriately configured wireless access points
 * M3 = List of inappropriately configured wireless access points
-* M4 = The number of wireless access points (count of M1)
-* M5 = The number of appropriately configured wireless access points (count of M2)
-* M6 = The number of inappropriately configured wireless access points (count of M3)
+* M4 = Count of wireless access points (count of M1)
+* M5 = Count of appropriately configured wireless access points (count of M2)
+* M6 = Count of inappropriately configured wireless access points (count of M3)
 
 Metrics
 -------

@@ -5,7 +5,7 @@ Disable wireless access on devices that do not have a business purpose for wirel
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Devices
@@ -18,8 +18,8 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
 
 Inputs
 -----------
@@ -41,10 +41,10 @@ Measures
 * M2 = List of endpoints with wireless access enabled and without an identified business purpose for wireless access
 * M3 = List of endpoints without wireless access enabled and without an identified business purpose
 * M4 = List of endpoints with wireless access enabled and with an identified business purpose for wireless access
-* M5 = The number of wireless-access-capable endpoints (count of M1)
-* M6 = The number of endpoints with wireless access enabled and without an identified business purpose for wireless access (count of M2)
-* M7 = The number of endpoints without wireless access enabled and without an identified business purpose (count of M3)
-* M8 = The number of endpoints with wireless access enabled and with an identified business purpose for wireless access (count of M4)
+* M5 = Count of wireless-access-capable endpoints (count of M1)
+* M6 = Count of endpoints with wireless access enabled and without an identified business purpose for wireless access (count of M2)
+* M7 = Count of endpoints without wireless access enabled and without an identified business purpose (count of M3)
+* M8 = Count of endpoints with wireless access enabled and with an identified business purpose for wireless access (count of M4)
 * M9 = M7 + M8
 
 Metrics

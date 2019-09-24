@@ -5,7 +5,7 @@ Alert when users deviate from normal login behavior, such as time-of-day, workst
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Users
@@ -18,10 +18,10 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
-* Subcontrol 2.1: Maintain Inventory of Authorized Software
-* Subcontrol 2.5: Integrate Software and Hardware Asset Inventories
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
+* Sub-control 2.1: Maintain Inventory of Authorized Software
+* Sub-control 2.5: Integrate Software and Hardware Asset Inventories
 
 Inputs
 -----------
@@ -46,17 +46,17 @@ Operations
 Measures
 --------
 * M1 = List of user behavioral monitoring software systems
-* M2 = List of endpoints 
+* M2 = List of endpoints
 * M3 = List of endpoints covered by at least one behavioral monitoring system
 * M4 = List of endpoints not covered by at least one behavioral monitoring system
 * M5 = List of appropriately configured behavioral monitoring systems
 * M6 = List of inappropriately configured behavioral monitoring systems
-* M7 = The number of user behavioral monitoring software systems (count of M1)
-* M8 = The number of endpoints (count of M2)
-* M9 = The number of endpoints covered by at least one behavioral monitoring system (count of M3)
-* M10 = The number of endpoints not covered by at least one behavioral monitoring system (count of M4)
-* M11 = The number of appropriately configured behavioral monitoring systems (count of M5)
-* M12 = The number of inappropriately configured behavioral monitoring systems (count of M6)
+* M7 = Count of user behavioral monitoring software systems (count of M1)
+* M8 = Count of endpoints (count of M2)
+* M9 = Count of endpoints covered by at least one behavioral monitoring system (count of M3)
+* M10 = Count of endpoints not covered by at least one behavioral monitoring system (count of M4)
+* M11 = Count of appropriately configured behavioral monitoring systems (count of M5)
+* M12 = Count of inappropriately configured behavioral monitoring systems (count of M6)
 
 Metrics
 -------

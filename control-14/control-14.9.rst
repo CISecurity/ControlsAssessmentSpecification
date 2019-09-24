@@ -5,7 +5,7 @@ Enforce detailed audit logging for access to sensitive data or changes to sensit
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Data
@@ -18,10 +18,10 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
-* Subcontrol 2.1: Maintain Inventory of Authorized Software
-* Subcontrol 2.5: Integrate Software and Hardware Asset Inventories
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
+* Sub-control 2.1: Maintain Inventory of Authorized Software
+* Sub-control 2.5: Integrate Software and Hardware Asset Inventories
 
 Inputs
 -----------
@@ -47,11 +47,11 @@ Measures
 * M3 = List of inappropriately configured endpoints (those that do not have detailed audit logging enabled for access or changes to sensitive data)
 * M4 = List of endpoints inappropriately configured to log access to sensitive data
 * M5 = List of endpoints inappropriately configured to log changes to sensitive data
-* M6 = The number of endpoints storing sensitive information (count of M1)
-* M7 = The number of appropriately configured endpoints (count of M2)
-* M8 = The number of inappropriately configured endpoints (count of M3)
-* M9 = The number of endpoints inappropriately configured to log access to sensitive data (count of M4)
-* M10 = The number of endpoints inappropriately configured to log changes to sensitive data (count of M5)
+* M6 = Count of endpoints storing sensitive information (count of M1)
+* M7 = Count of appropriately configured endpoints (count of M2)
+* M8 = Count of inappropriately configured endpoints (count of M3)
+* M9 = Count of endpoints inappropriately configured to log access to sensitive data (count of M4)
+* M10 = Count of endpoints inappropriately configured to log changes to sensitive data (count of M5)
 
 Metrics
 -------
