@@ -5,7 +5,7 @@ Deploy an automated tool on network perimeters that monitors for unauthorized tr
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Data
@@ -18,8 +18,8 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 2.1: Maintain Inventory of Authorized Software
-* Subcontrol 12.1: Maintain an Inventory of Network Boundaries
+* Sub-control 2.1: Maintain Inventory of Authorized Software
+* Sub-control 12.1: Maintain an Inventory of Network Boundaries
 
 Inputs
 -----------
@@ -51,12 +51,12 @@ Measures
 * M4 = List of inappropriately configured perimeter monitoring systems
 * M5 = List of network perimeters covered by at least one network perimeter monitoring system
 * M6 = List of network perimeters not covered by at least one network perimeter monitoring system
-* M7 = The number of network perimeter monitoring systems (count of M1)
-* M8 = The number of network perimeters (count of M2)
-* M9 = The number of appropriately configured perimeter monitoring systems (count of M3)
-* M10 = The number of inappropriately configured perimeter monitoring systems (count of M4)
-* M11 = The number of network perimeters covered by at least one network perimeter monitoring system (count of M5)
-* M12 = The number of network perimeters not covered by at least one network perimeter monitoring system (count of M6)
+* M7 = Count of network perimeter monitoring systems (count of M1)
+* M8 = Count of network perimeters (count of M2)
+* M9 = Count of appropriately configured perimeter monitoring systems (count of M3)
+* M10 = Count of inappropriately configured perimeter monitoring systems (count of M4)
+* M11 = Count of network perimeters covered by at least one network perimeter monitoring system (count of M5)
+* M12 = Count of network perimeters not covered by at least one network perimeter monitoring system (count of M6)
 
 Metrics
 -------

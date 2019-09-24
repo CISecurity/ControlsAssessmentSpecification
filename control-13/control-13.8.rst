@@ -5,7 +5,7 @@ Configure systems not to write data to external removable media, if there is no 
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Data
@@ -18,8 +18,8 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
 
 Inputs
 -----------
@@ -41,11 +41,11 @@ Measures
 * M3 = List of all endpoints without a business need to support external removable media
 * M4 = List of appropriately configured endpoints without a need to support external removable media
 * M5 = List of inappropriately configured endpoints without a need to support external removable media
-* M6 = The number of endpoints supporting external removable media (count of M1)
-* M7 = The number of endpoints with a business need to support external removable media (count of M2)
-* M8 = The number of endpoints without a business need to support external removable media (count of M3)
-* M9 = The number of appropriately configured endpoints without a need to support external removable media (count of M4)
-* M10 = The number of inappropriately configured endpoints without a need to support external removable media (count of M5)
+* M6 = Count of endpoints supporting external removable media (count of M1)
+* M7 = Count of endpoints with a business need to support external removable media (count of M2)
+* M8 = Count of endpoints without a business need to support external removable media (count of M3)
+* M9 = Count of appropriately configured endpoints without a need to support external removable media (count of M4)
+* M10 = Count of inappropriately configured endpoints without a need to support external removable media (count of M5)
 
 Metrics
 -------

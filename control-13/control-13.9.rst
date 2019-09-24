@@ -5,7 +5,7 @@ If USB storage devices are required, all data stored on such devices must be enc
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Data
@@ -18,8 +18,8 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
 
 Inputs
 -----------
@@ -40,9 +40,9 @@ Measures
 * M1 = List of endpoints capable of supporting USB storage devices
 * M2 = List of endpoints appropriately configured
 * M3 = List of endpoints inappropriately configured
-* M4 = The number of endpoints capable of supporting USB storage devices (count of M1)
-* M5 = The number of endpoints appropriately configured (count of M2)
-* M6 = The number of endpoints inappropriately configured (count of M3)
+* M4 = Count of endpoints capable of supporting USB storage devices (count of M1)
+* M5 = Count of endpoints appropriately configured (count of M2)
+* M6 = Count of endpoints inappropriately configured (count of M3)
 
 Metrics
 -------
