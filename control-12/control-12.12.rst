@@ -5,7 +5,7 @@ Scan all enterprise devices remotely logging into the organization’s network p
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Devices
@@ -18,7 +18,7 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 16.1: Maintain an Inventory of Authentication Systems
+* Sub-control 16.1: Maintain an Inventory of Authentication Systems
 
 Inputs
 -----------
@@ -35,7 +35,7 @@ Measures
 --------
 * M1 = List of authentication systems that have properly configured mechanisms in place to ensure that organizational security policies are enforced in remote devices (compliant list)
 * M2 = List of authentication systems that do not have properly configured mechanisms in place to ensure that organizational security policies are enforced in remote devices (non-compliant list)
-* M3 = The number of authentication systems with properly configured mechanisms in place (count of M1)
+* M3 = Count of authentication systems with properly configured mechanisms in place (count of M1)
 * M4 = The total number of authentication systems that allow remote connections (count of Input 1)
 
 Metrics

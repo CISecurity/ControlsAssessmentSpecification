@@ -5,7 +5,7 @@ Decrypt all encrypted network traffic at the boundary proxy prior to analyzing t
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Network
@@ -18,7 +18,7 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 2.1: Maintain Inventory of Authorized Software
+* Sub-control 2.1: Maintain Inventory of Authorized Software
 
 Inputs
 -----------
@@ -38,9 +38,9 @@ Measures
 * M1 = List of boundary proxy systems
 * M2 = List of appropriately configured boundary proxy systems
 * M3 = List of inappropriately configured boundary proxy systems
-* M4 = The number of boundary proxy systems (count of M1)
-* M5 = The number of appropriately configured boundary proxy systems (count of M2)
-* M6 = The number of inappropriately configured boundary proxy systems (count of M3)
+* M4 = Count of boundary proxy systems (count of M1)
+* M5 = Count of appropriately configured boundary proxy systems (count of M2)
+* M6 = Count of inappropriately configured boundary proxy systems (count of M3)
 
 Metrics
 -------

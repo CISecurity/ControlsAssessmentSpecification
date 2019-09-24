@@ -5,7 +5,7 @@ Deploy network-based Intrusion Prevention Systems (IPS) to block malicious netwo
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Network
@@ -18,8 +18,8 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 2.1: Maintain Inventory of Authorized Software
-* Subcontrol 12.1: Maintain an Inventory of Network Boundaries
+* Sub-control 2.1: Maintain Inventory of Authorized Software
+* Sub-control 12.1: Maintain an Inventory of Network Boundaries
 
 Inputs
 -----------
@@ -43,12 +43,12 @@ Measures
 * M4 = List of inappropriately configured IPS systems
 * M5 = List of network boundaries covered by at least one IPS system
 * M6 = List of network boundaries not covered by at least one IPS system
-* M7 = The number of IPS systems (count of M1)
-* M8 = The number of network boundaries (count of M2)
-* M9 = The number of appropriately configured IPS systems (count of M3)
-* M10 = The number of inappropriately configured IPS systems (count of M4)
-* M11 = The number of network boundaries covered by at least one IPS system (count of M5)
-* M12 = The number of network boundaries not covered by at least one IPS system (count of M6)
+* M7 = Count of IPS systems (count of M1)
+* M8 = Count of network boundaries (count of M2)
+* M9 = Count of appropriately configured IPS systems (count of M3)
+* M10 = Count of inappropriately configured IPS systems (count of M4)
+* M11 = Count of network boundaries covered by at least one IPS system (count of M5)
+* M12 = Count of network boundaries not covered by at least one IPS system (count of M6)
 
 Metrics
 -------
