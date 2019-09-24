@@ -5,7 +5,7 @@ Encrypt or hash with a salt all authentication credentials when stored.
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Users
@@ -18,7 +18,7 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 16.1: Inventory of Authentication Systems
+* Sub-control 16.1: Inventory of Authentication Systems
 
 Inputs
 -----------
@@ -27,7 +27,7 @@ Inputs
 
 Operations
 ----------
-#. For each authentication system provided in Input 1 (along with any listed related components), check to see if it is configured properly according to the appropriate configuration(s) provided in Input 2.  
+#. For each authentication system provided in Input 1 (along with any listed related components), check to see if it is configured properly according to the appropriate configuration(s) provided in Input 2.
 #. Create a list of the authentication systems that are properly configured (M1)
 #. Create a list of the authentication systems that are not properly configured (M2) including the deviations from proper configuration (if any related component identified in Input 1 is not configured according to the appropriate configuration, then its associated authentication system should be considered improperly configured, and the specific component should be noted as part of the deviation from proper configuration).
 
@@ -46,7 +46,7 @@ Coverage
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of properly configured authentication systems to the total number of 
+	  - | The ratio of properly configured authentication systems to the total number of
 	    | authentication systems.
 	* - **Calculation**
 	  - :code:`M3 / M4`

@@ -5,7 +5,7 @@ Require multi-factor authentication for all user accounts, on all systems, wheth
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Users
@@ -18,7 +18,7 @@ Draft
 
 Dependencies
 ------------
-* TBD
+* Sub-control 16.6: Maintain an Inventory of Accounts
 
 Inputs
 -----------
@@ -28,7 +28,7 @@ Inputs
 Operations
 ----------
 #. For each account in the account inventory (Input 1), check to see if that account is configured to require MFA in accordance with the appropriate approved configuration(s) from Input 2.  
-#. Create a list of accounts that are properly configured to require MFA (M1) 
+#. Create a list of accounts that are properly configured to require MFA (M1)
 #. Create a list of accounts that are not properly configured to require MFA (M2) noting the deviations from the approved configuration.
 
 Measures

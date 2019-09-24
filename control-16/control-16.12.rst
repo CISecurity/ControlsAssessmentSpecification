@@ -5,7 +5,7 @@ Monitor attempts to access deactivated accounts through audit logging.
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Users
@@ -18,8 +18,8 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 2.1: Maintain Inventory of Authorized Software
-* Subcontrol 16.1: Inventory of Authentication Systems
+* Sub-control 2.1: Maintain Inventory of Authorized Software
+* Sub-control 16.1: Inventory of Authentication Systems
 
 Inputs
 -----------
@@ -38,10 +38,10 @@ Operations
 Measures
 --------
 * M1 = List of authentication systems with each endpoint entry labeled with compliance or non-compliance for both Input 2 and Input 3
-* M2 = Number of compliant authentication systems based on Input 2 configurations
-* M3 = Number of compliant authentication systems based on Input 3 configurations
-* M4 = Number of authentication systems that are compliant with configurations from both inputs
-* M5 = Total number of authentication systems from Input 1
+* M2 = Count of compliant authentication systems based on Input 2 configurations
+* M3 = Count of compliant authentication systems based on Input 3 configurations
+* M4 = Count of authentication systems that are compliant with configurations from both inputs
+* M5 = Total count of authentication systems from Input 1
 
 Metrics
 -------

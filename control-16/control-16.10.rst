@@ -5,7 +5,7 @@ Ensure that all accounts have an expiration date that is monitored and enforced.
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Users
@@ -18,7 +18,7 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 16.1: Inventory of Authentication Systems
+* Sub-control 16.1: Inventory of Authentication Systems
 
 Inputs
 -----------
@@ -30,7 +30,7 @@ Inputs
 Operations
 ----------
 #. For each account in the account inventory (Input 1), check to see if that account has a valid expiration date that is in the future.  If the optional Input 4 was provided, also verify if that expiration date complies with any applicable additional time frame restrictions.  Based on these checks, create a list (M1) of accounts with valid expiration dates, and a list (M2) of accounts with invalid expiration dates (noting why the expiration date is invalid).
-#. For each authentication system in Input 2, check to see if it is configured according to the appropriate configuration(s) from Input 3.  
+#. For each authentication system in Input 2, check to see if it is configured according to the appropriate configuration(s) from Input 3.
 #. Create a list (M3) of authentication systems that are configured correctly
 #. Create a list (M4) of authentication systems that are not configured correctly (noting the deviations).
 
@@ -59,7 +59,7 @@ Metrics
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of correctly configured authentication systems to the total number of 
+	  - | The ratio of correctly configured authentication systems to the total number of
 	    | authentication systems
 	* - **Calculation**
 	  - :code:`M7 / M8`

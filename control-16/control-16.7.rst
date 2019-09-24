@@ -5,7 +5,7 @@ Establish and follow an automated process for revoking system access by disablin
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Users
@@ -18,7 +18,7 @@ Draft
 
 Dependencies
 ------------
-* TBD
+* Sub-control 16.6: Maintain an Inventory of Accounts
 
 Inputs
 -----------
@@ -31,8 +31,10 @@ Operations
 
 Measures
 --------
-* M1 = The number of employee accounts collected by Operation 1
-* M2 = The number of employee accounts disabled within the Input 2 time period
+* M1 = List of employee accounts collected by Operation 1
+* M2 = Count of M1
+* M3 = List of employee accounts disabled within the Input 2 time period
+* M4 = Count of M3
 
 Metrics
 -------
@@ -45,7 +47,7 @@ Enforcement Quality
 	  - | The ratio of employee accounts that have been terminated/revoked within the acceptable
 	    | timeframe.
 	* - **Calculation**
-	  - :code:`M1 / M2`
+	  - :code:`M2 / M4`
 
 .. history
 .. authors
