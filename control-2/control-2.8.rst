@@ -5,7 +5,7 @@ The organization’s application whitelisting software must ensure that only aut
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Applications
@@ -18,8 +18,8 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 2.1: Maintain Inventory of Authorized Software
-* Subcontrol 2.7: Utilize Application Whitelisting
+* Sub-control 2.1: Maintain Inventory of Authorized Software
+* Sub-control 2.7: Utilize Application Whitelisting
 
 Inputs
 ------
@@ -36,9 +36,9 @@ Measures
 * M1 = List of all instances of whitelisting software found in the software inventory
 * M2 = List of appropriately configured whitelisting software instances
 * M3 = List of inappropriately configured whitelisting software instances
-* M4 = The number of all instances of whitelisting software found in the software inventory (count of M1)
-* M5 = The number of appropriately configured whitelisting software instances (count of M2)
-* M6 = The number of inappropriately configured whitelisting software instances (count of M3)
+* M4 = Count of all instances of whitelisting software found in the software inventory (count of M1)
+* M5 = Count of appropriately configured whitelisting software instances (count of M2)
+* M6 = Count of inappropriately configured whitelisting software instances (count of M3)
 
 Metrics
 -------
@@ -48,7 +48,7 @@ Coverage
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of appropriately configured whitelisting software instances to the total 
+	  - | The ratio of appropriately configured whitelisting software instances to the total
 	    | number of whitelisting software instances in the enterprise
 	* - **Calculation**
 	  - :code:`M5 / M4`

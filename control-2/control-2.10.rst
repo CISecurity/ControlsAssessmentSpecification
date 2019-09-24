@@ -5,7 +5,7 @@ Physically or logically segregated systems should be used to isolate and run sof
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Applications
@@ -18,7 +18,7 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 2.1: Maintain Inventory of Authorized Software
+* Sub-control 2.1: Maintain Inventory of Authorized Software
 
 Inputs
 ------
@@ -35,7 +35,7 @@ Measures
 --------
 * M1 = List of high-risk applications that are properly segregated (compliant list)
 * M2 = List of high-risk applications that are not properly segregated (non-compliant list)
-* M3 = The number of high-risk applications that are properly segregated (count of M1)
+* M3 = Count of high-risk applications that are properly segregated (count of M1)
 * M4 = The total number of approved high-risk applications (count of Input 1)
 
 Metrics

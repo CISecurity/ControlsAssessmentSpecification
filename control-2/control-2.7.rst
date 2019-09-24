@@ -5,7 +5,7 @@ Utilize application whitelisting technology on all assets to ensure that only au
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Applications
@@ -18,10 +18,10 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
-* Subcontrol 2.1: Maintain Inventory of Authorized Software
-* Subcontrol 2.5: Integrate Software and Hardware Asset Inventories
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
+* Sub-control 2.1: Maintain Inventory of Authorized Software
+* Sub-control 2.5: Integrate Software and Hardware Asset Inventories
 
 Inputs
 ------
@@ -41,11 +41,11 @@ Measures
 * M3 = List of endpoints without whitelisting capabilities installed
 * M4 = List of endpoints with appropriately configured whitelisting capabilities
 * M5 = List of endpoints with inappropriately configured whitelisting capabilities
-* M6 = The number of endpoints capable of leveraging whitelisting technology (count of M1)
-* M7 = The number of endpoints with whitelisting capabilities installed (count of M2)
+* M6 = Count of endpoints capable of leveraging whitelisting technology (count of M1)
+* M7 = Count of endpoints with whitelisting capabilities installed (count of M2)
 * M8 = The number of endpoints without whitelisting capabilities installed (count of M3)
-* M9 = The number of endpoints with appropriately configured whitelisting capabilities (count of M4)
-* M10 = The number of endpoints with inappropriately configured whitelisting capabilities (count of M5)
+* M9 = Count of endpoints with appropriately configured whitelisting capabilities (count of M4)
+* M10 = Count of endpoints with inappropriately configured whitelisting capabilities (count of M5)
 
 
 Metrics
@@ -56,7 +56,7 @@ Whitelisting Installation Coverage
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of endpoints with whitelisting capabilities installed to the number of 
+	  - | The ratio of endpoints with whitelisting capabilities installed to the number of
 	    | whitelisting-eligible endpoints
 	* - **Calculation**
 	  - :code:`M7 / M6`
@@ -66,7 +66,7 @@ Whitelisting Configuration Coverage
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of endpoints with appropriately configured whitelisting capabilities 
+	  - | The ratio of endpoints with appropriately configured whitelisting capabilities
 	    | to the number of endpoints with whitelisting capabilities
 	* - **Calculation**
 	  - :code:`M9 /  M7`

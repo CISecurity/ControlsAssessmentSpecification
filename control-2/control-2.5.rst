@@ -5,7 +5,7 @@ The software inventory system should be tied into the hardware asset inventory s
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Applications
@@ -18,8 +18,8 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
 
 Inputs
 ------
@@ -37,10 +37,10 @@ Measures
 * M2 = List of hardware inventory systems
 * M3 = List of appropriately configured software inventory systems
 * M4 = List of inappropriately configured software inventory systems
-* M5 = The number of software inventory systems (count of M1)
-* M6 = The number of hardware inventory systems (count of M2)
-* M7 = The number of appropriately configured software inventory systems (count of M3)
-* M8 = The number of inappropriately configured software inventory systems (count of M4)
+* M5 = Count of software inventory systems (count of M1)
+* M6 = Count of hardware inventory systems (count of M2)
+* M7 = Count of appropriately configured software inventory systems (count of M3)
+* M8 = Count of inappropriately configured software inventory systems (count of M4)
 
 Metrics
 -------
@@ -50,7 +50,7 @@ Coverage
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of appropriately configured software inventory systems to the number of 
+	  - | The ratio of appropriately configured software inventory systems to the number of
 	    | software inventory systems
 	* - **Calculation**
 	  - :code:`M7 / M5`
