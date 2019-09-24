@@ -5,7 +5,7 @@ For applications that rely on a database, use standard hardening configuration t
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - N/A
@@ -18,11 +18,11 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
-* Subcontrol 2.1: Maintain Inventory of Authorized Software
-* Subcontrol 2.5: Integrate Software and Hardware Asset Inventories
-* Subcontrol 5.1: Establish Secure Configurations
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
+* Sub-control 2.1: Maintain Inventory of Authorized Software
+* Sub-control 2.5: Integrate Software and Hardware Asset Inventories
+* Sub-control 5.1: Establish Secure Configurations
 
 Inputs
 -----------
@@ -37,8 +37,13 @@ Operations
 
 Measures
 --------
-* M1 = The number of enterprise security configuration standards specific to database management software
-* M2 = The number of database management software covered by applicable enterprise security configuration standards
+* M1 = List of enterprise security configuration standards specific to database management systems
+* M2 = Count of M1
+* M3 = List of database management software covered by applicable enterprise security configuration standards
+* M4 = Count of M3
+* M5 = List of database management software not covered by applicable enterprise security configuration standards
+* M6 = Count of M5
+* M7 = Count of database management software being used in the organization (from Input 1)
 
 Metrics
 -------
@@ -48,10 +53,10 @@ Coverage
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of database management software covered by applicable enterprise security 
+	  - | The ratio of database management software covered by applicable enterprise security
 	    | configuration standards to the total number of database management software
 	* - **Calculation**
-	  - :code:`?`
+	  - :code:`M4 / M7`
 
 **NOTE**: The second ask of this sub-control speaks to assessment of Input 2 against security configuration standards determined by Operation 1.
 

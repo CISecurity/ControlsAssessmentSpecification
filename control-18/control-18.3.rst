@@ -5,7 +5,7 @@ Verify that the version of all software acquired from outside your organization 
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - N/A
@@ -18,9 +18,9 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 2.1: Maintain Inventory of Authorized Software
-* Subcontrol 2.2: Ensure Software is Supported by Vendor
-* Subcontrol 5.1: Establish Secure Configurations
+* Sub-control 2.1: Maintain Inventory of Authorized Software
+* Sub-control 2.2: Ensure Software is Supported by Vendor
+* Sub-control 5.1: Establish Secure Configurations
 
 Inputs
 -----------

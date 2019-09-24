@@ -5,7 +5,7 @@ Protect web applications by deploying web application firewalls (WAFs) that insp
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - N/A
@@ -18,7 +18,7 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 2.1: Maintain Inventory of Authorized Software
+* Sub-control 2.1: Maintain Inventory of Authorized Software
 
 Inputs
 -----------
@@ -37,10 +37,10 @@ Measures
 * M2 = Enumerated list of all application-level firewalls
 * M3 = Enumerated list of applications covered by application-level firewalls
 * M4 = Enumerated list of applications not covered by software applications (fourth operation)
-* M5 = The number of software for which an application-level firewall technology exists (count of M1)
-* M6 = The number of application-level firewalls (count of M2)
-* M7 = The number of applications covered by application-level firewalls (count of M3)
-* M8 = The number of applications not covered by software applications (count of M4)
+* M5 = Count of software for which an application-level firewall technology exists (count of M1)
+* M6 = Count of application-level firewalls (count of M2)
+* M7 = Count of applications covered by application-level firewalls (count of M3)
+* M8 = Count of applications not covered by software applications (count of M4)
 
 Metrics
 -------

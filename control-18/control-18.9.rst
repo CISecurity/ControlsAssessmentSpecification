@@ -5,7 +5,7 @@ Maintain separate environments for production and non-production systems. Develo
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - N/A
@@ -18,10 +18,10 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
-* Subcontrol 2.1: Maintain Inventory of Authorized Software
-* Subcontrol 2.5: Integrate Software and Hardware Asset Inventories
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
+* Sub-control 2.1: Maintain Inventory of Authorized Software
+* Sub-control 2.5: Integrate Software and Hardware Asset Inventories
 
 Inputs
 -----------
@@ -37,9 +37,9 @@ Operations
 Measures
 --------
 * M1(i) = (For each system with a production deployment "i") 1 if at least one non-production deployment environment exists for that system, 0 otherwise.
-* M2 = The number of systems with a production deployment
-* M3 = The number of user accounts whose access to production environments is monitored by the mechanism defined by Input 3.
-* M4 = The number of user accounts with access to production environments (the count from Operation 2).
+* M2 = Count of systems with a production deployment
+* M3 = Count of user accounts whose access to production environments is monitored by the mechanism defined by Input 3.
+* M4 = Count of user accounts with access to production environments (the count from Operation 2).
 
 Metrics
 -------
@@ -49,7 +49,7 @@ Environment Coverage
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of production systems where at least one non-production deployment exists 
+	  - | The ratio of production systems where at least one non-production deployment exists
 	    | to the total number of production systems
 	* - **Calculation**
 	  - :code:`(SUM from i=1..M2 (M1(i))) / M2`
@@ -59,7 +59,7 @@ Monitored Account Coverage
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of accounts with production system access that are monitored to the total 
+	  - | The ratio of accounts with production system access that are monitored to the total
 	    | accounts with production system access
 	* - **Calculation**
 	  - :code:`M3 / M4`

@@ -5,7 +5,7 @@ For in-house developed software, ensure that explicit error checking is performe
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - N/A
@@ -18,7 +18,7 @@ Draft
 
 Dependencies
 ------------
-* None
+* Sub-control 18.1: Establish Secure Coding Practices
 
 Inputs
 -----------
