@@ -6,7 +6,7 @@ Utilize a passive discovery tool to identify devices connected to the organizati
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Devices
@@ -19,7 +19,7 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 12.1: Maintain an Inventory of Network Boundaries
+* Sub-control 12.1: Maintain an Inventory of Network Boundaries
 
 Inputs
 ------
@@ -53,7 +53,7 @@ Coverage
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of the organization's networks with coverage from at least one properly 
+	  - | The ratio of the organization's networks with coverage from at least one properly
 	    | configured passive asset discovery tool to the total number of networks
 	* - **Calculation**
 	  - :code:`M5 / M6`

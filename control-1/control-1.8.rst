@@ -5,7 +5,7 @@ Use client certificates to authenticate hardware assets connecting to the organi
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Devices
@@ -18,8 +18,8 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
 
 Inputs
 ------
@@ -35,9 +35,9 @@ Measures
 * M1 = List of hardware devices (operation 1)
 * M2 = List of appropriately configured hardware devices (operation 2)
 * M3 = List of inappropriately configured hardware devices (operation 2)
-* M4 = The number of hardware devices (count of M1)
-* M5 = The number of appropriately configured hardware devices (count of M2)
-* M6 = The number of inappropriately configured hardware devices (count of M3)
+* M4 = Count of hardware devices (count of M1)
+* M5 = Count of appropriately configured hardware devices (count of M2)
+* M6 = Count of inappropriately configured hardware devices (count of M3)
 
 Metrics
 -------
