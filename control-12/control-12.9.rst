@@ -14,33 +14,66 @@ Ensure that all network traffic to or from the Internet passes through an authen
 
 Status
 ------
-In Development
+Draft
 
 Dependencies
 ------------
-* 
+* Subcontrol 1.4: Maintain Detailed Asset Inventory
+* Subcontrol 1.5: Maintain Asset Inventory Information
+* Subcontrol 2.1: Maintain Inventory of Authorized Software
+* Subcontrol 2.5: Integrate Software and Hardware Asset Inventories
 
 Inputs
 -----------
-#. 
+#. The list of endpoints
+#. The list of authorized software
+#. The list of unauthorized connections
 
 Operations
 ----------
-#. 
+#. Enumerate network devices guarding Internet network boundaries
+#. Enumerate application-layer proxies
+#. For each application-layer proxy
+	#. Enumerate the network boundary devices it covers
+	#. For each Internet network boundary device it covers
+		#. Ensure it is appropriately configured to filter against the list of unauthorized connections
+#. Enumerate the set of covered Internet network boundary devices
 
 Measures
 --------
-
+* M1 = List of Internet network boundary devices
+* M2 = List of application-layer proxies
+* M3 = List of appropriately configured application-layer proxies
+* M4 = List of inappropriately configured application-layer proxies
+* M5 = List of covered Internet network boundary devices
+* M6 = The number of Internet network boundary devices (count of M1)
+* M7 = The number of application-layer proxies (count of M2)
+* M8 = The number of appropriately configured application-layer proxies (count of M3)
+* M9 = The number of inappropriately configured application-layer proxies (count of M4)
+* M10 = The number of covered Internet network boundary devices (count of M5)
 
 Metrics
 -------
 
+Proxy Coverage
+^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | 
+	  - | The ratio of appropriately configured application-layer proxies to the total number
+	    | of application-layer proxies.
 	* - **Calculation**
-	  - :code:`?`
+	  - :code:`M8 / M7`
+
+Internet Network Boundary Coverage
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. list-table::
+
+	* - **Metric**
+	  - | The ratio of covered Internet network boundary devices to the total number of Internet
+	    | network boundary devices
+	* - **Calculation**
+	  - :code:`M10 / M6`
 
 .. history
 .. authors

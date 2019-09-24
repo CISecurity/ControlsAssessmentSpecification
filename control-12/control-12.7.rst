@@ -14,33 +14,62 @@ Deploy network-based Intrusion Prevention Systems (IPS) to block malicious netwo
 
 Status
 ------
-In Development
+Draft
 
 Dependencies
 ------------
-* 
+* Subcontrol 2.1: Maintain Inventory of Authorized Software
+* Subcontrol 12.1: Maintain an Inventory of Network Boundaries
 
 Inputs
 -----------
-#. 
+#. The list of authorized software
+#. The list of network boundaries
 
 Operations
 ----------
-#. 
+#. Enumerate all IPS systems in the software inventory
+#. For each IPS system:
+	#. Enumerate the network boundaries covered by the system
+	#. Examine its configuration to ensure that the system is configured to block malicious network traffic through that boundary
+#. Enumerate network boundaries covered by all IPS systems (i.e. create a set of covered network boundaries)
+#. Complement the set of covered network boundaries with the list of network boundaries to identify all uncovered network boundaries
 
 Measures
 --------
-
+* M1 = List of all IPS systems
+* M2 = List of network boundaries
+* M3 = List of appropriately configured IPS systems
+* M4 = List of inappropriately configured IPS systems
+* M5 = List of network boundaries covered by at least one IPS system
+* M6 = List of network boundaries not covered by at least one IPS system
+* M7 = The number of IPS systems (count of M1)
+* M8 = The number of network boundaries (count of M2)
+* M9 = The number of appropriately configured IPS systems (count of M3)
+* M10 = The number of inappropriately configured IPS systems (count of M4)
+* M11 = The number of network boundaries covered by at least one IPS system (count of M5)
+* M12 = The number of network boundaries not covered by at least one IPS system (count of M6)
 
 Metrics
 -------
 
+IPS Coverage
+^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | 
+	  - | The ratio of appropriately configured IPS systems to the total number of IPS systems
 	* - **Calculation**
-	  - :code:`?`
+	  - :code:`M9 / M7`
+
+Boundary Coverage
+^^^^^^^^^^^^^^^^^
+.. list-table::
+
+	* - **Metric**
+	  - | The ratio of covered network boundaries to the total number of network boundaries
+	* - **Calculation**
+	  - :code:`M11 / M8`
 
 .. history
 .. authors
