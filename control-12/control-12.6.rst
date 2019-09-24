@@ -5,7 +5,7 @@ Deploy network-based Intrusion Detection Systems (IDS) sensors to look for unusu
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Network
@@ -18,9 +18,9 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
-* Subcontrol 12.1: Maintain an Inventory of Network Boundaries
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
+* Sub-control 12.1: Maintain an Inventory of Network Boundaries
 
 Inputs
 -----------
@@ -33,9 +33,12 @@ Operations
 
 Measures
 --------
-* M1 = Count of network boundaries
-* M2 = Count of IDS sensors
-* M3 = Count of network boundaries covered by IDS sensors
+* M1 = Count of network boundaries (from Input 1)
+* M2 = Count of IDS sensors (from Input 2)
+* M4 = List of network boundaries covered by IDS sensors
+* M5 = Count of network boundaries covered by IDS sensors
+* M6 = List of network boundaries not covered by IDS sensors
+* M7 = Count of network boundaries not covered by IDS sensors
 
 Metrics
 -------
@@ -45,9 +48,9 @@ Coverage
 .. list-table::
 
 	* - **Metric**
-	  - | Percentage of network boundaries not covered by IDS sensors
+	  - | Ratio of network boundaries covered by IDS sensors to total number of network boundaries 
 	* - **Calculation**
-	  - :code:`?`
+	  - :code:`M5 / M1`
 
 .. history
 .. authors

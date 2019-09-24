@@ -5,7 +5,7 @@ Perform regular scans from outside each trusted network boundary to detect any u
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Network
@@ -18,9 +18,9 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
-* Subcontrol 12.1: Maintain an Inventory of Network Boundaries
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
+* Sub-control 12.1: Maintain an Inventory of Network Boundaries
 
 Inputs
 -----------
@@ -50,7 +50,7 @@ Coverage
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of network boundary devices scanned within the allowable timeframe to the 
+	  - | The ratio of network boundary devices scanned within the allowable timeframe to the
 	    | total number of network boundary devices
 	* - **Calculation**
 	  - :code:`M3 / M4`

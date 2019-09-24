@@ -5,7 +5,7 @@ Deny communications with known malicious or unused Internet IP addresses and lim
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Network
@@ -18,9 +18,9 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
-* Subcontrol 12.1: Maintain an Inventory of Network Boundaries
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
+* Sub-control 12.1: Maintain an Inventory of Network Boundaries
 
 Inputs
 -----------
@@ -42,9 +42,9 @@ Measures
 * M1 = List of all network boundary devices
 * M2 = List of appropriately configured network boundary devices
 * M3 = List of inappropriately configured network boundary devices
-* M4 = The number of network boundary devices (the count of M1)
-* M5 = The number of appropriately configured network boundary devices (the count of M2)
-* M6 = The number of inappropriately configured network boundary devices (the count of M3)
+* M4 = Count of network boundary devices (the count of M1)
+* M5 = Count of appropriately configured network boundary devices (the count of M2)
+* M6 = Count of inappropriately configured network boundary devices (the count of M3)
 
 Metrics
 -------
@@ -54,7 +54,7 @@ Coverage
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of appropriately configured network boundary devices to the total number of 
+	  - | The ratio of appropriately configured network boundary devices to the total number of
 	    | network boundary devices
 	* - **Calculation**
 	  - :code:`M5 / M4`

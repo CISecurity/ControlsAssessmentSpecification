@@ -5,7 +5,7 @@ Configure monitoring systems to record network packets passing through the bound
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Network
@@ -18,8 +18,8 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 2.1: Maintain Inventory of Authorized Software
-* Subcontrol 12.1: Maintain an Inventory of Network Boundaries
+* Sub-control 2.1: Maintain Inventory of Authorized Software
+* Sub-control 12.1: Maintain an Inventory of Network Boundaries
 
 Inputs
 -----------
@@ -35,11 +35,14 @@ Operations
 
 Measures
 --------
-* M1 = Count of network monitoring systems
-* M2 = Count of misconfigured network monitoring systems
-* M3 = Count of network boundaries
-* M4 = Count of network boundaries covered by network monitoring systems
-
+* M1 = Count of network monitoring systems (from Input 1)
+* M2 = List of misconfigured network monitoring systems
+* M3 = Count of misconfigured network monitoring systems
+* M4 = Count of network boundaries (from Input 2)
+* M5 = List of network boundaries covered by network monitoring systems
+* M6 = Count of network boundaries covered by network monitoring systems
+* M7 = List of network boundaries not covered by network monitoring systems
+* M8 = Count of network boundaries not covered by network monitoring systems 
 
 Metrics
 -------
@@ -51,7 +54,7 @@ Monitoring System Configuration
 	* - **Metric**
 	  - | Percentage of appropriately configured monitoring systems
 	* - **Calculation**
-	  - :code:`(M1 - M2) / M1`
+	  - :code:`(M1 - M3) / M1`
 
 Network Boundary Coverage
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -60,7 +63,7 @@ Network Boundary Coverage
 	* - **Metric**
 	  - | Percentage of network boundaries not covered by a monitoring system
 	* - **Calculation**
-	  - :code:`(M3 - M4) / M3`
+	  - :code:`(M4 - M6) / M4`
 
 .. history
 .. authors
