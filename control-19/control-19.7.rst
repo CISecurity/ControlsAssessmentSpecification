@@ -5,7 +5,7 @@ Plan and conduct routine incident response exercises and scenarios for the workf
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - N/A
@@ -18,7 +18,7 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 19.1: Document Incident Response Procedures
+* Sub-control 19.1: Document Incident Response Procedures
 
 Inputs
 -----------

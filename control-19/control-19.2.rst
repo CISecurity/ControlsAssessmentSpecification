@@ -5,7 +5,7 @@ Assign job titles and duties for handling computer and network incidents to spec
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - N/A
@@ -18,7 +18,7 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 19.1: Document Incident Response Procedures
+* Sub-control 19.1: Document Incident Response Procedures
 
 Inputs
 -----------
@@ -48,7 +48,7 @@ Incident Response Plan Completeness
 .. list-table::
 
 	* - **Metric**
-	  - | Does the incident response plan exist, contain job titles/duties, and adequately 
+	  - | Does the incident response plan exist, contain job titles/duties, and adequately
 	    | address tracking and documentation throughout the incident?
 	* - **Calculation**
 	  - :code:`M1 AND M2`
@@ -58,7 +58,7 @@ Assignment Coverage
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of incident response jobs/duties with assignees to the total number of 
+	  - | The ratio of incident response jobs/duties with assignees to the total number of
 	    | incident response jobs/duties
 	* - **Calculation**
 	  - :code:`M4 / M6`
