@@ -14,33 +14,55 @@ Encrypt all sensitive information at rest using a tool that requires a secondary
 
 Status
 ------
-In Development
+Draft
 
 Dependencies
 ------------
-* 
+* Subcontrol 1.4: Maintain Detailed Asset Inventory
+* Subcontrol 1.5: Maintain Asset Inventory Information
+* Subcontrol 2.1: Maintain Inventory of Authorized Software
+* Subcontrol 2.5: Integrate Software and Hardware Asset Inventories
 
 Inputs
 -----------
-#. 
+#. The list of endpoints
+#. The list of authorized software
+#. The list of sensitive information
 
 Operations
 ----------
-#. 
+#. Enumerate all encryption tools requiring secondary authentication systems from the software inventory
+#. Enumerate all endpoints storing sensitive information using the sensitive information inventory
+#. For each identified encryption tool
+	#. Enumerate endpoints covered by the encryption tool
+#. Enumerate all endpoints covered by at least one encryption tool
+#. Complement all covered endpoints with the enumeration of all endpoints storing sensitive information to find those endpoints not covered by at least one encryption tool
+
 
 Measures
 --------
-* 
+* M1 = List of all encryption tools that require secondary authentication
+* M2 = List of all endpoints storing sensitive information
+* M3 = List of all endpoints covered by at least one encryption tool
+* M4 = List of all endpoints not covered by at least one encryption tool
+* M5 = The number of encryption tools that require secondary authentication (count of M1)
+* M6 = The number of endpoints storing sensitive information (count of M2)
+* M7 = The number of endpoints covered by at least one encryption tool (count of M3)
+* M8 = The number of endpoints not covered by at least one encryption tool (count of M4)
+
 
 Metrics
 -------
 
+Coverage
+^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | 
+	  - | The ratio of endpoints covered by an encryption tool to the total number of endpoints
+	    | storing sensitive information
 	* - **Calculation**
-	  - :code:`?`
+	  - :code:`M7 / M6`
 
 .. history
 .. authors

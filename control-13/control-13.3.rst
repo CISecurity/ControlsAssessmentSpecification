@@ -14,33 +14,71 @@ Deploy an automated tool on network perimeters that monitors for unauthorized tr
 
 Status
 ------
-In Development
+Draft
 
 Dependencies
 ------------
-* TBD
+* Subcontrol 2.1: Maintain Inventory of Authorized Software
+* Subcontrol 12.1: Maintain an Inventory of Network Boundaries
 
 Inputs
 -----------
-#. 
+#. The list of authorized software
+#. The list of network perimeters
 
 Operations
 ----------
-#. 
+#. Enumerate all network perimeter monitoring systems
+#. For each network perimeter monitoring system:
+	#. Enumerate the network perimeters covered by the system
+	#. Examine its configuration to ensure that the system is configured to:
+		#. Monitor for sensitive information
+		#. Block transfer of detected sensitive information
+		#. Alert appropriately
+#. Enumerate network perimeters covered by all network perimeter monitoring systems
+#. Complement the set of covered network perimeters with the list of network perimeters to identify all uncovered network perimeters
+
+Assumptions
+^^^^^^^^^^^
+* Network perimeter monitoring systems are primarily software-based
+
 
 Measures
 --------
-* 
+* M1 = List of network perimeter monitoring systems
+* M2 = List of network perimeters
+* M3 = List of appropriately configured perimeter monitoring systems
+* M4 = List of inappropriately configured perimeter monitoring systems
+* M5 = List of network perimeters covered by at least one network perimeter monitoring system
+* M6 = List of network perimeters not covered by at least one network perimeter monitoring system
+* M7 = The number of network perimeter monitoring systems (count of M1)
+* M8 = The number of network perimeters (count of M2)
+* M9 = The number of appropriately configured perimeter monitoring systems (count of M3)
+* M10 = The number of inappropriately configured perimeter monitoring systems (count of M4)
+* M11 = The number of network perimeters covered by at least one network perimeter monitoring system (count of M5)
+* M12 = The number of network perimeters not covered by at least one network perimeter monitoring system (count of M6)
 
 Metrics
 -------
 
+Coverage
+^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | 
+	  - | The ratio of covered network perimeters to the total number of network perimeters
 	* - **Calculation**
-	  - :code:`?`
+	  - :code:`M11 / M8`
+
+Perimeter Monitoring Configuration Coverage
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. list-table::
+
+	* - **Metric**
+	  - | The ratio of appropriately configured network perimeter monitoring systems to the total
+	    | number of network perimeter monitoring systems
+	* - **Calculation**
+	  - :code:`M9 / M7`
 
 .. history
 .. authors
