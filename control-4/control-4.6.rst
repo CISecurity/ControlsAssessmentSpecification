@@ -5,7 +5,7 @@ Ensure administrators use a dedicated machine for all administrative tasks or ta
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Users
@@ -18,10 +18,10 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
-* Subcontrol 2.1: Maintain Inventory of Authorized Software
-* Subcontrol 2.5: Integrate Software and Hardware Asset Inventories
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
+* Sub-control 2.1: Maintain Inventory of Authorized Software
+* Sub-control 2.5: Integrate Software and Hardware Asset Inventories
 
 Inputs
 -----------
@@ -45,10 +45,10 @@ Measures
 * M2 = List of administrative software
 * M3 = List of appropriately configured devices
 * M4 = List of inappropriately configured devices
-* M5 = The number of devices used for administrative purposes (count of M1)
-* M6 = The number of administrative software (count of M2)
-* M7 = The number of appropriately configured devices (count of M3)
-* M8 = The number of inappropriately configured devices (count of M4)
+* M5 = Count of devices used for administrative purposes (count of M1)
+* M6 = Count of administrative software (count of M2)
+* M7 = Count of appropriately configured devices (count of M3)
+* M8 = Count of inappropriately configured devices (count of M4)
 
 Metrics
 -------

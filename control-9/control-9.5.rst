@@ -5,7 +5,7 @@ Place application firewalls in front of any critical servers to verify and valid
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Devices
@@ -18,10 +18,10 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 1.4: Maintain Detailed Asset Inventory
-* Subcontrol 1.5: Maintain Asset Inventory Information
-* Subcontrol 2.1: Maintain Inventory of Authorized Software
-* Subcontrol 2.5: Integrate Software and Hardware Asset Inventories
+* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 1.5: Maintain Asset Inventory Information
+* Sub-control 2.1: Maintain Inventory of Authorized Software
+* Sub-control 2.5: Integrate Software and Hardware Asset Inventories
 
 Inputs
 -----------
@@ -42,10 +42,10 @@ Measures
 * M2 = List of application firewalls
 * M3 = List of endpoints covered by at least one application firewall
 * M4 = List of endpoints not covered by at least one application firewall
-* M5 = The number of critical endpoints (count of M1)
-* M6 = The number of application firewalls (count of M2)
-* M7 = The number of endpoints covered by at least one application firewall (count of M3)
-* M8 = The number of endpoints not covered by at least one application firewall (count of M4)
+* M5 = Count of critical endpoints (count of M1)
+* M6 = Count of application firewalls (count of M2)
+* M7 = Count of endpoints covered by at least one application firewall (count of M3)
+* M8 = Count of endpoints not covered by at least one application firewall (count of M4)
 
 Metrics
 -------

@@ -5,7 +5,7 @@ On a regular basis, tune your SIEM system to better identify actionable events a
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - Network
@@ -18,7 +18,7 @@ Draft
 
 Dependencies
 ------------
-* None
+* Sub-control 6.6: Deploy SIEM or Log Analytic Tools
 
 Inputs
 ------
