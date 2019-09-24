@@ -5,7 +5,7 @@ Ensure that the organization’s security awareness program is updated frequentl
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - N/A
@@ -18,7 +18,7 @@ Draft
 
 Dependencies
 ------------
-* None
+* Sub-control 17.3: Implement a Security Awareness Program
 
 Inputs
 -----------

@@ -5,7 +5,7 @@ Deliver training to address the skills gap identified to positively impact workf
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - N/A
@@ -18,7 +18,7 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 17.1: Perform a Skills Gap Analysis
+* Sub-control 17.1: Perform a Skills Gap Analysis
 
 Inputs
 -----------
