@@ -5,7 +5,7 @@ Use vulnerability scanning and penetration testing tools in concert. The results
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - N/A
@@ -18,7 +18,7 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 20.1: Establish a Penetration Testing Program
+* Sub-control 20.1: Establish a Penetration Testing Program
 
 Inputs
 -----------
@@ -40,7 +40,7 @@ Presence
 .. list-table::
 
 	* - **Metric**
-	  - | Presence or absence of instructions to use vulnerability scan results to inform 
+	  - | Presence or absence of instructions to use vulnerability scan results to inform
 	    | penetration testing efforts
 	* - **Calculation**
 	  - :code:`M1`

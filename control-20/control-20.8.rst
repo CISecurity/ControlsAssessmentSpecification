@@ -5,7 +5,7 @@ Any user or system accounts used to perform penetration testing should be contro
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - N/A
@@ -18,7 +18,8 @@ Draft
 
 Dependencies
 ------------
-* None
+* Sub-control 16.6: Maintain an Inventory of Accounts
+* Sub-control 20.1: Establish a Penetration Testing Program
 
 Inputs
 -----------
@@ -35,11 +36,11 @@ Operations
 Measures
 --------
 * M1 = The list of historical user and system accounts authorized for use in penetration testing
-* M2 = The number of historical user and system accounts authorized for use in penetration testing (count of M1)
+* M2 = Count of historical user and system accounts authorized for use in penetration testing (count of M1)
 * M3 = The list of current user and system accounts that were authorized for use in penetration testing
-* M4 = The number of current user and system accounts that were authorized for use in penetration testing (count of M3)
+* M4 = Count of current user and system accounts that were authorized for use in penetration testing (count of M3)
 * M5 = The list of current user and system accounts with penetration testing privileges still assigned
-* M6 = The number of current user and system accounts with penetration testing privileges still assigned (count of M5)
+* M6 = Count of current user and system accounts with penetration testing privileges still assigned (count of M5)
 
 Metrics
 -------
@@ -49,7 +50,7 @@ Privileged Accounts Remain
 .. list-table::
 
 	* - **Metric**
-	  - | If :code:`M5 > 0`, then privileged user accounts remain following the penetration 
+	  - | If :code:`M5 > 0`, then privileged user accounts remain following the penetration
 	    | testing period.
 	* - **Calculation**
 	  - :code:`M5 > 0`

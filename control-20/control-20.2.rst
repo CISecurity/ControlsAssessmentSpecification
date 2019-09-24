@@ -5,7 +5,7 @@ Conduct regular external and internal penetration tests to identify vulnerabilit
 .. list-table::
 	:header-rows: 1
 
-	* - Asset Type 
+	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
 	* - N/A
@@ -18,7 +18,7 @@ Draft
 
 Dependencies
 ------------
-* Subcontrol 20.1: Establish a Penetration Testing Program
+* Sub-control 20.1: Establish a Penetration Testing Program
 
 Inputs
 -----------
