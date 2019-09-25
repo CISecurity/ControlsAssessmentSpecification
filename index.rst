@@ -18,6 +18,7 @@ The main documentation for the site is organized into sections for each individu
    About <about/index>
    Methodology <about/methodology>
    Getting Started <about/getting-started>
+   Terms of Use <about/terms-of-use>
 
 .. toctree::
    :maxdepth: 1
@@ -44,4 +45,3 @@ The main documentation for the site is organized into sections for each individu
    CIS Control 18: Application Software Security <control-18/index>
    CIS Control 19: Incident Response and Management <control-19/index>
    CIS Control 20: Penetration Tests and Red Team Exercises <control-20/index>
-
