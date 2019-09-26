@@ -9,7 +9,7 @@ Wherever possible, ensure that Red Team results are documented using open, machi
 	  - Security Function
 	  - Implementation Groups
 	* - N/A
-	* - N/A
+	  - N/A
 	  - 3
 
 Dependencies

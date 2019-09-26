@@ -9,7 +9,7 @@ Create a test bed that mimics a production environment for specific penetration 
 	  - Security Function
 	  - Implementation Groups
 	* - N/A
-	* - N/A
+	  - N/A
 	  - 2, 3
 
 Dependencies

@@ -9,7 +9,7 @@ Include tests for the presence of unprotected system information and artifacts t
 	  - Security Function
 	  - Implementation Groups
 	* - N/A
-	* - N/A
+	  - N/A
 	  - 2, 3
 
 Dependencies

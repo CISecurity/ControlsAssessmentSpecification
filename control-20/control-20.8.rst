@@ -9,7 +9,7 @@ Any user or system accounts used to perform penetration testing should be contro
 	  - Security Function
 	  - Implementation Groups
 	* - N/A
-	* - N/A
+	  - N/A
 	  - 2, 3
 
 Dependencies

@@ -14,8 +14,8 @@ Ensure that unauthorized software is either removed or the inventory is updated 
 
 Dependencies
 ------------
-* Sub-control 2.1: Maintain Inventory of Authorzied Software
 * Sub-control 1.4: Maintain Detailed Asset Inventory
+* Sub-control 2.1: Maintain Inventory of Authorzied Software
 
 Inputs
 ------

@@ -9,7 +9,7 @@ Perform periodic Red Team exercises to test organizational readiness to identify
 	  - Security Function
 	  - Implementation Groups
 	* - N/A
-	* - N/A
+	  - N/A
 	  - 3
 
 Dependencies

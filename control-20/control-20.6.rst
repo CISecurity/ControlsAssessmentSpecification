@@ -9,7 +9,7 @@ Use vulnerability scanning and penetration testing tools in concert. The results
 	  - Security Function
 	  - Implementation Groups
 	* - N/A
-	* - N/A
+	  - N/A
 	  - 2, 3
 
 Dependencies
