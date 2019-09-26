@@ -9,8 +9,11 @@ The table of contents below and in the sidebar should let you easily access the 
 The main documentation for the site is organized into sections for each individual CIS Control.
 
 The "About the CIS Controls" section provides background information about the CIS Controls.
+
 The "About the CIS Controls Assessment Specification" provides information about the Controls Assessment Specification including its purpose, methodology, and structure.
+
 The "Terms of Use" section provides the terms of use policy.
+
 The "Contributing" section provides details on how you can contribute to the Controls Assessment Specification.
 
 .. toctree::
