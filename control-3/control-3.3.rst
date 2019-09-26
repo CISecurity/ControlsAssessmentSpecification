@@ -12,10 +12,6 @@ Use a dedicated account for authenticated vulnerability scans, which should not 
 	  - Protect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

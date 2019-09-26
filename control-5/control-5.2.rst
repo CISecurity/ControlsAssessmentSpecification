@@ -12,14 +12,10 @@ Maintain secure images or templates for all systems in the enterprise based on t
 	  - Protect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 5.1: Maintain Inventory of Authorized Software
+* Sub-control 2.1: Maintain Inventory of Authorized Software
 * Sub-control 5.1: Establish Secure Configurations
 
 Inputs

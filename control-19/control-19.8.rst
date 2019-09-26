@@ -12,10 +12,6 @@ Create incident scoring and prioritization schema based on known or potential im
 	  - N/A
 	  - 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 19.1: Document Incident Response Procedures

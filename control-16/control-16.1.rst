@@ -12,10 +12,6 @@ Maintain an inventory of each of the organization’s authentication systems, in
 	  - Identify
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

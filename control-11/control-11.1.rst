@@ -12,10 +12,6 @@ Maintain documented security configuration standards for all authorized network 
 	  - Identify
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

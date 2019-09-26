@@ -12,10 +12,6 @@ Perform periodic Red Team exercises to test organizational readiness to identify
 	* - N/A
 	  - 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 20.1: Establish a Penetration Testing Program

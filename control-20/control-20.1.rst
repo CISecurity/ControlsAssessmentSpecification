@@ -12,10 +12,6 @@ Establish a program for penetration tests that includes a full scope of blended 
 	* - N/A
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * None

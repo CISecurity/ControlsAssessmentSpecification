@@ -12,10 +12,6 @@ Create a test bed that mimics a production environment for specific penetration 
 	* - N/A
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 20.1: Establish a Penetration Testing Program

@@ -12,10 +12,6 @@ Utilize a risk-rating process to prioritize the remediation of discovered vulner
 	  - Respond
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * None

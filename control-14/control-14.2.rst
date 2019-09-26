@@ -12,10 +12,6 @@ Enable firewall filtering between VLANs to ensure that only authorized systems a
 	  - Protect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * None

@@ -12,10 +12,6 @@ Ensure that the organization’s anti-malware software updates its scanning engi
 	  - Protect
 	  - 1, 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Integrate Software and Hardware Asset Inventories

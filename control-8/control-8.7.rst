@@ -12,10 +12,6 @@ Enable Domain Name System (DNS) query logging to detect hostname lookups for kno
 	  - Detect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Subcontrol 2.5: Integrate Software and Hardware Asset Inventories

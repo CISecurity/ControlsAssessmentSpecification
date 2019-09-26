@@ -12,10 +12,6 @@ Publish information for all workforce members, regarding reporting computer anom
 	  - N/A
 	  - 1, 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Subcontrol 19.1: Document Incident Response Procedures

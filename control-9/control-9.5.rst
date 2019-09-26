@@ -12,10 +12,6 @@ Place application firewalls in front of any critical servers to verify and valid
 	  - Protect
 	  - 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

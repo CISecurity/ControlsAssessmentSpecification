@@ -12,10 +12,6 @@ Devise organization-wide standards for the time required for system administrato
 	  - N/A
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 19.1: Document Incident Response Procedures

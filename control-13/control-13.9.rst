@@ -12,10 +12,6 @@ If USB storage devices are required, all data stored on such devices must be enc
 	  - Protect
 	  - 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

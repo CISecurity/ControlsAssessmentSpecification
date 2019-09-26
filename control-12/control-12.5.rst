@@ -12,10 +12,6 @@ Configure monitoring systems to record network packets passing through the bound
 	  - Detect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 2.1: Maintain Inventory of Authorized Software

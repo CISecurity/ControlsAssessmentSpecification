@@ -12,10 +12,6 @@ Where multi-factor authentication is not supported (such as local administrator,
 	  - Protect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * None

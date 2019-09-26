@@ -12,10 +12,6 @@ Deny communication over unauthorized TCP or UDP ports or application traffic to 
 	  - Protect
 	  - 1, 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

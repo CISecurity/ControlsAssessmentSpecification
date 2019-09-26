@@ -12,10 +12,6 @@ Assign job titles and duties for handling computer and network incidents to spec
 	  - N/A
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 19.1: Document Incident Response Procedures

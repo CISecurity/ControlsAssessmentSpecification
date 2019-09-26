@@ -12,10 +12,6 @@ Ensure that the hardware asset inventory records the network address, hardware a
 	  - Identify
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

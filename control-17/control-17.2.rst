@@ -12,10 +12,6 @@ Deliver training to address the skills gap identified to positively impact workf
 	  - N/A
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 17.1: Perform a Skills Gap Analysis

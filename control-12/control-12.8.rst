@@ -12,10 +12,6 @@ Enable the collection of NetFlow and logging data on all network boundary device
 	  - Detect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

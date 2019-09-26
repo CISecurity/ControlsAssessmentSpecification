@@ -12,10 +12,6 @@ Enforce network-based URL filters that limit a system’s ability to connect to 
 	  - Protect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 2.5: Integration Software and Hardware Asset Inventories

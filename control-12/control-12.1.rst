@@ -12,10 +12,6 @@ Maintain an up-to-date inventory of all of the organization’s network boundari
 	  - Identify
 	  - 1, 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

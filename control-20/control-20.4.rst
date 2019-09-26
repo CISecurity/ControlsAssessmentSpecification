@@ -12,10 +12,6 @@ Include tests for the presence of unprotected system information and artifacts t
 	* - N/A
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 20.1: Establish a Penetration Testing Program

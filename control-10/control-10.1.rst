@@ -12,10 +12,6 @@ Ensure that all system data is automatically backed up on a regular basis.
 	  - Protect
 	  - 1, 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

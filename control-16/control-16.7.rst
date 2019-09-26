@@ -12,10 +12,6 @@ Establish and follow an automated process for revoking system access by disablin
 	  - Protect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 16.6: Maintain an Inventory of Accounts

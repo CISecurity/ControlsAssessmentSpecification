@@ -12,10 +12,6 @@ Ensure that all account usernames and authentication credentials are transmitted
 	  - Protect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 16.1: Inventory of Authentication Systems

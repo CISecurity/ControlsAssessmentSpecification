@@ -12,10 +12,6 @@ Establish a process to accept and address reports of software vulnerabilities, i
 	  - N/A
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * None

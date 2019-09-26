@@ -12,10 +12,6 @@ Maintain an inventory of all accounts organized by authentication system.
 	  - Identify
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 16.1: Inventory of Authentication Systems

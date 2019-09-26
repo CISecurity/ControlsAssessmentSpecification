@@ -12,10 +12,6 @@ Alert when users deviate from normal login behavior, such as time-of-day, workst
 	  - Detect
 	  - 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

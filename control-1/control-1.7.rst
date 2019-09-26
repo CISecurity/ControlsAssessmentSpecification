@@ -12,10 +12,6 @@ Utilize port level access control, following 802.1x standards, to control which 
 	  - Protect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

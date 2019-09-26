@@ -12,10 +12,6 @@ Deploy Security Information and Event Management (SIEM) or log analytic tools fo
 	  - Detect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 2.4: Track Software Inventory Information

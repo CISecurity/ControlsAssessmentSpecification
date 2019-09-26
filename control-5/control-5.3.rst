@@ -12,10 +12,6 @@ Store the master images and templates on securely configured servers, validated 
 	  - Protect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * None

@@ -12,10 +12,6 @@ Block all email attachments entering the organization’s email gateway if the f
 	  - Protect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 2.5: Integration Software and Hardware Asset Inventories

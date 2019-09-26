@@ -12,10 +12,6 @@ Plan and conduct routine incident response exercises and scenarios for the workf
 	  - N/A
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 19.1: Document Incident Response Procedures

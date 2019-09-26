@@ -12,10 +12,6 @@ Use vulnerability scanning and penetration testing tools in concert. The results
 	* - N/A
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 20.1: Establish a Penetration Testing Program

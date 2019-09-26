@@ -13,10 +13,6 @@ Utilize a passive discovery tool to identify devices connected to the organizati
 	  - Identify
 	  - 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 12.1: Maintain an Inventory of Network Boundaries

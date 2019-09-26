@@ -12,10 +12,6 @@ The software inventory system should track the name, version, publisher, and ins
 	  - Identify
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 2.3: Utilize Software Inventory Tools

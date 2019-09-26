@@ -12,10 +12,6 @@ The organization’s application whitelisting software must ensure that only aut
 	  - Protect
 	  - 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 2.1: Maintain Inventory of Authorized Software

@@ -12,10 +12,6 @@ Configure devices so that they automatically conduct an anti-malware scan of rem
 	  - Detect
 	  - 1, 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

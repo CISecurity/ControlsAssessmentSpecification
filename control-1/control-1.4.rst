@@ -12,9 +12,9 @@ Maintain an accurate and up-to-date inventory of all technology assets with the 
 	  - Identify
 	  - 1, 2, 3
 
-Status
-------
-Draft
+Dependencies
+------------
+* None
 
 Inputs
 -----------

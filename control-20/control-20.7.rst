@@ -12,10 +12,6 @@ Wherever possible, ensure that Red Team results are documented using open, machi
 	* - N/A
 	  - 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 20.1: Establish a Penetration Testing Program

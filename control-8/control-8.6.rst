@@ -12,10 +12,6 @@ Send all malware detection events to enterprise anti-malware administration tool
 	  - Detect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 2.1: Maintain Inventory of Authorized Software

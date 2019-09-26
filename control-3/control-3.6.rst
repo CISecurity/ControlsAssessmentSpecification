@@ -12,10 +12,6 @@ Regularly compare the results from consecutive vulnerability scans to verify tha
 	  - Respond
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.5: Maintain Asset Inventory Information

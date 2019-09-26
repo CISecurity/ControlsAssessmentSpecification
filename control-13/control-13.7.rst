@@ -12,10 +12,6 @@ If USB storage devices are required, enterprise software should be used that can
 	  - Protect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

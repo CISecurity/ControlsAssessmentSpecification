@@ -12,10 +12,6 @@ Scan all enterprise devices remotely logging into the organization’s network p
 	  - Protect
 	  - 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 16.1: Maintain an Inventory of Authentication Systems

@@ -12,10 +12,6 @@ Ensure that appropriate logs are being aggregated to a central log management sy
 	  - Detect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 2.4: Track Software Inventory Information

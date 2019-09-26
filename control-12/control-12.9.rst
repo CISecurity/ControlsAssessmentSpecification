@@ -12,10 +12,6 @@ Ensure that all network traffic to or from the Internet passes through an authen
 	  - Detect
 	  - 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

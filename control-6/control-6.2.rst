@@ -12,10 +12,6 @@ Ensure that local logging has been enabled on all systems and networking devices
 	  - Detect
 	  - 1, 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

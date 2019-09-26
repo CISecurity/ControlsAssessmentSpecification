@@ -12,10 +12,6 @@ Configure systems not to write data to external removable media, if there is no 
 	  - Protect
 	  - 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

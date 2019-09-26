@@ -12,10 +12,6 @@ Configure access for all accounts through as few centralized points of authentic
 	  - Protect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

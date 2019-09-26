@@ -12,10 +12,6 @@ Ensure that only fully supported web browsers and email clients are allowed to e
 	  - Protect
 	  - 1, 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 2.1: Maintain Inventory of Authorized Software

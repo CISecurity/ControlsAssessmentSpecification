@@ -12,10 +12,6 @@ Apply host-based firewalls or port-filtering tools on end systems, with a defaul
 	  - Protect
 	  - 1, 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

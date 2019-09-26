@@ -12,10 +12,6 @@ Apply static and dynamic analysis tools to verify that secure coding practices a
 	  - N/A
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 2.1: Maintain Inventory of Authorized Software

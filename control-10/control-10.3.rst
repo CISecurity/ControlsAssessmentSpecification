@@ -12,10 +12,6 @@ Test data integrity on backup media on a regular basis by performing a data rest
 	  - Protect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

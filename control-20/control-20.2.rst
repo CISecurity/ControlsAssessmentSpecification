@@ -12,10 +12,6 @@ Conduct regular external and internal penetration tests to identify vulnerabilit
 	* - N/A
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 20.1: Establish a Penetration Testing Program

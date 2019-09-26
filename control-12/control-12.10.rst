@@ -12,10 +12,6 @@ Decrypt all encrypted network traffic at the boundary proxy prior to analyzing t
 	  - Detect
 	  - 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 2.1: Maintain Inventory of Authorized Software

@@ -12,10 +12,6 @@ Create a separate wireless network for personal or untrusted devices. Enterprise
 	  - Protect
 	  - 1, 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

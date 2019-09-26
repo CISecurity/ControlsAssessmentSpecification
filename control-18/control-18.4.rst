@@ -12,10 +12,6 @@ Only use up-to-date and trusted third-party components for the software develope
 	  - N/A
 	  - 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 2.1: Maintain Inventory of Authorized Software

@@ -12,10 +12,6 @@ Disable peer-to-peer (ad hoc) wireless network capabilities on wireless clients.
 	  - Protect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

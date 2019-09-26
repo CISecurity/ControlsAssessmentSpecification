@@ -12,10 +12,6 @@ Any user or system accounts used to perform penetration testing should be contro
 	* - N/A
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 16.6: Maintain an Inventory of Accounts

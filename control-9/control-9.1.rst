@@ -12,10 +12,6 @@ Associate active ports, services, and protocols to the hardware assets in the as
 	  - Identify
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

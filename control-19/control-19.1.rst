@@ -12,10 +12,6 @@ Ensure that there are written incident response plans that define roles of perso
 	  - N/A
 	  - 1, 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * None

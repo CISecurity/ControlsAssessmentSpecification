@@ -12,10 +12,6 @@ Use an automated tool, such as host-based Data Loss Prevention, to enforce acces
 	  - Protect
 	  - 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

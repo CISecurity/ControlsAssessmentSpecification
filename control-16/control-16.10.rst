@@ -12,10 +12,6 @@ Ensure that all accounts have an expiration date that is monitored and enforced.
 	  - Protect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 16.1: Inventory of Authentication Systems

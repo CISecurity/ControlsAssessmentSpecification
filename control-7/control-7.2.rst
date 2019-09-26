@@ -12,10 +12,6 @@ Uninstall or disable any unauthorized browser or email client plugins or add-on 
 	  - Protect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.5: Maintain Asset Inventory Information

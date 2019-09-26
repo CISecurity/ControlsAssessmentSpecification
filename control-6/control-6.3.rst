@@ -12,10 +12,6 @@ Enable system logging to include detailed information such as an event source, d
 	  - Detect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.5: Maintain Asset Inventory Information

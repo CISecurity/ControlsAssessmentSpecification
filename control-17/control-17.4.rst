@@ -12,10 +12,6 @@ Ensure that the organization’s security awareness program is updated frequentl
 	  - N/A
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 17.3: Implement a Security Awareness Program

@@ -12,10 +12,6 @@ Ensure that wireless networks use authentication protocols such as Extensible Au
 	  - Protect
 	  - 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

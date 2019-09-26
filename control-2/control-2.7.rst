@@ -12,10 +12,6 @@ Utilize application whitelisting technology on all assets to ensure that only au
 	  - Protect
 	  - 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

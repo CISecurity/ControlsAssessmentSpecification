@@ -12,10 +12,6 @@ Enforce detailed audit logging for access to sensitive data or changes to sensit
 	  - Detect
 	  - 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

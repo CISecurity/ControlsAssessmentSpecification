@@ -12,10 +12,6 @@ Only allow access to authorized cloud storage or email providers.
 	  - Protect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

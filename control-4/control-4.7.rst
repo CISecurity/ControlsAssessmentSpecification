@@ -12,15 +12,11 @@ Limit access to scripting tools (such as Microsoft® PowerShell and Python) to o
 	  - Protect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 2.1: Maintain Inventory of Authorized Software
-* Sub-control 16.6: Maintain an Inventory of Accounts
 * Sub-control 5.1: Establish Secure Configurations
+* Sub-control 16.6: Maintain an Inventory of Accounts
 
 Inputs
 ------

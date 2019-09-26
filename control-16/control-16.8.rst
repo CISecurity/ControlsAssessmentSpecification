@@ -12,10 +12,6 @@ Disable any account that cannot be associated with a business process or busines
 	  - Respond
 	  - 1, 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * None

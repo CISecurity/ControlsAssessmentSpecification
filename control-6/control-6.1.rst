@@ -12,10 +12,6 @@ Use at least three synchronized time sources from which all servers and network 
 	  - Detect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.5: Maintain Asset Inventory Information

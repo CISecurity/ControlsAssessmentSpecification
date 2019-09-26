@@ -12,10 +12,6 @@ The software inventory system should be tied into the hardware asset inventory s
 	  - Identify
 	  - 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

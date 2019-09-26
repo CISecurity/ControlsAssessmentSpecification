@@ -12,10 +12,6 @@ Deny communications with known malicious or unused Internet IP addresses and lim
 	  - Protect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

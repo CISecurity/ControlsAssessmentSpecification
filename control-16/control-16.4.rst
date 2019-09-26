@@ -12,10 +12,6 @@ Encrypt or hash with a salt all authentication credentials when stored.
 	  - Protect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 16.1: Inventory of Authentication Systems

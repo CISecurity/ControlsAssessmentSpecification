@@ -12,10 +12,6 @@ Leverage the Advanced Encryption Standard (AES) to encrypt wireless data in tran
 	  - Protect
 	  - 1, 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

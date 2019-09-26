@@ -12,10 +12,6 @@ Designate management personnel, as well as backups, who will support the inciden
 	  - N/A
 	  - 1, 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 19.1: Document Incident Response Procedures
