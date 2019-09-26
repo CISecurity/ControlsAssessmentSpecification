@@ -12,10 +12,6 @@ Require multi-factor authentication for all user accounts, on all systems, wheth
 	  - Protect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 16.6: Maintain an Inventory of Accounts

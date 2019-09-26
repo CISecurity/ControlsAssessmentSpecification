@@ -12,10 +12,6 @@ Disable wireless access on devices that do not have a business purpose for wirel
 	  - Protect
 	  - 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

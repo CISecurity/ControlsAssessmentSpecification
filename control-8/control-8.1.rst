@@ -12,10 +12,6 @@ Utilize centrally managed anti-malware software to continuously monitor and defe
 	  - Protect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

@@ -12,10 +12,6 @@ Manage the network infrastructure across network connections that are separated 
 	  - Protect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * None

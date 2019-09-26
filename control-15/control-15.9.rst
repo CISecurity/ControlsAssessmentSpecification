@@ -12,10 +12,6 @@ Disable wireless peripheral access of devices [such as Bluetooth and Near Field 
 	  - Protect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

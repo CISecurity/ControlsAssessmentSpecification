@@ -12,10 +12,6 @@ For in-house developed software, ensure that explicit error checking is performe
 	  - N/A
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 18.1: Establish Secure Coding Practices

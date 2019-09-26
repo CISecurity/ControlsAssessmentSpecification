@@ -12,10 +12,6 @@ Use a wireless intrusion detection system (WIDS) to detect and alert on unauthor
 	  - Detect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

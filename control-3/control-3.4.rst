@@ -12,10 +12,6 @@ Deploy automated software update tools in order to ensure that the operating sys
 	  - Protect
 	  - 1, 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 5.1: Establish Secure Configurations

@@ -12,10 +12,6 @@ Create a security awareness program for all workforce members to complete on a r
 	  - N/A
 	  - 1, 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * None

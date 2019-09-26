@@ -12,10 +12,6 @@ Use Dynamic Host Configuration Protocol (DHCP) logging on all DHCP servers or IP
 	  - Identify
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

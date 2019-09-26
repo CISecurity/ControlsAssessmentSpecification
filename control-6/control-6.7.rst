@@ -12,10 +12,6 @@ On a regular basis, review logs to identify anomalies or abnormal events.
 	  - Detect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * None

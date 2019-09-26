@@ -12,10 +12,6 @@ Utilize software inventory tools throughout the organization to automate the doc
 	  - Identify
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

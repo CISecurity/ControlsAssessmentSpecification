@@ -12,10 +12,6 @@ Perform a skills gap analysis to understand the skills and behaviors workforce m
 	  - N/A
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * None

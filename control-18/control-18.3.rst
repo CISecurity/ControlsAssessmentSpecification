@@ -12,10 +12,6 @@ Verify that the version of all software acquired from outside your organization 
 	  - N/A
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 2.1: Maintain Inventory of Authorized Software

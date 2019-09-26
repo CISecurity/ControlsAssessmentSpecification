@@ -12,10 +12,6 @@ Configure devices to not auto-run content from removable media.
 	  - Protect
 	  - 1, 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

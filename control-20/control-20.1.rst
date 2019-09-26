@@ -9,12 +9,8 @@ Establish a program for penetration tests that includes a full scope of blended 
 	  - Security Function
 	  - Implementation Groups
 	* - N/A
-	* - N/A
+	  - N/A
 	  - 2, 3
-
-Status
-------
-Draft
 
 Dependencies
 ------------

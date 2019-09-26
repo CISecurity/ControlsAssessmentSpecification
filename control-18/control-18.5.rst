@@ -12,10 +12,6 @@ Use only standardized, currently accepted, and extensively reviewed encryption a
 	  - N/A
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * None

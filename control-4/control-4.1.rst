@@ -12,10 +12,6 @@ Use automated tools to inventory all administrative accounts, including domain a
 	  - Detect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * None

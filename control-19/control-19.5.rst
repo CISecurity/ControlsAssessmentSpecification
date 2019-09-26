@@ -12,10 +12,6 @@ Assemble and maintain information on third-party contact information to be used 
 	  - N/A
 	  - 1, 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Subcontrol 19.1: Document Incident Response Procedures

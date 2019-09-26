@@ -12,10 +12,6 @@ Enable command-line audit logging for command shells, such as Microsoft PowerShe
 	  - Detect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

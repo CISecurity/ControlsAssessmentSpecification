@@ -12,10 +12,6 @@ Deploy automated software update tools in order to ensure that third-party softw
 	  - Protect
 	  - 1, 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 2.1: Maintain Inventory of Authorized Software 

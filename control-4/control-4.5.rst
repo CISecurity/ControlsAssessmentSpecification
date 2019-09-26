@@ -12,10 +12,6 @@ Use multi-factor authentication and encrypted channels for all administrative ac
 	  - Protect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 2.4: Track Software Inventory Information

@@ -12,10 +12,6 @@ For applications that rely on a database, use standard hardening configuration t
 	  - N/A
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

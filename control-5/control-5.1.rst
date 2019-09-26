@@ -12,10 +12,6 @@ Maintain documented security configuration standards for all authorized operatin
 	  - Protect
 	  - 1, 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 2.1: Maintain Inventory of Authorized Software

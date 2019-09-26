@@ -12,10 +12,6 @@ Physically or logically segregated systems should be used to isolate and run sof
 	  - Protect
 	  - 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 2.1: Maintain Inventory of Authorized Software

@@ -12,10 +12,6 @@ Deploy network-based Intrusion Prevention Systems (IPS) to block malicious netwo
 	  - Protect
 	  - 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 2.1: Maintain Inventory of Authorized Software

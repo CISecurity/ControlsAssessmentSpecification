@@ -12,10 +12,6 @@ Segment the network based on the label or classification level of the informatio
 	  - Protect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 13.1: Maintain an Inventory of Sensitive Information

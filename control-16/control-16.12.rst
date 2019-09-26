@@ -12,10 +12,6 @@ Monitor attempts to access deactivated accounts through audit logging.
 	  - Detect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 2.1: Maintain Inventory of Authorized Software

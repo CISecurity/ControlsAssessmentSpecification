@@ -12,10 +12,6 @@ Ensure that all users with administrative account access use a dedicated or seco
 	  - Protect
 	  - 1, 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * None

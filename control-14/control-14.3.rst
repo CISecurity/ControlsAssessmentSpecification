@@ -12,10 +12,6 @@ Disable all workstation-to-workstation communication to limit an attacker’s ab
 	  - Protect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

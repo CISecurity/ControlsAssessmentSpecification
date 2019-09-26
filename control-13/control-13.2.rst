@@ -12,10 +12,6 @@ Remove sensitive data or systems not regularly accessed by the organization from
 	  - Protect
 	  - 1, 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

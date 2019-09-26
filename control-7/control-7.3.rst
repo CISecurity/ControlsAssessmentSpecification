@@ -12,10 +12,6 @@ Ensure that only authorized scripting languages are able to run in all web brows
 	  - Protect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 2.5: Integration Software and Hardware Asset Inventories

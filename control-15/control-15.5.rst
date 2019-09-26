@@ -12,10 +12,6 @@ Configure wireless access on client machines that do have an essential wireless 
 	  - Protect
 	  - 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

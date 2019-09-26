@@ -12,10 +12,6 @@ Maintain an up-to-date list of all authorized software that is required in the e
 	  - Identify
 	  - 1, 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * None

@@ -12,10 +12,6 @@ Train the workforce on how to identify different forms of social engineering att
 	  - N/A
 	  - 1, 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * None

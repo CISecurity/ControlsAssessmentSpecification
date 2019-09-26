@@ -12,10 +12,6 @@ Ensure that all systems that store logs have adequate storage space for the logs
 	  - Detect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.5: Maintain Asset Inventory Information

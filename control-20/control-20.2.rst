@@ -9,12 +9,8 @@ Conduct regular external and internal penetration tests to identify vulnerabilit
 	  - Security Function
 	  - Implementation Groups
 	* - N/A
-	* - N/A
+	  - N/A
 	  - 2, 3
-
-Status
-------
-Draft
 
 Dependencies
 ------------

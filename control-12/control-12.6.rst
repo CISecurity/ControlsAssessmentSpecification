@@ -12,10 +12,6 @@ Deploy network-based Intrusion Detection Systems (IDS) sensors to look for unusu
 	  - Detect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

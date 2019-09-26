@@ -12,10 +12,6 @@ Utilize an active discovery tool to identify all sensitive information stored, p
 	  - Detect
 	  - 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

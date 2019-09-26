@@ -12,10 +12,6 @@ Ensure that only network ports, protocols, and services listening on a system wi
 	  - Protect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

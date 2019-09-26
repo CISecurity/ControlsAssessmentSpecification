@@ -12,10 +12,6 @@ Manage all network devices using multi-factor authentication and encrypted sessi
 	  - Protect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

@@ -12,10 +12,6 @@ Install the latest stable version of any security-related updates on all network
 	  - Protect
 	  - 1, 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

@@ -12,10 +12,6 @@ Enable anti-exploitation features such as Data Execution Prevention (DEP) and Ad
 	  - Detect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

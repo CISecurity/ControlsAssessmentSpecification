@@ -12,10 +12,6 @@ Configure network vulnerability scanning tools to detect and alert on unauthoriz
 	  - Detect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 2.1: Maintain Inventory of Authorized Software

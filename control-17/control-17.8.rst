@@ -12,10 +12,6 @@ Train workforce members to be aware of causes for unintentional data exposures, 
 	  - N/A
 	  - 1, 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * None

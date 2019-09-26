@@ -12,10 +12,6 @@ Monitor all traffic leaving the organization and detect any unauthorized use of 
 	  - Detect
 	  - 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 2.1: Maintain Inventory of Authorized Software

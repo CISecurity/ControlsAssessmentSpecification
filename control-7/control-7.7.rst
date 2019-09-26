@@ -12,10 +12,6 @@ Use Domain Name System (DNS) filtering services to help block access to known ma
 	  - Protect
 	  - 1, 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.5: Maintain Asset Inventory Information

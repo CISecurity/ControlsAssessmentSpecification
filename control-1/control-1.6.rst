@@ -12,10 +12,6 @@ Ensure that unauthorized assets are either removed from the network, quarantined
 	  - Respond
 	  - 1, 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

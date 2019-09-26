@@ -12,10 +12,6 @@ Require all remote login access to the organization’s network to encrypt data 
 	  - Protect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

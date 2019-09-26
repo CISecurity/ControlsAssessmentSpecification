@@ -12,10 +12,6 @@ Maintain an inventory of all sensitive information stored, processed, or transmi
 	  - Identify
 	  - 1, 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

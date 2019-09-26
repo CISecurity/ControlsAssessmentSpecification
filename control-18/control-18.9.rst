@@ -12,10 +12,6 @@ Maintain separate environments for production and non-production systems. Develo
 	  - N/A
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

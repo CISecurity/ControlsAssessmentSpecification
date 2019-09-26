@@ -12,10 +12,6 @@ Deploy an automated tool on network perimeters that monitors for unauthorized tr
 	  - Detect
 	  - 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 2.1: Maintain Inventory of Authorized Software

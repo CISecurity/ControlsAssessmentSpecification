@@ -12,10 +12,6 @@ Subscribe to URL-categorization services to ensure that they are up-to-date with
 	  - Protect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * None

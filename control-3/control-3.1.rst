@@ -12,10 +12,6 @@ Utilize an up-to-date Security Content Automation Protocol (SCAP) compliant vuln
 	  - Detect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

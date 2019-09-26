@@ -12,10 +12,6 @@ To lower the chance of spoofed or modified emails from valid domains, implement 
 	  - Protect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 2.4: Track Software Inventory Information

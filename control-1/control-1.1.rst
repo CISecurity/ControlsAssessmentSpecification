@@ -13,10 +13,6 @@ Utilize an active discovery tool to identify devices connected to the organizati
 	  - Identify
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 5.1: Establish Secure Configurations

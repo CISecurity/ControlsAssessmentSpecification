@@ -12,10 +12,6 @@ Establish secure coding practices appropriate to the programming language and de
 	  - N/A
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * None

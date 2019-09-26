@@ -12,10 +12,6 @@ Encrypt all sensitive information in transit.
 	  - Protect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 13.1: Maintain an Inventory of Sensitive Information

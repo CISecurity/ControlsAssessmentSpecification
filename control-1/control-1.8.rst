@@ -12,10 +12,6 @@ Use client certificates to authenticate hardware assets connecting to the organi
 	  - Protect
 	  - 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

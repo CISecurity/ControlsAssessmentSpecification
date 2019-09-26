@@ -12,10 +12,6 @@ Ensure that all backups have at least one offline (i.e., not accessible via a ne
 	  - Protect
 	  - 1, 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

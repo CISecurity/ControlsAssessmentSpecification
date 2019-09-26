@@ -12,10 +12,6 @@ Train workforce members on the importance of enabling and utilizing secure authe
 	  - N/A
 	  - 1, 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * None

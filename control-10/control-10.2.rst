@@ -12,10 +12,6 @@ Ensure that all of the organization’s key systems are backed up as a complete 
 	  - Protect
 	  - 1, 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

@@ -12,10 +12,6 @@ Train workforce members on how to identify and properly store, transfer, archive
 	  - N/A
 	  - 1, 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * None

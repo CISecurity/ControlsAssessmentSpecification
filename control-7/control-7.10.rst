@@ -12,10 +12,6 @@ Use sandboxing to analyze and block inbound email attachments with malicious beh
 	  - Protect
 	  - 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 2.1: Maintain Inventory of Authorized Software

@@ -12,13 +12,9 @@ Perform automated port scans on a regular basis against all systems and alert if
 	  - Detect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
-2.5: Integrate Software and Hardware Asset Inventories
+* Sub-control 2.5: Integrate Software and Hardware Asset Inventories
 
 Inputs
 ------

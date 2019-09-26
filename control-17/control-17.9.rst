@@ -12,10 +12,6 @@ Train workforce members to be able to identify the most common indicators of an 
 	  - N/A
 	  - 1, 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * None

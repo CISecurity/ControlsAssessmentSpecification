@@ -12,10 +12,6 @@ Ensure that backups are properly protected via physical security or encryption w
 	  - Protect
 	  - 1, 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

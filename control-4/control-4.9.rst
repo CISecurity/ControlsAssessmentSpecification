@@ -12,10 +12,6 @@ Configure systems to issue a log entry and alert on unsuccessful logins to an ad
 	  - Detect
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 1.4: Maintain Detailed Asset Inventory

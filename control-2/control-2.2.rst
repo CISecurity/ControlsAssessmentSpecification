@@ -12,10 +12,6 @@ Ensure that only software applications or operating systems currently supported 
 	  - Identify
 	  - 1, 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * Sub-control 2.1: Maintain Inventory of Authorized Software

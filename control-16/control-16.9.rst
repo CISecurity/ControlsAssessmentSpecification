@@ -12,10 +12,6 @@ Automatically disable dormant accounts after a set period of inactivity.
 	  - Respond
 	  - 1, 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * None

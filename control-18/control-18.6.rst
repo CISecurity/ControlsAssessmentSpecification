@@ -12,10 +12,6 @@ Ensure that all software development personnel receive training in writing secur
 	  - N/A
 	  - 2, 3
 
-Status
-------
-Draft
-
 Dependencies
 ------------
 * None
