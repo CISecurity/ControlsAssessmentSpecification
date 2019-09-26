@@ -1,6 +1,9 @@
 About
 =============
 
+The CIS Controls™
+------------------
+
 The CIS Controls™ are a prioritized set of actions that collectively form a defense-in-depth set
 of best practices that mitigate the most common attacks against systems and networks. The
 CIS Controls are developed by a community of IT experts who apply their first-hand experience
@@ -59,7 +62,7 @@ them implementable, usable, scalable, and compliant with all industry or governm
 requirements.
 
 Why the CIS Controls Work: Methodology and Contributors
-=======================================================
+-------------------------------------------------------
 
 The CIS Controls are informed by actual attacks and effective defenses and reflect the combined
 knowledge of experts from every part of the ecosystem (companies, governments, individuals);
@@ -114,7 +117,7 @@ reliable, scalable, and continuous measurements of their adherence to
 the Controls and related metrics.
 
 Getting Started
-===============
+------------------------
 
 The CIS Controls are a relatively small number of prioritized, well-vetted, and supported security
 actions that organizations can take to assess and improve their current security state. They also

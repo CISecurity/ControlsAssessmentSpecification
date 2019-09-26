@@ -1,11 +1,16 @@
+About the CIS Controls Assessment Specification
+===============================================
+
 Purpose
-=======================================================
+-------
+
 The CIS Controls provide essential best practices that organizations can implement to improve their cybersecurity posture.  In addition to implementing the CIS Controls, it is also important that organizations measure their implementations to ensure that Sub-Controls are in place and working properly.  The purpose of the CIS Controls Assessent Specification (CAS) is to provide a common understanding of what should be measured in order to verify that CIS Sub-Controls are properly implemented. The hope is that those developing related tools will then build these measures into their tools so that the CIS Controls are measured in a uniform way.
 
 Note that the focus of CAS is on "what to measure" rather than "how to measure".  With the goal of being platform agnostic, a conscious effort was made to avoid addressing the "how to measure" in writing CAS, leaving those platform specific details to specific implementations of these measures.  Tool developers will determine the "hows" that are appropriate for their tools and use cases.
 
+
 Methodology
-=======================================================
+-----------
 
 The CIS Controls provide cybersecurity best practices designed to help organizations of all types secure a wide variety of systems.  Because the CIS Controls cover so many security topics, and apply to such a wide variety of hardware and software that can be used in many different ways, measuring the CIS Controls is a complex challenge.  Different approaches to measuring the Controls can result in multiple ways of measuring the same Sub-Control.  
 
@@ -15,8 +20,9 @@ While both of these measurement approaches are useful and have their place, for 
 
 Specific configuration details are not specified in CAS, as these would vary from platform to platform, and would encroach on "how to measure".  When there are multiple ways to implement a Sub-Control, CAS attempts to be generic enough to cover these varying methods in its measures.  Where assumptions are made, CAS attempts to explicitly state them.
 
+
 Structure of a Sub-Control Measurement
-=======================================================
+--------------------------------------
 
 This section describes the standard structure of a Sub-Control Measurement in CAS.
 
@@ -43,8 +49,10 @@ Assumptions are provided inside of the section that they are most applicable to,
 Procedure Review (optional section that does not appear for all Sub-Control measurements):
 When present, this section describes a manual review of a procedure that helps fulfill the Sub-Control.
 
+
 Versioning
-=======================================================
+-----------
+
 CAS follows a semantic versioning approach based on semver.org and having the following format: `major.minor.point`. 
 
 * Major: Significant and material changes to 
