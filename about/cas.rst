@@ -26,28 +26,37 @@ Structure of a Sub-Control Measurement
 
 This section describes the standard structure of a Sub-Control Measurement in CAS.
 
-Basic CIS Sub-Control Information:
+Basic CIS Sub-Control Information
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 This section includes the Sub-Control number, title, description, asset type, security function, and implementation group.  This information matches the information in the CIS Controls v7.1 document.
 
-Sub-Control Dependencies (optional section that does not appear for all Sub-Control measurements): 
-When present, this section lists any other Sub-Controls that are prerequisites for measuring this Sub-Control.  Completion of the Sub-Controls specified in this section will typically generate data necessary as an Input for measuring this Sub-Control. 
+Assumptions
+^^^^^^^^^^^
+Assumptions are provided inside of the section to which they are most applicable, or not in any specific section if they are general to the entire Sub-Control measurement.
 
-Inputs:
+Sub-Control Dependencies
+^^^^^^^^^^^^^^^^^^^^^^^^
+This is an optional section that may not appear for all Sub-Control measurements.  When present, this section lists any other Sub-Controls that are prerequisites for measuring this Sub-Control.  Completion of the Sub-Controls specified in this section will typically generate data necessary as an Input for measuring this Sub-Control. 
+
+Inputs
+^^^^^^
 This section includes the data that is expected as an input in order to measure this Sub-Control.
 
-Operations:
+Operations
+^^^^^^^^^^
 This section specifies actions to be performed on the inputs in order to generate the measures.  The operations provide a linkage between the inputs and measures.
 
-Measures:
+Measures
+^^^^^^^^
 This section describes the information that should be measured, generally as a result of performing operations on the inputs.  Measures are combined to form metrics.
 
-Metrics:
+Metrics
+^^^^^^^
 This section describes standard metrics that can be calculated from the measures, providing a description of the metricalong with the formula for calculating the metric.  In general, CAS attempts to frame metrics in a positive light - i.e., the ratio of items that are compliant with the Sub-Control (as opposed to the ratio of items that are not compliant).  The provided metrics are not meant to be an exhausive list of metrics, rather it is just meant to list some examples of common metrics that are likely to be useful.  The hope is that if appropriate measures have been defined, other metrics can be built from those measures to suit different use cases.
 
-Assumptions are provided inside of the section that they are most applicable to, or not in any specific section if they are general to the entire Sub-Control measurement.
-
-Procedure Review (optional section that does not appear for all Sub-Control measurements):
-When present, this section describes a manual review of a procedure that helps fulfill the Sub-Control.
+Procedure Review
+^^^^^^^^^^^^^^^^
+This is an optional section that may not appear for all Sub-Control measurements.  When present, this section describes a manual review of a procedure that helps fulfill the Sub-Control.
 
 
 Versioning
