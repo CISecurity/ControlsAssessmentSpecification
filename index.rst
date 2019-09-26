@@ -21,7 +21,7 @@ The "Contributing" section provides details on how you can contribute to the Con
    :caption: General
    :name: cas-general
 
-   About the CIS Controls <about/index>
+   About the CIS Controls <about/controls>
    About the CIS Controls Assessment Specification <about/cas>
    Terms of Use <about/terms-of-use>
    Contributing <about/contributing>
