@@ -1,8 +1,5 @@
-About
-=============
-
-The CIS Controls™
-------------------
+About the CIS Controls™
+=======================
 
 The CIS Controls™ are a prioritized set of actions that collectively form a defense-in-depth set
 of best practices that mitigate the most common attacks against systems and networks. The
