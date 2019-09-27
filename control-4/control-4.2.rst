@@ -52,7 +52,7 @@ Default Password Usage
 	* - **Metric**
 	  - | What percentage of credentials have been changed from the default value?
 	* - **Calculation**
-	  - | * code:`(M2 - M4) / M2`
+	  - | :code:`(M2 - M4) / M2`
 
 Password Policy Compliance
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
