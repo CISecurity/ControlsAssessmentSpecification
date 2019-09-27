@@ -19,10 +19,10 @@ Dependencies
 
 Inputs
 ------
-#. ASL\ :sub:`i`\ : The previous list of authorized software
+#. Authorized Software List\ :sub:`i`\ : The previous list of authorized software
 #. An organizationally defined allowable time frame for resolution of discovered unauthorized software (recommend at least monthly)
-#. SCE: The list of endpoints to be checked (derived from hardware inventory; see sub-control 1.4)
-#. ASL\ :sub:`i+1`\ : The updated authorized software list, following the time frame defined by Input 2
+#. Software-capable Endpoints: The list of endpoints to be checked (derived from hardware inventory; see sub-control 1.4)
+#. Authorized Software List\ :sub:`i+1`\ : The updated authorized software list, following the time frame defined by Input 2
 #. The "scanning threshold"; the time period between scan 1 and scan 2
 
 Assumptions

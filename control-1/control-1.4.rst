@@ -18,7 +18,7 @@ Dependencies
 
 Inputs
 -----------
-#. EI: The organization's current inventory list (the "to be checked" list).
+#. Endpoint Inventory: The organization's current inventory list (the "to be checked" list).
 #. A "ground truth" inventory list to compare with input 1.  This list would be enhanced by manual verification, but a tool-generated or aggregated list could be substituted here.  This should be an aggregation of the devices detected over a period of time, preferably not from a single scan.
 #. A write-up of the procedure for adding or removing assets to or from the inventory - only for manual review.
 

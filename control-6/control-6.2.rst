@@ -19,7 +19,7 @@ Dependencies
 
 Inputs
 ------
-#. EI: The list of endpoints from the endpoint inventory
+#. Endpoint Inventory: The list of endpoints from the endpoint inventory
 #. The list of events that should be logged (an event logging policy).
 
 Assumptions

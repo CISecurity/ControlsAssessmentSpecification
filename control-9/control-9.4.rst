@@ -19,7 +19,7 @@ Dependencies
 
 Inputs
 ------
-#. EI: Derive from the endpoint inventory those endpoints able to scan (assumed capable of hosting firewall/port-filtering software)
+#. Endpoint Inventory: Derive from the endpoint inventory those endpoints able to scan (assumed capable of hosting firewall/port-filtering software)
 #. A policy (or set of policies, potentially individually per endpoint) indicating the ports that are allowed to be open
 
 Operations

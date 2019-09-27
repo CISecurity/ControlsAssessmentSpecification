@@ -18,8 +18,8 @@ Dependencies
 
 Inputs
 ------
-#. ASL: The list of authorized software (sub-control 2.1).
-#. SCS: The list of enterprise security configuration standards.
+#. Authorized Software List: The list of authorized software (sub-control 2.1).
+#. Security Configuration Standards: The list of enterprise security configuration standards.
 
 Assumptions
 ^^^^^^^^^^^

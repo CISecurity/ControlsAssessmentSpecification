@@ -18,7 +18,7 @@ Dependencies
 
 Inputs
 ------
-#. EI: The list of endpoints to be audited (sub-control 1.5).
+#. Endpoint Inventory: The list of endpoints to be audited (sub-control 1.5).
 #. The list of accepted DNS filtering services, such as Quad-9.
 
 Operations

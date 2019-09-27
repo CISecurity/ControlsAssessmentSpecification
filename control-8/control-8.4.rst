@@ -19,7 +19,7 @@ Dependencies
 
 Inputs
 -----------
-#. EI: Endpoint inventory (with entry for each endpoint indicating whether that endpoint can support anti-malware software or not)
+#. Endpoint Inventory: Endpoint inventory (with entry for each endpoint indicating whether that endpoint can support anti-malware software or not)
 #. Desired anti-malware configuration (to automatically scan removable media when inserted/connected)
 
 Assumptions

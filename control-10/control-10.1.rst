@@ -20,7 +20,7 @@ Dependencies
 
 Inputs
 -----------
-#. EI: Endpoint Inventory
+#. Endpoint Inventory: Endpoint Inventory
 #. Backup configuration policy is available
 #. Backup software (either OS or 3d party) configuration is available and able to be queried
 #. Backup software logs are available and can be queried

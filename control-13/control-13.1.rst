@@ -18,7 +18,7 @@ Dependencies
 
 Inputs
 -----------
-#. CS: The organizationally-defined classification scheme
+#. Classification Scheme: The organizationally-defined classification scheme
 #. The data set of sensitive information for which the organization is responsible, mapped to the classification scheme defined by Input 1
 #. A mapping of an organization's endpoints/systems containing sensitive information classified by Input 2 (ideally using the endpoint inventory; see sub-control 1.4)
 

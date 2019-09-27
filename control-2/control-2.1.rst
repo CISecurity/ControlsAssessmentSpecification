@@ -18,7 +18,7 @@ Dependencies
 
 Inputs
 ------
-#. ASL: The authorized software list (containing a timestamp indicating both last updated and last verified values).
+#. Authorized Software List: The authorized software list (containing a timestamp indicating both last updated and last verified values).
 #. An organizationally defined acceptable timeframe for "up-to-date" (recommend at least monthly)
 
 Operations

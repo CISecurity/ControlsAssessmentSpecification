@@ -20,7 +20,7 @@ Dependencies
 
 Inputs
 -----------
-#. KS: The list of "key systems" identified by the organization, as derived from the endpoint inventory (see sub-control 1.4)
+#. Key Systems: The list of "key systems" identified by the organization, as derived from the endpoint inventory (see sub-control 1.4)
 #. The organization's backup/imaging configuration policy
 
 Assumptions

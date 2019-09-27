@@ -18,7 +18,7 @@ Dependencies
 
 Inputs
 ------
-#. ASL: The authorized software list with a notation of "supported" or "unsupported" for each entry (sub-control 2.1)
+#. Authorized Software List: The authorized software list with a notation of "supported" or "unsupported" for each entry (sub-control 2.1)
 #. Access to an authoritative source of information indicating supported/unsupported details by product.
 
 Operations

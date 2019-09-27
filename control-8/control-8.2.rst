@@ -20,7 +20,7 @@ Dependencies
 
 Inputs
 -----------
-#. EI: Endpoint inventory (with entry for each endpoint indicating whether that endpoint can support anti-malware software or not; sub-control 1.4)
+#. Endpoint Inventory: Endpoint inventory (with entry for each endpoint indicating whether that endpoint can support anti-malware software or not; sub-control 1.4)
 #. Anti-malware software version information (this is a list of acceptable versions for the scanning engines and the signature databases for any anti-malware products in use on endpoints in Input 1; this version information needs to be updated frequently to reflect current version information and age off outdated versions; reference the ASL per sub-control 2.1 and ideally leverage the software inventory in sub-control 2.4)
 #. Maximum time allowed for anti-malware software updates to be applied to endpoints
 

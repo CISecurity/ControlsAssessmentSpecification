@@ -19,7 +19,7 @@ Dependencies
 Inputs
 -----------
 #. A list of discovered assets not currently present in the asset inventory ("unauthorized" assets).
-#. EI: Current hardware inventory (sub-control 1.4)
+#. Endpoint Inventory: Current hardware inventory (sub-control 1.4)
 #. An organizationally defined time frame for "timely" (recommend 24 hours or better)
 #. (Optional) Measurement results would be more useful if the disposition of the items (removed, added to inventory, quarantined, etc.) was provided to be verified, but this is not absolutely necessary.
 

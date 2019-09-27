@@ -19,7 +19,7 @@ Dependencies
 
 Inputs
 -----------
-#. EI: Endpoint inventory
+#. Endpoint Inventory: Endpoint inventory
 #. Desired configuration(s) to disable auto-run. There may be multiple configurations targeted at different types of endpoints (for instance, a different configuration might be provided for each type of operating system used on the endpoints in the provided inventory). If the endpoints are capable of performing multiple types of auto-run behavior (i.e., auto-run vs. auto-play), appropriate configurations should be provided for each type.
 
 Operations

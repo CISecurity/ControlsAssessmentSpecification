@@ -20,7 +20,7 @@ Dependencies
 
 Inputs
 -----------
-#. EI: List of endpoints
+#. Endpoint Inventory: List of endpoints
 #. Backup configuration policy assuming inclusion of "offline" backup destination
 
 Operations
