@@ -61,8 +61,9 @@ Password Policy Compliance
 	* - **Metric**
 	  - | What percentage of collected password policies comply with the organization's password policies?
 	* - **Calculation**
-	  - | - If M6 = 0, then no endpoint password policy configurations were collected.
-	    | - Otherwise, the value of this metric is :code:`M8 / M6`
+	  - |
+		* If M6 = 0, then no endpoint password policy configurations were collected.
+	  * Otherwise, the value of this metric is :code:`M8 / M6`
 
 .. history
 .. authors
