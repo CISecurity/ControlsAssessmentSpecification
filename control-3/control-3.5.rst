@@ -14,7 +14,7 @@ Deploy automated software update tools in order to ensure that third-party softw
 
 Dependencies
 ------------
-* Sub-control 2.1: Maintain Inventory of Authorized Software 
+* Sub-control 2.1: Maintain Inventory of Authorized Software
 
 Inputs
 ------
@@ -53,10 +53,10 @@ Update Effectiveness (Per Endpoint)
 	  - | For a given endpoint, calculate the ratio of installed software updates to the
 	    | total number of required software updates.
 	* - **Calculation**
-	  - | * If M2 = 0, this indicates the endpoint requires no software updates.
-	    | * If (M2 - M5) == 0, this indicates the endpoint requires software updates,
+	  - | If M2 = 0, this indicates the endpoint requires no software updates.
+	    | If (M2 - M5) == 0, this indicates the endpoint requires software updates,
 	    | but the out-of-date software has an approved exception.
-	    | * Otherwise, this metric is calculated as :code:`(M2 - M5) / M4`
+	    | Otherwise, this metric is calculated as :code:`(M2 - M5) / M4`
 
 Update Effectiveness (Organizational)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
