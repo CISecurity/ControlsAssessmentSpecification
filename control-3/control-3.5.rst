@@ -38,10 +38,6 @@ Measures
 * M5 = List of authorized software products installed on the endpoint which are not at the latest version, but have approved exceptions.
 * M6 = Count of M5
 
-* M1 = The number of authorized software products installed on the endpoint which are not at the latest version.
-* M2 = The number of authorized software products installed on the endpoint (software load).
-* M3 = The number of authorized software products installed on the endpoint which are not at the latest version, but have approved exceptions.
-
 Metrics
 -------
 
