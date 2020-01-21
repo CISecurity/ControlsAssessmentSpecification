@@ -7,24 +7,20 @@ Global variables are denoted by a concatenation of :code:`GV` and a positive int
 
 We encourage you to report any missed global variables by creating a GitHub issue in our publicly available repository TODO: LINK.
 
-.. list-table::
-	:header-rows: 1
+.. list-table:: **Global Variable Listing**
+   :widths: 15 10 30
+   :header-rows: 1
 
-	* - Identifier
-	  - Name
-	  - Description
-    - Source Sub-Control (if applicable)
-    - Notes
-	* - GV1
-	  - Hardware Asset Inventory
-	  - The collection of hardware assets managed by the enterprise.
-    - 1.1
-    - The hardware asset inventory is intended to include physical and virtual hardware and what is commonly referred to in the CIS Controls as systems.
-  * - GV2
-    - Count of Hardware Asset Inventory
-    - The count of the collection of hardware assets managed by the enterprise.
-    - N/A
-    - None
+   * - Identifier
+     - Name
+     - Description
+   * - :code:`GV1`
+     - Hardware Asset Inventory
+     - The collection of hardware assets used throughout the enterprise.
+   * - :code:`GV2`
+     - Count of Hardware Asset Inventory
+     - The count of the collection of hardware assets used throughout the enterprise.
+
 
 
 .. history
