@@ -31,21 +31,21 @@ Inputs
 
 Operations
 ----------
-#. For each 802.1x authenticator, ensure proper configuration
-#. For each 802.1x authentication server, ensure proper configuration, including connection to at least one CMDB server
+#. For each 802.1x authenticator, ensure proper configuration (becomes M5), noting those that are not appropriately configured (becomes M3) and why
+#. For each 802.1x authentication server, ensure proper configuration, including connection to at least one CMDB server (becomes M9), and noting those that are not appropriately configured (becomes M7) and why
 
 Measures
 --------
 * M1 = Boolean: 802.1x authenticators are in use
 * M2 = Boolean: 802.1x authentication servers are in use
 * M3 = List of inappropriately configured 802.1x authenticators
-* M4 = Count of M3
+* M4 = Count of inappropriately configured 802.1x authenticators (count of M3)
 * M5 = List of appropriately configured 802.1x authenticators
-* M6 = Count of M5
+* M6 = Count of appropriately configured 802.1x authenticators (count of M5)
 * M7 = List of inappropriately configured 802.1x authentication servers
-* M8 = Count of M7
+* M8 = Count of inappropriately configured 802.1x authentication servers (count of M7)
 * M9 = List of appropriately configured 802.1x authentication servers
-* M10 = Count of M9
+* M10 = Count of appropriately configured 802.1x authentication servers (count of M9)
 * M11 = Count of 802.1x authentication servers (from Input 2)
 * M12 = Count of 802.1x authenticators (from Input 1)
 

@@ -18,13 +18,13 @@ Dependencies
 
 Inputs
 -----------
-#. The list of DHCP servers
-#. The list of CMDB servers (i.e. asset inventory systems)
+#. The list of DHCP servers - may be derived from :code:`GV12
+#. The list of CMDB servers (i.e. asset inventory systems) - may be derived from :code:`GV12`
 
 Operations
 ----------
-#. For each DHCP server, check whether DHCP logging is enabled
-#. For each CMDB server, check whether DHCP logs are used to update IP addresses
+#. For each DHCP server, check whether DHCP logging is enabled (becomes M2)
+#. For each CMDB server, check whether DHCP logs are used to update IP addresses (becomes M5)
 
 Assumptions
 ^^^^^^^^^^^
@@ -33,15 +33,15 @@ Assumptions
 Measures
 --------
 * M1 = Count of DHCP servers (using Input 1)
-* M2 = List of DHCP servers with logging enabled
-* M3 = Count of M2
+* M2 = List of DHCP servers with logging enabled (compliant list)
+* M3 = Count of DHCP servers with logging enabled
 * M4 = Count of CMDB servers (using Input 2)
-* M5 = List of CMDB servers configured to use DHCP logs to update IP addresses
-* M6 = Count of M5
-* M7 = List of devices in the DHCP server logs that are not included in the CMDB servers
-* M8 = Count of M7
+* M5 = List of CMDB servers configured to use DHCP logs to update IP addresses (compliant list)
+* M6 = Count of CMDB servers configured to use DHCP logs to update IP addresses
+* M7 = List of devices in the DHCP server logs that are not included in the CMDB servers (non-compliant list)
+* M8 = Count of devices in the DHCP server logs that are not included in the CMDB servers
 * M9 = List of devices in the DHCP server logs that are included in the CMDB servers
-* M10 = Count of M9
+* M10 = Count of devices in the DHCP server logs that are included in the CMDB servers
 
 Metrics
 -------

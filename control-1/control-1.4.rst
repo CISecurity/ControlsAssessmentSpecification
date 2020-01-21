@@ -18,8 +18,8 @@ Dependencies
 
 Inputs
 -----------
-#. Endpoint Inventory: The organization's current inventory list (the "to be checked" list).
-#. A "ground truth" inventory list to compare with input 1.  This list would be enhanced by manual verification, but a tool-generated or aggregated list could be substituted here.  This should be an aggregation of the devices detected over a period of time, preferably not from a single scan.
+#. :code:`GV1`: Hardware Asset Inventory
+#. A "ground truth" inventory list to compare with Input 1 (:code:`GV1`).  This list would be enhanced by manual verification, but a tool-generated or aggregated list could be substituted here.  This should be an aggregation of the devices detected over a period of time, preferably not from a single scan.
 #. A write-up of the procedure for adding or removing assets to or from the inventory - only for manual review.
 
 Assumptions
@@ -28,20 +28,20 @@ Assumptions
 
 Operations
 ----------
-* If Input 1 is not provided, this sub-control is measured at a 0 (complete fail).
+* If Input 1 (:code:`GV1`) is not provided, this sub-control is measured at a 0 (complete fail).
 * If Input 2 is not provided, no true accuracy measurement can be made for this sub-control.
 * Calculate the intersection of Input 1 and Input 2, noting items in the inventory and not in "ground truth" and items in "ground truth" not in the inventory.
 
 Measures
 --------
-* M1 = List of items in the intersection of Input 1 and Input 2
-* M2 = Count of items in M1
-* M3 = List of items in Input 2
-* M4 = Count of items in M3
-* M5 = List of items in the inventory and not in "ground truth"
-* M6 = Count of items in M5
-* M7 = List of items not in the inventory and in "ground truth"
-* M8 = Count of items in M7
+* M1 = List of items in the intersection of the hardware asset inventory (Input 1 (:code:`GV1`)) and the "ground truth" inventory list (from Input 2)
+* M2 = Count of the intersection of the hardware asset inventory (Input 1 (:code:`GV1`)) and the "ground truth" inventory list (from Input 2)
+* M3 = List of items in the "ground truth" inventory list (from Input 2)
+* M4 = Count of items in the "ground truth" inventory list (from Input 2)
+* M5 = List of items in the hardware asset inventory (Input 1 (:code:`GV1`)) and not in the "ground truth" inventory list
+* M6 = Count of items in the the hardware asset inventory (Input 1 (:code:`GV`)) and not in the "ground truth" inventory list (from Input 2)
+* M7 = List of items not in the hardware asset inventory (Input 1 (:code:`GV1`)) and in the "ground truth" inventory list (from Input 2)
+* M8 = Count of items not in the hardware asset inventory (Input 1 (:code:`GV1`)) and in the "ground truth" inventory list (from Input 2)
 
 Metrics
 -------

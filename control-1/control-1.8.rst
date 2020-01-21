@@ -19,21 +19,19 @@ Dependencies
 
 Inputs
 ------
-#. The list of endpoints
+#. :code:`GV1`: Hardware Asset Inventory
+#. :code:`GV2`: Count of Hardware Asset Inventory
 
 Operations
 ----------
-#. Enumerate hardware devices (physical and virtual) from the endpoint inventory
-#. For each hardware device, examine device client authentication certificate configuration noting appropriate and inappropriate configurations
+#. For each endpoint in the hardware asset inventory, examine the endpoint's client authentication certificate configuration noting appropriate (becomes M1) and inappropriate (becomes M2) configurations
 
 Measures
 --------
-* M1 = List of hardware devices (operation 1)
-* M2 = List of appropriately configured hardware devices (operation 2)
-* M3 = List of inappropriately configured hardware devices (operation 2)
-* M4 = Count of hardware devices (count of M1)
-* M5 = Count of appropriately configured hardware devices (count of M2)
-* M6 = Count of inappropriately configured hardware devices (count of M3)
+* M1 = List of appropriately configured endpoints (operation 2)
+* M2 = List of inappropriately configured endpoints (operation 2)
+* M3 = Count of appropriately configured hardware devices (count of M1)
+* M4 = Count of inappropriately configured hardware devices (count of M2)
 
 Metrics
 -------
@@ -45,7 +43,7 @@ Coverage
 	* - **Metric**
 	  - | The ratio of appropriately configured hardware devices to the number of hardware devices
 	* - **Calculation**
-	  - :code:`M5 / M4`
+	  - :code:`M4 / GV2`
 
 .. history
 .. authors

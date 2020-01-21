@@ -51,3 +51,4 @@ The "Contributing" section provides details on how you can contribute to the Con
    CIS Control 18: Application Software Security <control-18/index>
    CIS Control 19: Incident Response and Management <control-19/index>
    CIS Control 20: Penetration Tests and Red Team Exercises <control-20/index>
+   Appendix A: Global Variable Listing <appendix-a/index>

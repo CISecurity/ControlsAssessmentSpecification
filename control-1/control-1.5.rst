@@ -18,27 +18,26 @@ Dependencies
 
 Inputs
 -----------
-#. Detailed endpoint inventory
+#. :code:`GV1`: Hardware Asset Inventory
+#. :code:`GV2`: Count of Hardware Asset Inventory
 
 Operations
 ----------
-#. For each endpoint, identify detailed information, such as:
+#. For each endpoint represented in the hardware asset inventory (Input 1 (:code:`GV1`)), identify detailed information, such as:
 	* Network Address
 	* Hardware Address (applies to virtual endpoints)
 	* Machine name
 	* Data asset owner
 	* Assigned department
-#. Identify endpoints with all detailed information identified
-#. For each endpoint, identify network connection approval
+#. Identify endpoints with all detailed information identified (from Operation 1)
+#. For each endpoint, identify network connection approval (from Input 1 (:code:`GV1`))
 
 Measures
 --------
-* M1 = List of endpoints in inventory
-* M2 = Count of M1
+* M1 = List of endpoints with all detailed information
+* M2 = Count of endpoints with all detailed information
 * M3 = List of endpoints with network connection approval
-* M4 = Count of M3
-* M5 = List of endpoints with all detailed information
-* M6 = Count of M5
+* M4 = Count of endpoints with network connection approval
 
 Metrics
 -------
@@ -51,7 +50,7 @@ Endpoint Inventory Quality
 	  - | The ratio of endpoints with all detailed information to the total number of inventoried
 	    | endpoints
 	* - **Calculation**
-	  - :code:`M6 / M2`
+	  - :code:`M2 / GV2`
 
 Endpoint Inventory Authorization Quality
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -60,7 +59,7 @@ Endpoint Inventory Authorization Quality
 	* - **Metric**
 	  - | The ratio of endpoints with approval to connect to the network
 	* - **Calculation**
-	  - :code:`M4 / M2`
+	  - :code:`M4 / GV2`
 
 .. history
 .. authors
