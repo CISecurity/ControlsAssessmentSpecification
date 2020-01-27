@@ -8,7 +8,7 @@ Global variables are denoted by a concatenation of :code:`GV` and a positive int
 We encourage you to report any missed global variables by creating a GitHub issue in our publicly available repository TODO: LINK.
 
 .. list-table:: **Global Variable Listing**
-   :widths: 15 10 30
+   :widths: 5 15 30
    :header-rows: 1
 
    * - Identifier

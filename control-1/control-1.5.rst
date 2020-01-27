@@ -1,3 +1,5 @@
+.. include:: ../.variable-lookup.rst
+
 1.5: Maintain Asset Inventory Information
 =========================================================
 Ensure that the hardware asset inventory records the network address, hardware address, machine name, data asset owner, and department for each asset and whether the hardware asset has been approved to connect to the network.
@@ -18,7 +20,7 @@ Dependencies
 
 Inputs
 -----------
-#. :code:`GV1`: Hardware Asset Inventory
+#. |GV1-label|: |GV1-name|
 #. :code:`GV2`: Count of Hardware Asset Inventory
 
 Operations

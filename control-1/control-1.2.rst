@@ -1,3 +1,5 @@
+.. include:: ../.variable-lookup.rst
+
 1.2: Use a Passive Asset Discovery Tool
 =======================================
 

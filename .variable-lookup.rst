@@ -1,0 +1,3 @@
+.. |GV1-name| replace:: Hardware Asset Inventory
+.. |GV1-label| replace:: GV1
+.. |GV1-description| replace::The set of hardware assets managed by the enterprise.
