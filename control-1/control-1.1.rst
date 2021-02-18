@@ -1,7 +1,7 @@
 1.1: Utilize an Active Discovery Tool
 =====================================
 
-Utilize an active discovery tool to identify devices connected to the organization’s network and update the hardware asset inventory.
+Utilize an active discovery tool to identify devices connected to the organization’s network and update the enterprise asset inventory.
 
 .. list-table::
 	:header-rows: 1
