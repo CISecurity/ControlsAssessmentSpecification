@@ -1,7 +1,7 @@
-1.2: Use a Passive Asset Discovery Tool
+1.2: Address Unauthorized Assets
 =======================================
 
-Utilize a passive discovery tool to identify devices connected to the organization’s network and automatically update the organization’s hardware asset inventory.
+Ensure that a process exists to address unauthorized assets on a weekly basis. The enterprise may choose to remove the asset from the network, deny the asset from connecting remotely to the network, or quarantine the asset.
 
 .. list-table::
 	:header-rows: 1
@@ -10,49 +10,53 @@ Utilize a passive discovery tool to identify devices connected to the organizati
 	  - Security Function
 	  - Implementation Groups
 	* - Devices
-	  - Identify
-	  - 3
+	  - Respond
+	  - 1, 2, 3
 
 Dependencies
 ------------
-* Sub-control 12.1: Maintain an Inventory of Network Boundaries
+* Safeguard 1.1: Establish and Maintain Detailed Enterprise Asset Inventory
 
 Inputs
 ------
-#. The list of the organization's networks
-#. The list of passive asset discovery tools in use by the organization. For each, include the location of the tool's configuration information and which networks it covers.
-#. Approved configuration(s) for each passive asset discovery tool. Configurations should include the settings necessary for the tool to be able to update the organization's hardware asset inventory.
+#. Updated Detailed Enterprise Asset Inventory from Safeguard 1.1
+#. The list of discovered assets in the Aggregate Enterprise Asset Inventory that are not authorized (not in the Updated Enterprise Asset Inventory). 
+#. The enterprise defined time frame for removing unauthorized assets (weekly or more often).
 
 Operations
 ----------
-#. For each passive asset discovery tool provided in Input 2, check the tool's configuration against the appropriate approved configuration from Input 3.
-	#. Create a list of those tools that are properly configured (M1)
-	#. Create a list of those tools that are improperly configured (M2) noting the deviations from proper configuration
-#. For each of the organization's networks provided in Input 1, check Input 2 and M1 to ensure that at least one properly configured passive asset discovery tool covers that network.
-	#. Create a list of the organization's networks that have coverage from at least one properly configured passive asset discovery tool (M3)
-	#. Create a list of the organization's networks that do not have coverage from any properly configured passive asset discovery tools (M4)
+If the optional disposition list is provided, the checks would be tailored to those dispositions.  For the following, assume no disposition list is available:
+
+#. At the time frame specified by Input 3, for each unauthorized asset in Input 2, check to see if the asset is present in the updated asset inventory from Input 1.
+#. For those items in Input 2 that are not in Input 1, scan the network to determine if the item is still reachable on the network.
+
+Assumptions
+^^^^^^^^^^^
+If the item is not reachable, it may be reasonable to assume it has been removed from the network and therefore dealt with.
 
 Measures
 --------
-* M1 = List of properly configured passive asset discovery tools (compliant tool list)
-* M2 = List of improperly configured passive asset discovery tools (non-compliant tool list)
-* M3 = List of organization's networks with coverage from at least one properly configured passive asset discovery tool (compliant network list)
-* M4 = List of organization's networks that do not have coverage from any properly configured passive asset discovery tool (non-compliant network list)
-* M5 = Count of networks with coverage from at least one properly configured passive asset discovery tool (count of M3)
-* M6 = Total count of the organization's networks (count of Input 1)
+* M1 = Count of Input 1
+* M2 = Count of Input 2
+* M3 = Timeframe in days for Input 3
+* M4 = Count of items in Input 1 that are unreachable
+* M5 = Count of items in Input 2 that are unreachable
+ 
 
 Metrics
 -------
+If M3 is greater than seven days, then this safeguard is measured at a 0 and receives a failing score. The other metrics don't apply.
 
 Coverage
 ^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of the organization's networks with coverage from at least one properly
-	    | configured passive asset discovery tool to the total number of networks
+	  - | The ratio of unaccounted for, unauthorized assets, to the total assets in the asset
+	    | inventory.
 	* - **Calculation**
-	  - :code:`M5 / M6`
+	  - | If the value of M5 is 0, there are no unauthorized assets that remain unaccounted for.
+	    | In this case, the value of the metric is 1.  Otherwise, the value is :code:`(M1 - M5) / M5`
 
 .. history
 .. authors
