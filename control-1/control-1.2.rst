@@ -19,7 +19,7 @@ Dependencies
 
 Inputs
 ------
-#. Updated Detailed Enterprise Asset Inventory from Safeguard 1.1
+#. Detailed Enterprise Asset Inventory from Safeguard 1.1
 #. The list of discovered assets in the Aggregate Enterprise Asset Inventory that are not authorized (not in the Updated Enterprise Asset Inventory). 
 #. The enterprise defined time frame for removing unauthorized assets (weekly or more often).
 
