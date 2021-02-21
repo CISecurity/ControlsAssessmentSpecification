@@ -41,15 +41,16 @@ Measures
 --------
 * M1 = Count of items in Input 1
 * M2 = Count of items in Input 2
-* M3 = Count of new items in the intersection of Input 1 and Input 2
+* M3 = Count of items in the intersection of Input 1 and Input 2
 * M4 = Count of items in Input 1 not found in Input 2
-* M5 = Count of items in Input 1 that do not contain detailed information
-* M6 = Months since the last update to Input 1
+* M5 = Count of items in Input 2 not found in Input 1
+* M6 = Count of items in Input 1 that do not contain detailed information
+* M7 = Months since the last update to Input 1
 
 Metrics
 -------
 * If M1 is not provided or available, then this safeguard is measured at a 0 and receives a failing score. The other metrics don't apply.
-* If M6 is greater than six months, then this safeguard is measured at a 0 and receives a failing score. The other metrics don't apply.
+* If M7 is greater than six months, then this safeguard is measured at a 0 and receives a failing score. The other metrics don't apply.
 
 Accuracy Score
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -62,7 +63,7 @@ Accuracy Score
 	* - **Metric**
 	  - | What percentage of the current enterprise asset inventory contained necessary detailed information?
 	* - **Calculation**
-	  - :code:`M5 / M1`
+	  - :code:`M6 / M1`
 
 Procedural Review
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
