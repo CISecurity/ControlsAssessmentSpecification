@@ -56,11 +56,11 @@ Accuracy Score
 .. list-table::
 
 	* - **Metric**
-	  - |What percentage of the Bi-annual aggregate endpoint inventory is accounted for in the current enterprise asset inventory?
+	  - | What percentage of the Bi-annual aggregate endpoint inventory is accounted for in the current enterprise asset inventory?
 	* - **Calculation**
 	  - :code:`M3 / M2`
 	* - **Metric**
-	  - |What percentage of the current enterprise asset inventory contained necessary detailed information?
+	  - | What percentage of the current enterprise asset inventory contained necessary detailed information?
 	* - **Calculation**
 	  - :code:`M5 / M1`
 
