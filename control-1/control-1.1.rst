@@ -31,7 +31,9 @@ Assumptions
 
 Operations
 ----------
-#. Calculate the intersection of Input 1 and Input 2, noting items in Input 1 that are not in Input 2 (M 3) and items in Input 2 not in Input 1 (M1).
+#. Calculate the intersection of Input 1 and Input 2
+	#. Note items in Input 1 that are not in Input 2 (M 3) 
+	#. Note items in Input 2 not in Input 1 (M1).
 #. Check items in Input 1 for complete or missing detailed information
 	#. Note items that have complete information (M4).
 	#. Note items that do not have complete information or missing information (M7).
