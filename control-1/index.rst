@@ -21,7 +21,7 @@ Another benefit of complete enterprise asset management is supporting incident r
    :maxdepth: 1
    :name: toc-control-1
 
-   1.1: UEstablish and Maintain Detailed Enterprise Asset Inventory <control-1.1>
+   1.1: Establish and Maintain Detailed Enterprise Asset Inventory <control-1.1>
    1.2: Address Unauthorized Assets <control-1.2>
    1.3: Utilize an Active Discovery Tool <control-1.3>
    1.4: Use Dynamic Host Configuration Protocol (DHCP) Logging to Update Enterprise Asset Inventory <control-1.4>
