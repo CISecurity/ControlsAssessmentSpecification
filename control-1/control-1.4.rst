@@ -1,6 +1,6 @@
-1.4: Maintain Detailed Asset Inventory
+1.4: Use Dynamic Host Configuration Protocol (DHCP) Logging to Update Enterprise Asset Inventory
 ======================================
-Maintain an accurate and up-to-date inventory of all technology assets with the potential to store or process information. This inventory shall include all assets, whether connected to the organization’s network or not.
+Use DHCP logging on all DHCP servers or Internet Protocol (IP) address management tools to update the enterprise’s asset inventory. Review and use logs to update the enterprise’s asset inventory weekly, or more frequently.
 
 .. list-table::
 	:header-rows: 1
@@ -10,56 +10,57 @@ Maintain an accurate and up-to-date inventory of all technology assets with the 
 	  - Implementation Groups
 	* - Devices
 	  - Identify
-	  - 1, 2, 3
+	  - 2, 3
 
 Dependencies
 ------------
-* None
+* Safeguard 1.1: Establish and Maintain Detailed Enterprise Asset Inventory
 
 Inputs
 -----------
-#. Endpoint Inventory: The organization's current inventory list (the "to be checked" list).
-#. A "ground truth" inventory list to compare with input 1.  This list would be enhanced by manual verification, but a tool-generated or aggregated list could be substituted here.  This should be an aggregation of the devices detected over a period of time, preferably not from a single scan.
-#. A write-up of the procedure for adding or removing assets to or from the inventory - only for manual review.
-
-Assumptions
-^^^^^^^^^^^
-* Devices belonging to the organization, but not connected to the organization's network, require manual discovery in order to be included in the "ground truth" inventory.
+#. List of DHCP servers
+#. List of CMDB servers
 
 Operations
 ----------
-* If Input 1 is not provided, this sub-control is measured at a 0 (complete fail).
-* If Input 2 is not provided, no true accuracy measurement can be made for this sub-control.
-* Calculate the intersection of Input 1 and Input 2, noting items in the inventory and not in "ground truth" and items in "ground truth" not in the inventory.
+* For each DHCP server, check whether DHCP logging is enabled
+* For each CMDB server, check whether DHCP logs are used to update IP addresses
+
+Assumptions
+^^^^^^^^^^^
+* CMDB servers are configured to pull from DHCP logs
 
 Measures
 --------
-* M1 = List of items in the intersection of Input 1 and Input 2
-* M2 = Count of items in M1
-* M3 = List of items in Input 2
-* M4 = Count of items in M3
-* M5 = List of items in the inventory and not in "ground truth"
-* M6 = Count of items in M5
-* M7 = List of items not in the inventory and in "ground truth"
-* M8 = Count of items in M7
+* M1 = Count of Input 1
+* M2 = Count of DHCP servers with logging enabled
+* M3 = Count of Input 2
+* M4 = Count of CMDB servers configured to use DHCP logs to update IP addresses
+* M5 = Count of devices in the DHCP server logs that are not included in the CMDB servers
+* M6 = Count of devices in the DHCP server logs that are included in the CMDB servers
 
 Metrics
 -------
+* M4 > 0 indicates a non up-to-date asset inventory
 
-Accuracy Score
+DHCP Logging Quality
 ^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | What percentage of the "ground truth" inventory is accounted for in the organization's
-	    | current asset inventory?
+	  - | Ratio of appropriately configured DHCP logging enabled to known DHCP servers
 	* - **Calculation**
-	  - :code:`M2 / M4`
+	  - :code:`M2 / M1`
 
+CMDB Configuration Quality
+^^^^^^^^^^^^^^
+.. list-table::
 
-Procedure Review
-^^^^^^^^^^^^^^^^
-Second, manual review/rating of the inventory procedures, to include adding and removing assets, and the time allowable or expected, after acquisition or disposal of assets.
+	* - **Metric**
+	  - | Ratio of appropriately configured CMDB servers using DHCP logging to update
+	  - | IP addresses
+	* - **Calculation**
+	  - :code:`M4 / M3`
 
 
 .. history
