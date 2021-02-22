@@ -1,6 +1,6 @@
-1.5: Maintain Asset Inventory Information
+1.5: Use a Passive Asset Discovery Tool
 =========================================================
-Ensure that the hardware asset inventory records the network address, hardware address, machine name, data asset owner, and department for each asset and whether the hardware asset has been approved to connect to the network.
+Use a passive discovery tool to identify assets connected to the enterprise’s network. Review and use scans to update the enterprise’s asset inventory at least weekly, or more frequently.
 
 .. list-table::
 	:header-rows: 1
@@ -9,58 +9,50 @@ Ensure that the hardware asset inventory records the network address, hardware a
 	  - Security Function
 	  - Implementation Groups
 	* - Devices
-	  - Identify
-	  - 2, 3
+	  - Detect
+	  - 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Safeguard 4.2: Establish and Maintain a Secure Configuration Process for Network Infrastructure
+* Safeguard 12.4: Establish and Maintain Architecture Diagram(s)
 
 Inputs
 -----------
-#. Detailed endpoint inventory
+#. List of the enterprise’s networks
+#. List of passive asset discovery tools in use by the organization. For each, include the location of the tool's configuration information and which networks it covers.
+#. Approved configuration(s) for each passive asset discovery tool. Configurations should include the settings necessary for the tool to be able to update the enterprise's asset inventory
 
 Operations
 ----------
-#. For each endpoint, identify detailed information, such as:
-	* Network Address
-	* Hardware Address (applies to virtual endpoints)
-	* Machine name
-	* Data asset owner
-	* Assigned department
-#. Identify endpoints with all detailed information identified
-#. For each endpoint, identify network connection approval
+#. For each passive asset discovery tool provided in Input 2, check the tool's configuration against the appropriate approved configuration from Input 3.
+	#. Create a list of those tools that are properly configured (becomes M1)
+	#. Create a list of those tools that are improperly configured (becomes M2) noting the deviations from proper configuration
+#. For each of the enterprise's networks provided in Input 1, check to see if at least one properly configured passive asset discovery tool from M1 covers that network.
+	#. Create a list of the organization's networks that have coverage from at least one properly configured passive asset discovery tool (M3)
+	#. Create a list of the organization's networks that do not have coverage from any properly configured passive asset discovery tools (M4)
 
 Measures
 --------
-* M1 = List of endpoints in inventory
-* M2 = Count of M1
-* M3 = List of endpoints with network connection approval
-* M4 = Count of M3
-* M5 = List of endpoints with all detailed information
-* M6 = Count of M5
+* M1 = Count of properly configured passive asset discovery tools
+* M2 = Count of improperly configured passive asset discovery tools
+* M3 = Count of organization's networks that are covered by properly configured passive discovery tools
+* M4 = Count of organization's networks that are not covered by properly configured passive discovery tools
+* M5 = Count of Input 1
 
 Metrics
 -------
 
-Endpoint Inventory Quality
+Coverage
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of endpoints with all detailed information to the total number of inventoried
-	    | endpoints
+	  - | The ratio of the organization's networks with coverage from at least one properly
+	    | configured passive asset discovery tool to the total number of networks
 	* - **Calculation**
-	  - :code:`M6 / M2`
+	  - :code:`M3 / M5`
 
-Endpoint Inventory Authorization Quality
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. list-table::
-
-	* - **Metric**
-	  - | The ratio of endpoints with approval to connect to the network
-	* - **Calculation**
-	  - :code:`M4 / M2`
 
 .. history
 .. authors
