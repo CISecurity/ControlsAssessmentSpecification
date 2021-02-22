@@ -62,7 +62,7 @@ Accuracy Score
 	* - **Calculation**
 	  - :code:`M3 / M2`
 	* - **Metric**
-	  - | What percentage of the current enterprise asset inventory did not contained necessary detailed information?
+	  - | What percentage of the current enterprise asset inventory contains necessary detailed information?
 	* - **Calculation**
 	  - :code:`M8 / M1`
 
