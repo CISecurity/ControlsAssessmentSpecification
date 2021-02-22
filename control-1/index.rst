@@ -1,28 +1,31 @@
-CIS Control 1: Inventory and Control of Hardware Assets
+CIS Control 1: Inventory and Control of Enterprise Assets
 =======================================================
 
-Actively manage (inventory, track, and correct) all hardware devices on the network so that only authorized devices are given access, and unauthorized and unmanaged devices are found and prevented from gaining access.
+Actively manage (inventory, track, and correct) all enterprise assets (end-user devices, including portable and mobile; network devices; non-computing/Internet of Things (IoT) devices; and servers) connected to the infrastructure, physically, virtually, remotely, and those within cloud environments, to accurately know the totality of assets that need to be monitored and protected within the enterprise. This will also support identifying unauthorized and unmanaged assets to remove or remediate.
 
 **Why is this CIS Control Critical?**
 
-Attackers, who can be located anywhere in the world, are continuously scanning the address space of target organizations, waiting for new and possibly unprotected systems to be attached to the network. They are particularly interested in devices which come and go off of the enterprise’s network such as laptops or Bring-Your-Own-Device (BYOD) which might be out of synchronization with security updates or might already be compromised. Attacks can take advantage of new hardware that is installed on the network one evening but not configured and patched with appropriate security updates until the following day. Even devices that are not visible from the Internet can be used by attackers who have already gained internal access and are hunting for internal pivot points or victims. Additional systems that connect to the enterprise’s network (e.g., demonstration systems, temporary test systems, guest networks) should also be managed carefully and/or isolated in order to prevent adversarial access from affecting the security of enterprise operations.
+Enterprises cannot defend what they do not know they have. Managed control of all enterprise assets also plays a critical role in security monitoring, incident response, system backup, and recovery. Enterprises should know what data is critical to them, and proper asset management will help identify those enterprise assets that hold or manage this critical data, so appropriate security controls can be applied. 
 
-Large, complex enterprises understandably struggle with the challenge of managing intricate, fast-changing environments. But attackers have shown the ability, patience, and willingness to “inventory and control” our assets at very large scale in order to support their opportunities.
+External attackers are continuously scanning the internet address space of target enterprises, premise-based or in the cloud, identifying possibly unprotected assets attached to enterprises' networks. Attackers can take advantage of new assets that are installed, yet not securely configured and patched. Internally, unidentified assets can also have weak security configurations that can make them vulnerable to web or email-based malware; and adversaries can leverage weak security configurations for traversing the network, once they are inside.
 
-Managed control of all devices also plays a critical role in planning and executing system backup, incident response, and recovery.
+Additional assets that connect to the enterprise’s network (e.g., demonstration systems, temporary test systems, guest networks, etc.) should be identified and/or isolated, in order to prevent adversarial access from affecting the security of enterprise operations.
+
+Large, complex, dynamic enterprises understandably struggle with the challenge of managing intricate, fast-changing environments. However, attackers have shown the ability, patience, and willingness to “inventory and control” our enterprise assets at very large scale in order to support their opportunities.
+
+Another challenge is that portable end-user devices will periodically join a network and then disappear, making the inventory of currently available assets very dynamic. Likewise, cloud environments and virtual machines can be difficult to track in asset inventories when they are shut down or paused.
+Another benefit of complete enterprise asset management is supporting incident response. Both when investigating the origination of network traffic from an asset on the network, and to be able to identify all potentially vulnerable, or impacted, assets of similar type or location during an incident.
+
 
 .. toctree::
    :maxdepth: 1
    :name: toc-control-1
 
-   1.1: Utilize an Active Discovery Tool <control-1.1>
-   1.2: Use a Passive Asset Discovery Tool <control-1.2>
-   1.3: Use DHCP Logging to Update Asset Inventory <control-1.3>
-   1.4: Maintain Detailed Asset Inventory <control-1.4>
-   1.5: Maintain Asset Inventory Information <control-1.5>
-   1.6: Address Unauthorized Assets <control-1.6>
-   1.7: Deploy Port Level Access Control <control-1.7>
-   1.8: Utilize Client Certificates to Authenticate Hardware Assets <control-1.8>
+   1.1: UEstablish and Maintain Detailed Enterprise Asset Inventory <control-1.1>
+   1.2: Address Unauthorized Assets <control-1.2>
+   1.3: Utilize an Active Discovery Tool <control-1.3>
+   1.4: Use Dynamic Host Configuration Protocol (DHCP) Logging to Update Enterprise Asset Inventory <control-1.4>
+   1.5: Use a Passive Asset Discovery Tool <control-1.5>
    
 .. history
 .. authors
