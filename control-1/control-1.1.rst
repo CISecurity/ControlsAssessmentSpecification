@@ -31,11 +31,11 @@ Assumptions
 
 Operations
 ----------
-#. If Input 2 is not provided, no true accuracy measurement can be made for this safeguard.
-#. If Input 3 is greater than six months, this safeguard is measured at a 0.
-#. Calculate the intersection of Input 1 and Input 2, noting items in Input 1 that are not in Input 2 (M 3) and items in Input 2 not in Input 1 (M 1).
-#. Identify and note items in Input 1 that lack any detailed information or information is incomplete (M 4).
-#. Calculate the time (in months) since the last update to Input 1 by using current date and Input 4 (M 6).
+#. Calculate the intersection of Input 1 and Input 2, noting items in Input 1 that are not in Input 2 (M 3) and items in Input 2 not in Input 1 (M1).
+#. Check items in Input 1 for complete or missing detailed information
+	#. Note items that have complete information (M4).
+	#. Note items that do not have complete information or missing information (M7).
+#. Calculate the time (in months) since the last update to Input 1 by using current date and Input 4 (M8).
 
 Measures
 --------
@@ -44,13 +44,14 @@ Measures
 * M3 = Count of items in the intersection of Input 1 and Input 2
 * M4 = Count of items in Input 1 not found in Input 2
 * M5 = Count of items in Input 2 not found in Input 1
-* M6 = Count of items in Input 1 that do not contain detailed information
-* M7 = Months since the last update to Input 1
+* M6 = Count of items in Input 1 that contain all necessary detailed information
+* M7 = Count of items in Input 1 that do not contain detailed information
+* M8 = Months since the last update to Input 1
 
 Metrics
 -------
 * If M1 is not provided or available, then this safeguard is measured at a 0 and receives a failing score. The other metrics don't apply.
-* If M7 is greater than six months, then this safeguard is measured at a 0 and receives a failing score. The other metrics don't apply.
+* If M8 is greater than six months, then this safeguard is measured at a 0 and receives a failing score. The other metrics don't apply.
 
 Accuracy Score
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -61,9 +62,9 @@ Accuracy Score
 	* - **Calculation**
 	  - :code:`M3 / M2`
 	* - **Metric**
-	  - | What percentage of the current enterprise asset inventory did not contain necessary detailed information?
+	  - | What percentage of the current enterprise asset inventory did not contained necessary detailed information?
 	* - **Calculation**
-	  - :code:`M6 / M1`
+	  - :code:`M8 / M1`
 
 Procedural Review
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
