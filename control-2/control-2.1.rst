@@ -18,7 +18,7 @@ Dependencies
 
 Inputs
 ------
-#. The authorized software inventory with detailed information including: timestamp indicating both last updated and last verified values, timestamp indicating installation date, operating system, software name, software version, software publisher, authorization status, business purpose, supported/unsupported. Where applicable, additionally include URL, app store(s), deployment mechanism, and decommission date.Authorized Software List: The authorized software list (containing a timestamp indicating both last updated and last verified values).
+#. The authorized software inventory with detailed information including: timestamp indicating both last updated and last verified values, timestamp indicating installation date, operating system, software name, software version, software publisher, authorization status, business purpose, supported/unsupported. Where applicable, additionally include URL, app store(s), deployment mechanism, and decommission date.
 #. The date of the last update to the authorized software inventory.
 
 Operations
