@@ -27,7 +27,7 @@ Inputs
 Operations
 ----------
 #. Using Input 1 identify and note assets capable of supporting allowlisting software (some assets may not enable third-party software installation or otherwise have constrained environments precluding the use of allowlisting software) (M1).
-#. Using the output from Operation 1 and Input 2
+#. Using the output from Operation 1 and authorizes software inventory from Input 2
 	#. Identify and note allowlisting capable assets with allowlisting software installed (M2)
 	#. Identify and note allowlisting capable assets without allowlisting software installed (M3)
 #. For each asset with allowlisting software installed (M2) from Operation 2 use Input 3 to check and
