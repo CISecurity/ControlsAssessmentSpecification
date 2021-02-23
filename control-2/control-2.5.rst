@@ -23,6 +23,7 @@ Inputs
 #. Detailed enterprise asset inventory
 #. Authorized software inventory with detailed information
 #. Approved configuration (s) for allowlisting software 
+#. Date of last assessment of this safeguard
 
 Operations
 ----------
@@ -33,6 +34,7 @@ Operations
 #. For each asset with allowlisting software installed (M2) from Operation 2 use Input 3 to check and
 	#. Note properly configured software (M4)
 	#. Note improperly configured software (M5)
+#. Compare Input 4 to current date and note timeframe in months (M6)
 
 Measures
 --------
@@ -41,9 +43,11 @@ Measures
 * M3 = Count of enterprise assets capable of supporting allowlisting software and do not have the software installed
 * M4 = Count of enterprise assets with allowlisting software that is properly configured 
 * M5 = Count of enterprise assets with allowlisting software that is properly configured
+* M6 = Timeframe of last assessment of this safeguard
 
 Metrics
 -------
+* If M6 is greater than six months, then this safeguard is measured at a 0 and receives a failing score. The other metrics don’t apply.
 
 Allowlisting Installation Coverage
 ^^^^^^^^
