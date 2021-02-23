@@ -1,6 +1,6 @@
-2.4: Track Software Inventory Information
+2.4: Utilize Automated Software Inventory Tools
 =========================================================
-The software inventory system should track the name, version, publisher, and install date for all software, including operating systems authorized by the organization.
+Utilize software inventory tools, when possible, throughout the enterprise to automate the discovery and documentation of installed software.
 
 .. list-table::
 	:header-rows: 1
@@ -9,57 +9,46 @@ The software inventory system should track the name, version, publisher, and ins
 	  - Security Function
 	  - Implementation Groups
 	* - Applications
-	  - Identify
+	  - Detect
 	  - 2, 3
 
 Dependencies
 ------------
-* Sub-control 2.3: Utilize Software Inventory Tools
+* Safeguard 1.1: Establish and Maintain Detailed Enterprise Asset Inventory
 
 Inputs
 ------
-#. Detailed software inventory
+#. Detailed enterprise asset inventory
+#. List of software inventory tools
 
 Operations
 ----------
-#. For each entry in the software inventory, including operating systems, identify detailed information such as:
-	* Software name (market name)
-	* Software version (market version)
-	* Software publisher
-	* Installation date (timestamp)
-#. For each entry in the software inventory, including operating systems, identify authorization state
-#. Identify software with all detailed information identified
+#. Use Input 1 to identify software capable assets.
+	#. Note software capable assets (M1)
+	#. Note assets unable to support software (M2)
+#. For each software capable asset identified in Operation 1
+	#. Identify and note if the asset is covered by at least one software inventory tool (M3)
+	#. Identify and note if the asset is not covered by at least one software inventory tool (M4)
 
 Measures
 --------
-* M1 = Count of entries in software inventory (from Input 1)
-* M2 = List of entries authorized for installation
-* M3 = Count of M2
-* M4 = List of entries not authorized for installation
-* M5 = Count of M4
-* M6 = List of entries with all detailed information
-* M7 = Count of M6
-* M8 = List of entries without all detailed information
-* M9 = Count of M8
+* M1 = Count of software capable assets
+* M2 = Count of assets unable to to support software
+* M3 = Count of assets covered by software inventory tools
+* M4 = Count of assets not covered by software inventory tools
+* M5 = Count of Input 2
 
 Metrics
 -------
+* If M5 is 0 or unavailable, then this safeguard is measured at a 0 and receives a failing score. The other metrics don’t apply.
 
-Inventory Quality
+Inventory Tool Coverage
 ^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of entries with all detailed information to the total number of entries
-	* - **Calculation**
-	  - :code:`M7 / M1`
-
-Inventory Authorization Quality
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. list-table::
-
-	* - **Metric**
-	  - | The ratio of entries authorized to be installed to the total number of entries
+	  - | The percentage of endpoints covered by software inventory tools to the total
+	  - | number of applicable endpoints
 	* - **Calculation**
 	  - :code:`M3 / M1`
 
