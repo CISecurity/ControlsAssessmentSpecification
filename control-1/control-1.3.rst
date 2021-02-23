@@ -28,7 +28,7 @@ Inputs
 
 Assumptions
 ^^^^^^^^^^^
-* The asset discovery tools on the provided list are active asset discovery tools, as opposed to passive asset discovery tools (verification of this is not performed during the following operations).
+#. The asset discovery tools on the provided list are active asset discovery tools, as opposed to passive asset discovery tools (verification of this is not performed during the following operations).
 
 Operations
 ----------
