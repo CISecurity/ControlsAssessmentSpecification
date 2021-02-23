@@ -21,14 +21,14 @@ Inputs
 #. List of DHCP servers
 #. List of CMDB servers
 
+Assumptions
+^^^^^^^^^^^
+* CMDB servers are configured to pull from DHCP logs
+
 Operations
 ----------
 * For each DHCP server, check whether DHCP logging is enabled
 * For each CMDB server, check whether DHCP logs are used to update IP addresses
-
-Assumptions
-^^^^^^^^^^^
-* CMDB servers are configured to pull from DHCP logs
 
 Measures
 --------
