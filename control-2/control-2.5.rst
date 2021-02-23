@@ -43,7 +43,7 @@ Measures
 * M3 = Count of enterprise assets capable of supporting allowlisting software and do not have the software installed
 * M4 = Count of enterprise assets with allowlisting software that is properly configured 
 * M5 = Count of enterprise assets with allowlisting software that is properly configured
-* M6 = Timeframe of last assessment of this safeguard
+* M6 = Timeframe since last assessment of this safeguard
 
 Metrics
 -------
