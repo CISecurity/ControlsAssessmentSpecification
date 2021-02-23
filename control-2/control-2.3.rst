@@ -1,6 +1,6 @@
-2.3: Utilize Software Inventory Tools
+2.3: Address Unauthorized Software
 =========================================================
-Utilize software inventory tools throughout the organization to automate the documentation of all software on business systems.
+Ensure that unauthorized software is either removed from use on enterprise assets or receives a documented exception. Review monthly, or more frequently..
 
 .. list-table::
 	:header-rows: 1
@@ -10,62 +10,58 @@ Utilize software inventory tools throughout the organization to automate the doc
 	  - Implementation Groups
 	* - Applications
 	  - Identify
-	  - 2, 3
+	  - 1, 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-
-Assumptions
-^^^^^^^^^^^
-* The documentation referenced by this sub-control intends to mean an enumeration of software load on endpoints capable of running installed software
-* A business system is any endpoint owned or operated by the enterprise/organization
-* The CMDB does not contain and up-to-date software load for each endpoint in its inventory
+* Safeguard 1.1: Establish and Maintain Detailed Enterprise Asset Inventory
+* Safeguard 2.1: Establish and Maintain a Software Inventory
 
 Inputs
 ------
-#. Endpoint inventory
-#. List of software inventory tools
+#. Authorized software list with detailed information
+#. Detailed enterprise asset inventory
+#. Enterprise defined timeframe for scanning of enterprise assets.
+#. Enterprise defined allowable timeframe for resolution of discovered unauthorized software (recommend at least monthly)
+
+Assumptions
+--------
+#. The scanning schedule timeframe is greater than the enterprise defined allowable timeframe for resolution of discovered unauthorized software. 
 
 Operations
-----------
-#. For each software inventory, count covered endpoints and calculate the aggregate (becomes M2)
-#. Count number of endpoints loadable with software (becomes M3)
+--------
+#. Identify the software capable enterprise assets in Input 2 
+#. Scan the assets identified in Operation 1 and note software present on each asset (M1)
+#. Compare the scan results to the authorized software list in Input 1
+	#. Note unauthorized software identified on assets (M2)
+#. Conduct subsquent scan of assets identified in Operation 1 as dictated by timeframe in Input 3
+	#. Compare to list generated in Operation 3 (M2)
+#. For each software still present in Operation 4, check the authorized software list in Input 1
+	#. Software that remains installed and is not listed in Input 1 is placed on the unaddressed software list (M3).
 
 Measures
 --------
-* M1 = Count of software inventory tools (from Input 2)
-* M2 = List of endpoints covered by software inventory tools
-* M3 = Count of M2
-* M4 = List of endpoints not covered by software inventory tools
-* M5 = Count of M4
-* M6 = List of endpoints loadable with software
-* M7 = Count of M6
-* M8 = List of endpoints not loadable with software
-* M9 = Count of M8
-
+* M1 = The count of software installed on a given asset
+* M2 = The count of unauthorized software installed on a given asset
+* M3 = The count of unaddressed software installed on a given asset, identified by follow-up scan.
+* M4 = Timeframe for resolution of discovered unauthorized software in weeks
 
 Metrics
 -------
+* If M4 is greater than four weeks, then this safeguard is measured at a 0 and receives a failing score. The other metrics don’t apply.
 
-Software Inventory Tool Usage
+Unauthorized software Per Asset
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | Are software inventory tools used?
+	  - | Ensure unauthorized software installations are addressed
 	* - **Calculation**
-	  - :code:`(M1 == 0) OR (M1 == 1)`
+	  - :code:`(M2-M3) / M3`
 
-Inventory Tool Coverage
+Unauthorized software for the enterprise
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. list-table::
-
-	* - **Metric**
-	  - | The ratio of endpoints covered by automated software inventory tools to the total
-	    | number of applicable endpoints
-	* - **Calculation**
-	  - :code:`M3 / M7`
+*The enterprise metric is calculated through averaging the results calculated above per asset.
 
 .. history
 .. authors
