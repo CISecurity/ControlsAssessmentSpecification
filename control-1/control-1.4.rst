@@ -23,7 +23,7 @@ Inputs
 
 Assumptions
 ^^^^^^^^^^^
-* CMDB servers are configured to pull from DHCP logs
+#. CMDB servers are configured to pull from DHCP logs
 
 Operations
 ----------
