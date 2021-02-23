@@ -61,7 +61,7 @@ Unauthorized software Per Asset
 
 Unauthorized software for the enterprise
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
-*The enterprise metric is calculated through averaging the results calculated above per asset.
+* The enterprise metric is calculated through averaging the results calculated above per asset.
 
 .. history
 .. authors
