@@ -9,7 +9,7 @@ Ensure that unauthorized software is either removed from use on enterprise asset
 	  - Security Function
 	  - Implementation Groups
 	* - Applications
-	  - Identify
+	  - Respond
 	  - 1, 2, 3
 
 Dependencies
