@@ -25,7 +25,7 @@ Inputs
 
 Assumptions
 ^^^^^^^^^^^
-If the item is not reachable, it may be reasonable to assume it has been removed from the network and therefore dealt with.
+#. If the item is not reachable, it may be reasonable to assume it has been removed from the network and therefore dealt with.
 
 Operations
 ----------
