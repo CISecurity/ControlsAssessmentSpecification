@@ -1,6 +1,6 @@
-2.6: Address Unapproved Software
+2.6: Allowlist Authorized Libraries
 ================================
-Ensure that unauthorized software is either removed or the inventory is updated in a timely manner.
+Use technical controls to ensure that only authorized software libraries, such as specific .dll, .ocx, .so, etc. files, are allowed to load into a system process. Block unauthorized libraries from loading into a system process. Reassess bi-annually, or more frequently.
 
 .. list-table::
 	:header-rows: 1
@@ -9,58 +9,51 @@ Ensure that unauthorized software is either removed or the inventory is updated 
 	  - Security Function
 	  - Implementation Groups
 	* - Applications
-	  - Respond
-	  - 1, 2, 3
+	  - Protect
+	  - 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 2.1: Maintain Inventory of Authorzied Software
+* Safeguard 2.1: Establish and Maintain a Software Inventory
+* Safeguard 2.5: Allowlist Authorized Software
+* Safegaurd 4.2: Establish and Maintain a Secure Configuration Process for Network Infrastructure
 
 Inputs
 ------
-#. Authorized Software List\ :sub:`i`\ : The previous list of authorized software
-#. An organizationally defined allowable time frame for resolution of discovered unauthorized software (recommend at least monthly)
-#. Software-capable Endpoints: The list of endpoints to be checked (derived from hardware inventory; see sub-control 1.4)
-#. Authorized Software List\ :sub:`i+1`\ : The updated authorized software list, following the time frame defined by Input 2
-#. The "scanning threshold"; the time period between scan 1 and scan 2
-
-Assumptions
-^^^^^^^^^^^
-* For Input 4, that the authorized software list may have been updated after a manual review of unauthorized software based on user requests, etc.
-* For Input 5, that the scanning threshold time period is greater than Input 2 (resolution time frame).
+#. Authorized software inventory with detailed information
+#. The list of authorized software libraries
+#. Approved configuration (s) for allowlisting software
+#. Date of last assessement of this safeguard
 
 Operations
 ----------
-#. For each endpoint in Input 3, scan the installed software present on that endpoint.
-#. Compare the installed software list for each endpoint (M1) to the authorized software list (Input 1) to generate the unauthorized software list for that endpoint (M2).
-#. Wait the "scanning threshold" time period (Input 5) and re-scan the endpoints specified by Input 3.
-#. For each software on the M2 list, determine if that software is still present in the Operation 3 scan.
-#. For those that are still present, check Input 4 to determine if the software is now present on the updated authorized software list (Input 4).  Software that remains installed on the machine, but does not appear on the updated authorized software list is added to the unaddressed software list for that endpoint (M3).
+#. Using Input 1, identify and note all allowlisting software authorized within the enterprise (M1).
+#. For each item identified in the output of Operation 1 (M1), use the approved configurations from Input 3 and authorized library list from Input 2
+	#. Identify and note allowlisting software properly configured to allow process loading of authorized libraries (M2)
+	#. Identify and note allowlisting software improperly configured to allow process loading of authorized libraries (M3)
+#. Compare the date from Input 4 to current date and note timeframe in months (M4).
 
 Measures
 --------
-* M1 = The list of software installed on a given endpoint, per Operation 1.
-* M2 = The list of unauthorized software installed on a given endpoint, identified by comparing M1 to Input 1.
-* M3 = The list of unaddressed software installed on a given endpoint, identified by follow-up scan.
-* M4 = The number of items in M2 (# of unauthorized software per endpoint).
-* M5 = The number of items in M3 (# of unaddressed software per endpoint).
+* M1 = Count of authorized allowlisting software 
+* M2 = Count of properly configured allowlisting software
+* M3 = Count of improperly configured allowlisting software
+* M4 = Timeframe since last assessment of this safeguard
+
 
 Metrics
 -------
+* If M4 is greater than six months, then this safeguard is measured at a 0 and receives a failing score. The other metrics don’t apply.
 
-Unauthorized Software (Per Endpoint)
+Coverage
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | Ensure unauthorized software installations are addressed
+	  - | The percentage of appropriately configured allowlisting software instances within the enterprise. 
 	* - **Calculation**
-	  - :code:`(M4 - M5) / M4`
+	  - :code:`M2 / M1`
 
-Unauthorized Software (Organizational)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-The organizational metric is calculated by averaging the results of the "per endpoint" metric above.
 
 .. history
 .. authors
