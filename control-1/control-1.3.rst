@@ -26,16 +26,16 @@ Inputs
 #. Configuration information for the active asset discovery tools.
 #. Approved configurations for all active asset discovery tools that interface with the Detailed Enterprise Asset Inventory.
 
+Assumptions
+^^^^^^^^^^^
+* The asset discovery tools on the provided list are active asset discovery tools, as opposed to passive asset discovery tools (verification of this is not performed during the following operations).
+
 Operations
 ----------
 #. Identify enterprise assets not discovered by the active discovery tools by comparing Input 1 and Input 3 (M2).
 #. Using the configuration information in Input 4, check the approved configurations from Input 5 to verify that the tools are capable of interfacing with the asset inventory to make automatic updates. 
 	#. Create a list of those tools that are compliant (M3)
 	#. Create a list of those that are not compliant (M4).
-
-Assumptions
-^^^^^^^^^^^
-* The asset discovery tools on the provided list are active asset discovery tools, as opposed to passive asset discovery tools (verification of this is not performed during the following operations).
 
 Measures
 --------
