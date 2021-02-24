@@ -1,6 +1,6 @@
-2.7: Utilize Application Whitelisting
+2.7: Allowlist Authorized Scripts
 =========================================================
-Utilize application whitelisting technology on all assets to ensure that only authorized software executes and all unauthorized software is blocked from executing on assets.
+Use technical controls, such as digital signatures and version control, to ensure that only authorized scripts, such as specific .ps1, .py, etc. files, are allowed to execute. Block unauthorized scripts from executing. Reassess bi-annually, or more frequently.
 
 .. list-table::
 	:header-rows: 1
@@ -14,58 +14,46 @@ Utilize application whitelisting technology on all assets to ensure that only au
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 1.5: Maintain Asset Inventory Information
-* Sub-control 2.1: Maintain Inventory of Authorized Software
-* Sub-control 2.5: Integrate Software and Hardware Asset Inventories
+* Safeguard 2.1: Establish and Maintain a Software Inventory
+* Safeguard 4.2: Establish and Maintain a Secure Configuration Process for Network Infrastructure
 
 Inputs
 ------
-#. The list of endpoints
-#. The list of authorized software
+#. Authorized software inventory with detailed information
+#. The list of authorized scripts
+#. Approved configuration (s) for allowlisting software
+#. Date of last assessement of this safeguard
 
 Operations
 ----------
-#. Enumerate endpoints capable of leveraging whitelisting technology (e.g. some network and other devices may not enable third-party software installation or otherwise have constrained environments precluding the use of whitelisting software)
-#. For each eligible endpoint (operation 1), examine the software inventory for whitelisting applications related to that endpoint, noting endpoints with and without whitelisting capabilities
-#. For each endpoint with whitelisting capabilities, examine the whitelisting software's configuration to ensure only authorized software is considered executable and that attempts to execute unauthorized software is blocked, noting appropriately and inappropriately configured software
+#. Using Input 1, identify and note all allowlisting software authorized within the enterprise (M1)
+#. For each item identified in the output of Operation 1 (M1), use the approved configurations from Input 3 and authorized scripts list from Input 2
+	#. Identify and note allowlisting software properly configured to allow execution of authorized and signed scripts (M2)
+	#. Identify and note allowlisting software improperly configured to allow execution of authorized and signed scripts (M3)
+#. Compare the date from Input 4 to current date and note timeframe in months (M4).
 
 Measures
 --------
-* M1 = List of endpoints capable of leveraging whitelisting technology
-* M2 = List of endpoints with whitelisting capabilities installed
-* M3 = List of endpoints without whitelisting capabilities installed
-* M4 = List of endpoints with appropriately configured whitelisting capabilities
-* M5 = List of endpoints with inappropriately configured whitelisting capabilities
-* M6 = Count of endpoints capable of leveraging whitelisting technology (count of M1)
-* M7 = Count of endpoints with whitelisting capabilities installed (count of M2)
-* M8 = The number of endpoints without whitelisting capabilities installed (count of M3)
-* M9 = Count of endpoints with appropriately configured whitelisting capabilities (count of M4)
-* M10 = Count of endpoints with inappropriately configured whitelisting capabilities (count of M5)
+* M1 = Count of authorized allowlisting software 
+* M2 = Count of properly configured allowlisting software
+* M3 = Count of improperly configured allowlisting software
+* M4 = Timeframe since last assessment of this safeguard
 
 
 Metrics
 -------
 
-Whitelisting Installation Coverage
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* If M4 is greater than six months, then this safeguard is measured at a 0 and receives a failing score. The other metrics don’t apply.
+
+Coverage
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of endpoints with whitelisting capabilities installed to the number of
-	    | whitelisting-eligible endpoints
+	  - | The percentage of appropriately configured allowlisting software instances within the enterprise. 
 	* - **Calculation**
-	  - :code:`M7 / M6`
+	  - :code:`M2 / M1`
 
-Whitelisting Configuration Coverage
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. list-table::
-
-	* - **Metric**
-	  - | The ratio of endpoints with appropriately configured whitelisting capabilities
-	    | to the number of endpoints with whitelisting capabilities
-	* - **Calculation**
-	  - :code:`M9 /  M7`
 
 .. history
 .. authors
