@@ -19,8 +19,8 @@ Dependencies
 
 Inputs
 ------
-#. Authorized software list with detailed information
-#. Detailed enterprise asset inventory
+#. :code:`GV5`: Authorized software inventory 
+#. :code:`GV1`: Enterprise asset Invetory
 #. Enterprise defined timeframe for scanning of enterprise assets.
 #. Enterprise defined allowable timeframe for resolution of discovered unauthorized software (recommend at least monthly)
 
@@ -30,14 +30,14 @@ Assumptions
 
 Operations
 --------
-#. Identify the software capable enterprise assets in Input 2 
+#. Identify the software capable enterprise assets in :code:`GV1` (:code:`GV7`) 
 #. Scan the assets identified in Operation 1 and note software present on each asset (M1)
-#. Compare the scan results to the authorized software list in Input 1
-	#. Note unauthorized software identified on assets (M2)
+#. Compare the scan results to the authorized software list in :code:`GV5`
+	#. Enumerate unauthorized software identified on assets (M2)
 #. Conduct subsquent scan of assets identified in Operation 1 as dictated by timeframe in Input 3
 	#. Compare to list generated in Operation 3 (M2)
-#. For each software still present in Operation 4, check the authorized software list in Input 1
-	#. Software that remains installed and is not listed in Input 1 is placed on the unaddressed software list (M3).
+#. For each software still present in Operation 4, check the authorized software list in :code:`GV5`
+	#. Software that remains installed and is not listed in :code:`GV5` is placed on the unaddressed software list (M3) for that asset.
 
 Measures
 --------
