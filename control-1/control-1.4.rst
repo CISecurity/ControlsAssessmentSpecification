@@ -27,8 +27,8 @@ Assumptions
 
 Operations
 ----------
-* For each DHCP server, check whether DHCP logging is enabled
-* For each CMDB server, check whether DHCP logs are used to update IP addresses
+* For each DHCP server, enumerate those where DHCP logging is enabled (M2)
+* For each CMDB server, enumerate those where DHCP logs are used to update IP addresses (M4)
 
 Measures
 --------
