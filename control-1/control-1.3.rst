@@ -19,12 +19,11 @@ Dependencies
 
 Inputs
 -----------
-#. The Detailed Enterprise Asset Inventory
+#. :code:`GV1`
 #. The list of active discovery tool(s) used by the enterprise
 #. List consisting of the union from scan results conducted using all active asset discovery tool(s) within the enterprise (discovered assets).
 #. Timeframe between two active asset discovery tool scans.
-#. Configuration information for the active asset discovery tools.
-#. Approved configurations for all active asset discovery tools that interface with the Detailed Enterprise Asset Inventory.
+#. :code:`GV3`: Configuration information 
 
 Assumptions
 ^^^^^^^^^^^
@@ -33,9 +32,10 @@ Assumptions
 Operations
 ----------
 #. Identify enterprise assets not discovered by the active discovery tools by comparing Input 1 and Input 3 (M2).
-#. Using the configuration information in Input 4, check the approved configurations from Input 5 to verify that the tools are capable of interfacing with the asset inventory to make automatic updates. 
-	#. Create a list of those tools that are compliant (M3)
-	#. Create a list of those that are not compliant (M4).
+#. Identify the configurations for active asset discovery tools that interface with :code:`GV1` by using :code:`GV3`
+#. Using the configuration information in :code:`GV3`, check the approved configurations to verify that the tools are capable of interfacing with the asset inventory to make automatic updates. 
+	#. Enumerate those tools that are compliant (M3)
+	#. Enumerate those that are not compliant (M4).
 
 Measures
 --------
@@ -44,7 +44,7 @@ Measures
 * M3 = Count of properly configured tools
 * M4 = Count of improperly configured tools
 * M5 = Count of Input 2
-* M6 = Count of Input 1
+* M6 = Count of :code:`GV1`
 * M7 = Timeframe in hours for Input 4
 
 Metrics
