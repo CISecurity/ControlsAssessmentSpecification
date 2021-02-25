@@ -15,7 +15,7 @@ Utilize an active discovery tool to identify assets connected to the enterpriseâ
 
 Dependencies
 ------------
-* Safeguard 4.2: Establish and Maintain a Secure Configuration Process for Network Infrastructure
+* Safeguard 4.1: Establish and Maintain a Secure Configuration Process
 
 Inputs
 -----------
