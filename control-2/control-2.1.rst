@@ -18,23 +18,23 @@ Dependencies
 
 Inputs
 ------
-#. The authorized software inventory with detailed information including: timestamp indicating both last updated and last verified values, timestamp indicating installation date, operating system, software name, software version, software publisher, authorization status, business purpose, supported/unsupported. Where applicable, additionally include URL, app store(s), deployment mechanism, and decommission date.
-#. The date of the last update to the authorized software inventory.
+#. :code:`GV5`: The authorized software inventory with detailed information including: timestamp indicating both last updated and last verified values, timestamp indicating installation date, operating system, software name, software version, software publisher, authorization status, business purpose, supported/unsupported. Where applicable, additionally include URL, app store(s), deployment mechanism, and decommission date.
+#. :code:`GV6`: The date of the last update to the authorized software inventory.
 
 Operations
 ----------
-#. Check the authorized software inventory for completeness of deteailed information.
+#. Check :code:`GV5` for completeness of detailed information.
 	#. Note items that have complete detailed information (M2).
 	#. Note items that having missing or incomplete information (M3).
-#. Compare the current date to the last date of update to the authorized software inventory in months (M4).
+#. Compare the current date to :code:`GV6` and note timeframe in months (M4).
 
 Measures
 --------
 
-* M1 = Count of Input 1
-* M2 = Count of items in Input 1 with complete information
-* M3 = Count of items in Input 1 with incomplete or missing information
-* M4 = Timeframe in months of since last update to the authorized software inventory
+* M1 = Count of :code:`GV5`
+* M2 = Count of items in :code:`GV5` with complete information
+* M3 = Count of items in :code:`GV5` with incomplete or missing information
+* M4 = Timeframe in months since last update :code:`GV6`
 
 
 Metrics
