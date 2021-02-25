@@ -20,22 +20,21 @@ Dependencies
 
 Inputs
 ------
-#. Authorized software inventory with detailed information
+#. :code:`GV8`: Authorized allowlisting software 
 #. The list of authorized software libraries
-#. Approved configuration (s) for allowlisting software
+#. :code:`GV9`: Approved configuration (s) for allowlisting software
 #. Date of last assessement of this safeguard
 
 Operations
 ----------
-#. Using Input 1, identify and note all allowlisting software authorized within the enterprise (M1).
-#. For each item identified in the output of Operation 1 (M1), use the approved configurations from Input 3 and authorized library list from Input 2
-	#. Identify and note allowlisting software properly configured to allow process loading of authorized libraries (M2)
-	#. Identify and note allowlisting software improperly configured to allow process loading of authorized libraries (M3)
+#. For each item identified in :code:`GV8, use the approved configurations from :code:`GV9` and authorized library list from Input 2
+	#. Identify and enumerate allowlisting software properly configured to allow process loading of authorized libraries (M2)
+	#. Identify and enumerate allowlisting software improperly configured to allow process loading of authorized libraries (M3)
 #. Compare the date from Input 4 to current date and note timeframe in months (M4).
 
 Measures
 --------
-* M1 = Count of authorized allowlisting software 
+* M1 = Count :code:`GV8
 * M2 = Count of properly configured allowlisting software
 * M3 = Count of improperly configured allowlisting software
 * M4 = Timeframe since last assessment of this safeguard
