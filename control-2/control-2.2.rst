@@ -18,25 +18,26 @@ Dependencies
 
 Inputs
 ------
-#. The authorized software inventory with detailed information. deployment mechanism, and decommission date.
+#. :code:`GV5`: The authorized software inventory with detailed information. deployment mechanism, and decommission date.
 #. Authoritative source of information indicating supported/unsupported details by product.
 #. Exception documentation for unsupported software that is necessary for the fulfillment of the enterprise’s mission.
-#. Date of last update to the authorized software inventory
+#. :code:`GV6`: Date of last update to the authorized software inventory
 
-Operations
-----------
-#. For each item in Input 1, perform a lookup in Input 2 to verify supported/unsupported status.
-	#. Note each item labeled "unsupported" but "supported based on Input 2 (M2)
-	#. Note each item labeled "supported" but is "unsupported" based on Input 2 (M3).
-#. Identify and note truly "unsupported" items from Input 1 after conducting Operation 1 (M4).
-#. For each unsupported item identifed in Operation 2, conduct a check using Input 3.
-	#. Note items that do not have appropriate exception documentation (M5).
-	#. Note items that do have appropriate exception documentation (M6).
-#. Compare date of last update to the authorized software inventory to the current date and note timeframe in weeks (M7).
 
 Assumptions
 --------
 #. Authorized software inventory with detailed information exists for the enterprise. 
+
+Operations
+----------
+#. For each item in :code:`GV5`, perform a lookup in Input 2 to verify supported/unsupported status.
+	#. Enumerate each item labeled "unsupported" but "supported based on Input 2 (M2)
+	#. Enumerate each item labeled "supported" but is "unsupported" based on Input 2 (M3).
+#. Identify and note truly "unsupported" items from Input 1 after conducting Operation 1 (M4).
+#. For each unsupported item identifed in Operation 2, conduct a check using Input 3.
+	#. Note items that do not have appropriate exception documentation (M5).
+	#. Note items that do have appropriate exception documentation (M6).
+#. Compare date of :code:`GV6` to the current date and note timeframe in weeks (M7).
 
 Measures
 --------
