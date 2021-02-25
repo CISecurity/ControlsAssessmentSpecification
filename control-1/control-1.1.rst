@@ -19,36 +19,34 @@ Dependencies
 
 Inputs
 -----------
-#. Detailed Enterprise Asset Inventory - The organizations list of current approved inventory to include all assests as outlined in the safeguard. This list is a mix of manual and tool-generated endpoints that includes information such as authorized, non-authorized, IP address, device type and any other information as defined by the enterprise.
-#. Bi-annual Aggregate Enterprise Asset Inventory - The organizations list gathering all all devices detected over the time period, manually or automated, preferrably not from a single scan. At a minimum twice a year but can be more frequent.
-#. A write up of the procedure for adding or removing enterprise assets to or from the Detailed Enterprise Asset Inventory along with the required fields as part of the detail.
+#. :code:`GV1`: Detailed Enterprise Asset Inventory - The enterprise's list of current approved inventory to include all assests as outlined in the safeguard. This list is a mix of manual and tool-generated endpoints that includes information such as authorized, non-authorized, IP address, device type and any other information as defined by the enterprise.
+#. Aggregate Enterprise Asset Inventory - The enterprise's list of all devices detected, manually or through automated scans, since the last update to :code:`GV1`. 
 #. Date of last update to the Detailed Enterprise Asset Inventory
 
 Assumptions
 ^^^^^^^^^^^
-#. The asset discovery tools on the provided list are active asset discovery tools, as opposed to passive asset discovery tools (verification of this is not performed during the following operations).
-#. The asset discovery tools are used regularly (this is not verified during the following operations).
+#. Devices belonging to the organization, but not connected to the organization’s network, require manual discovery in order to be included in the aggregate inventory.
 
 Operations
 ----------
-#. Calculate the intersection of Input 1 and Input 2
-	#. Note items in Input 1 that are not in Input 2 (M 3) 
-	#. Note items in Input 2 not in Input 1 (M1).
+#. Calculate the intersection of :code:`GV1` and Input 2
+	#. Enumerate items in :code:`GV1` that are not in Input 2 (M4) 
+	#. Enumerate items in Input 2 not in Input 1 (:code:`GV2`: M5). These assets are considered unauthorized. 
 #. Check items in Input 1 for complete or missing detailed information
-	#. Note items that have complete information (M4).
-	#. Note items that do not have complete information or missing information (M7).
+	#. Enumerate items that have complete information (M6)
+	#. Enumerate items that do not have complete information or missing information (M7).
 #. Calculate the time (in months) since the last update to Input 1 by using current date and Input 4 (M8).
 
 Measures
 --------
-* M1 = Count of items in Input 1
+* M1 = :code:`GV1`
 * M2 = Count of items in Input 2
-* M3 = Count of items in the intersection of Input 1 and Input 2
-* M4 = Count of items in Input 1 not found in Input 2
-* M5 = Count of items in Input 2 not found in Input 1
-* M6 = Count of items in Input 1 that contain all necessary detailed information
-* M7 = Count of items in Input 1 that do not contain detailed information
-* M8 = Months since the last update to Input 1
+* M3 = Count of items in the intersection of :code:`GV1` and Input 2
+* M4 = Count of items in :code:`GV1` not found in Input 2
+* M5 = :code:`GV2`
+* M6 = Count of items in :code:`GV1` that contain all necessary detailed information
+* M7 = Count of items in :code:`GV1` that do not contain detailed information
+* M8 = Months since the last update to :code:`GV1`
 
 Metrics
 -------
@@ -60,9 +58,14 @@ Accuracy Score
 .. list-table::
 
 	* - **Metric**
-	  - | What percentage of the Bi-annual aggregate endpoint inventory is accounted for in the current enterprise asset inventory?
+	  - | What percentage of the aggregate endpoint inventory is accounted for in the current enterprise asset inventory?
 	* - **Calculation**
 	  - :code:`M3 / M2`
+
+Completeness Score
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. list-table::
+
 	* - **Metric**
 	  - | What percentage of the current enterprise asset inventory contains necessary detailed information?
 	* - **Calculation**
