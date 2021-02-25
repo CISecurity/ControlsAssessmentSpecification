@@ -19,15 +19,16 @@ Dependencies
 
 Inputs
 -----------
-#. List of the enterprise’s networks
+#. :code:`GV4`: List of the enterprise’s networks
 #. List of passive asset discovery tools in use by the organization. For each, include the location of the tool's configuration information and which networks it covers.
-#. Approved configuration(s) for each passive asset discovery tool. Configurations should include the settings necessary for the tool to be able to update the enterprise's asset inventory
+#. :code:`GV3`: Approved configuration(s) for each passive asset discovery tool. Configurations should include the settings necessary for the tool to be able to update the enterprise's asset inventory
 
 Operations
 ----------
-#. For each passive asset discovery tool provided in Input 2, check the tool's configuration against the appropriate approved configuration from Input 3.
-	#. Create a list of those tools that are properly configured (becomes M1)
-	#. Create a list of those tools that are improperly configured (becomes M2) noting the deviations from proper configuration
+#. Identify approved configuratons for passive asset discovery tools using :code:`GV3`
+#. For each passive asset discovery tool provided in Input 2, check the tool's configuration against the appropriate approved configuration from :code:`GV3`
+	#. Enumerate those tools that are properly configured (M1)
+	#. Enumerate those tools that are improperly configured (M2) noting the deviations from proper configuration
 #. For each of the enterprise's networks provided in Input 1, check to see if at least one properly configured passive asset discovery tool from M1 covers that network.
 	#. Create a list of the organization's networks that have coverage from at least one properly configured passive asset discovery tool (M3)
 	#. Create a list of the organization's networks that do not have coverage from any properly configured passive asset discovery tools (M4)
@@ -38,7 +39,7 @@ Measures
 * M2 = Count of improperly configured passive asset discovery tools
 * M3 = Count of organization's networks that are covered by properly configured passive discovery tools
 * M4 = Count of organization's networks that are not covered by properly configured passive discovery tools
-* M5 = Count of Input 1
+* M5 = :code:`GV4`
 
 Metrics
 -------
