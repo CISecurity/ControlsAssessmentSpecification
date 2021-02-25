@@ -19,8 +19,8 @@ Dependencies
 
 Inputs
 ------
-#. Detailed Enterprise Asset Inventory from Safeguard 1.1
-#. The list of discovered assets in the Aggregate Enterprise Asset Inventory that are not authorized (not in the Updated Enterprise Asset Inventory). 
+#. :code:`GV1`: Detailed Enterprise Asset Inventory 
+#. :code:`GV2`: Unauthorized Assets
 #. The enterprise defined time frame for removing unauthorized assets (weekly or more often).
 
 Assumptions
@@ -31,16 +31,18 @@ Operations
 ----------
 If the optional disposition list is provided, the checks would be tailored to those dispositions.  For the following, assume no disposition list is available:
 
-#. At the time frame specified by Input 3, for each unauthorized asset in Input 2, check to see if the asset is present in the updated asset inventory from Input 1.
-#. For those items in Input 2 that are not in Input 1, scan the network to determine if the item is still reachable on the network.
+#. At the time frame specified by Input 3, for each unauthorized asset in :code:`GV2`, check to see if the asset is present in the updated asset inventory from :code:`GV1`.
+#. For those items in :code:`GV2` that are not in :code:`GV1`, scan the network to determine if the item is still reachable on the network.
+	#. Enumerate the items from :code:`GV2` that are unreachable (M4)
+	#. Enumerate the items from :code:`GV1` that are unreachable (M5)
 
 Measures
 --------
-* M1 = Count of Input 1
-* M2 = Count of Input 2
+* M1 = :code:`GV1`
+* M2 = Count of :code:`GV2`
 * M3 = Timeframe in days for Input 3
-* M4 = Count of items in Input 1 that are unreachable
-* M5 = Count of items in Input 2 that are unreachable
+* M4 = Count of items from :code:`GV2` that are unreachable after scan
+* M5 = Count of items from :code:`GV1` that are unreachable after scan
  
 
 Metrics
@@ -55,8 +57,8 @@ Coverage
 	  - | The ratio of unaccounted for, unauthorized assets, to the total assets in the asset
 	    | inventory.
 	* - **Calculation**
-	  - | If the value of M5 is 0, there are no unauthorized assets that remain unaccounted for.
-	    | In this case, the value of the metric is 1.  Otherwise, the value is :code:`(M1 - M5) / M5`
+	  - | If the value of M4 is 0, there are no unauthorized assets that remain unaccounted for.
+	    | In this case, the value of the metric is 1.  Otherwise, the value is :code:`(M2 - M4) / M2 `
 
 .. history
 .. authors
