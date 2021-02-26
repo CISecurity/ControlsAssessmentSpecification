@@ -17,7 +17,7 @@ Dependencies
 * Safeguard 1.1: Establish and Maintain Detailed Enterprise Asset Inventory
 * Safeguard 2.1: Establish and Maintain a Software Inventory
 * Safeguard 2.3: Address Unauthorized Software
-* Safeguard 4.2: Establish and Maintain a Secure Configuration Process for Network Infrastructure
+* Safeguard 4.1: Establish and Maintain a Secure Configuration Process
 
 Inputs
 ------
