@@ -15,7 +15,7 @@ Use technical controls, such as digital signatures and version control, to ensur
 Dependencies
 ------------
 * Safeguard 2.1: Establish and Maintain a Software Inventory
-* Safeguard 4.2: Establish and Maintain a Secure Configuration Process for Network Infrastructure
+* Safeguard 4.1: Establish and Maintain a Secure Configuration Process
 
 Inputs
 ------
