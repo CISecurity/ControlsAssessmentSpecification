@@ -1,6 +1,6 @@
-4.6: Use Dedicated Workstations For All Administrative Tasks
+4.6: Securely Manage Enterprise Assets and Software
 ============================================================
-Ensure administrators use a dedicated machine for all administrative tasks or tasks requiring administrative access. This machine will be segmented from the organization’s primary network and not be allowed Internet access.  This machine will not be used for reading email, composing documents, or browsing the Internet.
+Securely manage enterprise assets and software. Example implementations include managing configuration through version-controlled-infrastructure-as-code and accessing administrative interfaces over secure network protocols, such as Secure Shell (SSH) and Hypertext Transfer Protocol Secure (HTTPS). Do not use insecure management protocols, such as Telnet (Teletype Network) and HTTP, unless operationally essential.
 
 .. list-table::
 	:header-rows: 1
@@ -8,43 +8,38 @@ Ensure administrators use a dedicated machine for all administrative tasks or ta
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Users
+	* - Network
 	  - Protect
-	  - 3
+	  - 1, 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 1.5: Maintain Asset Inventory Information
-* Sub-control 2.1: Maintain Inventory of Authorized Software
-* Sub-control 2.5: Integrate Software and Hardware Asset Inventories
+* Safeguard 1.1: Establish and Maintain Detailed Enterprise Asset Inventory
+* Safeguard 2.1: Establish and Maintain a Software Inventory
+* Safeguard 4.1: Establish and Maintain a Secure Configuration Process
 
 Inputs
 -----------
-#. The list of endpoints
-#. The list of authorized software
+#. :code:`GV1`: Enterprise asset inventory
+#. :code:`GV5`: Authorized software inventory
+#. :code:`GV3`: Configuration standard
 
 Operations
 ----------
-#. Enumerate the devices used for administrative purposes based on the endpoint inventory
-#. Enumerate all software identified as administrative from the software inventory
-#. For each identified device:
-	#. Enumerate the devices configured/managed by this device
-	#. Examine its configuration noting whether it is appropriately or inappropriately configured:
-		#. The device has internet access
-		#. The device can run unauthorized software
-		#. The device can be reached by any device not in the enumeration identified above
+#. Using :code:`GV5` identify and enumerate authorized management software (M1)
+#. Using :code:`GV1` identify and enumerate assets capable of supporting management software (M2)
+#. Using the output of Operations 1 and 2, identify and enumerate assets with authorized management software installed (M3)
+#. Using configuration standards :code:`GV3` to check if management software is configured properly
+	#. Enumerate assets from Operation 3 with properly configured management software (M4)
+	#. Enumerate assets from Operation 1 with improperly configured mangement software (M5)
 
 Measures
 --------
-* M1 = List of devices used for administrative purposes
-* M2 = List of administrative software
-* M3 = List of appropriately configured devices
-* M4 = List of inappropriately configured devices
-* M5 = Count of devices used for administrative purposes (count of M1)
-* M6 = Count of administrative software (count of M2)
-* M7 = Count of appropriately configured devices (count of M3)
-* M8 = Count of inappropriately configured devices (count of M4)
+* M1 = Count of authorized management software
+* M2 = Count of enterprise assets capable of supporting management software
+* M3 = Count of assets with authorized management software installed
+* M4 = Count of assets with properly configured management software
+* M5 = Count of assets with improperly configured management software
 
 Metrics
 -------
@@ -54,10 +49,9 @@ Coverage
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of appropriately configured administrative devices to the total number of
-	    | administrative devices
+	  - | The percentage of assets with properly configured authorized management software
 	* - **Calculation**
-	  - :code:`M7 / M5`
+	  - :code:`M4 / M2`
 
 .. history
 .. authors
