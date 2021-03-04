@@ -1,6 +1,6 @@
-4.1: Maintain Inventory of Administrative Accounts
+4.1: Establish and Maintain a Secure Configuration Process
 =========================================================
-Use automated tools to inventory all administrative accounts, including domain and local accounts, to ensure that only authorized individuals have elevated privileges.
+Establish and maintain a secure configuration process for enterprise assets (end-user devices, including portable and mobile, non-computing/IoT devices, and servers) and software (operating systems and applications). Review and update documentation annually, or when significant enterprise changes occur that could impact this Safeguard.
 
 .. list-table::
 	:header-rows: 1
@@ -8,75 +8,57 @@ Use automated tools to inventory all administrative accounts, including domain a
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Users
-	  - Detect
-	  - 2, 3
+	* - Applications
+	  - Protect
+	  - 1, 2, 3
 
 Dependencies
 ------------
-* None
+* Safeguard 2.1: Establish and Maintain a Software Inventory
 
 Inputs
 ------
-#. Inventory of authorized administrative accounts including which system the account is authorized for and which individual the account is associated with
-#. Output from the automated tool(s) identifying the discovered administrative accounts accompanied by which system that account is on
+#. :code:`GV2`: Authorized software inventory
+#. :code:`GV1`: Enterprise asse inventory
+#. :code:`GV3`: Configuration Standard: this should include any enterprise approved deviations from industry standard baselines  such as CIS benchmarks, DISA Security Technical Implementation Guides (STIGs), or U.S. government configuration baselines (USGCB).
+#. Date of last review and updat of configuration standard
 
 Operations
 ----------
-#. Generate a count of the administrative accounts in Inventory 1 (this count becomes M1). If this count is 0, skip the remaining Operation(s).
-#. Check Input 2 - if there is at least 1 administrative account provided in Input 2, set M2 equal to 1 and continue on to the next Operation. If there are no administrative accounts provided in Input 2, set M2 equal to 0 and skip the remaining Operation(s).
-#. Compare Input 1 and Input 2, creating a list accounts that are in Input 2 which are also found in Input 1 (this is the list of discovered authorized administrative accounts that becomes M3) and a list of accounts that are in Input 2 that are not found in Input 1 (this is the list of discovered unauthorized administrative accounts that becomes M4).
+#. Identify whether Input 2 exists
+	#. If it exists M1 = 1
+	#. If it does not exist M1 = 0
+#. Identify and enumerate end-user devices, including portable and mobile, non-computing/IoT devices, and servers in :code:`GV1` (M2)
+#. Using the output of Operation 2 (M2), identify and enumerate the software installed on the assets using :code:`GV2` (M3)
+#. For each software identified in Operation 3 (M3)
+	#. Enumerate software that is listed in the configuration standard :code:`GV3`(M4)
+	#. Enumerate software that is not listed in the configuration standard :code:`GV3`(M5)
+#. Compare current date to date provided in Input 4.  Note the timeframe in months (M6)
 
 Measures
 --------
-* M1 = Count of authorized administrative accounts in Input 1
-* M2 = A binary value, 1 if the automated tool(s) provided at least 1 administrative account (Input 2); 0 if the automated tool(s) did not provide any administrative accounts (Input 2)
-* M3 = List of discovered authorized administrative accounts
-* M4 = List of discovered unauthorized administrative accounts
-* M5 = Count of discovered authorized administrative accounts
-* M6 = Count of discovered unauthorized administrative accounts
+* M1 = Output of Operation 1
+* M2 = Count of applicable enterprise assets 
+* M3 = Count of software insalled on applicable enterprise assets
+* M4 = Count of software that is listed in the configuration standard
+* M5 = Count of software that is not listed in the configuration standard
+* M6 = Timeframe since last review and update in months
 
 Metrics
 -------
+* If M1 is 0, this safeguard receives a failing score. The other metrics don't apply.
+* If M6 is greater than twelve, this safeguard is measured at a 0 and receives a failing score. The other metrics don't apply.
 
-Administrative Account Inventory
+Standard Configuration Coverage
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | Ensure the administrative account inventory exists.  If :code:`M1 == 0`, this metric
-	    | fails and the remaining metrics are not applicable.
+	  - | The perecentage of authorized software  with secure configuration standards documented
+	  - | and maintained.
 	* - **Calculation**
-	  - :code:`M1`
+	  - :code:`M4 / M3`
 
-Automated Tool Functioning
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. list-table::
-
-	* - **Metric**
-	  - | Ensure any automated tools are properly functioning.  If :code:`M2 == 0`, this metric
-	    | fails and the remaining metrics are not applicable.
-	* - **Calculation**
-	  - :code:`M2`
-
-Tool Coverage
-^^^^^^^^^^^^^
-.. list-table::
-
-	* - **Metric**
-	  - | The ratio discovered administrative accounts to the inventoried administrative accounts.
-	* - **Calculation**
-	  - :code:`M5 / M1`
-
-Unauthorized Accounts
-^^^^^^^^^^^^^^^^^^^^^
-.. list-table::
-
-	* - **Metric**
-	  - | The ratio of discovered unauthorized administrative accounts to total discovered
-	    | administrative accounts
-	* - **Calculation**
-	  - :code:`M6 / (M5 + M6)`
 
 .. history
 .. authors
