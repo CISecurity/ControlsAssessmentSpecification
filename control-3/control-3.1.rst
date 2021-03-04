@@ -1,6 +1,6 @@
-3.1: Run Automated Vulnerability Scanning Tools
+3.1: Establish and Maintain a Data Management Process
 ===============================================
-Utilize an up-to-date Security Content Automation Protocol (SCAP) compliant vulnerability scanning tool to automatically scan all systems on the network on a weekly or more frequent basis to identify all potential vulnerabilities on the organization’s systems.
+Establish and maintain a data management process. In the process, address data sensitivity, data owner, handling of data, data retention limits, and disposal requirements, based on sensitivity and retention standards for the enterprise. Review and update documentation annually, or when significant enterprise changes occur that could impact this Safeguard.
 
 .. list-table::
 	:header-rows: 1
@@ -8,86 +8,50 @@ Utilize an up-to-date Security Content Automation Protocol (SCAP) compliant vuln
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Applications
-	  - Detect
-	  - 2, 3
+	* - Data
+	  - Identify
+	  - 1, 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 2.3: Utilize Software Inventory Tools
+* None
 
 Inputs
 ------
-#. List of endpoints
-#. List of vulnerability scanning tools
-#. List of SCAP-validated vulnerability scanning tools
-#. Most recent scan results for each vulnerability scanning tool
+#. :code:`GV10`: Enterprise's data management process
+#. Date of last update to the data management process
 
 Operations
 ----------
-#. For each vulnerability scanning tool, enumerate the set of covered endpoints
-#. Union the set of covered endpoints
-#. For each vulnerability scanning tool, inspect tool configuration for at least weekly scans
-#. For each vulnerability scanning tool, inspect tool results/logs for at least weekly scans
+#. Review :code:`GV10` to determine if, at a minimum, it includes:
+	#. Addressing data sensitivity.  If so, M1 = 1.  Otherwise M1 = 0. (:code:`GV11`)
+	#. Captures data owner.  If so, M2 = 1.  Otherwise M2 = 0. (:code:`GV13`)
+	#. Handling of data. If so, M3 = 1.  Otherwise M3 = 0. (:code:`GV14`)
+	#. Data retention limits based on sensitivity of data. If so, M4 = 1. Otherwise M4 = 0. (:code:`GV15`)
+	#. Disposal requirements based on sensitivity of data. If so, M5 = 1. Otherwise M5 = 0. (:code:`GV16`)
 
 Measures
 --------
-* M1 = List of endpoints covered by vulnerability scanning tools
-* M2 = Count of M1
-* M3 = Count of endpoints (from Input 1)
-* M4 = List of vulnerability scanning tools configured to scan at least weekly
-* M5 = Count of M4
-* M6 = List of vulnerability scanning tools not configured to scan at least weekly
-* M7 = Count of M6
-* M8 = List of vulnerability scanning results having occurred in at least the past week
-* M9 = Count of M8
-* M10 = List of vulnerability scanning results having not occurred in at least the past week
-* M11 = Count of M10
-* M12 = Count of SCAP-validated vulnerability scanning tools (from Input 2)
-* M13 = Count of vulnerability scanning tools (from Input 3)
+* M1 = Does the process address data sensitivity
+* M2 = Does the process capture data owners
+* M3 = Does the process include guidance for handling of data
+* M4 = Does the process include data rentention limits based on sensitivity of data
+* M5 = Does the process include guidance on disposal requirements based on sensitivity of data
+* M6 = :code:`GV10`
 
 Metrics
 -------
+* If M6 is not available or does not exist, this safeguard is measured at a 0 and receives a failing score. The other metrics don't apply.
 
-Vulnerability Scanning Coverage
+Completeness of Data Management Process
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of endpoints covered by at least one vulnerability scanning tool to the total
-	    | number of endpoints
+	  - | The perecentage of completeness for the enterprise's data management process.
 	* - **Calculation**
-	  - :code:`M2 / M3`
+	  - :code:`(M1 + M2 + M3 + M4 + M5) / 5`
 
-Vulnerability Scanner Configuration Quality
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. list-table::
-
-	* - **Metric**
-	  - | The ratio of correctly configured vulnerability scanners to the total number of
-	    | vulnerability scanners
-	* - **Calculation**
-	  - :code:`M5 / M13`
-
-Vulnerability Scan Timeliness
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. list-table::
-
-	* - **Metric**
-	  - | The ratio of scanners having actually scanned in at least the past week to the total
-	    | number of vulnerability scanners
-	* - **Calculation**
-	  - :code:`M9 / M13`
-
-SCAP-Validated Vulnerability Scanner Coverage
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. list-table::
-
-	* - **Metric**
-	  - | The ratio of SCAP-validated scanners to the total number of vulnerability scanners
-	* - **Calculation**
-	  - :code:`M12 / M13`
 
 .. history
 .. authors
