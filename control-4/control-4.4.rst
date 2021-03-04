@@ -1,6 +1,6 @@
-4.4: Use Unique Passwords
+4.4: Implement and Manage a Firewall on Servers
 =========================================================
-Where multi-factor authentication is not supported (such as local administrator, root, or service accounts), accounts will use passwords that are unique to that system.
+Implement and manage a firewall on servers, where supported. Example implementations include a virtual firewall, operating system firewall, or a third-party firewall agent.
 
 .. list-table::
 	:header-rows: 1
@@ -8,43 +8,53 @@ Where multi-factor authentication is not supported (such as local administrator,
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Users
+	* - Devices
 	  - Protect
-	  - 2, 3
+	  - 1, 2, 3
 
 Dependencies
 ------------
-* None
+* Safeguard 1.1: Establish and Maintain Detailed Enterprise Asset Inventory
+* Safeguard 2.1: Establish and Maintain a Software Inventory
+* Safeguard 4.1: Establish and Maintain a Secure Configuration Process
 
 Inputs
 ------
-#. Password policy that includes requirement for unique passwords
+#. :code:`GV1`: Enterprise asset inventory
+#. :code:`GV5`: Authorized software inventory
+#. :code:`GV3`: Configuration standard
 
 Operations
 ----------
-#. Verify that a password policy was provided and set M1 accordingly.
-#. (Optional) Manually review the provided password policy. Determine if it includes a valid requirement for unique passwords and set M2 accordingly.
+#. Identify and enumerate servers capable of hosting a firewall using :code:`GV1` (M1)
+#. Identify and enumerate applications capable of hosting a firewall using :code:`GV5` (M2)
+#. Using configuration standards to check if firewalls are properly configured
+	#. Enumerate servers from Operation 1 with properly configured firewalls (M3)
+	#. Enumerate servers from Operation 1 with improperly configured firewalls (M4)
+	#. Enumerate applications from Operation 2 with properly configured firewalls (M3)
+	#. Enumerate application from Operation 2 with improperly configured firewalls (M4)
 
 Measures
 --------
-* M1 = Boolean value indicating whether a password policy was provided; 1 if policy provided, 0 if not
-* M2 = (From optional manual review) Binary value indicating whether the provided password policy includes a valid requirement for unique passwords; 1 if unique passwords required, 0 if not
+* M1 = Count of servers enterprise assets capable of hosting a firewall
+* M2 = Count of applications software capable of hosting a firewall
+* M3 = Count of servers with properly configured firewalls
+* M4 = Count of servers with improperly configured firewalls
+* M5 = Count of applications with properly configured firewalls
+* M6 = Count of applications with improperly configured firewalls
 
 Metrics
 -------
 
-Password Policy Existence
+Implementation of firewalls
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | This metric indicates the existence of a password policy for the organization
+	  - | The percentage of properly configured firewalls within the enterprise
 	* - **Calculation**
-	  - :code:`M1 == 1`
+	  - :code:`(M3 + M5) / (M1 + M2)`
 
-Policy Review
-^^^^^^^^^^^^^
-(Optional Manual Review) Pass if the organization's password policy includes a unique password requirement.
 
 .. history
 .. authors
