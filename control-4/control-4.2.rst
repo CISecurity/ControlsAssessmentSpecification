@@ -1,6 +1,6 @@
-4.2: Change Default Passwords
+4.2: Establish and Maintain a Secure Configuration Process for Network Infrastructure
 =============================
-Before deploying any new asset, change all default passwords to have values consistent with administrative level accounts.
+Establish and maintain a secure configuration process for network devices. Review and update documentation annually, or when significant enterprise changes occur that could impact this Safeguard.
 
 .. list-table::
 	:header-rows: 1
@@ -8,63 +8,56 @@ Before deploying any new asset, change all default passwords to have values cons
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Users
+	* - Network
 	  - Protect
 	  - 1, 2, 3
 
 Dependencies
 ------------
-* Sub-control 2.4: Track Software Inventory Information
+* Safeguard 2.1: Establish and Maintain a Software Inventory
 
 Inputs
 ------
-#. The organization's inventory of endpoints which utilize credentials, either at the OS level or at the application software level (ideally software inventory from sub-control 2.4)
-#. An authoritative source of known default passwords
-#. The organization's defined password policy configuration
+#. :code:`GV2`: Authorized software inventory
+#. :code:`GV1`: Enterprise asse inventory
+#. :code:`GV3`: Configuration Standard: this should include any enterprise approved deviations from industry standard baselines  such as CIS benchmarks, DISA Security Technical Implementation Guides (STIGs), or U.S. government configuration baselines (USGCB).
+#. Date of last review and updat of configuration standard
 
 Operations
 ----------
-#. For each endpoint in Input 1, enumerate the available logins, including hashed credentials (becomes M1)
-#. For each endpoint in Input 1, generate password hashes for all relevant default passwords provided in Input 2 in accordance with the corresponding hashing procedures for the appropriate OS, application, etc. including any applicable salting
-#. For each login, compare the password hash for that login to the default password hashes generated in the previous operation.  Create a list containing any logins that have hashes that match default password hashes, including the endpoint to which the login corresponds and the default password and hash that was matched (becomes M3)
-#. For each endpoint, collect the applied password policy configuration (becomes M5)
-#. For each endpoint, compare the password policy configuration to the organizationally defined password policy recommendations (including password length, complexity requirements, etc.), creating a list of endpoint password policies that adhere to organizational policy (becomes M7) and a list of endpoint password policies that deviate from the organizational policy (becomes M9) noting where the deviations occur.
+#. Identify whether Input 2 exists
+	#. If it exists M1 = 1
+	#. If it does not exist M1 = 0
+#. Identify and enumerate network infrastructure assets in :code:`GV1` (M2)
+#. Using the output of Operation 2 (M2), identify and enumerate the software installed on the assets using :code:`GV2` (M3)
+#. For each software identified in Operation 3 (M3)
+	#. Enumerate software that is listed in the configuration standard :code:`GV3`(M4)
+	#. Enumerate software that is not listed in the configuration standard :code:`GV3`(M5)
+#. Compare current date to date provided in Input 4.  Note the timeframe in months (M6)
 
 Measures
 --------
-* M1 = The list of available logins for endpoints which utilized credentialed accounts
-* M2 = The count of logins from all endpoints that use credentiale accouts (count of M1)
-* M3 = The list of enumerated logins with a password hash that matches a known default password hash
-* M4 = The count of logins with a password hash that matches a known default password hash (count of M3)
-* M5 = The list of the collected endpoint password policy configurations
-* M6 = The count of collected password policy configurations (count of M5)
-* M7 = The list of collected password policy configurations that do match organizationally defined recommendations
-* M8 = The count of compliant collected password policies (count of M7)
-* M9 = The list of collected password policy configurations that do not match organizationally defined recommendations
+* M1 = Output of Operation 1
+* M2 = Count of applicable enterprise assets 
+* M3 = Count of software insalled on applicable enterprise assets
+* M4 = Count of software that is listed in the configuration standard
+* M5 = Count of software that is not listed in the configuration standard
+* M6 = Timeframe since last review and update in months
 
 Metrics
 -------
+* If M1 is 0, this safeguard receives a failing score. The other metrics don't apply.
+* If M6 is greater than twelve, this safeguard is measured at a 0 and receives a failing score. The other metrics don't apply.
 
-Default Password Usage
-^^^^^^^^^^^^^^^^^^^^^^
+Standard Configuration Coverage
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | What percentage of credentials have been changed from the default value?
+	  - | The perecentage of authorized software  with secure configuration standards documented
+	  - | and maintained.
 	* - **Calculation**
-	  - | :code:`(M2 - M4) / M2`
+	  - :code:`M4 / M3`
 
-Password Policy Compliance
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. list-table::
-
-	* - **Metric**
-	  - | What percentage of collected password policies comply with the organization's 
-	    | password policies?
-	* - **Calculation**
-	  - | If M6 = 0, then no endpoint password policy configurations were collected.
-	    | Otherwise, the value of this metric is :code:`M8 / M6`
-
-.. history
 .. authors
 .. license
