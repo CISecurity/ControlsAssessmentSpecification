@@ -1,6 +1,6 @@
-4.5: Use Multi-Factor Authentication for All Administrative Access
+4.5: Implement and Manage a Firewall on End-User Devices
 ==================================================================
-Use multi-factor authentication and encrypted channels for all administrative account access.
+Implement and manage a host-based firewall or port-filtering tool on end-user devices, with a default-deny rule that drops all traffic except those services and ports that are explicitly allowed.
 
 .. list-table::
 	:header-rows: 1
@@ -8,58 +8,48 @@ Use multi-factor authentication and encrypted channels for all administrative ac
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Users
+	* - Devices
 	  - Protect
-	  - 2, 3
+	  - 1, 2, 3
 
 Dependencies
 ------------
-* Sub-control 2.4: Track Software Inventory Information
-* Sub-control 4.1: Maintain Inventory of Administrative Accounts
+* Safeguard 1.1: Establish and Maintain Detailed Enterprise Asset Inventory
+* Safeguard 2.1: Establish and Maintain a Software Inventory
+* Safeguard 4.1: Establish and Maintain a Secure Configuration Process
 
 Inputs
 ------
-#. List of Administrative accounts in the organization along with corresponding authentication system for each
-#. Approved Multi-Factor Authentication Configuration(s) - there may be multiple configurations based on the types of accounts and authentication systems involved
-#. Approved Encrypted Channel Configuration(s) - there may be multiple configurations based on the types of accounts and authentication systems involved
+#. :code:`GV1`: Enterprise asset inventory
+#. :code:`GV5`: Authorized software inventory
+#. :code:`GV3`: Configuration standard
 
 Operations
 ----------
-#. For each account in Input 1, check its configuration against the appropriate Multi-Factor Authentication configuration in Input 2. Create a list of compliant accounts (M1) and non-compliant accounts (M2)
-#. For each account in Input 1, check its configuration against the appropriate Encrypted Channel configuration in Input 3. Create a list of compliant accounts (M3) and non-compliant accounts (M4)
+#. Identify and enumerate end-user devices capable of hosting a firewall or a deny rule using :code:`GV1` (M1)
+#. Using configuration standards :code:`GV3` to check if firewalls or deny rules are properly configured on end-user devices
+	#. Enumerate assets from Operation 1 with properly configured firewalls or a configured default deny rule (M3)
+	#. Enumerate assets from Operation 1 with improperly configured firewalls and lacking a configured default deny rule(M4)
 
 Measures
 --------
-* M1 = List of Administrative Accounts that are configured properly for Multi-Factor Authentication (Multi-Factor compliant list)
-* M2 = List of Administrative Accounts that are not configured properly for Multi-Factor Authentication (Multi-Factor non-compliant list)
-* M3 = List of Administrative Accounts that are configured properly to be accessed through encrypted channels (Encrypted Channel compliant list)
-* M4 = List of Administrative Accounts that are not configured properly to be accessed through encrypted channels (Encrypted Channel non-compliant list)
-* M5 = Count of Multi-Factor compliant Administrative Accounts (count of M1)
-* M6 = Count of Encrypted Channel compliant Administrative Accounts (count of M3)
-* M7 = Total count of Administrative Accounts (count of Input 1)
+* M1 = Count of end-user devices capable of hosting a firewall
+* M2 = Count of end-user devices with a properly configured firewall or default deny rule
+* M3 = Count of end-user devices with an improperly configured firewall and lacking a configured default deny rule
 
 Metrics
 -------
 
-Multi-Factor Compliance
-^^^^^^^^^^^^^^^^^^^^^^^
+Coverage
+^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | Calculate the ratio of administrative accounts configured to use multi-factor
-	    | authentication to the total number of administrative accounts
+	  - | The percentage of properly configured firewalls or deny rule on end-user devices
 	* - **Calculation**
-	  - :code:`M5 / M7`
+	  - :code:`M2 / M1`
 
-Encrypted Channel Compliance
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. list-table::
 
-	* - **Metric**
-	  - | Calculate the ratio of administrative accounts configured to use encrypted channels to
-	    | the total number of administrative accounts
-	* - **Calculation**
-	  - :code:`M6 / M7`
 
 .. history
 .. authors
