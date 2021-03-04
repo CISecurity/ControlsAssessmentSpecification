@@ -1,6 +1,6 @@
-4.3: Ensure the Use of Dedicated Administrative Accounts
+4.3: Configure Automatic Session Locking on Enterprise Assets
 =========================================================
-Ensure that all users with administrative account access use a dedicated or secondary account for elevated activities. This account should only be used for administrative activities and not Internet browsing, email, or similar activities.
+Configure automatic session locking on enterprise assets after a defined period of inactivity. For general purpose operating systems, the period must not exceed 15 minutes. For mobile end-user devices, the period must not exceed 2 minutes.
 
 .. list-table::
 	:header-rows: 1
@@ -14,61 +14,47 @@ Ensure that all users with administrative account access use a dedicated or seco
 
 Dependencies
 ------------
-* None
+* Safeguard 1.1: Establish and Maintain Detailed Enterprise Asset Inventory
+* Safeguard 2.1: Establish and Maintain a Software Inventory
+* Safeguard 4.1: Establish and Maintain a Secure Configuration Process
 
 Inputs
 ------
-#. The list of users defined as Administrators
-#. The list of user accounts for the users defined in Input 1
-#. The list of users NOT defined as Administrators
-#. The list of user accounts for the users defined in Input 3
-#. The list of all user accounts.
-#. The list of all Administrative user accounts
-#. The list of non-Administrative user accounts
+#. :code:`GV1`: Enterprise asset inventory
+#. :code:`GV5`: Authorized software Inventory
+#. :code:`GV3`: Configuration standard
 
 Operations
 ----------
-#. For each user defined in Input 1, collect the Administrative user account for that user from Input 6 and the non-Administrative user account from Input 7
-#. For each user defined in Input 3, collect any Administrative user account for that user from Input 6 and the non-Administrative user account from Input 7
+#. Identify and enumerate assets within :code:`GV1` that support automatic locking due to inactivity (M1)
+#. Use :code:`GV5` to identify and enumerate assets from Operation 1 with authorized software installed (M2)
+#. Check the configurations for the software using :code:`GV3` 
+	#. For general computing assets, enumerate those assets with properly configured automatic locking (15 minutes or less) (M3)
+	#. For general computing assets, enumerate those assets with improperly configured automatic locking (greater than 15 minutes) (M4)
+	#. For mobile assets, enumerate those assets with properly configured automatic locking (2 minutes or less) (M5)
+	#. For mobile assets, enumerate those assets with improperly configured automatic locking (greater than 2 minutes) (M6)
 
 Measures
 --------
-* M1 = The list of defined Administrative users
-* M2 = The count of M1
-* M3 = The list of users collected in Operation 1
-* M4 = The count of M3
-* M5 = The list of users collected in Operation 2
-* M6 = The count of M5
-
-* M1 = The number of users defined as Administrators
-* M2 = For each user, this measure describes the number of user accounts identified by Operation 1
-* M3 = For each user, this measure describes the number of user accounts identified by Operation 2
-
+* M1 = Count of assets capable of supporting automatic lockout
+* M2 = Count of assets with authorized software installed to allow lockout
+* M3 = Count of general computing assets with properly configured lockout
+* M4 = Count of general computing assets with improperly configured lockout
+* M5 = Count of mobile assets with properly configured lockout
+* M6 = Count of mobile assets with improperly configured lockout
 
 Metrics
 -------
 
-Administrative User Accounts
+Properly Configured Assets
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | This metric is intended to determine whether those users identified as Administrative-level
-	    | have at least one Administrative-level and one non-Administrative level user account.
+	  - | The percentage of assets properly configured for automatic lockout.
 	* - **Calculation**
-	  - | The mapping performed by Operation 1 must show that, for each Administrative-level
-	    | user, at least 1 Administrative-level user account and at least 1
-	    | non-Administrative-level user account are available.  Otherwise, this metric is a :code:`FAIL`
+	  - :code:`(M3 + M5) / M1`
 
-Unauthorized User Accounts
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. list-table::
-
-	* - **Metric**
-	  - | This metric is intended to illustrate any non-Administrative-level users that
-	    | have been assigned an Administrative-level user account.
-	* - **Calculation**
-	  - If :code:`M6 > 0`, then :code:`FAIL`; otherwise :code:`PASS`
 
 .. history
 .. authors
