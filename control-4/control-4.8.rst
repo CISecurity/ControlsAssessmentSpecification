@@ -1,6 +1,6 @@
-4.8: Log and Alert on Changes to Administrative Group Membership
+4.8: Uninstall or Disable Unnecessary Services on Enterprise Assets and Software
 ================================================================
-Configure systems to issue a log entry and alert when an account is added to or removed from any group assigned administrative privileges.
+Uninstall or disable unnecessary services on enterprise assets and software, such as an unused file sharing service, web application module, or service function.
 
 .. list-table::
 	:header-rows: 1
@@ -8,106 +8,63 @@ Configure systems to issue a log entry and alert when an account is added to or 
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Users
-	  - Detect
+	* - Devices
+	  - Protect
 	  - 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 5.1: Establish Secure Configurations
+* Safeguard 1.1: Establish and Maintain Detailed Enterprise Asset Inventory
+* Safeguard 2.1: Establish and Maintain a Software Inventory
 
 Inputs
 ------
-#. Endpoint inventory
-#. Approved configuration(s) for logging of accounts being added to groups with administrative privileges
-#. Approved configuration(s) for logging of accounts being removed from groups with administrative privileges
-#. Approved configuration(s) for alerting when accounts are added to groups with administrative privileges
-#. Approved configuration(s) for alerting when accounts are removed from groups with administrative privileges
-
-**Note**: there may be multiple configurations for Inputs 2 - 5 to account for various groups/types of endpoints.
+#. :code:`GV1`: Enterprise asset inventory
+#. :code:`GV5`: Authorized software inventory
+#. :code:`GV3`: Configuration standard
 
 Operations
 ----------
-#. For each endpoint in Input 1, select the appropriate approved configuration from Inputs 2 - 5 in turn for that endpoint and check to see if that endpoint's actual configuration complies with the approved configuration for each Input. Record this information as M1 - a list of endpoints annotated with whether that endpoint is compliant or non-compliant with the appropriate approved configuration from each of the four inputs (Input 2 - Input 5).
-#. For each of the Inputs 2 - 5, generate a count of compliant endpoints from M1 and record these as M2, M3, M4, and M5 respectively
-#. Count the number of endpoints that are compliant with all 4 inputs and record this as M6
+#. Use :code:`GV5` to identify and enumerate authorized services (M1)
+#. Use :code:`GV1` to identify and enumerate services on enterprise assets (M2)
+#. Compare outputs from Operations 1 and 2
+	#. Identify and enumerate authorized services on assets (M3)
+	#. Identify and enumerate unauthorized services on assets (M4) 
+#. For authorized services in Operation 3.2, use :code:`GV3` to check configurations
+	#. Identify and enumerate services that are configured correctly (disabled) (M5)
+	#. Identify and enumerate services that are configured improperly (enabled) (M6)
 
 Measures
 --------
-* M1 = List of endpoints with each endpoint entry labeled with compliance or non-compliance for each of the 4 logging/alerting configurations from Inputs 2 - 5
-* M2 = Count of compliant endpoints based on Input 2 configurations
-* M3 = Count of compliant endpoints based on Input 3 configurations
-* M4 = Count of compliant endpoints based on Input 4 configurations
-* M5 = Count of compliant endpoints based on Input 5 configurations
-* M6 = Count of endpoints that are compliant with configurations from all 4 inputs
-* M7 = Count of endpoints from Input 1
-* M8 = List of compliant endpoints based on Input 2 configurations
-* M9 = List of non-compliant endpoints based on Input 2 configurations
-* M10 = List of compliant endpoints based on Input 3 configurations
-* M11 = List of non-compliant endpoints based on Input 3 configurations
-* M12 = List of compliant endpoints based on Input 4 configurations
-* M13 = List of non-compliant endpoints based on Input 4 configurations
-* M14 = List of compliant endpoints based on Input 5 configurations
-* M15 = List of non-compliant endpoints based on Input 5 configurations
-* M16 = Count of non-compliant endpoints based on Input 2 configurations
-* M16 = Count of non-compliant endpoints based on Input 3 configurations
-* M16 = Count of non-compliant endpoints based on Input 4 configurations
-* M16 = Count of non-compliant endpoints based on Input 5 configurations
+* M1 = Count of authorized services
+* M2 = Count of services on enterprise assets
+* M3 = Count of authorized services on assets
+* M4 = Count of unauthorized services on assets
+* M5 = Count of unauthorized services that are disabled
+* M6 = Count of unauthorized serivces that are enabled
 
 
 Metrics
 -------
 
-Logging of Accounts Added to Groups
+Compliant Services
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of endpoints logging when accounts are added to groups to the total number
-	    | of endpoints
+	  - | The percentage of services installed/running that are 
+	    | enterprise essential 
 	* - **Calculation**
-	  - :code:`M2 / M7`
+	  - :code:`(M3 + M5) / M2`
 
-Logging of Accounts Removed from Groups
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. list-table::
-
-	* - **Metric**
-	  - | The ratio of endpoints logging when accounts are removed from groups to the total number
-	    | of endpoints
-	* - **Calculation**
-	  - :code:`M3 / M7`
-
-Alerting of Accounts Added to Groups
+Non-compliant Services
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. list-table::
 
 	* - **Metric**
-	  - | The ratio of endpoints alerting when accounts are added to groups to the total number
-	    | of endpoints
+	  - | The percentage of services installed/running that are 
+	    | not enteprise essential 
 	* - **Calculation**
-	  - :code:`M4 / M7`
-
-Alerting of Accounts Removed from Groups
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. list-table::
-
-	* - **Metric**
-	  - | The ratio of endpoints alerting when accounts are removed from groups to the total
-	    | number of endpoints
-	* - **Calculation**
-	  - :code:`M5 / M7`
-
-Combined Compliance
-^^^^^^^^^^^^^^^^^^^
-.. list-table::
-
-	* - **Metric**
-	  - | The ratio of endpoints both alerting and logging when accounts are both added and
-	    | removed to the total number of endpoints
-	* - **Calculation**
-	  - :code:`M6 / M7`
+	  - :code:`M6 / M2`
 
 .. history
 .. authors
