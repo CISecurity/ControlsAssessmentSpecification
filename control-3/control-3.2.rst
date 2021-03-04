@@ -1,6 +1,6 @@
-3.2: Perform Authenticated Vulnerability Scanning
+3.2: Establish and Maintain a Data Inventory
 =================================================
-Perform authenticated vulnerability scanning with agents running locally on each system or with remote scanners that are configured with elevated rights on the system being tested.
+Establish and maintain a data inventory, based on the enterprise’s data management process. Inventory sensitive data, at a minimum. Review and update inventory annually, at a minimum, with a priority on sensitive data. 
 
 .. list-table::
 	:header-rows: 1
@@ -8,77 +8,70 @@ Perform authenticated vulnerability scanning with agents running locally on each
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Applications
-	  - Detect
-	  - 2, 3
+	* - Data
+	  - Identify
+	  - 1, 2, 3
 
 Dependencies
 ------------
-* Sub-control 2.1: Maintain Inventory of Authorized Software
+* Sub-control 1.1: Establish and Maintain Detailed Enterprise Asset Inventory
 
 Inputs
 ------
-#. List of deployed vulnerability scanning tools
-#. List of authenticated vulnerability scanners
-#. Time threshold for last use of vulnerability scanner
+#. :code:`GV11`: Portion of data management process addressing data sensitivity
+#. :code:`GV12`: Data Inventory consisting of the data set of sensitive information for which the enterprise is responsible
+#. :code:`GV1`: Enterprise asset inventory
+#. Date of last update to the sensitive data inventory
+
 
 Operations
 ----------
-#. For each deployed vulnerability scanner, check whether it is in the list of authenticated vulnerability scanners, noting those that are and those that are not
-#. For each deployed vulnerability scanner, verify that it has been used within time threshold
-#. For each authorized vulnerability scanner
-	#. Enumerate endpoints covered
-	#. Check configuration for authenticated scanning on each endpoint
-#. Aggregate number of endpoints covered (becomes M5)
-#. Aggregate correct configuration (becomes M6)
+#. Use :code:`GV11` to map Input 2 to sensitivity per the guidance in the data management process
+	#. Identify and enumerate items in the data set that have a mapping (M2)
+	#. Identify and enumerate items in the data set that do not have a mapping (M3)
+#. Use :code:`GV1` and M2 from Operation 1 to map the data set to assets storing data 
+	#. Identify and enumerate items that have complete and correct mapping to asset and sensitivity (M4)
+	#. Identify and enumerate items that have partial mapping to sensitivity (M5)
+#. Use: code:`GV1` and M3 from Operation 2 to map the data set, without sensitivity mapping, to assets storing data
+	#. Identify and enumerate items that have partial mapping to assets (M6)
+	#. Identify and enumerate items that have no mapping at all (M7)
+#. Compare current date to Input 4 and capture timeframe in months (M8) 
+
 
 Measures
 --------
-* M1 = Count of deployed vulnerability scanning tools (from Input 1)
-* M2 = List of unauthenticated vulnerability scanning tools
-* M3 = Count of M2
-* M4 = List of authenticated vulnerability scanning tools
-* M5 = Count of M4
-* M6 = List of vulnerability scanning tools recently used
-* M7 = Count of M6
-* M8 = List of vulnerability scanning tools not recently used
-* M9 = Count of M8
-* M10 = List of endpoints covered by at least one authenticated vulnerability scanner
-* M11 = Count of M10
-* M12 = List of endpoints scanned in an authenticated manner
-* M13 = Count of M12
-* M14 = List of endpoints not scanned in an authenticated manner
-* M15 = Count of M14
+* M1 = :code:`GV11`
+* M2 = Count of sensitive data addressed in :code:`GV11`
+* M3 = Count of sensitive data not addressed in :code:`GV11`
+* M4 = Count of data with complete sensitivity and asset storage inventory
+* M5 = Count of data with partial mapping to sensitivity
+* M6 = Count of data with partial mapping to assets
+* M7 = Count of data with no mapping to sensitivity or asset
+* M8 = Timeframe since last update to sensitive data inventory in months
+* M9 = Count of items in :code:`GV12`
 
 Metrics
 -------
+* If M1 is 0, this safeguard receives a failing score. The other metrics don't apply.
+* If M9 is greater than 12 months, this safeguard is scored at zero and receives a failing score. The other metrics don't apply.
 
-Authenticated Vulnerability Scanning Tool Coverage
+Completeness of sensitive data inventory
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | Percentage of authenticated vulnerability scanning tools (100% is desired)
+	  - | Percentage of data with complete information
 	* - **Calculation**
-	  - :code:`(M1 - M5) / M1`
+	  - :code:`M4 / M9`
 
-Recently Used Vulnerability Scanning Tools
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. list-table::
-
-	* - **Metric**
-	  - | Percentage of vulnerability scanning tools recently used
-	* - **Calculation**
-	  - :code:`(M1 - M7) / M1`
-
-Coverage
+Partial completeness of sensitive data inventory
 ^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | Authenticated scanning coverage
+	  - | Percentage of data with partial inventory
 	* - **Calculation**
-	  - :code:`M13 / M11`
+	  - :code:`(M5 + M6) / M9`
 
 .. history
 .. authors
