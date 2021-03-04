@@ -1,6 +1,6 @@
-3.3: Protect Dedicated Assessment Accounts
+3.3: Configure Data Access Control Lists
 ===========================================
-Use a dedicated account for authenticated vulnerability scans, which should not be used for any other administrative activities and should be tied to specific machines at specific IP addresses.
+Configure data access control lists based on a user’s need to know. Apply data access control lists, also known as access permissions, to local and remote file systems, databases, and applications. 
 
 .. list-table::
 	:header-rows: 1
@@ -8,43 +8,73 @@ Use a dedicated account for authenticated vulnerability scans, which should not 
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Users
+	* - Data
 	  - Protect
-	  - 2, 3
+	  - 1, 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
+* Safeguard 3.2: Establish and Maintain a Data Inventory
+* Safeguard 4.1: Establish and Maintain a Secure Configuration Process
+* Safeguard 5.1: Establish and Maintain an Inventory of Accounts
 
 Inputs
 ------
-#. List of vulnerability scanning accounts
-#. List of vulnerability scanning machines
+#. :code:`GV12`: Sensitive Data Inventory 
+#. :code:`GV1`: Enterprise asset inventory
+#. :code:`GV3`: Configuration information
+#. :code:`GV13`: Portion of data management process addressing data owners
+#. :code:`GV14`: Portion of data management process addressing data handling
+#. :code:`GV17`: Inventory of Accounts 
+
+Assumptions
+----------
+
+
 
 Operations
 ----------
-#. For each vulnerability scanning account, ensure account configuration to log in only to one or more of the vulnerability scanning machines
+#. Use the data managemet process, specifically :code:`GV13` and :code:`GV14`, as guidelines to map user account to sensitive data in :code:`GV12`.
+	#. Identify and enumerate sensitive data correctly mapped to user accounts (M1)
+	#. Idenitfy and enumerate sensitive data not correctly mapped to user accounts (M2)
+#. For each enterprise asset storing sensitive data, as outlined by :code:`GV12,
+	#. Identify and enumerate all assets storing sensitive data (3)
+	#. Use :code:`GV3` to check and enumerate assets that are properly configured to only allow users as identified in Operation 1 (M3)
+	#. Use :code:`GV3` to check and enumerate assets that are improperly configured to only allow users as identified in Operation 1 (M4)
 
 Measures
---------
-* M1 = Total number of vulnerability scanning accounts (from Input 1)
-* M2 = List of vulnerability scanning accounts configured to log in only to one or more of the vulnerability scanning machines
-* M3 = Count of M2
-* M4 = List of vulnerability scanning account configured to log in to any machine other than one of the vulnerability scanning machines
-* M5 = Count of M4
+----------
+* M1 = Count of sensitive data correctly mapped to user accounts per the data management process
+* M2 = Count of sensitive data correctly mapped to user accounts per the data management process
+* M3 = Count of assets storing sensitive data
+* M4 = Count of properly configured assets to support data access control
+* M5 = Count of improperly configured assets to support data access control
+* M6 = Count of :code:`GV17`
+* M7 = :code:'GV13`
+* M8 = :code:`GV14`
 
 Metrics
 -------
+If either M7 or M8 is 0, this safeguard receives a failing score. The other metrics don't apply.
 
-Misconfigured Account Ratio
+Completeness of User Access Control
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | Ratio of misconfigured vulnerability scanning accounts to the total number of
-	    | vulnerability scanning accounts
+	  - | Percentage of user accounts properly mapped to sensitive data 
 	* - **Calculation**
-	  - :code:`(M1 - M3) / M1`
+	  - :code:`M1 / M6`
+
+Properly Configured Assets
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. list-table::
+
+	* - **Metric**
+	  - | Percentage of assets properly configured to control acess of
+	    | sensitive data
+	* - **Calculation**
+	  - :code:`M4 / M3`
 
 .. history
 .. authors
