@@ -1,6 +1,6 @@
-4.7: Limit Access to Scripting Tools
+4.7: Manage Default Accounts on Enterprise Assets and Software
 =========================================================
-Limit access to scripting tools (such as Microsoft® PowerShell and Python) to only administrative or development users with the need to access those capabilities.
+Manage default accounts on enterprise assets and software, such as root, administrator, and other pre-configured vendor accounts. Example implementations can include: disabling default accounts or making them unusable.
 
 .. list-table::
 	:header-rows: 1
@@ -10,48 +10,51 @@ Limit access to scripting tools (such as Microsoft® PowerShell and Python) to o
 	  - Implementation Groups
 	* - Users
 	  - Protect
-	  - 2, 3
+	  - 1, 2, 3
 
 Dependencies
 ------------
-* Sub-control 2.1: Maintain Inventory of Authorized Software
-* Sub-control 5.1: Establish Secure Configurations
-* Sub-control 16.6: Maintain an Inventory of Accounts
+* Safeguard 1.1: Establish and Maintain Detailed Enterprise Asset Inventory
+* Safeguard 2.1: Establish and Maintain a Software Inventory
+* Safeguard 5.2: Use Unique Passwords
 
 Inputs
 ------
-#. Inventory of Accounts including how/where access to scripting tools is restricted
-#. List of accounts (administrative or developer accounts) with the need to access scripting tools, including which scripting tools are required for each account
-#. Approved configuration(s) to restrict scripting tool access to only approved accounts
-#. List of scripting tools to be checked
-#. (Optional) List of scripting tools allowed in organization (subset of the Authorized Software List)
+#. :code:`GV1`: Enterprise asset inventory
+#. :code:`GV5`: Authorized software inventory
+#. :code:`GV20`: Unique password policy
 
 Operations
 ----------
-#. For each account in Input 1, determine if the account has access to any of the scripting tools provided in Input 4 by comparing the appropriate approved configuration(s) from Input 3 to the configuration location(s) specified for that account in Input 1. Create a list of accounts that conform to the appropriate configuration(s) and policy for scripting tool access (M1) noting which configuration(s) they were checked against, and a list of accounts that do not conform to the appropriate configuration(s) and policy for scripting tool access (M2) noting the configuration(s) they were checked against and the deviations from those configurations. For each account on both lists, note which, if any, scripting tools that account has access to.
-#. (Optional) Compare the scripting tools authorized for particular accounts identified in Input 2 to the authorized scripting tools provided in Input 5. Create a list of scripting tools that are authorized for particular accounts but are not authorized for use in the organization (M5).
-#. (Optional) For each account authorized to access scripting tools in M2, verify that the account is an administrative or developer account. Create a list of accounts that are authorized for scripting tools but that are not administrative or developer accounts (M6).
+#. Use :code:`GV5` to identify and enumerate authorized operating software, applications, and third-party software that contain default accounts (M1)
+#. Use :code:`GV1` to identify and enumerate assets with software, from Operation 1, installed (M2)
+#. For each identified in Operation 2, enumerate default accounts (M3)
+#. Check if default accounts can be disabled
+	#. Enumerate accounts that are disabled (M4)
+	#. Enumerate accounts that are enabled (M5)
+#. If account cannot be disabled, ensure to change default passwords according to the :code:`GV20`: enterprise's unique password policy
+	#. Enumerate accounts with changed passwords (M6)
 
 Measures
 --------
-* M1 = List of accounts that conform to the appropriate configuration(s) and policy for scripting tool access (compliant list)
-* M2 = List of accounts that do not conform to the appropriate configuration(s) and policy for scripting tool access (non-compliant list)
-* M3 = Count of accounts that are compliant with the scripting tool access policy (count of M1)
-* M4 = Total count of accounts (count of Input 1)
-* M5 (Optional) = List of scripting tools authorized for particular accounts but not authorized for use in the organization
-* M6 (Optional) = List of accounts that are authorized for scripting tools but that are not administrative or developer accounts
+* M1 = Count of software that uses default accounts
+* M2 = Count of assets with software installed that uses default accounts
+* M3 = Count of default accounts identified 
+* M4 = Count of default accounts that have been disabled
+* M5 = Count of default accounts that are enabled
+* M6 = Count of enabled default accounts with changed passwords
 
 Metrics
 -------
 
-Coverage
+Unusable Default Accounts 
 ^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | Ratio of accounts that comply with the scripting tool access policy
+	  - | The percentage of default accounts that have been rendered unusable
 	* - **Calculation**
-	  - :code:`M3 / M4`
+	  - :code:`(M4 + M6) / M3`
 
 .. history
 .. authors
