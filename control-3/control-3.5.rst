@@ -1,6 +1,6 @@
-3.5: Deploy Automated Software Patch Management Tools
+3.5: Securely Dispose of Data
 =====================================================
-Deploy automated software update tools in order to ensure that third-party software on all systems is running the most recent security updates provided by the software vendor.
+Securely dispose of data as outlined in the enterprise’s data management process. Ensure the disposal process and method are commensurate with the data sensitivity.
 
 .. list-table::
 	:header-rows: 1
@@ -8,55 +8,61 @@ Deploy automated software update tools in order to ensure that third-party softw
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Applications
+	* - Data
 	  - Protect
 	  - 1, 2, 3
 
 Dependencies
 ------------
-* Sub-control 2.1: Maintain Inventory of Authorized Software
+* Safeguard 3.1: Establish and Maintain a Data Management Process
+* Safeguard 3.2: Establish and Maintain a Data Inventory
 
 Inputs
 ------
-#. From the authorized software list (ASL; sub-control 2.1), information on the current authorized version.
-#. Access to an authoritative source of information indicating version details by product.
-#. A list of approved exceptions, noting any reasons that an authorized software package does not match the latest version.
+#. :code:`GV16`: Data disposal requirement portion of data management process
+#. :coode:`GV11`: Portion of data management process addressing data sensitivity
+#. :code:`GV17`: Count of Sensitive data types
+#. :code:`GV12`: Sensitive Data Inventory
 
 Operations
 ----------
-#. For each software in Input 1, list the software products which do not match the latest version as described by Input 2.
-#. For each endpoint, obtain the current software load (the list of installed software).
-#. For each endpoint, list the installed software that does not match the current authorized version from Input 1.
-#. For each software product listed in Operation 3, list any that exist in the approved exceptions list (Input 3).
+#. For each sensitive data type covered in :code:`GV17`
+	#. Identify and enumerate each type has a disposal method and process as defined by :code:`GV16` (M2)
+	#. Identify and enumerate each type that does not have a disposal method and process as defined by :code:`GV16`(M3)
+#. For each item in :code:`GV12`determine wether they data complies with the disposal requirements outlined in :code:`GV17`
+	#. Enumerate data that does not comply with disposal requirements (M4)
+	#. Enumerate data that complies with disposal requirements (M5)
 
 Measures
 --------
-* M1 = List of authorized software products installed on the endpoint which are not at the latest version.
-* M2 = Count of M1
-* M3 = List of authorized software products installed on the endpoint.
-* M4 = Count of M3
-* M5 = List of authorized software products installed on the endpoint which are not at the latest version, but have approved exceptions.
-* M6 = Count of M5
+* M1 = :code:`GV17`
+* M2 = Count of sensitive data types with an outlined disposal method
+* M3 = Count of sensitive data types witouth an outlined disposal method
+* M4 = Count of data in inventory that does not comply with disposal requirement
+* M5 = Count of data in inventory that complies with disposal requirement
+* M6 = Count of items in :code:`GV12`
 
 Metrics
 -------
+* If :code:`GV16` is 0, this safeguard receives a failing score. The other metrics don't apply.
 
-Update Effectiveness (Per Endpoint)
+Completeness of disposal process 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | For a given endpoint, calculate the ratio of installed software updates to the
-	    | total number of required software updates.
+	  - | The percentage of data sensitivity types that contain a disposal method and process
 	* - **Calculation**
-	  - | If :code:`M2 == 0`, this indicates the endpoint requires no software updates.
-	    | If :code:`(M2 - M5) == 0`, this indicates the endpoint requires software updates,
-	    | but the out-of-date software has an approved exception.
-	    | Otherwise, this metric is calculated as :code:`(M2 - M5) / M4`
+	  - | :code:`M2 / M1`
 
-Update Effectiveness (Organizational)
+Compliance to disposal process
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-The organizational metric is calculated by averaging the results of the "per endpoint" metric above.
+.. list-table::
+
+	* - **Metric**
+	  - | The percentage of compliance to the data disposal process
+	* - **Calculation**
+	  - | :code:`M5 / M6`
 
 .. history
 .. authors
