@@ -25,7 +25,7 @@ Inputs
 #. :code:`GV3`: Configuration information
 #. :code:`GV13`: Portion of data management process addressing data owners
 #. :code:`GV14`: Portion of data management process addressing data handling
-#. :code:`GV17`: Inventory of Accounts 
+#. :code:`GV22`: Inventory of Accounts 
 
 Assumptions
 ----------
