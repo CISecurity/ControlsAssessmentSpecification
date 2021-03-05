@@ -1,7 +1,7 @@
-5.5: Implement Automated Configuration Monitoring Systems
+5.5: Establish and Maintain an Inventory of Service Accounts
 =========================================================
 
-Utilize a Security Content Automation Protocol (SCAP) compliant configuration monitoring system to verify all security configuration elements, catalog approved exceptions, and alert when unauthorized changes occur.
+Establish and maintain an inventory of service accounts. The inventory, at a minimum, must contain department owner, review date, and purpose. Perform service account reviews to validate that all active accounts are authorized, on a recurring schedule at a minimum quarterly, or more frequently.
 
 .. list-table::
 	:header-rows: 1
@@ -9,104 +9,77 @@ Utilize a Security Content Automation Protocol (SCAP) compliant configuration mo
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Applications
-	  - Detect
+	* - Users
+	  - Identify
 	  - 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 2.4: Track Software Inventory Information
-* Sub-control 5.1: Establish Secure Configurations
+* Safeguard 6.6: Establish and Maintain an Inventory of Authentication and Authorization Systems
 
 Inputs
 ------
-#. The organization's configuration monitoring system
-#. The list (maintained by NIST) of SCAP-validated tools
-#. The list of endpoints
-#. The inventory and mappings of secure configuration policy(ies) to the list of endpoints
-#. The list of approved exceptions, mapped to the endpoints on which they are approved (i.e. some endpoints may be excepting certain configurations, but others under the same configuration policy may not).
-#. The organization's approved configuration scanning interval (at least weekly)
+#. :code:`GV23`: Authentication and Authorizaion System Inventory 
+#. Inventory of service accounts
+#. Date of last review of the inventory of service accounts
 
 Operations
 ----------
-#. (Manual) Ensure the configuration scanning tool (Input 1) is present in the list of SCAP-validated tools (Input 2).
-#. For each endpoint, obtain the configuration assessment results using Input 1
-#. For each assessment result in Operation 2, obtain the list of recommendations which map to the catalog of approved exceptions for that endpoint.
-#. Following the time period specified by Input 6, re-assess to obtain a comparative assessment result
+#. Check if the enterprise maintains an inventory of service accounts (Input 2)
+	#. If the inventory exists M1 = 1
+	#. If the inventory does not exist M1 = 0
+#. Using the inventory of accounts Input 2, determine if the inventory captures the following elements: department owner, review date, and purpose
+	#. Each element is assigned a value of 1 if it exists and 0 if it does not. Total the number of elements that exist. (M3)
+#. Using Input 2 check each account for elements: department owner, review date, and purpose
+	#. Identify and enumerate accounts with all elements (M4)
+	#. Identify and enumerate accounts missing or with incomplete elements (M5)
+#. Use :code:`GV23` to identify authentication systems or other software that manages service accounts.
+#. Using the output of Operation 4, enumerate all current service accounts throughout the enterprise (M6)
+#. Compare the output of Operation 5 with Input 2 
+	#. Identify and enumerate accounts that are supposed to be active/enabled (M7)
+	#. Identify and enumerate accounts that are supposed to be disabled/removed (M8)
+#. Compare the current date to the date provided in Input 3 and enumerate the timeframe in months (M9)
+ 
 
 Measures
 --------
-* M1 = 1 if Operation 1 indicates the organization's scanning tool is present in the list of SCAP-validated tools; 0 otherwise
-* M2 = (For each endpoint) The number of non-compliant recommendations resulting from Operation 2
-* M3 = (For each endpoint) The number of non-compliant recommendations that do not map to the catalog of approved exceptions for the endpoint
-* M4 = (For each endpoint) The number of non-compliant recommendations resulting from Operation 4
-* M5 = (For each endpoint) The number of non-compliant recommendations that do not map to the catalog of approved exceptions for the endpoint
-* M6 = (For each endpoint) The number of recommendations assessed
-* M7 = (For each endpoint) The number of approved configuration policy exceptions
-* M8 = The number of the organization's SCAP-validated tools
-* M9 = The number of the organization's configuration management tools
+* M1 = Does the account inventory exist (Output of Operation 1)
+* M2 = Count of accounts in Input 2
+* M3 = Count of elements provided in inventory
+* M4 = Count of accounts in inventory with complete information
+* M5 = Count of accounts in inventory with missing or incomplete information
+* M6 = Count of current service accounts identified through Operation 5
+* M7 = Count of authorized accounts
+* M8 = Count of unauthorized accounts
+* M9 = Timeframe of last update in months
 
 Metrics
 -------
+If M1 is 0, this safeguard receives a failing score and other metrics don't apply.
+If M9 is greater than three, this safeguard is measured at a 0 and receives a failing score. The other metrics don't apply.
 
-Tooling Compliance
-^^^^^^^^^^^^^^^^^^
-.. list-table::
-
-	* - **Metric**
-	  - | Are SCAP-validated configuration scanning tool(s) being used?
-	* - **Calculation**
-	  - :code:`M1 == 1`
-
-Tooling Compliance Coverage
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. list-table::
-
-	* - **Metric**
-	  - | The ratio of SCAP-validated tools to the total number of configuration management tools
-	* - **Calculation**
-	  - :code:`M8 / M9`
-
-Initial Non-Compliance (Per Endpoint)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. list-table::
-
-	* - **Metric**
-	  - | Per endpoint, the ratio of non-compliant recommendations to the total recommendations
-	    | assessed.
-	* - **Calculation**
-	  - :code:`M2 / M6`
-
-Initial Exception Coverage (Per Endpoint)
+Completeness of Inventory
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | Per endpoint, the ratio of non-compliant recommendations with approved exceptions, to
-	    | the total recommendations assessed.
+	  - | The percentage of minimum elements included in the inventory.
 	* - **Calculation**
-	  - :code:`(M7 - M3) / M7`
+	  - :code:`M3 / 4`
 
-Subsequent Non-Compliance (Per Endpoint)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	* - **Metric**
+	  - | The percentage of accounts with complete information.
+	* - **Calculation**
+	  - :code:`M4 / 2`
+
+Accuracy of Inventory
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | Per endpoint, the ratio of non-compliant recommendations to the total recommendations
-	    | assessed.
+	  - | The percentage of accurately listed accounts in the inventory.
 	* - **Calculation**
-	  - :code:`M4 / M6`
-
-Subsequent Exception Coverage (Per Endpoint)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. list-table::
-
-	* - **Metric**
-	  - | Per endpoint, the ratio of non-compliant recommendations with approved exceptions, to
-	    | the total recommendations assessed.
-	* - **Calculation**
-	  - :code:`(M7 - M5) / M7`
+	  - :code:`M8 / M6`
 
 .. history
 .. authors
