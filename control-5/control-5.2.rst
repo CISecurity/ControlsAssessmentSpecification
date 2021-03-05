@@ -1,6 +1,6 @@
-5.2: Maintain Secure Images
+5.2: Use Unique Passwords
 =========================================================
-Maintain secure images or templates for all systems in the enterprise based on the organization’s approved configuration standards.  Any new system deployment or existing system that becomes compromised should be imaged using one of those images or templates.
+Use unique passwords for all enterprise assets. Best practice implementation includes, at a minimum, an 8-character password for accounts using MFA and a 14-character password for accounts not using MFA. 
 
 .. list-table::
 	:header-rows: 1
@@ -8,58 +8,66 @@ Maintain secure images or templates for all systems in the enterprise based on t
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Applications
+	* - Users
 	  - Protect
-	  - 2, 3
+	  - 1, 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 2.1: Maintain Inventory of Authorized Software
-* Sub-control 5.1: Establish Secure Configurations
+* None
 
 Inputs
 ------
-#. The list of the organization's approved configuration standards, per implementation of sub-control 5.1
-#. The inventory of systems
-#. The mapping of systems in the inventory to any secure configurations that should be applied. This input assumes that multiple configurations could apply to a single system in the inventory.
-#. The inventory of images
+#. :code:`GV20`: Unique password policy for the enterprise
 
 Operations
 ----------
-#. For each system in the inventory, determine the list of systems which have had an image taken and the list of systems without a corresponding image.
-#. For each system with a corresponding image, compare the image's configuration with the configuration standard(s) mapped to that system.
-
+#. Check if the enterprise has a unique password policy
+	#. If policy is available M1 = 1
+	#. Otherwise M1 = 0
+#. Review the policy and determine whether it includes password guidance for accounts without MFA
+	#. If guidance is included M2 = 1
+		#. Does guidance, at a minimum, require a fourteen character password
+			#. If password guidance is fourteen characters or longer M3 = 1
+			#. Otherwise M3 = 0
+	#. Otherwise M2 = 0
+#. Review the policy and determine whether it includes password guidance for accounts with MFA
+	#. If guidance is included M4 = 1
+		# Does guidance, at a minimu, require an eight character password
+			#. If password guidance is eight characters or longer M5 = 1
+			#. Otherwise M5 = 0
+	#. Otherwise M3 = 0
+ 
 Measures
 --------
-* M1 = Count of systems in the inventory (from Input 2)
-* M2 = Count of systems with a corresponding image taken
-* M3 = 1 if an image is configured according to the standards mapped to that system; 0 otherwise.
-* M4 = List of systems with a corresponding image taken
-* M5 = List of systems without a corresponding image taken
+* M1 = Does a password policy exist 
+* M2 = Does guidance exist for accounts without MFA 
+* M3 = Does guidance for accounts without MFA meet minimum guidance 
+* M4 = Does guidance exist for accounts with MFA
+* M5 = Does guidance for accounts with MFA meet minimum guidance 
 
 Metrics
 -------
+If M1 is 0, the safeguard recieves a failing score. Other metrics don't apply 
 
-Image Coverage
+Completeness of Password Policy
 ^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of systems with a corresponding image taken to the total number of inventoried
-	    | systems
+	  - | The percentage of completeness of the unique password policy
 	* - **Calculation**
-	  - :code:`M2 / M1`
+	  - :code:`(M2 + M4) / 2`
 
-Configuration Coverage
+Strength of Policy
 ^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of all systems with a corresponding image taken to those configured according
-	    | to the standards mapped to that system
+	  - | The percentage of password guidance that meets minimum character length
+	    | standards
 	* - **Calculation**
-	  - :code:`(SUM from 1..M2 (M3)) / M2`
+	  - :code:`(M3 + M5) / 2`
 
 .. history
 .. authors
