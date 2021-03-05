@@ -1,6 +1,6 @@
-5.3: Securely Store Master Images
+5.3: Disable Dormant Accounts
 =========================================================
-Store the master images and templates on securely configured servers, validated with integrity monitoring tools, to ensure that only authorized changes to the images are possible.
+Delete or disable any dormant accounts after a period of 45 days of inactivity, where supported
 
 .. list-table::
 	:header-rows: 1
@@ -8,56 +8,67 @@ Store the master images and templates on securely configured servers, validated 
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Applications
-	  - Protect
-	  - 2, 3
+	* - Users
+	  - Respond
+	  - 1, 2, 3
 
 Dependencies
 ------------
-* None
+* Safeguard 5.1: Establish and Maintain an Inventory of Accounts
 
 Inputs
 ------
-#. The list of master images/templates
-#. An available integrity monitoring tool
-#. The inventory of master images mapped to the output of the integrity monitoring tool's identifying information (such as a hash).
-#. A documented procedure detailing authorizations required for updates to the master images/templates
+#. :code:`GV22`: Inventory of accounts
+#. Enterprise defined policy for dormant threshold
+
+Assumptions
+----------
+#. The list of accounts for the enterprise includes OS-level, database, internal and external application accounts.
+#. A query interface is assumed to enable collection of a “last activity” timestamp, such as last logon, as well as a status indicating if the account is enabled or disabled.
 
 Operations
 ----------
-#. Collect the list of master images/templates' integrity monitoring identifying information (i.e. for each master image, collect the hash).
-#. Determine whether the update procedure documentation exists (M3)
+#. Review Input 2 and note the dormant threshold in terms of days (M2)
+#. For each account in :code:`GV22`, query the interface and collect 
+	#. The date of last activity for each account 
+	#. Whether the account is disabled or not
+#. Using the output of Operation 2.1 and Input 2
+	#. Identify and enumerate accounts that have exceeded the dormant threshold (M3)
+	#. Identify and enumerate accounts that are still within the dormant threshold (M4)
+#. Use the output of Operation 2.2 and 3.1 (M3)
+	#. Identify and enumerate accounts that are disabled (M5)
+	#. Identify and enumerate accounts that are still enabled (M6)
 
 Measures
 --------
-* M1 = Count of master images/templates (from Input 3)
-* M2 = Count of master images/templates identified by integrity monitoring tools
-* M3 = 1 if the documented master image update procedure exists; 0 otherwise.
-* M4 = List of master images/templates identified by integrity monitoring tools
-* M5 = List of master images/templates unidentified by integrity monitoring tools
-* M6 = Count of master images/templates unidentified by integrity monitoring tools (M5)
+* M1 = Count of accounts in :code:`GV22`
+* M2 = Timeframe of dormant threshold in days
+* M3 = Count of dormant accounts
+* M4 = Count of active accounts
+* M5 = Count of dormant accounts that have been disabled
+* M6 = Count of dormant accounts still enabled
 
 Metrics
 -------
 
-Integrity Monitoring Coverage
+Dormant Accounts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of master images/templates identified by integrity monitoring tools,
-	    | to the total number of images/templates.
+	  - | The percentage of dormant accounts still included in
+	  - | the inventory.
 	* - **Calculation**
-	  - :code:`M2 / M1`
+	  - :code:`M6 / M1`
 
-Update Procedures
+Enabled Dormant Accounts 
 ^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | Determine if the documented master image update procedure exists
+	  - | The percentage of dormant accounts still enabled
 	* - **Calculation**
-	  - :code:`M3 == 1`
+	  - :code:`M6 / M3`
 
 .. history
 .. authors
