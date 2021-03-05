@@ -1,6 +1,6 @@
-5.4: Deploy System Configuration Management Tools
+5.4: Restrict Administrator Privileges to Dedicated Administrator Accounts
 =========================================================
-Deploy system configuration management tools that will automatically enforce and redeploy configuration settings to systems at regularly scheduled intervals.
+Restrict administrator privileges to dedicated administrator accounts on enterprise assets. Conduct general computing activities, such as internet browsing, email, and productivity suite use, from the user’s primary, non-privileged account.
 
 .. list-table::
 	:header-rows: 1
@@ -8,76 +8,64 @@ Deploy system configuration management tools that will automatically enforce and
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Applications
+	* - Users
 	  - Protect
-	  - 2, 3
+	  - 1, 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 2.4: Track Software Inventory Information
-* Sub-control 5.1: Establish Secure Configurations
+* Safeguard 5.1: Establish and Maintain an Inventory of Accounts
 
 Inputs
 ------
-#. The organization's configuration monitoring system
-#. The list of endpoints
-#. The inventory and mappings of secure configuration policy(ies) to the list of endpoints
-#. The organization's approved configuration scanning interval (at least weekly)
+#. :code:`GV22`: Inventory of accounts
+#. List of users identified as administrators
 
 Assumptions
-^^^^^^^^^^^
-#. A timestamp "t" is defined as the time of a given configuration assessment
-#. A subsequent assessment, following the approved scanning interval (Input 4), is noted as "t+1"
+----------
+#. For the purpose of this control, it is assumed that users identified as administrators that have an active administrative and non-administrative account have properly dedicated accounts for administrative privileges. 
 
 Operations
 ----------
-#. For each endpoint, obtain the configuration assessment results using Input 1.  Note this as M1(t).
-#. Following the time period specified by Input 4, re-assess to obtain a comparative assessment result.  Note this as M1(t+1)
-
-Assumptions
-^^^^^^^^^^^
-* The assumption is that remediation/redeployment of configuration settings is occurring based on the improvement of scores over time and subsequent assessments.
+#. Using :code:`GV22` and Input 2
+	#. Identify and enumerate users identified as administrators with active administrator accounts (M1)
+	#. Identify and enumerate users identified as administrators without active administrator accounts (M2)
+	#. Identify and enumerate users not identified as administrators with active administrator accounts (M3)
+#. Using :code:`GV22` and output of Operation 1.1 
+	#. Identify and enumerate users identified as administrators that have an active non-administrative user account (M4)
+	#. Identify and enumerate users identified as administrators that do not have an active non-administrative user account (M5)
 
 Measures
 --------
-* M1(t) = (For each endpoint) Count of non-compliant recommendations resulting from Operation 1
-* M1(t+1) = (For each endpoint) Count of non-compliant recommendations resulting from Operation 2
-* M2 = (For each endpoint) Count of recommendations assessed
-* M3 = The number of endpoints
-* M4 = List of non-compliant endpoints resulting from Operation 1
-* M5 = List of non-compliant endpoints resulting from Operation 2
+* M1 = Count of authorized administrative users with active administrator accounts
+* M2 = Count of authorized administrative users without active administrator accounts
+* M3 = Count of non-administrative users with active administrator accounts
+* M4 = Count of authorized administrative users with an active administrative and non-administrative account
+* M5 = Count of authorized administrative users without an active administrative and non-administrative account
+* M6 = Count of Input 2
 
 Metrics
 -------
 
-Initial Non-Compliance
+Administrative User Accounts
 ^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of non-compliant recommendations at time "t", to the total recommendations
-	    | assessed.
+	  - | The perecentage of administrative users with both an administrative account
+	    | and non-administrative acount.
 	* - **Calculation**
-	  - :code:`M1(t) / M2`
+	  - :code:`M4/ M6`
 
-Subsequent Non-Compliance
+Unauthorized Administrative Accounts
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of non-compliant recommendations at time "t+1" ()
+	  - | The percentage of unauthorized administrative accounts
 	* - **Calculation**
-	  - :code:`M1(t+1) / M2`
+	  - :code:`M3 / (M1 + M3)`
 
-Overall Compliance
-^^^^^^^^^^^^^^^^^^
-.. list-table::
-
-	* - **Metric**
-	  - | What is the average overall compliance for all assessed endpoints at time "t"
-	* - **Calculation**
-	  - :code:`(SUM from 1..M3 (M1(t) / M2)) / M3`
 
 .. history
 .. authors
