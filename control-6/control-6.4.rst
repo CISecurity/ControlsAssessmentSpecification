@@ -1,6 +1,6 @@
-6.4: Ensure Adequate Storage for Logs
+6.4: Require MFA for Remote Network Access
 =========================================================
-Ensure that all systems that store logs have adequate storage space for the logs generated.
+Require MFA for remote network access.
 
 .. list-table::
 	:header-rows: 1
@@ -8,43 +8,44 @@ Ensure that all systems that store logs have adequate storage space for the logs
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Network
-	  - Detect
-	  - 2, 3
+	* - Users
+	  - Protect
+	  - 1, 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.5: Maintain Asset Inventory Information
+* Safeguard 1.1: Establish and Maintain Detailed Enterprise Asset Inventory
+* Safeguard 4.1: Establish and Maintain a Secure Configuration Process
 
 Inputs
 ------
-#. The list of endpoints (subject to system logging configuration)
-#. The organization's logging configuration policy, outlining log rotation policy, maximum log storage size, etc.
+#. :code:`GV1`: Enterprise asset inventory
+#. :code:`GV3`: Configuration standards
 
 Operations
 ----------
-#. For each endpoint, collect the system logging configuration
+#. Using :code:`GV1` as a guide, identify and enumerate all authorized remote assets (M1)
+#. For each asset identified in Operation 1, check configurations :code:`GV3`
+	#. Identify and enumerate assets properly configured to require MFA (M2)
+	#. Identify and enumerate assets not properly configured to require MFA (M3)
 
 Measures
 --------
-* M1(i) = (For each endpoint "i") 1 if an endpoint's logging configuration complies with the organizations logging policy; 0 otherwise.
-* M2 = The number of endpoints from Input 1
-* M3 = List of compliant endpoints
-* M4 = List of non-compliant endpoints
+* M1 = Count of remote assets
+* M2 = Count of remote assets properly configured to require MFA
+* M3 = Count of remote assets not properly configured to require MFA
 
 
 Metrics
 -------
 
-Logging Storage Coverage
+Coverage
 ^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of endpoints compliant with the organization's logging policy to the total
-	    | number of endpoints.
-	* - **Calculation**
-	  - :code:`(SUM from i=1..M2 (M1(i))) / M2`
+	  - | The percentage of remote assets poperly configured to require MFA
+	  - :code:`M2 / M1`
 
 .. history
 .. authors
