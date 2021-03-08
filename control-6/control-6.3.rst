@@ -1,6 +1,6 @@
-6.3: Enable Detailed Logging
+6.3: Require MFA for Externally-Exposed Applications
 =========================================================
-Enable system logging to include detailed information such as an event source, date, user, timestamp, source addresses, destination addresses, and other useful elements.
+Require all externally-exposed enterprise or third-party applications to enforce MFA, where supported. Enforcing MFA through a directory service or SSO provider is a satisfactory implementation of this Safeguard.
 
 .. list-table::
 	:header-rows: 1
@@ -8,42 +8,48 @@ Enable system logging to include detailed information such as an event source, d
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Network
-	  - Detect
-	  - 2, 3
+	* - Users
+	  - Protect
+	  - 1, 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.5: Maintain Asset Inventory Information
+* Safeguard 2.1: Establish and Maintain a Software Inventory
+* Safeguard 4.1: Establish and Maintain a Secure Configuration Process
+* Safeguard 5.1: Establish and Maintain an Inventory of Accounts
 
 Inputs
 ------
-#. The list of endpoints (subject to system logging configuration)
-#. The organization's logging configuration policy, outlining the detailed information to be written to system logs
+#. :code:`GV5`: Authorized Software Inventory
+#. :code:`GV22`: Inventory of Accounts
+#. :code:`GV3`: Configuration Standard
 
 Operations
-----------
-#. For each endpoint, collect the system logging configuration
+---------- 
+#. Use Input 1 to identify and enumerate externally exposed and third party applications
+#. Using the output of Operation 1 and :code:`GV22` identify and enumerate all user accounts associated with the applications (M1) 
+#. For each account identified in Operation 2 use :code:`GV3` to
+	#. Identify and enumerate accounts properly configured to require MFA (M2)
+	#. Identify and enumerate accounts not properly configured to require MFA (M3)
 
 Measures
 --------
-* M1(i) = (For each endpoint "i") 1 if the endpoint's logging configuration complies with the organizations logging policy; 0 otherwise.
-* M2 = Count of endpoints from Input 1
-* M3 = List of compliant endpoints
-* M4 = List of non-compliant endpoints
+* M1 = Count of accounts associated with externally exposed and third party applications
+* M2 = Count of accounts properly configured to require MFA
+* M3 = Count of accounts not properly configured to require MFA
 
 Metrics
 -------
 
-Logging Coverage
+Coverage
 ^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of endpoints configured to enable detailed system logging to the total number
-	    | of endpoints.
+	  - | The percentage of externally exposed and third party application accounts
+	  - | properly configured for MFA
 	* - **Calculation**
-	  - :code:`(SUM from i=1..M2 (M1(i))) / M2`
+	  - :code:`M2 / M1`
 
 .. history
 .. authors
