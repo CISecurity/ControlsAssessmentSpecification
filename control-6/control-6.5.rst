@@ -1,6 +1,6 @@
-6.5: Central Log Management
+6.5: Require MFA for Administrative Access
 =========================================================
-Ensure that appropriate logs are being aggregated to a central log management system for analysis and review.
+Require MFA for all administrative access accounts, where supported, on all enterprise assets, whether managed on-site or through a third-party provider.
 
 .. list-table::
 	:header-rows: 1
@@ -8,38 +8,43 @@ Ensure that appropriate logs are being aggregated to a central log management sy
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Network
-	  - Detect
-	  - 2, 3
+	* - Users
+	  - Protect
+	  - 1, 2, 3
 
 Dependencies
 ------------
-* Sub-control 2.4: Track Software Inventory Information
+* Safeguard 4.1: Establish and Maintain a Secure Configuration Process
+* Safeguard 5.1: Establish and Maintain an Inventory of Accounts 
 
 Inputs
 ------
-#. The total number of log producers (M1)
-#. The number of sensors correlated in a central service (M2)
+#. :code:`GV22`: Inventory of accounts 
+#. :code:`GV3`: Configuration Standard
 
 Operations
 ----------
-N/A
+#. Using :code:`GV22` identify and enumerate all administrative accounts (M1)
+#. For each administrative account identified in Operation 1 check configurations in :code:`GV3`
+	#. Identify and enumerate administrative accounts properly configured to require MFA (M2)
+	#. Identify and enumerate administrative accounts not properly configure to require MFA (M3)
 
 Measures
 --------
-* M1 = Count log producers
-* M2 = Count of sensors correlated in a central service
+* M1 = Count of administrative accounts 
+* M2 = Count of administrative accounts properly configured to require MFA
+* M3 = Count of administrative accounts not properly configured to require MFA
 
 Metrics
 -------
 
-Quality of Log correlation/aggregation
+Coverage
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of log producers correlated in a central service to the total number
-	    | of log producers.
+	  - | The percentage of administrative accounts properly configured to
+	  - | require MFA.
 	* - **Calculation**
 	  - :code:`M2 / M1`
 
