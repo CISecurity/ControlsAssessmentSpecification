@@ -1,6 +1,6 @@
-6.1: Utilize Three Synchronized Time Sources
+6.1: Establish an Access Granting Process
 =========================================================
-Use at least three synchronized time sources from which all servers and network devices retrieve time information on a regular basis so that timestamps in logs are consistent.
+Establish and follow a process, preferably automated, for granting access to enterprise assets upon new hire, rights grant, or role change of a user.
 
 .. list-table::
 	:header-rows: 1
@@ -8,46 +8,43 @@ Use at least three synchronized time sources from which all servers and network 
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Network
-	  - Detect
-	  - 2, 3
+	* - Users
+	  - Protect
+	  - 1, 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.5: Maintain Asset Inventory Information
+* None
 
 Inputs
 ------
-#. The list of endpoints
-#. The list of network time sources/NTP servers
+#. Enterprise process for granting access to enterprise assets
 
 Operations
 ----------
-#. From the list of endpoints, filter to collect the list of those servers and network devices that should be configured.
-#. From the list of servers/network devices, collect each endpoint's network time configuration
-#. Collect the list of servers/network devices whose network time configuration does not include a network time source.
+#. Check to see if Input 1 exists
+	#. If the enterprise has an access granting process, M1 = 1
+	#. If the enterprise does not have an access granting process, M1 = 0
+#. Using Input 1, check to see if the process, includes at a minimum, a way to grant access upon new hire, rights grat, and role change of a user.
+	#. For each element that is include, assign a value of 1. Sum the value of the elemnts included. (M2)
 
 Measures
 --------
-* M1 = Count of endpoints
-* M2 = Count of endpoints configured to synchronize with NTP servers
-* M3 = Count of endpoints whose network time configuration does not include an approved network time source
-* M4(i) = (For each endpoint "i" collected in Operation 1) 1 when the number of configured NTP servers >= 3; 0 otherwise.
-* M5 = List of endpoints configured to synchronize with NTP servers
-* M6 = List of endpoints whose network time configuration does not include an approved network time source
+* M1 = Output of Operation 1
+* M2 = Count of elements included in the access granting process
 
 Metrics
 -------
+If M1 is 0, the safeguard receives a failing score. The other metric don't apply.
 
-NTP Compliance Coverage
+Completeness of Process
 ^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of endpoints using at least 3 synchronized time sources to the total
-	    | set of endpoints
+	  - | The percentage of elements included in the access granting process
 	* - **Calculation**
-	  - :code:`(SUM from i=1..M2 (M4(i)) / M2)`
+	  - :code:`M2 / 3`
 
 .. history
 .. authors
