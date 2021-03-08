@@ -1,6 +1,6 @@
-6.2: Activate Audit Logging
+6.2: Establish an Access Revoking Process
 =========================================================
-Ensure that local logging has been enabled on all systems and networking devices.
+Establish and follow a process, preferably automated, for revoking access to enterprise assets, through disabling accounts immediately upon termination, rights revocation, or role change of a user. Disabling accounts, instead of deleting accounts, may be necessary to preserve audit trails.
 
 .. list-table::
 	:header-rows: 1
@@ -8,49 +8,43 @@ Ensure that local logging has been enabled on all systems and networking devices
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Network
-	  - Detect
+	* - Users
+	  - Protect
 	  - 1, 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 5.1: Establish Secure Configurations
+* None
 
 Inputs
 ------
-#. Endpoint Inventory: The list of endpoints from the endpoint inventory
-#. The list of events that should be logged (an event logging policy).
-
-Assumptions
-^^^^^^^^^^^
-The assumption is that there could potentially be numerous events which should be logged, and that a checklist verifying the logging policy can be examined per endpoint.
+#. Enterprise process for revoking access to enterprise assets
 
 Operations
 ----------
-#. For each endpoint, determine if the configured event logging policy matches the policy defined by Input 2, noting appropriately and inappropriately configured endpoints.
+#. Check to see if Input 1 exists
+	#. If the enterprise has an access revoking process, M1 = 1
+	#. If the enterprise does not have an access revoking process, M1 = 0
+#. Using Input 1, check to see if the process, includes at a minimum, a way to revoke access upon termination, rights revocation, and role change of a user.
+	#. For each element that is include, assign a value of 1. Sum the value of the elemnts included. (M2)
 
 Measures
 --------
-* M1 = The list of endpoints
-* M2 = Count of M1
-* M3 = The list of appropriately configured endpoints
-* M4 = Count of M3
-* M5 = The list of inappropriately configured endpoints
-* M6 = Count of M5
+* M1 = Output of Operation 1
+* M2 = Count of elements included in the access revoking process
 
 Metrics
 -------
+If M1 is 0, the safeguard receives a failing score. The other metric don't apply.
 
-Logging Policy Coverage
+Completeness of Process
 ^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | Determine the ratio of endpoints implementing the prescribed event logging policy
-	    | to the total number of endpoints.
+	  - | The percentage of elements included in the access granting process
 	* - **Calculation**
-	  - :code:`M4 / M6)`
+	  - :code:`M2 / 3`
 
 .. history
 .. authors
