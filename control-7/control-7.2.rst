@@ -1,6 +1,6 @@
-7.2: Disable Unnecessary or Unauthorized Browser or Email Client Plugins
+7.2: Establish and Maintain a Remediation Process
 ========================================================================
-Uninstall or disable any unauthorized browser or email client plugins or add-on applications.
+Establish and maintain a risk-based remediation strategy documented in a remediation process, with monthly, or more frequent, reviews.
 
 .. list-table::
 	:header-rows: 1
@@ -9,58 +9,48 @@ Uninstall or disable any unauthorized browser or email client plugins or add-on 
 	  - Security Function
 	  - Implementation Groups
 	* - Applications
-	  - Protect
-	  - 2, 3
+	  - Respond
+	  - 1, 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.5: Maintain Asset Inventory Information
-* Sub-control 2.1: Maintain Inventory of Authorized Software
+* None
 
 Inputs
 ------
-#. The list of authorized browser plugins
-#. The list of authorized email client plugins
-#. The list of endpoints
+#. Enterprise remediation strategy process
+#. Date of last review of the process
+#. :code:`GV18`: Enterprise assets storing, processing, and transmitting sensitive data
 
 Operations
 ----------
-#. From the list of all endpoints, collect the list of endpoints subject to browser/email plugin restrictions
-#. For each endpoint listed by Operation 1, collect the list of installed browser plugins
-#. For each endpoint listed by Operation 1, collect the list of installed email client plugins
-#. For each endpoint, calculate the complement of the installed browser plugins with the list of approved browser plugins from Input 1. The complement will yield any installed browser plugins not on the approved list.
-#. For each endpoint, calculate the complement of the installed email client plugins with the list of approved email client plugins from Input 2. The complement will yield any installed email client plugins not on the approved list.
+#. Determine whether the enterprise maintains a documented remediation process
+	#. If the process exists, M1 = 1
+	#. If the process does not exist, M1 = 0
+#. Check the documented remediation process to identify whether it includes a risk based process based on the following elements: Sensitive assets :code:`GV18` and criticality of vulnerability
+	#. Each element, if included, gets a value of 1. Sum all elements (M2) 
+#. Compare the date from Input 2 and current date. Enumerate the timeframe in terms of days (M3)
 
 Measures
 --------
-* M1 = Count of endpoints subject to browser/email plugin restrictions
-* M2(i) = (For each endpoint "i") Count of installed browser plugins not in the approved list (The count resulting from Operation 4)
-* M3(i) = 0 if, for each endpoint "i", the value of M2 > 0; 1 if the value of M2 == 0
-* M4(i) = (For each endpoint "i") Count of installed email client plugins not in the approved list (The count resulting from Operation 5)
-* M5(i) = 0 if, for each endpoint "i", the value of M4 > 0; 1 if the value of M4 == 0
+* M1 = Output of Operation 1
+* M2 = Sum of elements included in the remediation process
+* M3 = Timeframe since last review of process in days
 
 Metrics
 -------
+If M1 is 0, the safeguard receives a failing score. The other metrics don't apply.
+If M3 is greater than thirty, the safeguard receives a failing score. The other metrics don't apply.
 
-Browser Plugin Enforcement Quality
+Completenes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of endpoints utilizing browser plugins on the approved list to the total
-	    | number of endpoints.
+	  - | The percentage of elements included in the process
 	* - **Calculation**
-	  - :code:`(SUM from i=1..M1 (M3(i))) / M1`
+	  - :code:`M2 / 2`
 
-Email Client Plugin Enforcement Quality
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. list-table::
-
-	* - **Metric**
-	  - | The ratio of endpoints utilizing email client plugins on the approved list to the
-	    | total number of endpoints.
-	* - **Calculation**
-	  - :code:`(SUM from i=1..M1 (M5(i))) / M1`
 
 .. history
 .. authors
