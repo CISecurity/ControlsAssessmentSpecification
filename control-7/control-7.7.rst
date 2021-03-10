@@ -1,6 +1,6 @@
-7.7: Use of DNS Filtering Services
+7.7: Remediate Detected Vulnerabilities
 ===================================
-Use Domain Name System (DNS) filtering services to help block access to known malicious domains.
+Remediate detected vulnerabilities in software through processes and tooling on a monthly, or more frequent, basis, based on the remediation process.
 
 .. list-table::
 	:header-rows: 1
@@ -8,48 +8,53 @@ Use Domain Name System (DNS) filtering services to help block access to known ma
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Network
-	  - Protect
-	  - 1, 2, 3
+	* - Applications
+	  - Respond
+	  - 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.5: Maintain Asset Inventory Information
+* Safeguard 1.1: Establish and Maintain Detailed Enterprise Asset Inventory
 
 Inputs
 ------
-#. Endpoint Inventory: The list of endpoints to be audited (sub-control 1.5).
-#. The list of accepted DNS filtering services, such as Quad-9.
+#. :code:`GV1`: Enterprise asset inventory
+#. Current vulnerability scan
+#. Previous vulnerability scan 
+#. Date of current vulnerability scan
+#. Date of previous vulnerability scan
+
+Assumptions 
+----------
+#. Asset-Vulnerability combinations not found in most recent scan is indicative of remediation of that vulnerability on that asset.
 
 Operations
 ----------
-#. For each endpoint in Input 1, collect it's DNS configuration setting noting appropriately and inappropriately configured endpoints.
+#. For each asset in :code:`GV1`, compare Inputs 2 and 3
+	#. Identify and enumerate assets listed with the same vulnerability on both scans (M2)
+	#. Identify and enumerate assets previously found in Input 3 that are no longer listed in Input 2 with the same vulnerability (M3)
+#. Compare Inputs 4 and 5 and capture timeframe between scans in days (M4)
+
 
 Measures
 --------
-* M1 = List of audited endpoints
-* M2 = Count of M1
-* M3 = List of appropriately configured endpoints
-* M4 = Count of M3
-* M5 = List of inappropriately configured endpoints
-* M6 = Count of M5
+* M1 = Count of vulnerabilities identified in Input 3
+* M2 = Count of unremediated vulnerabilities
+* M3 = Count of remediated vulnerabilities
+* M4 = Timeframe in between scans
 
 Metrics
 -------
+If M4 is greater than thirty, this safeguard receives a failing score. The other metrics don't apply.
 
-DNS Filtering Coverage
+Remediation
 ^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | Determine the ratio of endpoints configured to use accepted DNS filtering services
-	    | to the total number of endpoints which utilize DNS.
+	  - | The percentage of remediated vulnerabilities 
 	* - **Calculation**
-	  - :code:`M4 / M2`
-
-Traffic Analysis
-^^^^^^^^^^^^^^^^
-**NOTE** A second measurement could utilize traffic analysis to determine if any traffic is *not* being sent through the prescribed DNS services.
+	  - :code:`M3 / M1`
 
 .. history
 .. authors
