@@ -1,6 +1,6 @@
-8.7: Enable DNS Query Logging
+8.7: Collect URL Request Audit Logs
 =========================================================
-Enable Domain Name System (DNS) query logging to detect hostname lookups for known malicious domains.
+Collect URL request audit logs on enterprise assets, where appropriate and supported.
 
 .. list-table::
 	:header-rows: 1
@@ -14,39 +14,37 @@ Enable Domain Name System (DNS) query logging to detect hostname lookups for kno
 
 Dependencies
 ------------
-* Sub-control 2.5: Integrate Software and Hardware Asset Inventories
-* Sub-control 5.1: Establish Secure Configurations
+* Safeguard 1.1: Establish and Maintain Detailed Enterprise Asset Inventory
+* Safeguard 4.1: Establish and Maintain a Secure Configuration Process
 
 Inputs
 ------
-#. The list of internal DNS servers
-#. The organization's DNS configuration policy
-
-Assumption
-^^^^^^^^^^
-* The organization maintains its own internal DNS server
+#. :code:`GV1`: Enterprise asset inventory
+#. :code:`GV3`: Configuration standards
 
 Operations
 ----------
-#. For each internal DNS server (Input 1), compare the server's DNS configuration with the organization's DNS configuration policy
+#. Use :code:`GV1` to identify and enumerate assets that support URL logging (M1)
+#. For each asset identified in Operation 1, use :code:`GV3` to check configurations for URL logging
+	#. Identify and enumerate assets properly configured for logging (M2)
+	#. Identify and enumerate assets not properly configured for logging (M3)
 
 Measures
 --------
-* M1 = Count of internal DNS servers
-* M2 = Count of internal DNS servers matching the organization's configuration policy
-* M3 = List of compliant DNS servers
-* M4 = List of non-compliant DNS servers
+* M1 = Count of assets capable of supporting URL logging
+* M2 = Count of assets properly configured for URL logging
+* M3 = Count of assets not properly configured for URL logging
 
 Metrics
 -------
 
-DNS Configuration Coverage
+Configuration Coverage
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of internal DNS servers matching the approved configuration to the
-	    | total number of internal DNS servers.
+	  - | The percentage of assets properly cofigured for 
+	    | URL logging
 	* - **Calculation**
 	  - :code:`M2 / M1`
 
