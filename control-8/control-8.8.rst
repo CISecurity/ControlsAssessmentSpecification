@@ -1,6 +1,6 @@
-8.8: Enable Command-Line Audit Logging
+8.8: Collect Command-Line Audit Logs
 =========================================================
-Enable command-line audit logging for command shells, such as Microsoft PowerShell and Bash.
+Collect command-line audit logs. Example implementations include collecting audit logs from PowerShell®, BASH™, and remote administrative terminals..
 
 .. list-table::
 	:header-rows: 1
@@ -14,39 +14,39 @@ Enable command-line audit logging for command shells, such as Microsoft PowerShe
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 5.1: Establish Secure Configurations
+* Safeguard 1.1: Establish and Maintain Detailed Enterprise Asset Inventory
+* Safeguard 4.1: Establish and Maintain a Secure Configuration Process
 
 Inputs
 ------
-#. The list of endpoints
-#. Approved configuration(s) for command line auditing of command shells (note: there may be multiple configurations based on the various types of endpoints, including various operating systems, etc.)
+#. :code:`GV1`: Enterprise asset inventory
+#. :code:`GV3`: Configuration standards
 
 Operations
 ----------
-#. For each endpoint in Input 1, examine the endpoint to see if it is configured according to the appropriate approved configuration(s) from Input 2.
-#. Create a list of endpoints that meet the approved configuration (M1)
-#. Create a list of endpoints that do not meet the approved configuration (M3), noting the deviations.
+#. Use :code:`GV1` to identify and enumerate assets that support command line auditing of command shells (M1)
+#. For each asset identified in Operation 1, use :code:`GV3` to check configurations for command line auditing of command shells
+	#. Identify and enumerate assets properly configured (M2)
+	#. Identify and enumerate assets not properly configured (M3)
 
 Measures
 --------
-* M1 = List of endpoints that meet the approved command shell logging configurations (compliant list)
-* M2 = Count of endpoints (count of Input 1)
-* M3 (Optional) = List of endpoints that do not meet the approved command shell logging configurations (non-compliant list)
-* M4 (Optional) = Count of non-compliant endpoints (count of M3)
+* M1 = Count of assets capable of supporting command line auditing of command shells
+* M2 = Count of assets properly configured for command line auditing of command shells
+* M3 = Count of assets not properly configured for command line auditing of command shells
 
 Metrics
 -------
 
-Coverage
-^^^^^^^^
+Configuration Coverage
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of endpoints compliant with command shell logging configurations to the
-	    | total number of endpoints
+	  - | The percentage of assets properly cofigured for 
+	    | command line auditing of command shells.
 	* - **Calculation**
-	  - :code:`M1 / M2`
+	  - :code:`M2 / M1`
 
 .. history
 .. authors
