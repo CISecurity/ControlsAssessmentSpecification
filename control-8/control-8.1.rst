@@ -1,6 +1,6 @@
-8.1: Utilize Centrally Managed Anti-Malware Software
+8.1: Establish and Maintain an Audit Log Management Process
 =========================================================
-Utilize centrally managed anti-malware software to continuously monitor and defend each of the organization’s workstations and servers.
+Establish and maintain an audit log management process that defines the enterprise’s logging requirements. At a minimum, address the collection, review, and retention of audit logs for enterprise assets. Review and update documentation annually, or when significant enterprise changes occur that could impact this Safeguard.
 
 .. list-table::
 	:header-rows: 1
@@ -8,64 +8,49 @@ Utilize centrally managed anti-malware software to continuously monitor and defe
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Devices
+	* - Network
 	  - Protect
-	  - 2, 3
+	  - 1, 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 1.5: Maintain Asset Inventory Information
-* Sub-control 2.1: Maintain Inventory of Authorized Software
-
-Assumption(s)
-^^^^^^^^^^^^^
-* It is assumed that this sub-control is specific to host-based anti-malware solutions.
+* None
 
 Inputs
 ------
-#. List of deployed anti-malware software
-#. The list of endpoints
+#. :code:`GV26`: Enterprise's audit log management process
+#. Date of last review of the audit log management process
 
 Operations
 ----------
-#. For each deployed anti-malware solution, verify that it is centrally managed
-#. For each deployed anti-malware solution, enumerate the set of endpoints covered
-#. Union the set of covered endpoints
-#. Identify set of endpoints eligible for anti-malware coverage (i.e. network devices likely do not run anti-malware agents)
+#. Check if :code:`GV26`the audit log management process exists
+	#. If it exists, M1 = 1
+	#. If it does not exist, M1 = 0
+#. Review :code:`GV26` for elements of the process, at a minimum, address the collection, review, and retention of audit logs for enterprise assets.
+	#. For each element that exists, assign a value of 1. Sum the values of existing elements. (M2) 
+#. Compare the date from Input 2 and the current date. Capture the timeframe in terms of months. (M3)
+
 
 Measures
 --------
-* M1 = Count of anti-malware solutions in use
-* M2 = Count of anti-malware solutions that are centrally managed
-* M3 = Total number of endpoints covered by anti-malware solutions
-* M4 = Total number of endpoints eligible for anti-malware coverage
-* M5 = List of anti-malware solutions that are centrally managed
-* M6 = List of anti-malware solutions that are not centrally managed
-* M7 = List of endpoints covered by anti-malware solutions
-* M8 = List of endpoints not covered by anti-malware solutions 
+* M1 = Output of Operation 1
+* M2 = Count of elements included in the audit log management process
+* M3 = Timeframe since last review of the autid log management process
 
 Metrics
 -------
+If M1 is 0, this safeguard receives a failing a score. The other metrics don't apply.
+If M3 is greater than twelve, this safeguard is measured at a 0 and receives a failing score. THe other metrics don't apply.
 
-Anti-Malware Management Coverage
+Completeness
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | Percentage of anti-malware solutions that are centrally managed
+	  - | The percentage of elements included in the audit log
+	  - | management process.
 	* - **Calculation**
-	  - :code:`M2 / M1`
-
-
-Endpoint Anti-Malware Coverage
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. list-table::
-
-	* - **Metric**
-	  - | Percentage of endpoints covered by anti-malware solutions
-	* - **Calculation**
-	  - :code:`M3 / M4`
+	  - :code:`M2 / 3`
 
 
 .. history
