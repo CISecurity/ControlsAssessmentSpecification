@@ -1,6 +1,6 @@
-8.5: Configure Devices to Not Auto-Run Content
+8.5: Collect Detailed Audit Logs
 =========================================================
-Configure devices to not auto-run content from removable media.
+Configure detailed audit logging for enterprise assets containing sensitive data. Include event source, date, username, timestamp, source addresses, destination addresses, and other useful elements that could assist in a forensic investigation.
 
 .. list-table::
 	:header-rows: 1
@@ -8,44 +8,57 @@ Configure devices to not auto-run content from removable media.
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Devices
-	  - Protect
-	  - 1, 2, 3
+	* - Network
+	  - Detect
+	  - 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 5.1: Establish Secure Configurations
+* Safeguard 1.1: Establish and Maintain Detailed Enterprise Asset Inventory
 
 Inputs
 -----------
-#. Endpoint Inventory: Endpoint inventory
-#. Desired configuration(s) to disable auto-run. There may be multiple configurations targeted at different types of endpoints (for instance, a different configuration might be provided for each type of operating system used on the endpoints in the provided inventory). If the endpoints are capable of performing multiple types of auto-run behavior (i.e., auto-run vs. auto-play), appropriate configurations should be provided for each type.
+#. :code:`GV18`: Enterprise assets storing, processing, and transmitting sensitive data
+#. :code:`GV26`: Enterprise's audit log management process
+#. :code:`GV3`: Configuration standards
 
 Operations
 ----------
-#. For each endpoint in Input 1, compare the endpoint's configuration to the appropriate configuration from Input 2. Generate a list of endpoints that adhere to the specified configuration (M1) and a list of the endpoints that do not adhere to the specified configuration (M2).
-
-Assumption
-^^^^^^^^^^
-Endpoints that are not capable of performing any type of auto-run behavior would be included in the compliant list (M1).
+#. Review :code:`GV26` for detailed logging requirements such as event source, date, username, timestamp, source addresses, and destination addresses. 
+	#. For each detailed logging requirement included, assign a value of 1.  Sum all requirements included. (M2)
+#. For each asset in :code:`GV18` check configuraions using :code:`GV3` as a guide
+	#. Identify and enumerate assets properly configured to collect detailed logging requirements (M3)
+	#. Identify and enumerate assets not properly configured to collect detailed logging requirements (M4)
 
 Measures
 --------
-* M1 = List of endpoints adhering to the specified configuration (compliant list)
-* M2 = List of endpoints not adhering to the specified configuration (non-compliant list)
-* M3 = Count of endpoints in M1 (number of compliant endpoints)
-* M4 = Count of endpoints in M2 (number of non-compliant endpoints)
-* M5 = Count of endpoints in the endpoint inventory (Input 1)
+* M1 = Count of assets capable of supporting logging :code:`GV27`
+* M2 = Count of detailed logging requirements included in log management process
+* M3 = Count of assets properly configured to collect detailed logs
+* M4 = Count of assets not properly configured to collect detailed logs
 
 Metrics
 -------
+
+Completeness of Process
+^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - The ratio of endpoints properly disabling auto-run to the total number of endpoints?
+	  - | The percentage of detailed logging requirements included in the 
+	  - | logging manangement process.
 	* - **Calculation**
-	  - :code:`M3 / M5`
+	  - :code:`M2 / 6`
+
+Logging Coverage
+^^^^^^^^^^^^^^
+.. list-table::
+
+	* - **Metric**
+	  - | The percentage of assets properly configured to collect 
+	  - | detailed logs.
+	* - **Calculation**
+	  - :code:`M3 / M1`
 
 .. history
 .. authors
