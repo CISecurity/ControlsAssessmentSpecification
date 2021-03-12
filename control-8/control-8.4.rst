@@ -1,6 +1,6 @@
-8.4: Configure Anti-Malware Scanning of Removable Media
+8.4: Standardize Time Synchronization
 =========================================================
-Configure devices so that they automatically conduct an anti-malware scan of removable media when inserted or connected.
+Standardize time synchronization. Configure at least two synchronized time sources across enterprise assets, where supported.
 
 .. list-table::
 	:header-rows: 1
@@ -8,50 +8,47 @@ Configure devices so that they automatically conduct an anti-malware scan of rem
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Devices
-	  - Detect
-	  - 1, 2, 3
+	* - Network
+	  - Protect
+	  - 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 5.1: Establish Secure Configurations
+* Safeguard 1.1: Establish and Maintain Detailed Enterprise Asset Inventory
 
 Inputs
 -----------
-#. Endpoint Inventory: Endpoint inventory (with entry for each endpoint indicating whether that endpoint can support anti-malware software or not)
-#. Desired anti-malware configuration (to automatically scan removable media when inserted/connected)
+#. :code:`GV27`: Assets capable of supporting logging
+#. List of approved network time sources/NTP servers
 
-Assumptions
------------
-Some endpoints, such as network devices, may not support anti-malware software. Whether an endpoint supports anti-malware software is provided as part of Input 1. Devices that cannot support anti-malware software are removed from the list of endpoints to be checked during Operation 1, and these devices are not counted in the metric below.
 
 Operations
 ----------
-#. Refine the endpoint inventory (Input 1) to only contain endpoints that can support anti-malware software endpoint inventory - this reduced list of endpoints becomes M1
-#. Of the set of endpoints that can support anti-malware software (M1), generate a list of those endpoints that actually have anti-malware software installed, enabled, and adhere to the configuration specified in Input 2 (M2) and a list of the endpoints that do not adhere to the specified configuration (M3). Note: Endpoints in M1 that do not have anti-malware installed and enabled, are considered non-compliant and added to M3.
+#. Using :code:'GV27`, identify and enumerate assets capable of supporting time synchronization (M1)
+#. Check the configurations of the assets identified in Operation 1
+	#. Identify and enumerate the assets configured using at least two approved time sources from Input 2 (M2)
+	#. Identify and enumerate the assets configured using time sources not on the approved list (M3)
+	#. Identify and enumerate the assets not configured using time sources (M4)
 
 Measures
 --------
-* M1 = List of endpoints capable of supporting anti-malware software
-* M2 = List of endpoints with anti-malware software installed, enabled, and properly configured to scan removable media (compliant list)
-* M3 = List of endpoints not adhering to the specified configuration (non-compliant list)
-* M4 = Count of endpoints in M1 (number of endpoints capable of supporting anti-malware software)
-* M5 = Count of endpoints in M2 (number of compliant endpoints)
-* M6 = Count of endpoints in M3 (number of non-compliant endpoints)
+* M1 = Count of logging capable assets that support time synchronization
+* M2 = Count of properly configured assets using at least two approve time sources
+* M3 = Count of assets configured using non-approved time sources
+* M4 = Count of assets not configured to use time sources
 
 Metrics
 -------
 
-Coverage
+NTP Compliance Coverage
 ^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | What is the ratio of endpoints compliant with the desired anti-malware configuration
-	    | to the total number of endpoints capable of supporting anti-malware software?
+	  - | The percentage of assets propery configured to with at least two 
+	    | approved synchronized time sources.
 	* - **Calculation**
-	  - :code:`M5 / M4`
+	  - :code:`M2 / M1`
 
 .. history
 .. authors
