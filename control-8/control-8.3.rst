@@ -1,6 +1,6 @@
-8.3: Enable Operating System Anti-Exploitation Features/ Deploy Anti-Exploit Technologies
+8.3: Ensure Adequate Audit Log Storage
 =========================================================================================
-Enable anti-exploitation features such as Data Execution Prevention (DEP) and Address Space Layout Randomization (ASLR) that are available in an operating system or deploy appropriate toolkits that can be configured to apply protection to a broader set of applications and executables.
+Ensure that logging destinations maintain adequate storage to comply with the enterprise’s audit log management process.
 
 .. list-table::
 	:header-rows: 1
@@ -8,45 +8,48 @@ Enable anti-exploitation features such as Data Execution Prevention (DEP) and Ad
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Devices
-	  - Detect
-	  - 2, 3
+	* - Network
+	  - Protect
+	  - 1, 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 1.5: Maintain Asset Inventory Information
-* Sub-control 5.1: Establish Secure Configurations
+* Safeguard 1.1: Establish and Maintain Detailed Enterprise Asset Inventory
 
 Inputs
 -----------
-#. List of endpoints
-#. Approved configuration(s) to enable anti-exploitation features (Operating System feature, toolkit, etc.) for each type of endpoint in Input 1
+#. :code:`GV27`: Assets capable of supporting logging
+#. :code:`GV26`: Enterprise's audit log management process
+
+Assumptions
+----------
+#. It is assumed that if the an asset is properly configured to meet the retention policy, that would include log rotation, maximum storage size, etc.
 
 Operations
 ----------
-#. For each endpoint in Input 1, examine the endpoint to see if it is configured according to the approved configuration(s).
-#. Create a list of the endpoints that meet the the approved configurations (M1)
-#. Create a list of the endpoints that do not meet the approved configurations (M2), noting each deviation.
+#. For each asset in :code:`GV27` collect the asset's logging configuration 
+#. Compare the output of Operation 1 and the retention portion of :code:`G26`
+	#. Identify and enumerate assets configured to comply with the retention portion of the process (M2)
+	#. Identify and enumerate assets not configured to comply with the retention portion of the process (M3)
 
 Measures
 --------
-* M1 = Count of endpoints that meet the approved anti-exploitation configurations, such as DEP, ASLR or similar technologies (compliant list)
-* M2 = Count of endpoints
-* M3 (Optional) = List of endpoints that meet the approved anti-exploitation configurations, such as DEP, ASLR or similar technologies (compliant list)
-* M4 (Optional) = List of endpoints that do not meet the approved anti-exploitation configurations, such as DEP, ASLR or similar technologies (non-compliant list)
-* M5 (Optional) = Count of non-compliant endpoints (M2 - M1)
-* M6 = List of non-compliant endpoints
+* M1 = Count of :code:`GV27` assets capable of supporting logging
+* M2 = Count of assets properly configured to meet retention requirements
+* M3 = Count of assets not properly configured to meet retention requirements
 
 Metrics
 -------
+
+Logging Storage Coverage
+^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | Ratio of endpoints compliant with anti-exploitation configurations to the total
-	    | number of endpoints
+	  - | The percentage of assets compliant with the organization's logging 
+	  - |  policy
 	* - **Calculation**
-	  - :code:`M1 / M2`
+	  - :code:`M2 / M1`
 
 .. history
 .. authors
