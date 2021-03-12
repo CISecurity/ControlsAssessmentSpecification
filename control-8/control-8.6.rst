@@ -1,5 +1,4 @@
 8.6: Collect DNS Query Audit Logs
-
 =========================================================
 Collect DNS query audit logs on enterprise assets, where appropriate and supported.
 
@@ -52,7 +51,6 @@ DNS Configuration Coverage
 	    | logging requirements.
 	* - **Calculation**
 	  - :code:`M2 / M1`
-
 
 .. history
 .. authors
