@@ -1,29 +1,23 @@
-CIS Control 9: Limitation and Control of Network Ports, Protocols and Services
+CIS Control 9: Email and Web Browser Protections
 ==============================================================================
 
-Manage (track/control/correct) the ongoing operational use of ports, protocols, and services
-on networked devices in order to minimize windows of vulnerability available to attackers
+Improve protections and detections of threats from email and web vectors, as these are opportunities for attackers to manipulate human behavior through direct engagement.
 
 **Why is this CIS Control Critical?**
 
-Attackers search for remotely accessible network services that are vulnerable to exploitation.
-Common examples include poorly configured web servers, mail servers, file and print services,
-and DNS servers installed by default on a variety of different device types, often without a
-business need for the given service. Many software packages automatically install services and
-turn them on as part of the installation of the main software package without informing a user or
-administrator that the services have been enabled. Attackers scan for such services and attempt
-to exploit these services, often attempting to exploit default user IDs and passwords or widely
-available exploitation code.
+Web browsers and email clients are very common points of entry for attackers because of their direct interaction with users inside an enterprise. Content can be crafted to entice or spoof users into disclosing credentials, providing sensitive data, or providing an open channel to allow attackers to gain access, thus increasing risk to the enterprise. Since email and web are the main means that users interact with external and untrusted users and environments, these are prime targets for both malicious code and social engineering. Additionally, as enterprises move to web-based email, or mobile email access, users no longer use traditional full-featured email clients, which provide embedded security controls like connection encryption, strong authentication, and phishing reporting buttons.
 
 .. toctree::
    :maxdepth: 1
    :name: toc-control-9
 
-   9.1: Associate Active Ports, Services and Protocols to Asset Inventory <control-9.1>
-   9.2: Ensure Only Approved Ports, Protocols and Services are Running <control-9.2>
-   9.3: Perform Regular Automated Port Scans <control-9.3>
-   9.4: Apply Host-Based Firewalls or Port-Filtering <control-9.4>
-   9.5: Implement Application Firewalls <control-9.5>
+   9.1: Ensure Use of Only Fully Supported Browsers and Email Clients <control-9.1>
+   9.2: Use DNS Filtering Services <control-9.2>
+   9.3: Maintain and Enforce Network-Based URL Filters <control-9.3>
+   9.4: Restrict Unnecessary or Unauthorized Browser and Email Client Extensions <control-9.4>
+   9.5: Implement DMARC <control-9.5>
+   9.6: Block Unnecessary File Types <control-9.6>
+   9.7: Deploy and Maintain Email Server Anti-Malware Protections <control-9.7>
    
 .. history
 .. authors
