@@ -1,6 +1,6 @@
-9.3: Perform Regular Automated Port Scans
+9.3: Maintain and Enforce Network-Based URL Filters
 =========================================================
-Perform automated port scans on a regular basis against all systems and alert if unauthorized ports are detected on a system.
+Enforce and update network-based URL filters to limit an enterprise asset from connecting to potentially malicious or unapproved websites. Example implementations include category-based filtering, reputation-based filtering, or through the use of block lists. Enforce filters for all enterprise assets.
 
 .. list-table::
 	:header-rows: 1
@@ -8,75 +8,47 @@ Perform automated port scans on a regular basis against all systems and alert if
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Devices
-	  - Detect
+	* - Network
+	  - Protect
 	  - 2, 3
 
 Dependencies
 ------------
-* Sub-control 2.5: Integrate Software and Hardware Asset Inventories
+* Safeguard 1.1: Establish and Maintain Detailed Enterprise Asset Inventory
+* Safeguard 2.1: Establish and Maintain a Software Inventory
+* Safeguard 4.1: Establish and Maintain a Secure Configuration Processs
 
 Inputs
 ------
-#. t(i): the timestamp at which a port scan i has been performed
-#. N: the number of port scans (timestamps) taken so far
-#. M: the maximum possible irregularity (can be fixed as 30 day)
-#. T: (optional) target/desirable review interval threshold
-#. D: the number of port scan in which at least one anomaly was detected
-#. L: The total number of port scans
-#. UP: The number of alerts received due to unauthorized ports (M5)
-#. NP: The number of unauthorized ports (M6)
+#. :code:`GV1`: Enterprise asset inventory
+#. :code:`GV3`: Configuration standards
+#. :code:`GV5`: Authorized software inventory
 
 Operations
 ----------
-* Enumerate endpoints and identify port scanning software
-* Calculate measures M1 - M6 for each port scanning software, tracking endpoints covered
-* Enumerate set of endpoints covered by port scanning software
-* Compare enumeration of covered endpoints against the list of all endpoints to identify those endpoints that are not covered
+#. Use :code:`GV1` to identify and enumerate enterprise assets capable of supporting network-based URL filters (M1)
+#. Use :code:`GV5` to identify authorized web browsers/clients
+#. For each asset identified in Operation 1 check to see if it is configured properly :code:`GV3` to support authorized web browsers/clients from Operation 2
+	#. Identify and enumerate assets properly configured (M2)
+	#. Identify and enumerate assets not properly configured (M3)
 
 Measures
 --------
-* M1 (the average of port scans) = :code:`SUM from i=1..N  ( t(i+1) - t(i) ) / N`
-* M2 (Regularity Measure of Port Scan) = :code:`(SUM from i=1..N  ( (t(i+1) - t(i) - M1)^2 / N ) / M`
-* M3 (Threshold-based Regularity Measure of Port Scan) = :code:`(SUM from i=1..N ( ( t(i+1) - t(i) - T )^2 / N ) / M`
-* M4 (The Probability of detecting an anomaly in port scans) = :code:`D / L`
-* M5 = Count of alerts received due to unauthorized ports
-* M6 = Count of unauthorized ports
-* M7 = List of endpoints covered by port scanning tools
-* M8 = List of endpoints not covered by port scanning tools
-* M9 = Count of endpoints covered by port scanning tools
-* M10 = Count of endpoints
+* M1 = Count of enterprise assets capable of supporting network-based URL filters
+* M2 = Count of assets properly configured to support network-based URL filters
+* M3 = Count of assets not properly configured to support network-based URL filters
 
 Metrics
 -------
 
-Quality of Port Scan
-^^^^^^^^^^^^^^^^^^^^
+Coverage 
+^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | Quality of review is high if and only if the review is highly regular and the potential
-	    | for detecting anomalies (at least one per review) is also high.
+	  - | The percentage of assets configured to use authorized network-based URL filters
 	* - **Calculation**
-	  - :code:`(1 - M2) * M4` or (if M3) :code:`(1 - M3) * M4`
-
-Quality
-^^^^^^^
-.. list-table::
-
-	* - **Metric**
-	  - | Ratio of unauthorized ports reported
-	* - **Calculation**
-	  - :code:`M5 / M6`
-
-Coverage
-^^^^^^^^
-.. list-table::
-
-	* - **Metric**
-	  - | Ratio of covered endpoints to the total number of endpoints
-	* - **Calculation**
-	  - :code:`M9 / M10`
+	  - :code:`M2 / M1`
 
 .. history
 .. authors
