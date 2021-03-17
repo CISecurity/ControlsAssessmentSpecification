@@ -1,6 +1,6 @@
-9.2: Ensure Only Approved Ports, Protocols, and Services Are Running
+9.2: Use DNS Filtering Services
 ====================================================================
-Ensure that only network ports, protocols, and services listening on a system with validated business needs are running on each system.
+Use DNS filtering services on all enterprise assets to block access to known malicious domains.
 
 .. list-table::
 	:header-rows: 1
@@ -8,71 +8,49 @@ Ensure that only network ports, protocols, and services listening on a system wi
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Devices
+	* - Network
 	  - Protect
-	  - 2, 3
+	  - 1, 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 1.5: Maintain Asset Inventory Information
+* Safeguard 1.1: Establish and Maintain Detailed Enterprise Asset Inventory
+* Safeguard 4.1: Establish and Maintain a Secure Configuration Process
 
 Inputs
 ------
-#. List of authorized ports with validated business need
-#. List of authorized protocols with validated business need
-#. List of authorized services with validated business need
-#. List of endpoints
+#. :code:`GV1`: Enterprise asset inventory
+#. :code:`GV5`: Authorized software inventory
+#. :code:`GV3`: Configuration standards
 
 Operations
 ----------
-#. For each endpoint perform the following to build sets of information:
-	#. Scan for open ports
-	#. For each open port
-		#. Test protocol running on that port
-	#. Enumerate installed services
-#. Enumerate discovered ports
-#. Enumerate discovered services
-#. Determine set of unauthorized ports
-#. Determine set of unauthorized services
+#. Use :code:`GV1` to identify and enumerate assets that support DNS filtering (M1)
+#. Use :code:`GV5` to identify and enumerate authorized DNS filtering services
+#. For each asset identified in Operation 1 check to see if it is configured properly :code:`GV3` to support authorized DNS filtering services from Operation 2
+	#. Identify and enumerate assets properly configured (M2)
+	#. Identify and enumerate assets not properly configured (M3)
 
 Measures
 --------
-* M1 = Set of open ports
-* M2 = Set of unauthorized ports
-* M3 = Set of discovered services
-* M4 = Set of unauthorized services
-* M5 = Set of unexpected protocols discovered on open ports
+* M1 = Count of enterprise assets capable of supporting DNS filtering
+* M2 = Count of assets properly configured to support DNS filtering
+* M3 = Count of assets not properly configured to support DNS filtering
+
 
 Metrics
 -------
 
-Ports
+DNS Filtering Coverage 
 ^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | Ratio of unauthorized ports to open ports
+	  - | The percentage of assets configured to use authorized DNS filtering services
 	* - **Calculation**
 	  - :code:`M2 / M1`
 
-Services
-^^^^^^^^
-.. list-table::
 
-	* - **Metric**
-	  - | Ratio of unauthorized services to discovered services
-	* - **Calculation**
-	  - :code:`M4 / M3`
-
-Unexpected Protocols
-^^^^^^^^^^^^^^^^^^^^
-.. list-table::
-
-	* - **Metric**
-	  - | Ratio of unexpected protocols discovered on open ports to total number of open ports
-	* - **Calculation**
-	  - :code:`M5 / M1`
 
 .. history
 .. authors
