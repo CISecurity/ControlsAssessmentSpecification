@@ -1,6 +1,6 @@
-9.4: Apply Host-Based Firewalls or Port-Filtering
+9.4: Restrict Unnecessary or Unauthorized Browser and Email Client Extensions
 =========================================================
-Apply host-based firewalls or port-filtering tools on end systems, with a default-deny rule that drops all traffic except those services and ports that are explicitly allowed.
+Restrict, either through uninstalling or disabling, any unauthorized or unnecessary browser or email client plugins, extensions, and add-on applications.
 
 .. list-table::
 	:header-rows: 1
@@ -8,53 +8,60 @@ Apply host-based firewalls or port-filtering tools on end systems, with a defaul
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Devices
+	* - Applications
 	  - Protect
-	  - 1, 2, 3
+	  - 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 1.5: Maintain Asset Inventory Information
+* Safeguard 1.1: Establish and Maintain Detailed Enterprise Asset Inventory
+* Safeguard 2.1: Establish and Maintain a Software Inventory
 
 Inputs
 ------
-#. Endpoint Inventory: Derive from the endpoint inventory those endpoints able to scan (assumed capable of hosting firewall/port-filtering software)
-#. A policy (or set of policies, potentially individually per endpoint) indicating the ports that are allowed to be open
+#. :code:`GV1`: Enterprise asset inventory
+#. :code:`GV5`: Aurhorized software inventory
 
 Operations
 ----------
-#. For each endpoint, retrieve the firewall policy
-#. For each firewall policy, enumerate both the ports which allow communication, and any configuration of a default deny rule (could that be a default?), noting along the way appropriately configured policies and inappropriately configured policies
+#. Use :code:`GV1` to identify and enumerate assets subject to browser/email plugin restrictions (M1)
+#. Use :code:`GV5` to identify authorized browser and email plugins
+#. For each asset listed in Operation 1, collect the list of installed browser plugins and compare to the output of Operation 2
+	#. Identify and enumerate assets with only authorized browser plugins installed or enabled (M2)
+	#. Identify and enumerate assets with one or more unauthorized browser plugins installed or enabled (M3)
+#. For each asset listed in Operation 1, collect the list of installed email plugins and compare to the output of Operation 2
+	#. Identify and enumerate assets with only authorized email plugins installed or enabled (M4)
+	#. Identify and enumerate assets with one or more unauthorized browser plugins installed or enabled (M5)
 
 Measures
 --------
-* M1 = List of endpoints
-* M2 = Count of M1
-* M3 = List of endpoints with appropriately configured firewall ports policy
-* M4 = Count of M3
-* M5 = List of endpoints with inappropriately configured firewall ports policy
-* M6 = Count of M5
-* M7 = List of endpoints with appropriately configured default deny rule
-* M8 = Count of M7
-* M9 = List of endpoints with inappropriately configured default deny rule
-* M10 = Count of M9
-* M11 = List of endpoints with both appropriately configured firewall policy
-* M12 = Count of M11
-* M13 = List of endpoints with at least one inappropriate firewall configuration
-* M14 = Count of M13
+* M1 = Count of assets subject to browser/email plugin restrictions
+* M2 = Count of assets with only authorized browser plugins installed or enabled
+* M3 = Count of assets with unauthorized browser plugins installed or enabled
+* M4 = Count of assets with only authorized email plugins installed or enabled
+* M5 = Count of assets with unauthorized email plugins installed or enabled
+
 
 Metrics
 -------
 
-Coverage
+Browser Plugin Enforcement Quality
 ^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of correctly configured endpoints to the total number of endpoint?
+	  - | The percentage of assets compliant with authorized browser plugins.
 	* - **Calculation**
-	  - :code:`M14 / M2`
+	  - :code:`M2 / M1`
+
+Email Client Plugin Enforcement Quality
+^^^^^^^^
+.. list-table::
+
+	* - **Metric**
+	  - | The percentage of assets compliant with authorized email plugins.
+	* - **Calculation**
+	  - :code:`M4 / M1`
 
 .. history
 .. authors
