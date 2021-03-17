@@ -1,6 +1,6 @@
-9.5: Implement Application Firewalls
+9.5: Implement DMARC
 =========================================================
-Place application firewalls in front of any critical servers to verify and validate the traffic going to the server. Any unauthorized traffic should be blocked and logged.
+To lower the chance of spoofed or modified emails from valid domains, implement DMARC policy and verification, starting with implementing the Sender Policy Framework (SPF) and the DomainKeys Identified Mail (DKIM) standards.
 
 .. list-table::
 	:header-rows: 1
@@ -8,53 +8,69 @@ Place application firewalls in front of any critical servers to verify and valid
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Devices
+	* - Network
 	  - Protect
-	  - 3
+	  - 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 1.5: Maintain Asset Inventory Information
-* Sub-control 2.1: Maintain Inventory of Authorized Software
-* Sub-control 2.5: Integrate Software and Hardware Asset Inventories
+* Safeguard 2.1: Establish and Maintain a Software Inventory
+
 
 Inputs
 -----------
-#. The list of endpoints
-#. The list of authorized software
+#. DMARC Policy
+#. TXT record published in DNS
+#. The Mail Transfer Agent used by the enterprise
+#. The Mail User Agent used by the enterprise
+
+Assumptions
+----------
+#. The DMARC configuration policy includes instructions to produce either Aggregate (rua) or Forensic (ruf) reports.
+#. The enterprise has access to these reports either daily (for Aggregate) or in real-time (for Forensic).
 
 Operations
 ----------
-#. Enumerate endpoints identified as critical in the endpoint inventory
-#. Enumerate all application firewalls from the software inventory
-#. For each identified application firewall, enumerate the endpoints it covers
-	#. Enumerate the set of identified endpoints - covered endpoints
-#. Complement the set of covered endpoints with the set of critical endpoints
+#. Check if enterprise has a DMARC policy
+	#. If the enterprise has a DMARC policy, M1 = 1
+	#. If the enterprise does not have a DMARC policy, M1 = 0
+#. Examine Input 2 for a value indicative of the use of DMARC
+	#. If a value for DMARC is identified, M2 = 1
+	#. If a value for DMARC is not identified, M2 = 0
+#. Examine Input 2 for a value indicative of the use of SPF
+	#. If a value for SPF is identified, M3 = 1
+	#. If a value for SPF is not identified, M3 = 0
+#. Examine Input 2 for a value indicative of the use of DKIM
+	#. If a value for DKIM is identified, M4 = 1
+	#. If a value for DKIM is not identified, M4 = 0
+#. Check if enterprise uses a Mail Transfer Agent
+	#. If the enterprise uses a Mail Transfer Agent, M5 = 1
+	#. It the enterprise does not use a Mail Transfer Agent, M5 = 1 
+#. Check if enterprise uses a Mail User Agent
+	#. If the enterprise uses a Mail User Agent, M6 = 1
+	#. It the enterprise does not use a Mail User Agent, M6 = 1 
 
 Measures
 --------
-* M1 = List of critical endpoints
-* M2 = List of application firewalls
-* M3 = List of endpoints covered by at least one application firewall
-* M4 = List of endpoints not covered by at least one application firewall
-* M5 = Count of critical endpoints (count of M1)
-* M6 = Count of application firewalls (count of M2)
-* M7 = Count of endpoints covered by at least one application firewall (count of M3)
-* M8 = Count of endpoints not covered by at least one application firewall (count of M4)
+* M1 = Output of Operation 1
+* M2 = Output of Operation 2
+* M3 = Output of Operation 3
+* M4 = Output of Operation 4
+* M5 = Output of Operation 5
+* M6 = Output of Operation 6
+
 
 Metrics
 -------
 
-Coverage
+DMARC Usage
 ^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of endpoints covered by at least one application firewall to the total number
-	    | of critical endpoints
+	  - | Usage and configuration of DMARC/SPF/DKIM
 	* - **Calculation**
-	  - :code:`M7 / M5`
+	  - :code:`(M1 + M2 + M3 + M4 + M5 + M6) / 6`
 
 .. history
 .. authors
