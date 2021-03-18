@@ -1,6 +1,6 @@
-10.1: Ensure Regular Automated Backups
+10.1: Deploy and Maintain Anti-Malware Software
 =======================================
-Ensure that all system data is automatically backed up on a regular basis.
+Deploy and maintain anti-malware software on all enterprise assets.
 
 .. list-table::
 	:header-rows: 1
@@ -8,44 +8,44 @@ Ensure that all system data is automatically backed up on a regular basis.
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Data
+	* - Devices
 	  - Protect
 	  - 1, 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 1.5: Maintain Asset Inventory Information
-* Sub-control 5.1: Establish Secure Configurations
+* Safeguard 1.1: Establish and Maintain Detailed Enterprise Asset Inventory
+* Safeguard 2.1: Establish and Maintain a Software Inventory
+* Safeguard 4.1: Establish and Maintain a Secure Configuration Process
 
 Inputs
 -----------
-#. Endpoint Inventory: Endpoint Inventory
-#. Backup configuration policy is available
-#. Backup software (either OS or 3d party) configuration is available and able to be queried
-#. Backup software logs are available and can be queried
-#. Successful backup staleness threshold is defined (a maximum time period allowed between backups; recommended value of at least weekly)
+#. :code:`GV1`: Enterprise asset inventory
+#. :code:`GV5`: Authorized sofware inventory
+#. :code:`GV3`: Configuration standards
 
 Operations
 ----------
-#. For each endpoint, examine its backup configuration with the available configuration policy (noting appropriately configured and inappropriately configured endpoints along the way), and examine its logs to determine the most recent successful backup completion time (noting whether it was run within the enterprise-defined staleness threshold).
-# Enumerate the endpoints that are both appropriately configured and do not have stale backups
+#. Use :code:`GV1` to identify and enumerate assets capable of supporting anti-malware software: :code:`GV30` (M1)
+#. Use :code:`GV5` to identify authorized anti-malware software: :code:`GV31`
+#. For each asset identified in Operation 1, use the output of Operation 2
+	#. Identify and enumerate assets with at least one authorized anti-malware software intalled: :code:`GV32` (M2)
+	#. Identify and enumerate assets with only unauthorized anti-malware software installed (M3)
+	#. Identify and enumerate assets without any anti-malware software installed (M4)
+#. For each asset wih a least one authorized anti-malware software installed from Operation 3.1, use :code:`GV3` to check configurations
+	#. Identify and enumerate assets with properly configured anti-malware software (M5)
+	#. Identify and enumerate assets with improperly configured anti-malware software (M6)
 
-#. Compare an endpoints backup configuration with available configuration policy
-#. Interrogate logs to determine most recent successful backup completion time
 
 Measures
 --------
-* M1 = List of endpoints
-* M2 = Count of M1
-* M3 = List of appropriately configured endpoints
-* M4 = Count of M3
-* M5 = List of inappropriately configured endpoints
-* M6 = Count of M5
-* M7 = List of endpoints both appropriately configured and without stale backups
-* M8 = Count of M7
-* M9 = List of endpoints either inappropriately configured or without stale backups
-* M10 = Count of M9
+* M1 = Count of assets capable of supporting anti-malware software
+* M2 = Count of assets with at least one authorized anti-malware software installed
+* M3 = Count of assets with only unauthorized anti-malware software installed
+* M4 = Count of assets without any anti-malware software installed
+* M5 = Count of assets with properly configured authorized anti-malware software installed
+* M6 = Count of assets with improperly configured authorized anti-malware software installed
+
 
 Metrics
 -------
@@ -55,9 +55,10 @@ Coverage
 .. list-table::
 
 	* - **Metric**
-	  - What percentage of endpoints are successfully backing up system data on a regular basis?
+	  - | The percentage of assets with properly configured authorized 
+	  - | anti-malware installed
 	* - **Calculation**
-	  - :code:`M8 / M2`
+	  - :code:`M5 / M1`
 
 .. history
 .. authors
