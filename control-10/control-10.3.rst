@@ -1,6 +1,6 @@
-10.3: Test Data on Backup Media
+10.3: Disable Autorun and Autoplay for Removable Media
 =========================================================
-Test data integrity on backup media on a regular basis by performing a data restoration process to ensure that the backup is properly working.
+Disable autorun and autoplay auto-execute functionality for removable media.
 
 .. list-table::
 	:header-rows: 1
@@ -8,64 +8,46 @@ Test data integrity on backup media on a regular basis by performing a data rest
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Data
+	* - Devices
 	  - Protect
-	  - 2, 3
+	  - 1, 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 1.5: Maintain Asset Inventory Information
+* Safeguard 1.1: Establish and Maintain Detailed Enterprise Asset Inventory
+* Safeguard 4.1: Establish and Maintain a Secure Configuration Process
 
 Inputs
 -----------
-#. The current set of backup media for the organization
-#. t(i): the timestamp at which a backup restoration i has been performed
-#. N: the number of backup restorations (timestamps) performed so far
-#. M: the maximum possible irregularity (can be fixed as 30 day)
-#. T: (optional) target/desirable review interval threshold
-#. D: the number of backup restorations in which at least one anomaly was detected
-#. L: The total number of backup restorations
+#. :code:`GV1`: Enterprise asset inventory
+#. :code:`GV3`: Configuration standards
 
 Operations
 ----------
-#. Given a sampling of backup media from Input 1, restore the backup to a temporary location
-
-Assumption
-^^^^^^^^^^
-* The assumption is made that the organization will know what a "properly working" restored backup entails.
+#. Use :code:`GV1` to identify and enumerate enterprise assets capable of performing autorun, autoplay, and auto-execute functions (M1)
+#. Check the configurations :code:`GV3` of each asset identified in Operation 1 to see if the autorun, autoplay, and auto-execute functions are disabled
+	#. Identify and enumerate properly configured assets (M2)
+	#. Identify and enumerate improperly configured assets (M3)
 
 Measures
 --------
-* M1 = Count of backups under test
-* M2 = Count of restored backups deemed "properly working" following restoration
-* M3 = The average of backup restorations = :code:`SUM from i=1..N ( t(i+1) - t(i) ) / N`
-* M4 (Regularity Measure of Backup Restoration) = :code:`(SUM from i=1..N ((t(i+1) - t(i)) - M3)^2 / N ) / M`
-* M5 (Threshold-based Regularity Measure of Backup Restoration) = :code:`(SUM from i=1..N ((t(i+1) - t(i) - T)^2 / N ) / M`
-* M6 (The Probability of detecting an anomaly in Backup Restoration) = :code:`D / L`
+* M1 = Count of assets capable of performing autorun, autoplay, and auto-excecute functions
+* M2 = Count of assets properly configured to disable functions
+* M3 = Count of assets not properly configured to disable functions
+
 
 Metrics
 -------
 
-Backup Integrity Quality
-^^^^^^^^^^^^^^^^^^^^^^^^
-.. list-table::
-
-	* - **Metric**
-	  - The ratio of "properly working" backups to the total number of backups under test
-	* - **Calculation**
-	  - :code:`M2 / M1`
-
-Quality of Backup Restoration
+Compliance
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | Quality of backup restoration is high if and only if the backup restoration is
-	    | highly regular and the potential for detecting anomalies (at least one per review)
-	    | is also high.
+	  - | The percentage of assets properly configured to disable autorun, autoplay
+	  - | and autoexecute functions.
 	* - **Calculation**
-	  - :code:`(1-M4) * M6` or (if M5) :code:`(1 - M5) / M6
+	  - :code:`M2 / M1` 
 
 .. history
 .. authors
