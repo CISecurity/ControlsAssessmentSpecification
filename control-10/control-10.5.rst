@@ -1,6 +1,6 @@
-10.5: Ensure All Backups Have at Least One Offline Backup Destination
+10.5: Enable Anti-Exploitation Features
 =====================================================================
-Ensure that all backups have at least one offline (i.e., not accessible via a network connection) backup destination.
+Enable anti-exploitation features on enterprise assets and software, where possible, such as Microsoft® Data Execution Prevention (DEP), Windows® Defender Exploit Guard (WDEG), or Apple® System Integrity Protection (SIP) and Gatekeeper™.
 
 .. list-table::
 	:header-rows: 1
@@ -8,33 +8,32 @@ Ensure that all backups have at least one offline (i.e., not accessible via a ne
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Data
+	* - Devices
 	  - Protect
-	  - 1, 2, 3
+	  - 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 1.5: Maintain Asset Inventory Information
-* Sub-control 5.1: Establish Secure Configurations
+* Safeguard 1.1: Establish and Maintain Detailed Enterprise Asset Inventory
+* Safeguard 4.1: Establish and Maintain a Secure Configuration Process
 
 Inputs
 -----------
-#. Endpoint Inventory: List of endpoints
-#. Backup configuration policy assuming inclusion of "offline" backup destination
+#. :code:`GV1`: Enterprise asset inventory
+#. :code:`GV3`: Configuration standards
 
 Operations
 ----------
-#. Collect list of endpoints matching/not-matching policy specified by Input 2
+#. For each asset in :code:`GV1`, use configuration standards :code:`GV3` to determine if it is propely configured to enable anti-exploitation features
+	#. Identify and enumerate assets properly configured to enable anti-exploitation features (M2)
+	#. Identify and enumerate assets not properly configured to enable anti-exploitation features (M3)
 
 Measures
 --------
-* M1 = List of endpoints
-* M2 = Count of M1
-* M3 = List of endpoints matching policy
-* M4 = Count of M3
-* M5 = List of endpoints not matching policy
-* M6 = Count of M5
+* M1 = Count of :code:`GV1`
+* M2 = Count of assets properly configured to enable anti-exploitation feautures
+* M3 = Count of assets not properly configured to enable anti-exploitation features
+
 
 Metrics
 -------
@@ -44,18 +43,11 @@ Coverage
 .. list-table::
 
 	* - **Metric**
-	  - What is the ratio of endpoints matching the backup configuration policy to the total number of endpoints?
+	  - | The percentage of assets properly configured to enable 
+	  - | anti-exploitation features.
 	* - **Calculation**
-	  - :code:`M4 / M2`
+	  - :code:`M2 / M1`
 
-Lack of Coverage
-^^^^^^^^^^^^^^
-.. list-table::
-
-	* - **Metric**
-	  - What is the ratio of endpoints *not* matching the backup configuration policy to the total number of endpoints?
-	* - **Calculation**
-	  - :code:`M5 / M2`
 
 .. history
 .. authors
