@@ -1,6 +1,6 @@
-10.2: Perform Complete System Backups
+10.2: Configure Automatic Anti-Malware Signature Updates
 ======================================
-Ensure that all of the organization’s key systems are backed up as a complete system, through processes such as imaging, to enable the quick recovery of an entire system.
+Configure automatic updates for anti-malware signature files on all enterprise assets.
 
 .. list-table::
 	:header-rows: 1
@@ -8,37 +8,33 @@ Ensure that all of the organization’s key systems are backed up as a complete 
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Data
+	* - Devices
 	  - Protect
 	  - 1, 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 1.5: Maintain Asset Inventory Information
-* Sub-control 5.1: Establish Secure Configurations
+* Safeguard 10.1: Deploy and Maintain Anti-Malware Software
+
 
 Inputs
 -----------
-#. Key Systems: The list of "key systems" identified by the organization, as derived from the endpoint inventory (see sub-control 1.4)
-#. The organization's backup/imaging configuration policy
-
-Assumptions
-^^^^^^^^^^^
-* Backup software (either OS or 3d party) is installed and appropriately configured on "key systems" identified in Input 1
+#. :code:`GV30`: Assets capable of supporting anti-malware software
+#. :code:`GV31`: Assets with at least one authorized anti-malware software intalled
+#. :code:`GV3`: Configuration standards
 
 Operations
 ----------
-#. For each endpoint in the list of "key systems", examine its backup configuration against the available backup configuration policy, noting appropriately and inappropriately configured endpoints along the way.
+#. For each asset in Input 2 :code:`GV31`, check configuraions :code:`GV3` to determine if anti-malware software is configured to autmatically update signature files
+	#. Identify and enumerate assets properly configured for automatic updates (M2)
+	#. Identify and enumerate asets not properly configured for automatic updates (M3)
 
 Measures
 --------
-* M1 = List of "key system" endpoints
-* M2 = Count of M1
-* M3 = List of appropriately configured "key systems"
-* M4 = Count of M3
-* M5 = List of inappropriately configured "key systems"
-* M6 = Count of M5
+* M1 = Count of :code:`GV30`
+* M2 = Count of assets configured to automatically update signature files
+* M3 = Count of assets not configured to automatically update signature files
+
 
 Metrics
 -------
@@ -48,9 +44,10 @@ Coverage
 .. list-table::
 
 	* - **Metric**
-	  - What percentage of key systems are successfully backed up as a complete system?
+	  - | The percentage of assets properly configured to automatically
+	  - | update signaure files
 	* - **Calculation**
-	  - :code:`M4 / M2`
+	  - :code:`M2 / M1`
 
 .. history
 .. authors
