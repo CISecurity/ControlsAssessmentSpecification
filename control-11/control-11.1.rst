@@ -1,6 +1,6 @@
-11.1: Maintain Standard Security Configurations for Network Devices
+11.1: Establish and Maintain a Data Recovery Process 
 ===================================================================
-Maintain documented security configuration standards for all authorized network devices.
+Establish and maintain a data recovery process. In the process, address the scope of data recovery activities, recovery prioritization, and the security of backup data. Review and update documentation annually, or when significant enterprise changes occur that could impact this Safeguard. 
 
 .. list-table::
 	:header-rows: 1
@@ -8,47 +8,48 @@ Maintain documented security configuration standards for all authorized network 
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Network
-	  - Identify
-	  - 2, 3
+	* - Data
+	  - Recovery
+	  - 1, 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 1.5: Maintain Asset Inventory Information
+* None
 
 Inputs
 ------
-#. The list of authorized network devices, per Control 1.
-#. The list of enterprise security configuration standards.
-
-Assumption
-^^^^^^^^^^
-* Documentation of secure configuration standards should include any approved deviations/exceptions from industry-standard security baselines such as CIS benchmarks, DISA Security Technical Implementation Guides (STIGs), or U.S. government configuration baselines (USGCB).
+#. Data recovery process for the enterprise
+#. Date of last update to the data recovery process 
 
 Operations
 ----------
-#. Perform a set calculation, computing the Intersection (M1) of Input 1 and Input 2
+#. Check if enterprise has a data recovery process Input 1
+	#. If so, M1 = 1
+	#. If not, M1 = 0
+#. Examine the enterprise's data recovery process and determine if it addresses, at a minimum, the scope of data recovery activities, recovery prioritization, and the security of backup data
+	#. For each element included within the process, assing the element a value of 1. M2 = sum of all the values.
+#. Compare the date of last update to the data recovery process to the curren date and capture timeframe in months (M3)
 
 Measures
 --------
-* M1 = The intersection of Input 1 and Input 2. This intersection measures those authorized network devices with security configuration standards.
-* M2 = The "left" side of the set calculation measures the number of authorized network devices without security configuration standards.
-* M3 = The "right" side of the set calculation measures the number of security configuration standards without any authorized network devices to which they are associated.
-* M4 = Count of authorized network devices.
+* M1 = Output of Operation 1
+* M2 = Sum of elements included in the data recoery process
+* M3 = Timeframe in months of last update to the data recovery process
+
 
 Metrics
 -------
+If M1 is 0, the safeguard receives a failing score. The other metrics don't apply.
+If M3 is greater than twelve, this safeguard is measured at a 0 and receives a failing score. The other metrics don't apply.
 
-Coverage
+Completeness
 ^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of network devices to which standard, documented security configuration
-	    | standards exist to the total number of network devices
+	  - | The percentage of elements included in the data recovery process
 	* - **Calculation**
-	  - :code:`(M4 - M2) / M4`
+	  - :code:`M2 / M3`
 
 .. history
 .. authors
