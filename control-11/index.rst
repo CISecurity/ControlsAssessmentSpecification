@@ -1,42 +1,26 @@
-CIS Control 11: Secure Configuration for Network Devices, such as Firewalls, Routers, and Switches
+CIS Control 11: Data Recovery
 ==================================================================================================
 
-Establish, implement, and actively manage (track, report on, correct) the security configuration of
-network infrastructure devices using a rigorous configuration management and change control
-process in order to prevent attackers from exploiting vulnerable services and settings.
+Establish and maintain data recovery practices sufficient to restore in-scope enterprise assets to a pre-incident and trusted state.
 
 **Why is this CIS Control Critical?**
 
-As delivered from manufacturers and resellers, the default configurations for network
-infrastructure devices are geared for ease-of-deployment and ease-of-use – not security. Open
-services and ports, default accounts (including service accounts) or passwords, support for older
-(vulnerable) protocols, pre-installation of unneeded software; all can be exploitable in their
-default state. The management of the secure configurations for networking devices is not a onetime
-event, but a process that involves regularly re-evaluating not only the configuration items
-but also the allowed traffic flows. Attackers take advantage of network devices becoming less
-securely configured over time as users demand exceptions for specific business needs. Sometimes
-the exceptions are deployed and then left undone when they are no longer applicable to the
-business needs. In some cases, the security risk of the exception is neither properly analyzed nor
-measured against the associated business need and can change over time.
+In the cybersecurity triad – Confidentiality, Integrity, and Availability (CIA) – the availability of data is, in some cases, more critical than its confidentiality. Enterprises need many types of data to make business decisions, and when that data is not available or is untrusted, then it could impact the enterprise. An easy example is weather information to a transportation enterprise.
 
-Attackers search for vulnerable default settings, gaps or inconsistencies in firewall rule sets,
-routers, and switches and use those holes to penetrate defenses. They exploit flaws in these
-devices to gain access to networks, redirect traffic on a network, and intercept information while
-in transmission. Through such actions, the attacker gains access to sensitive data, alters important
-information, or even uses a compromised machine to pose as another trusted system on the
-network.
+When attackers compromise assets, they make changes to configurations, add accounts, and often add software or scripts. These changes are not always easy to identify, as attackers might have corrupted or replaced trusted applications with malicious versions, or the changes might appear to be standard-looking account names. Configuration changes can include adding or changing registry entries, opening ports, turning off security services, deleting logs, or other malicious actions that make a system insecure. These actions do not have to be malicious; human error can cause each of these as well. Therefore, it is important to have an ability to have recent backups or mirrors to recover enterprise assets and data back to a known trusted state.
+
+There has been an exponential rise in ransomware over the last few years. It is not a new threat, though it has become more commercialized and organized as a reliable method for attackers to make money. If an attacker encrypts an enterprise’s data and demands ransom for its restoration, having a recent backup to recover to a known, trusted state can be helpful. However, as ransomware has evolved, it has also become an extortion technique, where data is exfiltrated before being encrypted, and the attacker asks for payment to restore the enterprise’s data, as well as to keep it from being sold or publicized. In this case, restoration would only solve the issue of restoring systems to a trusted state and continuing operations. Leveraging the guidance within the CIS Controls will help reduce the risk of ransomware through improved cyber hygiene, as attackers usually use older or basic exploits on insecure systems.
+
 
 .. toctree::
    :maxdepth: 1
    :name: toc-control-11
 
-   11.1: Maintain Standard Security Configuration for Network Devices <control-11.1>
-   11.2: Document Traffic Configuration Rules <control-11.2>
-   11.3: Use Automated Tools to Verify Standard Device Configurations and Detect Changes <control-11.3>
-   11.4: Install the Latest Stable Version of Any Security-Related Updates on All Network Devices <control-11.4>
-   11.5: Manage Network Devices Using Multi-Factor Authentication and Encrypted Sessions <control-11.5>
-   11.6: Use Dedicated Workstations for All Network Administrative Tasks <control-11.6>
-   11.7: Manage Network Infrastructure Through a Dedicated Network <control-11.7>
+   11.1: Establish and Maintain a Data Recovery Process  <control-11.1>
+   11.2: Perform Automated Backups  <control-11.2>
+   11.3: Protect Recovery Data <control-11.3>
+   11.4: Establish and Maintain an Isolated Instance of Recovery Data  <control-11.4>
+   11.5: Test Data Recovery <control-11.5>
    
 .. history
 .. authors
