@@ -1,6 +1,6 @@
-11.3: Use Automated Tools to Verify Standard Device Configurations and Detect Changes
+11.3: Protect Recovery Data
 =====================================================================================
-Compare all network device configurations against approved security configurations defined for each network device in use, and alert when any deviations are discovered.
+Protect recovery data with equivalent controls to the original data. Reference encryption or data separation, based on requirements.
 
 .. list-table::
 	:header-rows: 1
@@ -8,43 +8,46 @@ Compare all network device configurations against approved security configuratio
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Network
-	  - Detect
-	  - 2, 3
+	* - Data
+	  - Protect
+	  - 1, 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 1.5: Maintain Asset Inventory Information
-* Sub-control 2.1: Maintain Inventory of Authorized Software
+* Safeguard 1.1: Establish and Maintain Detailed Enterprise Asset Inventory
+* Safeguard 2.1: Establish and Maintain a Software Inventory
+* Safeguard 4.1: Establish and Maintain a Secure Configuration Process
 
 Inputs
 ------
-#. The organization's configuration monitoring system
-#. The list of network devices
-#. The inventory and mappings of secure configuration policy(ies) to the list of network devices
+#. :code:`GV33`: Assets that are in-scope for automated backups
+#. :code:`GV34`: Assets with authorized backup software installed
+#. :code:`GV3`: Configuration Standard
 
 Operations
 ----------
-#. For each network devices, obtain the configuration assessment results using Input 1
-
+#. For each asset with backup software installed, use :code:`GV3` to check if encryption is configured for backups
+	#. Identify and enumerate assets with software configured to encrypt backups (M2)
+	#. Identify and enumerate assets with software not configured to encrypt backups (M3)
+ 
 Measures
 --------
-* M1(i) = (For each network device "i") Count of non-compliant recommendations resulting from Operation 1
-* M2(i) = (For each network device "i") Count of recommendations assessed
+* M1 = Count of Input 1: :code:`GV33`
+* M2 = Count of software configured to encrypt backups
+* M3 = Count of software not configured to encrypt backups
 
 Metrics
 -------
 
-Non-Compliance Ratio
+Coverage
 ^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of network devices not in compliance with secure configuration policies to the
-	    | total number of network devices.
+	  - | The percentage of in-scope assets with backup software properly configured
+	  - | to encrypt backups.
 	* - **Calculation**
-	  - :code:`(SUM from i=1..M2 (M1(i))) / M2`
+	  - :code:`M2 / M1`
 
 .. history
 .. authors
