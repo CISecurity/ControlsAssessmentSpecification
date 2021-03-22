@@ -1,6 +1,6 @@
-11.4: Install the Latest Stable Version of Any Security-Related Updates on All Network Devices
+11.4: Establish and Maintain an Isolated Instance of Recovery Data 
 ==============================================================================================
-Install the latest stable version of any security-related updates on all network devices.
+Establish and maintain an isolated instance of recovery data. Example implementations include, version controlling backup destinations through offline, cloud, or off-site systems or services.
 
 .. list-table::
 	:header-rows: 1
@@ -8,34 +8,36 @@ Install the latest stable version of any security-related updates on all network
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Network
-	  - Protect
+	* - Data 
+	  - Recover
 	  - 1, 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 1.5: Maintain Asset Inventory Information
+* Safeguard 1.1: Establish and Maintain Detailed Enterprise Asset Inventory
+* Safeguard 4.1: Establish and Maintain a Secure Configuration Process
 
 Inputs
 -----------
-#. Network device inventory, derived from the endpoint inventory (see sub-control 1.4)
-#. Network device version information (this is a list of acceptable versions for each model of network device in Input 1; this version information needs to be updated frequently to reflect current version information and age off outdated versions)
+#. :code:`GV33`: Assets that are in-scope for automated backups
+#. :code:`GV34`: Assets with authorized backup software installed
+#. :code:`GV3`: Configuration standards
+
+Assumptions
+----------
+#. Configuration for backups will contain information about destination of backups
 
 Operations
 ----------
-#. For each network device in Input 1, compare the network device's version to the allowable versions from Input 2.
-#. Generate a list of those network devices that match an allowable version (M1)
-#. Generate a list of those network devices that do not match an allowable version (M2).
+#. For each asset in Input 2 :code:`GV34`, use configuration standards in :code:`GV3` to check destination of backups
+	#. Identify and enumerate assets properly configured to send backups to an isolated instance (M2)
+	#. Identify and enumerate assets not properly configured to send backups to an isolated instance (M3)
 
 Measures
 --------
-* M1 = List of network devices
-* M2 = Count of M1
-* M3 = List of network devices that match an allowable version (compliant list)
-* M4 = Count of M3
-* M5 = List of network devices that do not match an allowable version (non-compliant list)
-* M6 = Count of M5
+* M1 = Count of Input 1 :code:`GV33`
+* M2 = Count of assets with backups sent to an isolated instance 
+* M3 = Count of assets with backups not sent to an isolated instance
 
 Metrics
 -------
@@ -45,10 +47,9 @@ Coverage
 .. list-table::
 
 	* - **Metric**
-	  - | What percentage of inventoried network devices match the allowable version for that
-	    | device/OS?
+	  - | The percentage of assets configured to send backups to an isolated instance
 	* - **Calculation**
-	  - If M2 > 0, then :code:`M4 / M2`; otherwise :code:`0`
+	  - :code:`M2 / M1`
 
 .. history
 .. authors
