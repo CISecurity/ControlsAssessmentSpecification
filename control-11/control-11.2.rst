@@ -1,6 +1,6 @@
-11.2: Document Traffic Configuration Rules
+11.2: Perform Automated Backups 
 =========================================================
-All configuration rules that allow traffic to flow through network devices should be documented in a configuration management system with a specific business reason for each rule, a specific individual’s name responsible for that business need, and an expected duration of the need
+Perform automated backups of in-scope enterprise assets. Run backups weekly, or more frequently, based on the sensitivity of the data.
 
 .. list-table::
 	:header-rows: 1
@@ -8,59 +8,68 @@ All configuration rules that allow traffic to flow through network devices shoul
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Network
-	  - Identify
-	  - 2, 3
+	* - Data
+	  - Recover
+	  - 1, 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 1.5: Maintain Asset Inventory Information
+* Safeguard 1.1: Establish and Maintain Detailed Enterprise Asset Inventory
+* Safeguard 2.1: Establish and Maintain a Software Inventory
+* Safeguard 4.1: Establish and Maintain a Secure Configuration Process
 
 Inputs
 ------
-#. The list of traffic flow configurations for network devices. (M5)
-#. The inventory of configuration rules pertaining to traffic flow through network devices. (M4)
+#. :code:`GV1`: Enterprise asset inventory
+#. :code:`GV5`: Authorized software inventory
+#. :code:`GV3`: Configuration standards
+
 
 Operations
 ----------
-#. Perform a set calculation, computing the Intersection (M1) of Input 1 and Input 2
-#. Examine the inventory of configuration rules to manually determine those traffic flow rules which do not contain complete information (such as names, business needs, etc) (M6)
+#. For each asset in :code:`GV1` identify and enumerate assets that are in-scope for automated backups: :code:`GV33` (M1) 
+#. Use :code:`GV5` to identify authorized backup software and for each asset identified in Operation 1
+	#. Identify and enumerate assets covered by at least one authorized backup software: :code:`GV34` (M2)
+	#. Identify and enumerate assets not covered by at least one authorized backup software (M3)
+#. Use :code:`GV3` to check if the software on assets identifed in Operation 2.1 is configured correctly
+	#. Identify and enumerate assets with properly configured backup software (M4)
+	#. Identify and enumerate assets with improperly configured backup software (M5)
+#. For each asset with backup software identified in Operation 2.1, examine logs to determine the most recent successful backup date. Compare that date to current date and capture timeframe in days.
+	#. Identify and enumerate assets that have been backeup within seven days or less (M6) 
+	#. Identify and enumerate assets that have been backedup outside of a sevend day window (M7)
+
 
 Measures
 --------
-* M1 = The intersection of Input 1 and Input 2.  This intersection measures which of the inventoried configuration rules are contained in the enterprise's security configuration standards.
-* M2 = The "left" side of the set calculation measures the traffic flow configuration which are not documented in the inventory.
-* M3 = The "right" side of the set calculation measures any configuration rules in the inventory which are not currently configured on the network device.
-* M4 = Count of traffic flow configuration rules in the inventory.
-* M5 = The current traffic flow configuration for the network device
-* M6 = Count of traffic flow rules in the inventory that are incomplete
+* M1 = Count of assets within scope for automated backups
+* M2 = Count of in-scope assets with authorized backup software installed
+* M3 = Count of in-scope assets without authorized backup software installed
+* M4 = Count of in-scope assets with properly configured backup software
+* M5 = Count of in-scope assets with improperly configured backup software
+* M6 = Count of in-scope assets backed up within a week
+* M7 = Count of in-scope assets not backed up within a week
 
 Metrics
 -------
-
-* If M2 > 0 then there are traffic flows configured on the device which are not documented in the inventory.
-* If M3 > 0, there are configuration items in the inventory no longer configured in the device's configuration.
 
 Coverage
 ^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of undocumented traffic flow configurations to the current total traffic
-	    | flow configurations
+	  - | The percentage of in-scoope assets with properly configured authorized
+	    | backup software
 	* - **Calculation**
-	  - :code:`M2 / M5`
+	  - :code:`M4 / M1`
 
-Completeness
+Compliance
 ^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of inventoried but incomplete traffic flow rules to the total set of traffic
-	    | flow rules.
+	  - | The percentage of in-scope assets backed up within a week timeframe
 	* - **Calculation**
-	  - :code:`M6 / M4`
+	  - :code:`M6 / M1`
 
 .. history
 .. authors
