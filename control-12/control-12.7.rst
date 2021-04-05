@@ -1,6 +1,6 @@
-12.7: Deploy Network-Based Intrusion Prevention Systems
+12.7: Ensure Remote Devices Utilize a VPN and are Connecting to an Enterprise’s AAA Infrastructure
 =========================================================
-Deploy network-based Intrusion Prevention Systems (IPS) to block malicious network traffic at each of the organization’s network boundaries.
+Require users to authenticate to enterprise-managed VPN and authentication services prior to accessing enterprise resources on end-user devices.
 
 .. list-table::
 	:header-rows: 1
@@ -8,64 +8,87 @@ Deploy network-based Intrusion Prevention Systems (IPS) to block malicious netwo
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Network
+	* - Devices
 	  - Protect
-	  - 3
+	  - 2, 3
 
 Dependencies
 ------------
-* Sub-control 2.1: Maintain Inventory of Authorized Software
-* Sub-control 12.1: Maintain an Inventory of Network Boundaries
+* Safeguard 1.1: Establish and Maintain Detailed Enterprise Asset Inventory
+* Safeguard 2.1: Establish and Maintain a Software Inventory
+* Safeguard 12.5: Centralize Network Authentication, Authorization, and Auditing (AAA)
 
 Inputs
 -----------
-#. The list of authorized software
-#. The list of network boundaries
+#. :code:`GV1`: Enterprise Asset Inventory
+#. :code:`GV5`: Authorized Software Inventory
+#. :code:`GV38`: AAA services within the enterprise
+#. :code:`GV37`: Network infrastructure configuration standards
 
 Operations
 ----------
-#. Enumerate all IPS systems in the software inventory
-#. For each IPS system:
-	#. Enumerate the network boundaries covered by the system
-	#. Examine its configuration to ensure that the system is configured to block malicious network traffic through that boundary
-#. Enumerate network boundaries covered by all IPS systems (i.e. create a set of covered network boundaries)
-#. Complement the set of covered network boundaries with the list of network boundaries to identify all uncovered network boundaries
+#. Use Input 1 :code:`GV1` to identify and enumerate remote enterprise assets (M1)
+#. Use Input 1 :code:`GV1` and Input 2 :code:`GV5` to identify and enumerate all VPN devices and software (M2)
+#. Use the output of Operation 2 and Input 4 :code:`GV37`to check configuration of VPN
+	#. Identify and enumerate VPN devices and software properly configured to require authentication prior to granting access (M3)
+	#. Identify and enumerate VPN devices and software not properly configured to require authentication prior to granting access (M4)
+#. For each asset identified in Operation 1, check if is covered by a VPN device or software identified in Operation 3.1
+	#. Identify and enumerate assets that are covered by a VPN (M5)
+	#. Identify and enumerate assets that are not covered by a VPN (M6)
+#. Use Input 3 :code:`GV38` and Input 4 :code:`GV37` to check configuration of AAA services
+	#. Identify and enumerate AAA services properly configured to require authentication prior to granting access (M7)
+	#. Identify and enumerate AAA services not properly configured to require authentication prior to granting access (M8)
+#. For each asset indentified in Operation 1, check if it is covered an AAA service identified in Operation 5.1 
+	#. Identify and enumerate assets that are covered by an AAA service (M9)
+	#. Identify and enumerate assets that are not covered by an AAA service (M10)
+#. Compare the output of Operation 4.1 and 6.1
+	#. Identify and enumerate assets covered by both VPN and AAA (M1)
 
 Measures
 --------
-* M1 = List of all IPS systems
-* M2 = List of network boundaries
-* M3 = List of appropriately configured IPS systems
-* M4 = List of inappropriately configured IPS systems
-* M5 = List of network boundaries covered by at least one IPS system
-* M6 = List of network boundaries not covered by at least one IPS system
-* M7 = Count of IPS systems (count of M1)
-* M8 = Count of network boundaries (count of M2)
-* M9 = Count of appropriately configured IPS systems (count of M3)
-* M10 = Count of inappropriately configured IPS systems (count of M4)
-* M11 = Count of network boundaries covered by at least one IPS system (count of M5)
-* M12 = Count of network boundaries not covered by at least one IPS system (count of M6)
+* M1 = Count of remote enterprise assets
+* M2 = Count of VPN devices and software
+* M3 = Count of properly configured VPN devices and sofware
+* M4 = Count of improperly configured VPN devices and software
+* M5 = Count of remote assets covered by a properly configured VPN
+* M6 = Count of remote assets not covered by a properly configured VPN
+* M7 = Count of properly configured AAA services 
+* M8 = Count of improperly configured AAA services
+* M9 = Count of remote assets covered by a properly configured AAA service 
+* M10 = Count of remote assets not covered by a properly configured AAA service
+* M11 = Count of remote assets covered by both VPN and AAA
+* M12 = Count of AAA services within the enterprise
+
 
 Metrics
 -------
 
-IPS Coverage
+VPN Compliance
 ^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of appropriately configured IPS systems to the total number of IPS systems
+	  - | The percentage of properly configured VPN devices and software
 	* - **Calculation**
-	  - :code:`M9 / M7`
+	  - :code:`M3 / M2`
 
-Boundary Coverage
+AAA Compliance
 ^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of covered network boundaries to the total number of network boundaries
+	  - | The percentage of properly configured AAA services
 	* - **Calculation**
-	  - :code:`M11 / M8`
+	  - :code:`M7 / M12`
+
+Coverage
+^^^^^^^^^^^^^^^^^
+.. list-table::
+
+	* - **Metric**
+	  - | The percentage of remote assets using VPN and AAA 
+	* - **Calculation**
+	  - :code:`M11 / M1`
 
 .. history
 .. authors
