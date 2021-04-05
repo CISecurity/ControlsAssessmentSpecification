@@ -1,4 +1,4 @@
-# Reference: https://docs.readthedocs.io/en/latest/yaml-config.html
+# Reference: https://docs.readthedocs.io/en/1.0.0/yaml-config.html
 
 build:
   image: latest
