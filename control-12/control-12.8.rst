@@ -1,6 +1,6 @@
-12.8: Deploy NetFlow Collection on Networking Boundary Devices
+12.8: Establish and Maintain Dedicated Computing Resources for All Administrative Work
 ==============================================================
-Enable the collection of NetFlow and logging data on all network boundary devices.
+Establish and maintain dedicated computing resources, either physically or logically separated, for all administrative tasks or tasks requiring administrative access. The computing resources should be segmented from the enterprise's primary network and not be allowed internet access.
 
 .. list-table::
 	:header-rows: 1
@@ -8,77 +8,53 @@ Enable the collection of NetFlow and logging data on all network boundary device
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Network
-	  - Detect
-	  - 2, 3
+	* - Devices
+	  - Protect
+	  - 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 1.5: Maintain Asset Inventory Information
-* Sub-control 12.1: Maintain an Inventory of Network Boundaries
+* Safeguard 1.1: Establish and Maintain Detailed Enterprise Asset Inventory
+* Safeguard 4.2: Establish and Maintain a Secure Configuration Process for Network Infrastructure
 
 Inputs
 -----------
-#. List of network boundary devices (from inventory)
-
-Assumption
-^^^^^^^^^^
-* Assumes organization has positive control over inventory - explicitly ignores the case where there may be a network boundary device present and not accounted for (if other controls are working, this should not be the case).
+#. :code:`GV1`: Enterprise Asset Inventory
+#. :code:`GV37`: Network infrastructure configuration standards
 
 Operations
 ----------
-#. For each network boundary device,
-	#. Check configuration for NetFlow data (i.e. NetFlow is enabled)
-	#. Check configuration for logging data (i.e. logging is enabled)
+#. Use Input 1 :code:`GV1` to identify and enumerate assets used for administrative purposes (M1)
+#. For each asset identified in Operation 1, use Input 2 :code:`GV37` to check configurations
+	#. Identify and enumerate assets that do not have internet access (M2)
+	#. Identify and enumerate assets that have internet access (M3)
+	#. Identify and enumerate assets that are physically or logically seperated from the primary network (M4)
+	#. Identify and enumerate assets that are not physically or logically seperated from the primary network (M5)
+#. Compare the ouput of Operation 2.1 and 2.3
+	#. Identify and enumerate assets that do not have internet access and are physically or logically seperated (M6)
 
 Measures
 --------
-* M1 = Count of network boundary devices (from Input 1)
-* M2 = List of network boundary devices with NetFlow enabled
-* M3 = Count of M2
-* M4 = List of network boundary devices without NetFlow enabled
-* M5 = Count of M4
-* M6 = List of network boundary devices with logging enabled
-* M7 = Count of M6
-* M8 = List of network boundary devices without logging enabled
-* M9 = Count of M8
-* M10 = List of network boundary devices with both NetFlow and logging enabled
-* M11 = Count of M10
-* M12 = List of network boundary devices with either NetFlow or logging disabled
-* M13 = Count of M12
+* M1 = Count of assets used for administrative purposes
+* M2 = Count of assets configured to not allow internet access
+* M3 = Count of assets configured to allow internet access
+* M4 = Count of assets physically or logically seperated from the primary network
+* M5 = Count of assets not physically or logically seperated from the primary network
+* M6 = Count of assets configured to not allow internet acces and are physically or logically seperated
+
 
 Metrics
 -------
 
-NetFlow Coverage
+Compliance
 ^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | Ratio of network boundary devices with appropriately configured NetFlow to the total number of network boundary devices
+	  - | The percentage of properlu configured administrative assets 
 	* - **Calculation**
-	  - :code:`M3 / M1`
+	  - :code:`M6 / M1`
 
-
-Logging Coverage
-^^^^^^^^^^^^^^^^
-.. list-table::
-
-	* - **Metric**
-	  - | Ratio of network boundary devices with appropriately configured logging to the total number of network boundary devices
-	* - **Calculation**
-	  - :code:`M7 / M1`
-
-
-Total Coverage
-^^^^^^^^^^^^^^
-.. list-table::
-
-	* - **Metric**
-	  - | Ratio of appropriately configured network boundary devices to the total number of network boundary devices
-	* - **Calculation**
-	  - :code:`M11 / M1`
 .. history
 .. authors
 .. license
