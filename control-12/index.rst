@@ -1,53 +1,29 @@
-CIS Control 12: Boundary Defense
+CIS Control 12: Network Infrastructure Management
 =======================================================
 
-Detect/prevent/correct the flow of information transferring across networks of different trust
-levels with a focus on security-damaging data.
+Establish, implement, and actively manage (track, report, correct) network devices, in order to prevent attackers from exploiting vulnerable network services and access points.
 
 **Why is this CIS Control Critical?**
 
-Attackers focus on exploiting systems that they can reach across the Internet, including not only
-DMZ systems but also workstations and laptop computers that pull content from the Internet
-through network boundaries. Threats such as organized crime groups and nation-states use
-configuration and architectural weaknesses found on perimeter systems, network devices, and
-Internet-accessing client machines to gain initial access into an organization. Then, with a base of
-operations on these machines, attackers often pivot to get deeper inside the boundary to steal
-or change information or to set up a persistent presence for later attacks against internal hosts.
-Additionally, many attacks occur between business partner networks, sometimes referred to as
-extranets, as attackers hop from one organization’s network to another, exploiting vulnerable
-systems on extranet perimeters.
+Secure network infrastructure is an essential defense against attacks. This includes an appropriate security architecture, addressing vulnerabilities that are, often times, introduced with default settings, monitoring for changes, and reassessment of current configurations. Network infrastructure includes devices such as physical and virtualized gateways, firewalls, wireless access points, routers, and switches.
 
-To control the flow of traffic through network borders and police content by looking for attacks
-and evidence of compromised machines, boundary defenses should be multi-layered, relying on
-firewalls, proxies, DMZ perimeter networks, and network-based IPS and IDS. It is also critical to
-filter both inbound and outbound traffic.
+Default configurations for network devices are geared for ease-of-deployment and ease-of-use – not security. Potential default vulnerabilities include open services and ports, default accounts and passwords (including service accounts), support for older vulnerable protocols, and pre-installation of unneeded software. Attackers search for vulnerable default settings, gaps or inconsistencies in firewall rule sets, routers, and switches and use those holes to penetrate defenses. They exploit flaws in these devices to gain access to networks, redirect traffic on a network, and intercept data while in transmission.
 
-It should be noted that boundary lines between internal and external networks are diminishing
-as a result of increased interconnectivity within and between organizations as well as the rapid
-rise in deployment of wireless technologies. These blurring lines sometimes allow attackers to
-gain access inside networks while bypassing boundary systems. However, even with this blurring
-of boundaries, effective security deployments still rely on carefully configured boundary defenses
-that separate networks with different threat levels, sets of users, data and levels of control.
-And despite the blurring of internal and external networks, effective multi-layered defenses of
-perimeter networks help lower the number of successful attacks, allowing security personnel to
-focus on attackers who have devised methods to bypass boundary restrictions.
+Network security is a constantly changing environment that necessitates regular re-evaluation of architecture diagrams, configurations, access controls, and allowed traffic flows. Attackers take advantage of network device configurations becoming less secure over time as users demand exceptions for specific business needs. Sometimes the exceptions are deployed, but not removed when they are no longer applicable to the business’s needs. In some cases, the security risk of an exception is neither properly analyzed nor measured against the associated business need and can change over time.
+
 
 .. toctree::
    :maxdepth: 1
    :name: toc-control-12
 
-   12.1: Maintain an Inventory of Network Boundaries <control-12.1>
-   12.2: Scan for Unauthorized Connections Across Trusted Network Boundaries <control-12.2>
-   12.3: Deny Communications With Known Malicious IP Addresses <control-12.3>
-   12.4: Deny Communication Over Unauthorized Ports <control-12.4>
-   12.5: Configure Monitoring Systems to Record Network Packets <control-12.5>
-   12.6: Deploy Network-Based IDS Sensors <control-12.6>
-   12.7: Deploy Network-Based Intrusion Prevention Systems <control-12.7>
-   12.8: Deploy NetFlow Collection on Networking Boundary Devices <control-12.8>
-   12.9: Deploy Application Layer Filtering Proxy Server <control-12.9>
-   12.10: Decrypt Network Traffic at Proxy <control-12.10>
-   12.11: Require All Remote Logins to Use Multi-Factor Authentication <control-12.11>
-   12.12: Manage All Devices Remotely Logging Into Internal Network <control-12.12>
+   12.1: Ensure Network Infrastructure is Up-to-Date <control-12.1>
+   12.2: Establish and Maintain a Secure Network Architecture <control-12.2>
+   12.3: Securely Manage Network Infrastructure <control-12.3>
+   12.4: Establish and Maintain Architecture Diagram(s) <control-12.4>
+   12.5: Centralize Network Authentication, Authorization, and Auditing (AAA) <control-12.5>
+   12.6: Use of Secure Network Management and Communication Protocols  <control-12.6>
+   12.7: Ensure Remote Devices Utilize a VPN and are Connecting to an Enterprise’s AAA Infrastructure <control-12.7>
+   12.8: Establish and Maintain Dedicated Computing Resources for All Administrative Work <control-12.8>
    
 .. history
 .. authors
