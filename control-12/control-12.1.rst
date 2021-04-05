@@ -1,6 +1,6 @@
-12.1: Maintain an Inventory of Network Boundaries
+12.1: Ensure Network Infrastructure is Up-to-Date
 =========================================================
-Maintain an up-to-date inventory of all of the organization’s network boundaries.
+Ensure network infrastructure is kept up-to-date. Example implementations include running the latest stable release of software and/or using currently supported network-as-a-service (NaaS) offerings. Review software versions monthly, or more frequently, to verify software support.
 
 .. list-table::
 	:header-rows: 1
@@ -9,44 +9,46 @@ Maintain an up-to-date inventory of all of the organization’s network boundari
 	  - Security Function
 	  - Implementation Groups
 	* - Network
-	  - Identify
+	  - Protect
 	  - 1, 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 1.5: Maintain Asset Inventory Information
+* Safeguard 1.1: Establish and Maintain Detailed Enterprise Asset Inventory
 
 Inputs
 -----------
-#. An inventory of expected boundary devices (M1) as derived from the endpoint inventory (see sub-control 1.4)
+#. :code:`GV1`: Enterprise asset inventory
+#. Authoritative source of latest version information
+#. Date of last review of network infrastructure 
 
 Operations
 ----------
-#. Utilize a discovery tool or process to examine the network topology to collect the list of devices considered boundary devices (M2).
-#. Evaluate the complement of Input 1 and Operation 1 to get the list of non-inventoried boundary devices (M3).
+#. Use :code:`GV1` to identify and enumerate assets that are part of the network infrastructure :code:`GV35` (M1)
+#. Compare the network infrastructre asset version to the version in Input 2
+	#. Identify and enumerate assets that match the most recent version (M2)
+	#. Identify and enumerate assets that don't match the most recent version (M3)
+#. Compare Input 3 to current date and capture timeframe in days (M4)
 
 Measures
 --------
-* M1 = List of expected network boundary devices
-* M2 = Count of M1
-* M3 = List of discovered network boundary devices
-* M4 = Count of M3
-* M5 = List of non-inventoried boundary devices
-* M6 = Count of M5
+* M1 = Count of network infrastructure assets
+* M2 = Count of network infrastructure assets up to date
+* M3 = Count of network infrastructure assets not up to date
+* M4 = Timeframe since last review of network infrastrucute
 
 Metrics
 -------
+If M4 is greater than thirty days, then this safeguard is measured at a 0 and receives a failing score. The other metrics don't apply.
 
 Coverage
 ^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | What is the ratio of non-inventoried boundary devices to expected boundary devices?
-	    | If the calculated value is greater than zero, the inventory is not current.
+	  - | The percentage of network infrastructure assets that are up to date
 	* - **Calculation**
-	  - :code:`M6 / M2`
+	  - :code:`M2 / M1`
 
 .. history
 .. authors
