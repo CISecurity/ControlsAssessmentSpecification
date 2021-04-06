@@ -1,6 +1,6 @@
-13.3: Monitor and Block Unauthorized Network Traffic
+13.3: Deploy a Network Intrusion Detection Solution
 =========================================================
-Deploy an automated tool on network perimeters that monitors for unauthorized transfer of sensitive information and blocks such transfers while alerting information security professionals.
+Deploy a network intrusion detection solution on enterprise assets, where appropriate. Example implementations include the use of a Network Intrusion Detection System (NIDS) or equivalent cloud service provider (CSP) service.
 
 .. list-table::
 	:header-rows: 1
@@ -8,51 +8,35 @@ Deploy an automated tool on network perimeters that monitors for unauthorized tr
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Data
+	* - Network
 	  - Detect
-	  - 3
+	  - 2, 3
 
 Dependencies
 ------------
-* Sub-control 2.1: Maintain Inventory of Authorized Software
-* Sub-control 12.1: Maintain an Inventory of Network Boundaries
+* Safeguard 1.1: Establish and Maintain Detailed Enterprise Asset Inventory 
+* Safeguard 12.4: Establish and Maintain Architecture Diagram(s)
 
 Inputs
 -----------
-#. The list of authorized software
-#. The list of network perimeters
+#. :code:`GV35`: Assets that are part of the network infrastructure
+#. :code:`GV4`: Enterprise Network Architecture Documentation
 
 Operations
 ----------
-#. Enumerate all network perimeter monitoring systems
-#. For each network perimeter monitoring system:
-	#. Enumerate the network perimeters covered by the system
-	#. Examine its configuration to ensure that the system is configured to:
-		#. Monitor for sensitive information
-		#. Block transfer of detected sensitive information
-		#. Alert appropriately
-#. Enumerate network perimeters covered by all network perimeter monitoring systems
-#. Complement the set of covered network perimeters with the list of network perimeters to identify all uncovered network perimeters
-
-Assumptions
-^^^^^^^^^^^
-* Network perimeter monitoring systems are primarily software-based
+#. Use Input 1 :code:`GV35` to identify the network intrusion detection solutions for the enterprise
+#. Use Input 2 :code:`GV4` to identify and enumerate network boundaries (M1)
+#. For each network boundary identified in Operation 2, determine whether it is covered by at least one network intrusion detection solution
+	#. Identify and enumerate boundaries covered by at least one network intrusion detection solution (M2)
+	#. Identify and enumerate boundaries not covered by at least one network intrusion detection solution (M3)
 
 
 Measures
 --------
-* M1 = List of network perimeter monitoring systems
-* M2 = List of network perimeters
-* M3 = List of appropriately configured perimeter monitoring systems
-* M4 = List of inappropriately configured perimeter monitoring systems
-* M5 = List of network perimeters covered by at least one network perimeter monitoring system
-* M6 = List of network perimeters not covered by at least one network perimeter monitoring system
-* M7 = Count of network perimeter monitoring systems (count of M1)
-* M8 = Count of network perimeters (count of M2)
-* M9 = Count of appropriately configured perimeter monitoring systems (count of M3)
-* M10 = Count of inappropriately configured perimeter monitoring systems (count of M4)
-* M11 = Count of network perimeters covered by at least one network perimeter monitoring system (count of M5)
-* M12 = Count of network perimeters not covered by at least one network perimeter monitoring system (count of M6)
+* M1 = Count of network boundaries
+* M2 = Count of network boundaries covered by a network intrusion detection solution
+* M3 = Count of network boundaries not covered by a network intrusion detection solution
+
 
 Metrics
 -------
@@ -62,19 +46,10 @@ Coverage
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of covered network perimeters to the total number of network perimeters
+	  - | The percentage of network boundaries covered by network intrusion
+	  - | detection solutions 
 	* - **Calculation**
-	  - :code:`M11 / M8`
-
-Perimeter Monitoring Configuration Coverage
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. list-table::
-
-	* - **Metric**
-	  - | The ratio of appropriately configured network perimeter monitoring systems to the total
-	    | number of network perimeter monitoring systems
-	* - **Calculation**
-	  - :code:`M9 / M7`
+	  - :code:`M2 / M1`
 
 .. history
 .. authors
