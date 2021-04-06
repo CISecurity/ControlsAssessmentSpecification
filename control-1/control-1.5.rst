@@ -19,7 +19,7 @@ Dependencies
 
 Inputs
 -----------
-#. :code:`GV4`: Enterprise network architecture
+#. :code:`GV4`: Enterprise network architecture documentation
 #. List of passive asset discovery tools in use by the organization. For each, include the location of the tool's configuration information and which networks it covers.
 #. :code:`GV3`: Approved configuration(s) for each passive asset discovery tool. Configurations should include the settings necessary for the tool to be able to update the enterprise's asset inventory
 
@@ -29,7 +29,7 @@ Operations
 #. For each passive asset discovery tool provided in Input 2, check the tool's configuration against the appropriate approved configuration from :code:`GV3`
 	#. Enumerate those tools that are properly configured (M1)
 	#. Enumerate those tools that are improperly configured (M2) noting the deviations from proper configuration
-#. Identify and enumerate the enterprise's networks (M5) provided in Input 1, check to see if at least one properly configured passive asset discovery tool from M1 covers that network.
+#. Identify and enumerate the enterprise's networks (M5) using Input 1, check to see if at least one properly configured passive asset discovery tool from M1 covers that network.
 	#. Create a list of the enterprise's networks that have coverage from at least one properly configured passive asset discovery tool (M3)
 	#. Create a list of the enterprise's networks that do not have coverage from any properly configured passive asset discovery tools (M4)
 
