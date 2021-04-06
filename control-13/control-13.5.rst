@@ -1,6 +1,6 @@
-13.5: Monitor and Detect Any Unauthorized Use of Encryption
+13.5: Manage Access Control for Remote Assets
 ===========================================================
-Monitor all traffic leaving the organization and detect any unauthorized use of encryption.
+Manage access control for assets remotely connecting to enterprise resources. Determine amount of access to enterprise resources based on: up-to-date anti-malware software installed, configuration compliance with the enterprise’s secure configuration process, and ensuring the operating system and applications are up-to-date.	
 
 .. list-table::
 	:header-rows: 1
@@ -8,66 +8,66 @@ Monitor all traffic leaving the organization and detect any unauthorized use of 
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Data
-	  - Detect
-	  - 3
+	* - Devices
+	  - Protect
+	  - 2, 3
 
 Dependencies
 ------------
-* Sub-control 2.1: Maintain Inventory of Authorized Software
-* Sub-control 12.1: Maintain an Inventory of Network Boundaries
+* Safeguard 1.1: Establish and Maintain Detailed Enterprise Asset Inventory
+* Safeguard 4.1: Establish and Maintain a Secure Configuration Process
+* Safeguard 6.6: Establish and Maintain an Inventory of Authentication and Authorization Systems
 
 Inputs
 -----------
-#. The list of authorized software
-#. The list of network boundaries at the organization's perimeter
-#. Unauthorized encrypted connections
+#. :code:`GV23`: Authentication and Authorization System Inventory
+#. :code:`GV3`: Configuration Standard
+#. :code:`GV39`: Remote enterprise assets
+
 
 Operations
 ----------
-#. Enumerate all network monitoring systems in the software inventory
-#. For each network monitoring system
-	#. Enumerate the network boundaries covered by the system
-	#. Examine its configuration to ensure that the system is configured to monitor for unauthorized encrypted connections
-#. Enumerate network boundaries covered by all network monitoring systems (i.e. create a set of covered network boundaries)
-#. Complement the set of covered network boundaries with the list of network boundaries to identify all uncovered network boundaries
+#. Use Input 1 :code:`GV23` to identify and enumerate authorization systems that allow remote logins (M1)
+#. For each authorization system identified in Operation 1, use Input 2 :code`GV3` to check if configuration for each type of policy
+	#. Identify and enumerate authorization systems properly configured for all the policies (M2)
+	#. Identify and enumerate authorization systems for which at least one configuration does not comply with the policies (M3)
+#. For each remote enterprise asset from Input 3 :code:`GV39`, compare to the output of Operation 2.1
+	#. Identify and enumerate assets that are covered by at least one compliant authorization system (M4)
+	#. Identify and enumerate assets that are not covered by a compliant authorization system (M5)
+
 
 Measures
 --------
-* M1 = List of all network monitoring systems
-* M2 = List of network boundaries at the perimeter
-* M3 = List of appropriately configured network monitoring systems
-* M4 = List of inappropriately configured network monitoring systems
-* M5 = List of network boundaries covered by at least one network monitoring system
-* M6 = List of network boundaries not covered by at least one network monitoring system
-* M7 = Count of network monitoring systems (count of M1)
-* M8 = Count of network boundaries at the perimeter (count of M2)
-* M9 = Count of appropriately configured network monitoring systems (count of M3)
-* M10 = Count of inappropriately configured network monitoring systems (count of M4)
-* M11 = Count of network boundaries covered by at least one network monitoring system (count of M5)
-* M12 = Count of network boundaries not covered by at least one network monitoring system (count of M6)
+* M1 = Count of authorization systems that allow remote logins
+* M2 = Count of authorization systems properly configured to comply with policies
+* M3 = Count of authorization systems not properly configured to comply with policies
+* M4 = Count of remote enterprise assets covered by a compliant authorization system
+* M5 = Count of remote enterprise assets not covered by a compliant authorization system
+* M6 = Count of remote enterprise assets :code:`GV39`
+
 
 Metrics
 -------
 
-Network Monitoring Coverage
+Authorization System Compliance
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of appropriately configured network monitoring systems to the total number
-	    | of network monitoring systems
+	  - | The percentage of properly configured authorizations systems 
+	    | that allow remote login
 	* - **Calculation**
-	  - :code:`M9 / M7`
+	  - :code:`M2 / M1`
 
-Network Boundary Coverage
+Coverage
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of covered network boundaries to the total number of network boundaries
+	  - | The percentage of remote enterprise assets covered by compliant
+	  - | authorization systems
 	* - **Calculation**
-	  - :code:`M11 / M8`
+	  - :code:`M4 / M6`
 
 .. history
 .. authors
