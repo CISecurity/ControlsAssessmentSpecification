@@ -1,42 +1,35 @@
-CIS Control 13: Data Protection
+CIS Control 13: Network Monitoring and Defense
 =======================================================
 
-The processes and tools used to prevent data exfiltration, mitigate the effects of exfiltrated data,
-and ensure the privacy and integrity of sensitive information.
+Operate processes and tooling to establish and maintain comprehensive network monitoring and defense against security threats across the enterprise’s network infrastructure and user base.
 
 **Why is this CIS Control Critical?**
 
-Data resides in many places. Protection of that data is best achieved through the application
-of a combination of encryption, integrity protection, and data loss prevention techniques. As
-organizations continue their move towards cloud computing and mobile access, it is important
-that proper care be taken to limit and report on data exfiltration while also mitigating the effects
-of data compromise.
+We cannot rely on network defenses to be perfect. Adversaries continue to evolve and mature, as they share, or sell, information among their community on exploits and bypasses to security controls. Even if security tools work “as advertised,” it takes an understanding of the enterprise risk posture to configure, tune, and log them to be effective. Often, misconfigurations due to human error or lack of knowledge of tool capabilities give enterprises a false sense of security.
 
-Some organizations do not carefully identify and separate their most sensitive and critical
-assets from less sensitive, publicly accessible information on their internal networks. In many
-environments, internal users have access to all or most of the critical assets. Sensitive assets
-may also include systems that provide management and control of physical systems, such as
-Supervisory Control and Data Acquisition (SCADA). Once attackers have penetrated such a
-network, they can easily find and exfiltrate important information, cause physical damage, or
-disrupt operations with little resistance. For example, in several high-profile breaches over the
-past few years, attackers were able to gain access to sensitive data stored on the same servers
-with the same level of access as far less important data. There are also examples of using access to
-the corporate network to gain access to, then control over, physical assets and cause damage.
+Security tools can only be effective if they are supporting a process of continuous monitoring that allows staff the ability to be alerted and respond to security incidents quickly. Enterprises that adopt a purely technology-driven approach will also experience more false positives, due to their over-reliance on alerts from tools. Identifying and responding to these threats requires visibility into all threat vectors of the infrastructure and leveraging humans in the process of detection, analysis, and response. It is critical for large or heavily targeted enterprises to have a security operations capability to prevent, detect, and quickly respond to cyber threats before they can impact the enterprise. This process will generate activity reports and metrics that will help enhance security policies, and support regulatory compliance for many enterprises.
+
+As we have seen many times in the press, enterprises have been compromised for weeks, months, or years before discovery. The primary benefit of having comprehensive situational awareness is to increase the speed of detection and response. This is critical to respond quickly when malware is discovered, credentials are stolen, or when sensitive data is compromised to reduce impact to the enterprise.
+
+Through good situational awareness (i.e., security operations), enterprises will identify and catalog Tactics, Techniques, and Procedures (TTPs) of attackers, including their IOCs that will help the enterprise become more proactive in identifying future threats or incidents. Recovery can be achieved faster when the response has access to complete information about the environment and enterprise structure to develop efficient response strategies.
+
 
 .. toctree::
    :maxdepth: 1
    :name: toc-control-13
 
-   13.1: Maintain an Inventory of Sensitive Information <control-13.1>
-   13.2: Remove Sensitive Data or Systems Not Regularly Accessed by Organization <control-13.2>
-   13.3: Monitor and Block Unauthorized Network Traffic <control-13.3>
-   13.4: Only Allow Access to Authorized Cloud Storage or Email Providers <control-13.4>
-   13.5: Monitor and Detect Any Unauthorized Use of Encryption <control-13.5>
-   13.6: Encrypt Mobile Device Data <control-13.6>
-   13.7: Manage USB Devices <control-13.7>
-   13.8: Manage System’s External Removable Media’s Read/Write Configurations <control-13.8>
-   13.9: Encrypt Data on USB Storage Devices <control-13.9>
-   
+   13.1: Centralize Security Event Alerting <control-13.1>
+   13.2: Deploy a Host-Based Intrusion Detection Solution <control-13.2>
+   13.3: Deploy a Network Intrusion Detection Solution <control-13.3>
+   13.4: Perform Traffic Filtering Between Network Segments <control-13.4>
+   13.5: Manage Access Control for Remote Assets <control-13.5>
+   13.6: Collect Network Traffic Flow Logs  <control-13.6>
+   13.7: Deploy a Host-Based Intrusion Prevention Solution <control-13.7>
+   13.8: Deploy a Network Intrusion Prevention Solution <control-13.8>
+   13.9: Deploy Port-Level Access Control <control-13.9>
+   13.10: Perform Application Layer Filtering <control-13.10>
+   13.11: Tune Security Event Alerting Thresholds <control-13.11>
+
 .. history
 .. authors
 .. license
