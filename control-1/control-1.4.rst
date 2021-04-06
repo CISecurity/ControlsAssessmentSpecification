@@ -19,7 +19,7 @@ Dependencies
 Inputs
 -----------
 #. List of DHCP servers
-#. List of CMDB servers
+#. :code:`GV41`: List of CMDB servers
 
 Assumptions
 ^^^^^^^^^^^
@@ -34,7 +34,7 @@ Measures
 --------
 * M1 = Count of Input 1
 * M2 = Count of DHCP servers with logging enabled
-* M3 = Count of Input 2
+* M3 = Count of Input 2 :code:`GV41`
 * M4 = Count of CMDB servers configured to use DHCP logs to update IP addresses
 * M5 = Count of devices in the DHCP server logs that are not included in the CMDB servers
 * M6 = Count of devices in the DHCP server logs that are included in the CMDB servers
