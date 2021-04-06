@@ -1,6 +1,6 @@
-13.4: Only Allow Access to Authorized Cloud Storage or Email Providers
+13.4: Perform Traffic Filtering Between Network Segments
 ======================================================================
-Only allow access to authorized cloud storage or email providers.
+Perform traffic filtering between network segments, where appropriate.
 
 .. list-table::
 	:header-rows: 1
@@ -8,36 +8,33 @@ Only allow access to authorized cloud storage or email providers.
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Data
+	* - Network
 	  - Protect
 	  - 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 1.5: Maintain Asset Inventory Information
+* None
 
 Inputs
 -----------
-#. List of endpoints. For each, include the configuration locations that restrict which cloud providers the endpoint can access (this could be a firewall, etc.)
-#. List of cloud storage providers (this list should be as complete as possible and should indicate whether each provider is allowed or prohibited)
-#. List of cloud email providers (this list should be as complete as possible and should indicate whether each provider is allowed or prohibited)
-#. Organization's security policy regarding access to cloud storage and cloud email providers, including a list of which ones are allowed
+#. :code:`GV36`: Segments within the enterprise network
+#. :code:`GV35`: Assets that are part of the network infrastructure
+#. :code:`GV37`: Network infrastructure configuration standards
 
 Operations
 ----------
-#. For each of the endpoint configuration locations identified in Input 1, identify which of the cloud storage providers from Input 2 are reachable based on the configuration at that location, creating a list of reachable cloud storage providers by configuration location (M1). Mark each of the configuration locations in the list as either compliant (if it does not allow access to prohibited cloud storage providers), or non-compliant (if it allows access to at least one of the prohibited cloud storage providers).
-#. For each of the endpoint configuration locations identified in Input 1, identify which of the cloud email providers from Input 3 are reachable based on the configuration at that location, creating a list of reachable cloud email providers by configuration location (M2). Mark each of the configuration locations in the list as either compliant (if it does not allow access to prohibited cloud storage providers), or non-compliant (if it allows access to at least one of the prohibited cloud storage providers).
-#. For each endpoint in Input 1, check the status of each of that endpoint's configuration locations in M1 and M2, and create a count of the endpoints that have configuration locations that are all compliant (M3).
-#. Manually review the organization's security policy provided in Input 4 to ensure that it properly outlines the organization's rules for accessing cloud storage and cloud email providers, including identifying which providers are allowed and which are prohibited. Score this review as M5 (could be a binary 1 for adequate, 0 for inadequate; or a more nuanced score could be generated).
+#. Use Input 1 :code:`GV36` to identify and enumerate network segments that require communication with other network segments (M1)
+#. For each network segment identified in Operation 1, use Input 2 :code:`GV35` to identify network infrastructure assets responsible for traffic filtering 
+#. For each network infrastructure asset identified in Operation 1, check configurations using Input 3 :code:`GV37` to determine whether each semgment is properly configured to filter traffic
+	#. Identify and enumerate network segments with properly configured filtering assets (M2)
+	#. Identify and enumerate network segments with improperly configured filtering assets (M3)
 
 Measures
 --------
-* M1 = List of reachable cloud storage providers by configuration location
-* M2 = List of reachable cloud email providers by configuration location
-* M3 = Count of endpoints for which all their configuration locations are compliant
-* M4 = Count of endpoints (count of Input 1)
-* M5 = Score resulting from the manual review of the cloud provider access policy
+* M1 = Count of network segments that communicate with other network segments
+* M2 = Count of network segments with properly configured filtering assets
+* M3 = Count of network segments wih improperly configured filtering assets
 
 Metrics
 -------
@@ -47,20 +44,11 @@ Coverage
 .. list-table::
 
 	* - **Metric**
-	  - | Ratio of endpoints with cloud provider access properly limited to the total number of
-	    | endpoints
+	  - | The percentage of network segments properly configured to 
+	    | filter traffic between segments
 	* - **Calculation**
-	  - :code:`M3 / M4`
+	  - :code:`M2 / M1`
 
-Manual Review
-^^^^^^^^^^^^^
-.. list-table::
-
-	* - **Metric**
-	  - | Manual policy review included for this Sub-Control because it is not feasible to
-	    | identify (and therefore check for) all cloud storage and email providers.
-	* - **Calculation**
-	  - :code:`M5`
 
 .. history
 .. authors
