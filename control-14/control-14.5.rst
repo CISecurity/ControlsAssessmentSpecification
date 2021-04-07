@@ -1,6 +1,6 @@
-14.5: Utilize an Active Discovery Tool to Identify Sensitive Data
+14.5: Train Workforce Members on Causes of Unintentional Data Exposure
 =========================================================
-Utilize an active discovery tool to identify all sensitive information stored, processed, or transmitted by the organization’s technology systems, including those located on-site or at a remote service provider, and update the organization’s sensitive information inventory.
+Train workforce members to be aware of causes for unintentional data exposure. Example topics include mis-delivery of sensitive data, losing a portable end-user device, or publishing data to unintended audiences.
 
 .. list-table::
 	:header-rows: 1
@@ -8,75 +8,64 @@ Utilize an active discovery tool to identify all sensitive information stored, p
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Data
-	  - Detect
-	  - 3
+	* - N/A
+	  - Protect
+	  - 1, 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 1.5: Maintain Asset Inventory Information
-* Sub-control 2.1: Maintain Inventory of Authorized Software
-* Sub-control 2.5: Integrate Software and Hardware Asset Inventories
+* None
 
 Inputs
 -----------
-#. The list of endpoints
-#. The list of authorized software
-#. The inventory of sensitive data
+#. Causes of Unintentional Data Exposure
+#. :code:`GV43`: List of workforce members
+#. List of most recent module training completion dates for each workforce member
+
 
 Operations
 ----------
-#. Using the sensitive data inventory, enumerate all endpoints storing, processing, or transmitting sensitive information.
-#. Enumerate all sensitive information active monitoring tools from the software inventory
-#. For each identified active monitoring tool:
-	#. Enumerate the endpoints covered by the system
-	#. Examine its configuration to ensure that the system is configured to:
-		#. Monitor for sensitive information (noting appropriately and inappropriately configured systems along the way)
-#. Enumerate endpoints covered by all sensitive information active monitoring systems
-#. Complement the set of covered endpoints with the list of identified endpoints to identify all uncovered endpoints
-
-Assumptions
-^^^^^^^^^^^
-* Sensitive information monitoring systems are primarily software-based
+#. Check enterprise to determine if Input 1 exists
+	#. If Input 1 exists, M1 = 1
+	#. If Input 1 does not exist, M1 = 0
+#. For every member of the workforce in Input 2 :code:`GV43`, determine whether the member has completed training
+	#. Identify and enumerate members who have completed at least initial training (M3)
+	#. Identify and enumerate members who have not completed any training (M4)
+#. For every member of the workforce identified in Operation 2.1, identify the date of most recently completed module training 
+#. For every member of the workforce identified in Operation 2.1, use the output of Operation 4 and compare the date to current date. Capture timeframe in months.
+	#. Identify and enumerate members whose most recent training date is less than or equal to twelve months from current date (M5)
+	#. Identify and enumerate members whose most recent training date is greater than twelve months from current date (M6)
 
 Measures
 --------
-* M1 = List of endpoints storing, processing, or transmitting sensitive information
-* M2 = List of sensitive information monitoring tools
-* M3 = List of monitoring tools appropriately configured
-* M4 = List of monitoring tools inappropriately configured
-* M5 = List of endpoints covered by at least one monitoring tool
-* M6 = List of endpoints not covered by at least one monitoring tool
-* M7 = Count of endpoints storing, processing, or transmitting sensitive information (count of M1)
-* M8 = Count of sensitive information monitoring tools (count of M2)
-* M9 = Count of monitoring tools appropriately configured (count of M3)
-* M10 = Count of monitoring tools inappropriately configured (count of M4)
-* M11 = Count of endpoints covered by at least one monitoring tool (count of M5)
-* M12 = Count of endpoints not covered by at least one monitoring tool (count of M6)
+* M1 = Output of Operation 1
+* M2 = Count of Input 1 :code:`GV43` 
+* M3 = Count of workforce members that have completed training
+* M4 = Count of workforce members that have not completed training
+* M5 = Count of workforce members whose training is up to date
+* M6 = Count of workforce members whose training is not up to date
 
 Metrics
 -------
+* If M1 is measured at a 0, this safeguard receives a failing score. The other metrics don't apply.
 
-Endpoint Coverage
-^^^^^^^^^^^^^^^^^
+Initial Training Compliance
+^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of covered endpoints to the total number of endpoints storing, processing, or
-	    | transmitting sensitive information
+	  - | The percentage of workforce members that have received initial training
 	* - **Calculation**
-	  - :code:`M11 / M7`
+	  - :code:`M2 / M1`
 
-Monitoring Coverage
-^^^^^^^^^^^^^^^^^^^
+Up to Date Training
+^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of appropriately configured active sensitive information monitoring tools to
-	    | the total number of active sensitive information monitoring tools
+	  - | The percentage of compliant workforce members
 	* - **Calculation**
-	  - :code:`M9 / M8`
+	  - :code:`M4 / M1`
 
 .. history
 .. authors
