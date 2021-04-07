@@ -1,6 +1,6 @@
-14.3: Disable Workstation-to-Workstation Communication
+14.3: Train Workforce Members on Authentication Best Practices
 =========================================================
-Disable all workstation-to-workstation communication to limit an attacker’s ability to move laterally and compromise neighboring systems, through technologies such as private VLANs or micro segmentation.
+Train workforce members on authentication best practices. Example topics include MFA, password composition, and credential management.
 
 .. list-table::
 	:header-rows: 1
@@ -8,45 +8,64 @@ Disable all workstation-to-workstation communication to limit an attacker’s ab
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Network
+	* - N/A
 	  - Protect
-	  - 2, 3
+	  - 1, 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 1.5: Maintain Asset Inventory Information
+* None
 
 Inputs
 -----------
-#. The list of endpoints.  For each endpoint, include the corresponding policy configuration locations that are used to restrict workstation to workstation communication (network device configurations, workstation configurations, virtual network configurations, etc.)
-#. Approved configuration(s) for each type of configuration in Input 1
+#. Authentication Best Practices training module
+#. :code:`GV43`: List of workforce members
+#. List of most recent module training completion dates for each workforce member
+
 
 Operations
 ----------
-#. For each endpoint, check each corresponding policy configuration location specified in Input 1, comparing the configuration at that location against the appropriate configurations provided in Input 2.
-#. Create a list of endpoints for which all of the endpoint's corresponding policy configuration points are configured in accordance with the approved configurations (M1), noting the approved configurations that were used for each.
-#. Create a list of the endpoints that have at least one policy configuration points that is not configured appropriately (M2) noting the deviations from the approved configurations.
+#. Check enterprise to determine if Input 1 exists
+	#. If Input 1 exists, M1 = 1
+	#. If Input 1 does not exist, M1 = 0
+#. For every member of the workforce in Input 2 :code:`GV43`, determine whether the member has completed training
+	#. Identify and enumerate members who have completed at least initial training (M3)
+	#. Identify and enumerate members who have not completed any training (M4)
+#. For every member of the workforce identified in Operation 2.1, identify the date of most recently completed module training 
+#. For every member of the workforce identified in Operation 2.1, use the output of Operation 4 and compare the date to current date. Capture timeframe in months.
+	#. Identify and enumerate members whose most recent training date is less than or equal to twelve months from current date (M5)
+	#. Identify and enumerate members whose most recent training date is greater than twelve months from current date (M6)
 
 Measures
 --------
-* M1 = List of endpoints with all workstation to workstation policy configuration points configured appropriately (compliant list)
-* M2 = List of endpoints with at least one misconfigured workstation to workstation policy configuration point (non-compliant list)
-* M3 = Count of endpoints with all policy configuration points configured appropriately (count of M1)
-* M4 = Total count of endpoints (count of Input 1)
+* M1 = Output of Operation 1
+* M2 = Count of Input 1 :code:`GV43` 
+* M3 = Count of workforce members that have completed training
+* M4 = Count of workforce members that have not completed training
+* M5 = Count of workforce members whose training is up to date
+* M6 = Count of workforce members whose training is not up to date
 
 Metrics
 -------
+* If M1 is measured at a 0, this safeguard receives a failing score. The other metrics don't apply.
 
-Coverage
+Initial Training Compliance
 ^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of endpoints correctly configured to restrict workstation to workstation
-	    | communication to the total number of endpoints.
+	  - | The percentage of workforce members that have received initial training
 	* - **Calculation**
-	  - :code:`M3 / M4`
+	  - :code:`M2 / M1`
+
+Up to Date Training
+^^^^^^^^
+.. list-table::
+
+	* - **Metric**
+	  - | The percentage of compliant workforce members
+	* - **Calculation**
+	  - :code:`M4 / M1`
 
 .. history
 .. authors
