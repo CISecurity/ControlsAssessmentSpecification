@@ -1,6 +1,6 @@
-14.4: Encrypt All Sensitive Information in Transit
+14.4: Train Workforce on Data Handling Best Practices
 =========================================================
-Encrypt all sensitive information in transit.
+Train workforce members on how to identify and properly store, transfer, archive, and destroy sensitive data. This also includes training workforce members on clear screen and desk best practices, such as locking their screen when they step away from their enterprise asset, erasing physical and virtual whiteboards at the end of meetings, and storing data and assets securely.
 
 .. list-table::
 	:header-rows: 1
@@ -8,44 +8,64 @@ Encrypt all sensitive information in transit.
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Data
+	* - N/A
 	  - Protect
-	  - 2, 3
+	  - 1, 2, 3
 
 Dependencies
 ------------
-* Sub-control 13.1: Maintain an Inventory of Sensitive Information
+* None
 
 Inputs
 -----------
-#. Inventory of Sensitive Information (for each type of information listed in the inventory, include a description of how the encryption of this information in transit is accomplished, along with a list of the components used to achieve that encryption)
-#. Approved configuration(s) for each of the components identified in Input 1
+#. Data Handling Best Practices training module
+#. :code:`GV43`: List of workforce members
+#. List of most recent module training completion dates for each workforce member
+
 
 Operations
 ----------
-#. For each type of sensitive information listed in the inventory provided in Input 1, check each of the components used to encrypt that information in transit against the appropriate approved configuration(s) in Input 2.
-#. Create a list of the sensitive information types for which all of the associated components are properly configured (M1) noting which configurations they were checked against.
-#. Create a list of sensitive information types for which at least one of the associated components was not properly configured (M2) noting which configurations they were checked against and any deviations from the approved configurations.
+#. Check enterprise to determine if Input 1 exists
+	#. If Input 1 exists, M1 = 1
+	#. If Input 1 does not exist, M1 = 0
+#. For every member of the workforce in Input 2 :code:`GV43`, determine whether the member has completed training
+	#. Identify and enumerate members who have completed at least initial training (M3)
+	#. Identify and enumerate members who have not completed any training (M4)
+#. For every member of the workforce identified in Operation 2.1, identify the date of most recently completed module training 
+#. For every member of the workforce identified in Operation 2.1, use the output of Operation 4 and compare the date to current date. Capture timeframe in months.
+	#. Identify and enumerate members whose most recent training date is less than or equal to twelve months from current date (M5)
+	#. Identify and enumerate members whose most recent training date is greater than twelve months from current date (M6)
 
 Measures
 --------
-* M1 = List of sensitive information types for which all associated components were properly configured (compliant list)
-* M2 = List of sensitive information types for which at least one associated component was not properly configured (non-compliant list)
-* M3 = Count of compliant sensitive information types (count of M1)
-* M4 = Total count of sensitive information types (count of Input 1)
+* M1 = Output of Operation 1
+* M2 = Count of Input 1 :code:`GV43` 
+* M3 = Count of workforce members that have completed training
+* M4 = Count of workforce members that have not completed training
+* M5 = Count of workforce members whose training is up to date
+* M6 = Count of workforce members whose training is not up to date
 
 Metrics
 -------
+* If M1 is measured at a 0, this safeguard receives a failing score. The other metrics don't apply.
 
-Coverage
+Initial Training Compliance
 ^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of sensitive information types properly configured to be encrypted in
-	    | transit to the total set of sensitive information types.
+	  - | The percentage of workforce members that have received initial training
 	* - **Calculation**
-	  - :code:`M3 / M4`
+	  - :code:`M2 / M1`
+
+Up to Date Training
+^^^^^^^^
+.. list-table::
+
+	* - **Metric**
+	  - | The percentage of compliant workforce members
+	* - **Calculation**
+	  - :code:`M4 / M1`
 
 .. history
 .. authors
