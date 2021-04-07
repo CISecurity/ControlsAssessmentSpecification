@@ -1,6 +1,6 @@
-14.6: Protect Information Through Access Control Lists
+14.6: Train Workforce Members on Recognizing and Reporting Security Incidents
 =========================================================
-Protect all information stored on systems with file system, network share, claims, application, or database specific access control lists.  These controls will enforce the principle that only authorized individuals should have access to the information based on their need to access the information as a part of their responsibilities.
+Train workforce members to be able to recognize a potential incident and be able to report such an incident.
 
 .. list-table::
 	:header-rows: 1
@@ -14,39 +14,58 @@ Protect all information stored on systems with file system, network share, claim
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 1.5: Maintain Asset Inventory Information
-* Sub-control 5.1: Establish Secure Configurations
+* None
 
 Inputs
 -----------
-#. Endpoint Inventory
-#. Access control configuration policy
+#. Recognizing and Reporting Security Incidents training module
+#. :code:`GV43`: List of workforce members
+#. List of most recent module training completion dates for each workforce member
+
 
 Operations
 ----------
-#. For each endpoint in Input 1, collect the "ground truth" access policy for that endpoint and compare it to the access control configuration policy in Input 2. Generate a list of endpoints which comply with the specified access control configuration policy (M1) and a list of endpoints that do not comply with the specified policy (M2)
+#. Check enterprise to determine if Input 1 exists
+	#. If Input 1 exists, M1 = 1
+	#. If Input 1 does not exist, M1 = 0
+#. For every member of the workforce in Input 2 :code:`GV43`, determine whether the member has completed training
+	#. Identify and enumerate members who have completed at least initial training (M3)
+	#. Identify and enumerate members who have not completed any training (M4)
+#. For every member of the workforce identified in Operation 2.1, identify the date of most recently completed module training 
+#. For every member of the workforce identified in Operation 2.1, use the output of Operation 4 and compare the date to current date. Capture timeframe in months.
+	#. Identify and enumerate members whose most recent training date is less than or equal to twelve months from current date (M5)
+	#. Identify and enumerate members whose most recent training date is greater than twelve months from current date (M6)
 
 Measures
 --------
-* M1 = List of endpoints that comply with access control configuration policy (compliant list)
-* M2 = List of endpoints that do not comply with access control configuration policy (non-compliant list)
-* M3 = Count of endpoints in M1 (number of compliant endpoints)
-* M4 = Count of endpoints in M2 (number of non-compliant endpoints)
-* M5 = Count of endpoints in Input 1 (total number of endpoints to check)
+* M1 = Output of Operation 1
+* M2 = Count of Input 1 :code:`GV43` 
+* M3 = Count of workforce members that have completed training
+* M4 = Count of workforce members that have not completed training
+* M5 = Count of workforce members whose training is up to date
+* M6 = Count of workforce members whose training is not up to date
 
 Metrics
 -------
+* If M1 is measured at a 0, this safeguard receives a failing score. The other metrics don't apply.
 
-Coverage
+Initial Training Compliance
 ^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | What is the percentage of endpoints which are compliant with the organization's
-	    | access control policy?
+	  - | The percentage of workforce members that have received initial training
 	* - **Calculation**
-	  - :code:`M3 / M5`
+	  - :code:`M2 / M1`
+
+Up to Date Training
+^^^^^^^^
+.. list-table::
+
+	* - **Metric**
+	  - | The percentage of compliant workforce members
+	* - **Calculation**
+	  - :code:`M4 / M1`
 
 .. history
 .. authors
