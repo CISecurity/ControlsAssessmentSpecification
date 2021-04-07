@@ -1,6 +1,6 @@
-14.7: Enforce Access Control to Data Through Automated Tools
+14.7: Train Workforce on How to Identify and Report if Their Enterprise Assets are Missing Security Updates
 =========================================================
-Use an automated tool, such as host-based Data Loss Prevention, to enforce access controls to data even when the data is copied off a system.
+Train workforce to understand how to verify and report out-of-date software patches or any failures in automated processes and tools. Part of this training should include notifying IT personnel of any failures in automated processes and tools.
 
 .. list-table::
 	:header-rows: 1
@@ -8,54 +8,64 @@ Use an automated tool, such as host-based Data Loss Prevention, to enforce acces
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Data
+	* - N/A
 	  - Protect
-	  - 3
+	  - 1, 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 1.5: Maintain Asset Inventory Information
-* Sub-control 2.1: Maintain Inventory of Authorized Software
-* Sub-control 2.5: Integrate Software and Hardware Asset Inventories
+* None
 
 Inputs
 -----------
-#. The list of endpoints
-#. The list of authorized software
+#. How to Identify and Report if Their Enterprise Assets are Missing Security Updates training module
+#. :code:`GV43`: List of workforce members
+#. List of most recent module training completion dates for each workforce member
+
 
 Operations
 ----------
-#. Enumerate endpoints capable of storing data
-#. Enumerate all DLP software
-#. For each instance of DLP software:
-	#. Enumerate the endpoints covered by the DLP software
-#. Enumerate all endpoints covered by the set of DLP software
-#. Complement the list of covered endpoints with the list of endpoints enumerated in the first operation to get the enumeration of endpoints not covered
+#. Check enterprise to determine if Input 1 exists
+	#. If Input 1 exists, M1 = 1
+	#. If Input 1 does not exist, M1 = 0
+#. For every member of the workforce in Input 2 :code:`GV43`, determine whether the member has completed training
+	#. Identify and enumerate members who have completed at least initial training (M3)
+	#. Identify and enumerate members who have not completed any training (M4)
+#. For every member of the workforce identified in Operation 2.1, identify the date of most recently completed module training 
+#. For every member of the workforce identified in Operation 2.1, use the output of Operation 4 and compare the date to current date. Capture timeframe in months.
+	#. Identify and enumerate members whose most recent training date is less than or equal to twelve months from current date (M5)
+	#. Identify and enumerate members whose most recent training date is greater than twelve months from current date (M6)
 
 Measures
 --------
-* M1 = List of endpoints capable of storing data
-* M2 = List of DLP software instances
-* M3 = List of all endpoints covered by the set of DLP software
-* M4 = List of all endpoints not covered by the set of DLP software
-* M5 = Count of endpoints capable of storing data (count of M1)
-* M6 = Count of DLP software instances (count of M2)
-* M7 = Count of endpoints covered by the set of DLP software (count of M3)
-* M8 = Count of endpoints not covered by the set of DLP software (count of M4)
+* M1 = Output of Operation 1
+* M2 = Count of Input 1 :code:`GV43` 
+* M3 = Count of workforce members that have completed training
+* M4 = Count of workforce members that have not completed training
+* M5 = Count of workforce members whose training is up to date
+* M6 = Count of workforce members whose training is not up to date
 
 Metrics
 -------
+* If M1 is measured at a 0, this safeguard receives a failing score. The other metrics don't apply.
 
-Coverage
+Initial Training Compliance
 ^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of endpoints covered by at least one DLP software instance to the total
-	    | number of endpoints capable of storing data
+	  - | The percentage of workforce members that have received initial training
 	* - **Calculation**
-	  - :code:`M7 / M5`
+	  - :code:`M2 / M1`
+
+Up to Date Training
+^^^^^^^^
+.. list-table::
+
+	* - **Metric**
+	  - | The percentage of compliant workforce members
+	* - **Calculation**
+	  - :code:`M4 / M1`
 
 .. history
 .. authors
