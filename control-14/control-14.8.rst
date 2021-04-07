@@ -1,6 +1,6 @@
-14.8: Encrypt Sensitive Information at Rest
+14.8: Train Workforce on the Dangers of Connecting to and Transmitting Enterprise Data Over Insecure Networks
 =========================================================
-Encrypt all sensitive information at rest using a tool that requires a secondary authentication mechanism not integrated into the operating system, in order to access the information.
+Train workforce members on the dangers of connecting to, and transmitting data over, insecure networks for enterprise activities. If the enterprise has remote workers, training must include guidance to ensure that all users securely configure their home network infrastructure.
 
 .. list-table::
 	:header-rows: 1
@@ -8,57 +8,64 @@ Encrypt all sensitive information at rest using a tool that requires a secondary
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Data
+	* - N/A
 	  - Protect
-	  - 3
+	  - 1, 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 1.5: Maintain Asset Inventory Information
-* Sub-control 2.1: Maintain Inventory of Authorized Software
-* Sub-control 2.5: Integrate Software and Hardware Asset Inventories
+* None
 
 Inputs
 -----------
-#. The list of endpoints
-#. The list of authorized software
-#. The list of sensitive information
+#. Dangers of Connecting to and Transmitting Enterprise Data Over Insecure Networks training module
+#. :code:`GV43`: List of workforce members
+#. List of most recent module training completion dates for each workforce member
+
 
 Operations
 ----------
-#. Enumerate all encryption tools requiring secondary authentication systems from the software inventory
-#. Enumerate all endpoints storing sensitive information using the sensitive information inventory
-#. For each identified encryption tool
-	#. Enumerate endpoints covered by the encryption tool
-#. Enumerate all endpoints covered by at least one encryption tool
-#. Complement all covered endpoints with the enumeration of all endpoints storing sensitive information to find those endpoints not covered by at least one encryption tool
-
+#. Check enterprise to determine if Input 1 exists
+	#. If Input 1 exists, M1 = 1
+	#. If Input 1 does not exist, M1 = 0
+#. For every member of the workforce in Input 2 :code:`GV43`, determine whether the member has completed training
+	#. Identify and enumerate members who have completed at least initial training (M3)
+	#. Identify and enumerate members who have not completed any training (M4)
+#. For every member of the workforce identified in Operation 2.1, identify the date of most recently completed module training 
+#. For every member of the workforce identified in Operation 2.1, use the output of Operation 4 and compare the date to current date. Capture timeframe in months.
+	#. Identify and enumerate members whose most recent training date is less than or equal to twelve months from current date (M5)
+	#. Identify and enumerate members whose most recent training date is greater than twelve months from current date (M6)
 
 Measures
 --------
-* M1 = List of all encryption tools that require secondary authentication
-* M2 = List of all endpoints storing sensitive information
-* M3 = List of all endpoints covered by at least one encryption tool
-* M4 = List of all endpoints not covered by at least one encryption tool
-* M5 = Count of encryption tools that require secondary authentication (count of M1)
-* M6 = Count of endpoints storing sensitive information (count of M2)
-* M7 = Count of endpoints covered by at least one encryption tool (count of M3)
-* M8 = Count of endpoints not covered by at least one encryption tool (count of M4)
-
+* M1 = Output of Operation 1
+* M2 = Count of Input 1 :code:`GV43` 
+* M3 = Count of workforce members that have completed training
+* M4 = Count of workforce members that have not completed training
+* M5 = Count of workforce members whose training is up to date
+* M6 = Count of workforce members whose training is not up to date
 
 Metrics
 -------
+* If M1 is measured at a 0, this safeguard receives a failing score. The other metrics don't apply.
 
-Coverage
+Initial Training Compliance
 ^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of endpoints covered by an encryption tool to the total number of endpoints
-	    | storing sensitive information
+	  - | The percentage of workforce members that have received initial training
 	* - **Calculation**
-	  - :code:`M7 / M6`
+	  - :code:`M2 / M1`
+
+Up to Date Training
+^^^^^^^^
+.. list-table::
+
+	* - **Metric**
+	  - | The percentage of compliant workforce members
+	* - **Calculation**
+	  - :code:`M4 / M1`
 
 .. history
 .. authors
