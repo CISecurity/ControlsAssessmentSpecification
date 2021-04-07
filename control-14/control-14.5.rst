@@ -18,7 +18,7 @@ Dependencies
 
 Inputs
 -----------
-#. Causes of Unintentional Data Exposure
+#. Causes of Unintentional Data Exposure training module
 #. :code:`GV43`: List of workforce members
 #. List of most recent module training completion dates for each workforce member
 
