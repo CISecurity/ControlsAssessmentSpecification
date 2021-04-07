@@ -1,6 +1,6 @@
-14.9: Enforce Detail Logging for Access or Changes to Sensitive Data
+14.9: Conduct Role-Specific Security Awareness and Skills Training
 ====================================================================
-Enforce detailed audit logging for access to sensitive data or changes to sensitive data (utilizing tools such as File Integrity Monitoring or Security Information and Event Monitoring).
+Conduct role-specific security awareness and skills training. Example implementations include secure system administration courses for IT professionals, (OWASP® Top 10 vulnerability awareness and prevention training for web application developers, and advanced social engineering awareness training for high-profile roles.
 
 .. list-table::
 	:header-rows: 1
@@ -8,60 +8,64 @@ Enforce detailed audit logging for access to sensitive data or changes to sensit
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Data
-	  - Detect
-	  - 3
+	* - N/A
+	  - Protect
+	  - 1, 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 1.5: Maintain Asset Inventory Information
-* Sub-control 2.1: Maintain Inventory of Authorized Software
-* Sub-control 2.5: Integrate Software and Hardware Asset Inventories
+* None
 
 Inputs
 -----------
-#. The list of endpoints
-#. The list of authorized software
-#. The list of sensitive information
+#. Role-Specific Security Awareness and Skills Training module
+#. :code:`GV43`: List of workforce members
+#. List of most recent module training completion dates for each workforce member
+
 
 Operations
 ----------
-#. Enumerate all endpoints storing sensitive information using the endpoint inventory and the sensitive information inventory
-#. For each identified endpoint, examine its configuration as follows noting appropriately and inappropriately configured endpoints along the way:
-	#. Detailed audit logging is enabled for access to sensitive data
-	#. Detailed audit logging is enabled for changes to sensitive data
-#. Enumerate appropriately configured endpoints
-#. Enumerate inappropriately configured endpoints
-#. Enumerate endpoints inappropriately configured to log access to sensitive data
-#. Enumerate endpoints inappropriately configured to log changes to sensitive data
+#. Check enterprise to determine if Input 1 exists
+	#. If Input 1 exists, M1 = 1
+	#. If Input 1 does not exist, M1 = 0
+#. For every member of the workforce in Input 2 :code:`GV43`, determine whether the member has completed training
+	#. Identify and enumerate members who have completed at least initial training (M3)
+	#. Identify and enumerate members who have not completed any training (M4)
+#. For every member of the workforce identified in Operation 2.1, identify the date of most recently completed module training 
+#. For every member of the workforce identified in Operation 2.1, use the output of Operation 4 and compare the date to current date. Capture timeframe in months.
+	#. Identify and enumerate members whose most recent training date is less than or equal to twelve months from current date (M5)
+	#. Identify and enumerate members whose most recent training date is greater than twelve months from current date (M6)
 
 Measures
 --------
-* M1 = List of all endpoints storing sensitive information
-* M2 = List of appropriately configured endpoints (those that have detailed audit logging enabled for access and changes to sensitive data)
-* M3 = List of inappropriately configured endpoints (those that do not have detailed audit logging enabled for access or changes to sensitive data)
-* M4 = List of endpoints inappropriately configured to log access to sensitive data
-* M5 = List of endpoints inappropriately configured to log changes to sensitive data
-* M6 = Count of endpoints storing sensitive information (count of M1)
-* M7 = Count of appropriately configured endpoints (count of M2)
-* M8 = Count of inappropriately configured endpoints (count of M3)
-* M9 = Count of endpoints inappropriately configured to log access to sensitive data (count of M4)
-* M10 = Count of endpoints inappropriately configured to log changes to sensitive data (count of M5)
+* M1 = Output of Operation 1
+* M2 = Count of Input 1 :code:`GV43` 
+* M3 = Count of workforce members that have completed training
+* M4 = Count of workforce members that have not completed training
+* M5 = Count of workforce members whose training is up to date
+* M6 = Count of workforce members whose training is not up to date
 
 Metrics
 -------
+* If M1 is measured at a 0, this safeguard receives a failing score. The other metrics don't apply.
 
-Coverage
+Initial Training Compliance
 ^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of appropriately configured endpoints to the total number of endpoints storing
-	    | sensitive information
+	  - | The percentage of workforce members that have received initial training
 	* - **Calculation**
-	  - :code:`M7 / M6`
+	  - :code:`M2 / M1`
 
+Up to Date Training
+^^^^^^^^
+.. list-table::
+
+	* - **Metric**
+	  - | The percentage of compliant workforce members
+	* - **Calculation**
+	  - :code:`M4 / M1`
 .. history
 .. authors
 .. license
