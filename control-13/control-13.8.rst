@@ -1,6 +1,6 @@
-13.8: Manage System’s External Removable Media’s Read/Write Configurations
+13.8: Deploy a Network Intrusion Prevention Solutions
 ==========================================================================
-Configure systems not to write data to external removable media, if there is no business need for supporting such devices.
+Deploy a network intrusion prevention solution, where appropriate. Example implementations include the use of a Network Intrusion Prevention System (NIPS) or equivalent CSP service.
 
 .. list-table::
 	:header-rows: 1
@@ -8,40 +8,35 @@ Configure systems not to write data to external removable media, if there is no 
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Data
+	* - Network
 	  - Protect
 	  - 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 1.5: Maintain Asset Inventory Information
+* Safeguard 1.1: Establish and Maintain Detailed Enterprise Asset Inventory 
+* Safeguard 12.4: Establish and Maintain Architecture Diagram(s)
 
 Inputs
 -----------
-#. The list of endpoints
+#. :code:`GV35`: Assets that are part of the network infrastructure
+#. :code:`GV40`: Network Boundaries
 
 Operations
 ----------
-#. Enumerate all endpoints supporting external removable media
-#. Enumerate all endpoints with a business need to support external removable media
-#. Enumerate all endpoints without a business need to support external removable media
-#. For each endpoint without a business need to support external removable media, examine its external media configuration, noting whether it is appropriately or inappropriately configured
-#. Enumerate the inappropriately configured endpoints
-#. Enumerate the appropriately configured endpoints
+#. Use Input 1 :code:`GV35` to identify the network intrusion prevention solutions for the enterprise
+#. For each network boundary identified in Input 2, determine whether it is covered by at least one network intrusion prevention solution
+	#. Identify and enumerate boundaries covered by at least one network intrusion prevention solution (M2)
+	#. Identify and enumerate boundaries not covered by at least one network intrusion prevention solution (M3)
+
+
 
 Measures
 --------
-* M1 = List of all endpoints supporting external removable media
-* M2 = List of all endpoints with a business need to support external removable media
-* M3 = List of all endpoints without a business need to support external removable media
-* M4 = List of appropriately configured endpoints without a need to support external removable media
-* M5 = List of inappropriately configured endpoints without a need to support external removable media
-* M6 = Count of endpoints supporting external removable media (count of M1)
-* M7 = Count of endpoints with a business need to support external removable media (count of M2)
-* M8 = Count of endpoints without a business need to support external removable media (count of M3)
-* M9 = Count of appropriately configured endpoints without a need to support external removable media (count of M4)
-* M10 = Count of inappropriately configured endpoints without a need to support external removable media (count of M5)
+* M1 = Count of network boundaries :code:`GV40`
+* M2 = Count of network boundaries covered by a network intrusion prevention solution
+* M3 = Count of network boundaries not covered by a network intrusion prevention solution
+
 
 Metrics
 -------
@@ -51,10 +46,10 @@ Coverage
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of appropriately configured endpoints to the total number of endpoints without
-	    | a business need to support external removable media
+	  - | The percentage of network boundaries covered by network intrusion
+	  - | prevention solutions 
 	* - **Calculation**
-	  - :code:`M9 / M8`
+	  - :code:`M2 / M1`
 
 .. history
 .. authors
