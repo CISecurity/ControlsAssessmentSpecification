@@ -1,6 +1,6 @@
-14.2: Enable Firewall Filtering Between VLANs
+14.2: Train Workforce Members to Recognize Social Engineering Attacks
 =========================================================
-Enable firewall filtering between VLANs to ensure that only authorized systems are able to communicate with other systems necessary to fulfill their specific responsibilities.
+Train workforce members to recognize social engineering attacks, such as phishing, pre-texting, and tailgating. 
 
 .. list-table::
 	:header-rows: 1
@@ -8,44 +8,64 @@ Enable firewall filtering between VLANs to ensure that only authorized systems a
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Network
+	* - N/A
 	  - Protect
-	  - 2, 3
+	  - 1, 2, 3
 
 Dependencies
 ------------
 * None
-
+ 
 Inputs
 -----------
-#. List of the organization's VLANs, along with the systems (network devices, etc.) associated with administering, configuring, and filtering between them
-#. Approved configuration(s) for these VLANs and related systems to enable firewall filtering between VLANs
+#. Recognizing Social Engineering Attacks training module
+#. :code:`GV43`: List of workforce members
+#. List of most recent module training completion dates for each workforce member
+
 
 Operations
 ----------
-#. For each VLAN in Input 1, check each of its related systems to see if they are configured in accordance with the appropriate approved configurations from Input 2 to enable firewall filtering between VLANs.
-#. Create a list of VLANs that are correctly configured (M1)
-#. Create a list of VLANs that are not correctly configured (M2) noting which related systems are misconfigured and the details of the misconfiguration.
+#. Check enterprise to determine if Input 1 exists
+	#. If Input 1 exists, M1 = 1
+	#. If Input 1 does not exist, M1 = 0
+#. For every member of the workforce in Input 2 :code:`GV43`, determine whether the member has completed training
+	#. Identify and enumerate members who have completed at least initial training (M3)
+	#. Identify and enumerate members who have not completed any training (M4)
+#. For every member of the workforce identified in Operation 2.1, identify the date of most recently completed module training 
+#. For every member of the workforce identified in Operation 2.1, use the output of Operation 4 and compare the date to current date. Capture timeframe in months.
+	#. Identify and enumerate members whose most recent training date is less than or equal to twelve months from current date (M5)
+	#. Identify and enumerate members whose most recent training date is greater than twelve months from current date (M6)
 
 Measures
 --------
-* M1 = List of correctly configured VLANs (compliant list)
-* M2 = List of incorrectly configured VLANs along with deviations (non-compliant list)
-* M3 = Count of correctly configured VLANs (count of M1)
-* M4 = Total count of VLANs (count of Input 1)
+* M1 = Output of Operation 1
+* M2 = Count of Input 1 :code:`GV43` 
+* M3 = Count of workforce members that have completed training
+* M4 = Count of workforce members that have not completed training
+* M5 = Count of workforce members whose training is up to date
+* M6 = Count of workforce members whose training is not up to date
 
 Metrics
 -------
+* If M1 is measured at a 0, this safeguard receives a failing score. The other metrics don't apply.
 
-Coverage
+Initial Training Compliance
 ^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of VLANs properly configured for firewall filtering to the total number of
-	    | VLANs.
+	  - | The percentage of workforce members that have received initial training
 	* - **Calculation**
-	  - :code:`M3 / M4`
+	  - :code:`M2 / M1`
+
+Up to Date Training
+^^^^^^^^
+.. list-table::
+
+	* - **Metric**
+	  - | The percentage of compliant workforce members
+	* - **Calculation**
+	  - :code:`M4 / M1`
 
 .. history
 .. authors
