@@ -1,6 +1,6 @@
-17.2: Deliver Training to Fill the Skills Gap
+17.2: Establish and Maintain Contact Information for Reporting Security Incidents
 =========================================================
-Deliver training to address the skills gap identified to positively impact workforce members’ security behavior.
+Establish and maintain contact information for parties that need to be informed of security incidents. Contacts may include internal staff, third-party vendors, law enforcement, cyber insurance providers, relevant government agencies, Information Sharing and Analysis Center (ISAC) partners, or other stakeholders. Verify contacts annually to ensure that information is up-to-date.
 
 .. list-table::
 	:header-rows: 1
@@ -9,43 +9,35 @@ Deliver training to address the skills gap identified to positively impact workf
 	  - Security Function
 	  - Implementation Groups
 	* - N/A
-	  - N/A
-	  - 2, 3
+	  - Respond
+	  - 1, 2, 3
 
 Dependencies
 ------------
-* Sub-control 17.1: Perform a Skills Gap Analysis
+* None
 
 Inputs
 -----------
-#. Skills gap topics (areas of weakness as determined by the skills gap analysis in Sub-Control 17.1)
-#. Modules/topics covered in the organization's security awareness training
+#. :code:`GV51`: Enterprise Incident Response Documentation
+#. Date of last update or review of the documentation
 
 Operations
 ----------
-#. For each skills gap in Input 1, determine if that topic is adequately covered in the organization's security awareness training program (Input 2).
-	#. Create a list of the topics that are adequately covered (M1)
-	#. Create a list of the topics that are not adequately covered (M2) including notes on what needs to be added to achieve adequate coverage of the topic.
+#. Determine whether the enterprise documents establish and maintain contact information for reporting security incidents by reviewing Input 1 :code:`GV51`. Input 1 can be an incident response plan or other documentation.
+	#. If documentation outlining contact information exists, M1 = 1
+	#. If documentation outlining contact information does not exist, M1 = 0
+#. Compare Input 2 to current date and capture timeframe in months (M2)
 
 Measures
 --------
-* M1 = List of skills gap topics that are adequately covered in the organization's security awareness training
-* M2 = List of skills gap topics that are not adequately covered in the organization's security awareness training
-* M3 = Count of skills gap topics that are adequately covered in the organization's security awareness program (count of M1)
-* M4 = Total count of skills gap topics (count of Input 1)
+* M1 = Output of Operation 1
+* M2 = Timeframe since last update or review of documentation in months
 
 Metrics
 -------
+* If M1 is 0, this safeguard receives a failing score. The other metrics don't apply.
+* If M2 is greater than twelve months, then this safeguard is measured at a 0 and receives a failing score. The other metrics don't apply.
 
-Coverage
-^^^^^^^^
-.. list-table::
-
-	* - **Metric**
-	  - | The ratio of skills gap topics that are adequately covered in the organization's
-	    | security awareness training
-	* - **Calculation**
-	  - :code:`M3 / M4`
 
 .. history
 .. authors
