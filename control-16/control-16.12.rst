@@ -1,6 +1,6 @@
-16.12: Monitor Attempts to Access Deactivated Accounts
+16.12: Implement Code-Level Security Checks
 =========================================================
-Monitor attempts to access deactivated accounts through audit logging.
+Apply static and dynamic analysis tools within the application life cycle to verify that secure coding practices are being followed.
 
 .. list-table::
 	:header-rows: 1
@@ -8,69 +8,60 @@ Monitor attempts to access deactivated accounts through audit logging.
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Users
-	  - Detect
-	  - 2, 3
+	* - Applications
+	  - Protect
+	  - 3
 
 Dependencies
 ------------
-* Sub-control 2.1: Maintain Inventory of Authorized Software
-* Sub-control 16.1: Inventory of Authentication Systems
+* Safeguard 2.1: Establish and Maintain a Software Inventory
 
 Inputs
 -----------
-#. Authentication System Inventory
-#. Approved configuration(s) for logging attempts to access deactivated accounts
-#. Approved configuration(s) for alerting on attempts to access deactivated accounts
-
-**Note**: There may be multiple configurations for Inputs 2 and 3 to account for various groups/types of authentication systems.
+#. :code:`GV5`: Authorized Software Inventory
 
 Operations
 ----------
-#. For each authentication system in Input 1, select the appropriate approved configuration from Inputs 2 and 3 in turn for that endpoint and check to see if that authentication system's actual configuration complies with the approved configuration for each Input.  Record this information as M1 - a list of authentication systems annotated with whether that authentication system is compliant or non-compliant with the appropriate approved configuration from each of the two inputs (Input 2 and Input 3).
-#. For Input 2, and for Input 3, generate a count of compliant authentication systems from M1 and record these as M2 and M3 respectively.
-#. Count the number of authentication systems that are compliant with both inputs and record this as M4
+#. Use Input 1 :code:`GV5` to identify and enumerate in-house developed software (M1)
+#. Use Input 1 :code:`GV5` to identify static analysis tools
+#. For each software identified in Operation 1, determine if it is verified by a static tool identified in Operation 2
+	#. Identify and enumerate software verified by a static tool (M2)
+	#. Identify and enumerate software not verified by a static tool (M3)
+#. Use Input 1 :code:`GV5` to identify dynamic analysis tools
+#. For each software identified in Operation 1, determine if it is verified by a dynaic tool identified in Operation 4
+	#. Identify and enumerate software verified by a dynamic tool (M4)
+	#. Identify and enumerate software not verified by a dynamic tool (M5)
 
 Measures
 --------
-* M1 = List of authentication systems with each endpoint entry labeled with compliance or non-compliance for both Input 2 and Input 3
-* M2 = Count of compliant authentication systems based on Input 2 configurations
-* M3 = Count of compliant authentication systems based on Input 3 configurations
-* M4 = Count of authentication systems that are compliant with configurations from both inputs
-* M5 = Total count of authentication systems from Input 1
+* M1 = Count of in-house developed software
+* M2 = Count of in-house developed software verified by a static analysis tool
+* M3 = Count of in-house developed software not verified by a static analysis tool
+* M4 = Count of in-house developed software verified by a dynamic analysis tool
+* M5 = Count of in-house developed software not verified by a dynamic analysis tool
 
 Metrics
 -------
 
-Logging Coverage
+Static Analysis Tool Coverage
 ^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of authentication systems configured to log attempts to access deactivated
-	    | accounts to the total number of authentication systems.
+	  - | The percentage of in-house developed software verified by a
+	    | static analysis tool
 	* - **Calculation**
-	  - :code:`M2 / M5`
+	  - :code:`M2 / M1`
 
-Alerting Coverage
-^^^^^^^^^^^^^^^^^
+Dynamic Analysis Tool Coverage
+^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of authentication systems configured to log attempts to access deactivated
-	    | accounts to the total number of authentication systems.
+	  - | The percentage of in-house developed software verified by a
+	    | dynamic analysis tool
 	* - **Calculation**
-	  - :code:`M3 / M5`
-
-Full Coverage
-^^^^^^^^^^^^^
-.. list-table::
-
-	* - **Metric**
-	  - | The ratio of authentication systems configured to both log and alert on attempts to
-	    | access deactivated accounts to the total number of authentication systems.
-	* - **Calculation**
-	  - :code:`M4 / M5`
+	  - :code:`M4 / M1`
 
 .. history
 .. authors
