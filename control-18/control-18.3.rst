@@ -1,6 +1,6 @@
-18.3: Verify That Acquired Software Is Still Supported
+18.3: Remediate Penetration Test Findings
 =========================================================
-Verify that the version of all software acquired from outside your organization is still supported by the developer or appropriately hardened based on developer security recommendations.
+Remediate penetration test findings based on the enterprise’s policy for remediation scope and prioritization.
 
 .. list-table::
 	:header-rows: 1
@@ -8,49 +8,51 @@ Verify that the version of all software acquired from outside your organization 
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - N/A
-	  - N/A
+	* - Network
+	  - Protect
 	  - 2, 3
 
 Dependencies
 ------------
-* Sub-control 2.1: Maintain Inventory of Authorized Software
-* Sub-control 2.2: Ensure Software is Supported by Vendor
-* Sub-control 5.1: Establish Secure Configurations
+* Safeguard 18.2: Perform Periodic External Penetration Tests
 
 Inputs
 -----------
-#. List of software acquired from outside the organization, including version information for each (subset of Authorized Software List from Sub-Control 2.1). As described in Sub-Control 2.2, this list should also include the supported or unsupported status for each.
-#. The list of organizational security configuration standards from Sub-Control 5.1
+#. :code:`GV53: Penetration Testing Program Documentation
+#. :code:`GV54`: Most Recent External Penetration Report
+#. External penetration report prior to most recent report
 
 Operations
 ----------
-#. For each software version listed in Input 1, check the list of organizational security configuration standards provided in Input 2.
-	#. Create a list of software versions that have at least one associated organizational security configuration standard (M1) including identifiers for the associated standard(s)
-	#. Create a list of software versions that do not have any associated organizational security configuration standards (M2)
-#. For each software version listed in M2, check the supported/unsupported status field for that software version in Input 1 to see if that product version is still supported by the developer.
-	#. Create a list of software versions that appear in M2 and are not supported (M3).
+#. Use the findings in Input 3 to identify and enumerate the vulnerabilities outlined (M1)
+#. Use the findings in Input 2 :code:`GV54` to identify the vulnerabilites outlined 
+#. Compare the output of Operation 1 and Operation 1
+	#. Identify and enumerate vulnerabilities found in Input 3 that continue to be in Input 2 (M2)
+	#. Identify and enumerate vulnerabilities found in Input 3 that no longer appear in Input 2 (M3)
+#. Using the program documentation from Input 1 :code:`GV53` determine whether the ouput of Operation 3.2 is still within scope based on enterprise's policy
+	#. Identify and enumerate vulnerabilities within scope (M4)
+	#. Identify and enumerate vulnerabilities out of scope (M5)
 
 Measures
 --------
-* M1 = List of externally acquired software that has an associated organizational security configuration standard
-* M2 = List of externally acquired software that does not have an associated organizational security configuration standard
-* M3 = List of externally acquired software that does not have an associated organizational security configuration standard and is also not supported by the developer (non-compliant list)
-* M4 = Count of externally acquired software that does not have an associated organizational security configuration standard and is also not supported by the developer (count of M3)
-* M5 = Total count of externally acquired software (count of Input 1)
+* M1 = Count of initial vulnerabilities identified by penetration test
+* M2 = Count of successfully remediated vulnerabilities 
+* M3 = Count of vulnerabilities that have not been remediated
+* M4 = Count of unremediated vulnerabilities still in scope
+* M5 = Count of unremediated vulnerabilities out of scope
 
 Metrics
 -------
 
-Coverage
+Compliance
 ^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of externally acquired software that is either supported or has an associated
-	    | organizational security configuration standard
+	  - | The percent of successfully remediated or still within scope vulnerabilities 
+	    | identified in the intial penetration test findings
 	* - **Calculation**
-	  - :code:`(M5 - M4) / M5`
+	  - :code:`(M3 + M4) / M1`
 
 .. history
 .. authors
