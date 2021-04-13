@@ -1,6 +1,6 @@
-17.8: Train Workforce on Causes of Unintentional Data Exposure
+17.8: Conduct Post-Incident Reviews
 ==============================================================
-Train workforce members to be aware of causes for unintentional data exposures, such as losing their mobile devices or emailing the wrong person due to *autocomplete* in email.
+Conduct post-incident reviews. Post-incident reviews help prevent incident recurrence through identifying lessons learned and follow-up action.
 
 .. list-table::
 	:header-rows: 1
@@ -9,43 +9,44 @@ Train workforce members to be aware of causes for unintentional data exposures, 
 	  - Security Function
 	  - Implementation Groups
 	* - N/A
-	  - N/A
-	  - 1, 2, 3
+	  - Recover
+	  - 2, 3
 
 Dependencies
 ------------
-* None
+* Safeguard 17.4: Establish and Maintain an Incident Response Process
 
 Inputs
 -----------
-#. List of workforce members
-#. List of most recent security awareness training completion dates for each workforce member
-#. Required frequency of training (at least annually)
+#. :code:`GV52`: Incident response process
+#. Last post-incident review 
 
 Operations
 ----------
-#. For each workforce member in Input 1, check Input 2 to see if that workforce member's most recent security awareness training completion date was within the time frame specified by Input 3 (if the workforce member is not listed in Input 2, assume the workforce member is not compliant). Generate a list of compliant workforce members (M1) and a list of non-compliant workforce members (M2).
+#. Determine whether the enterprise's incident response process includes post-incident reviews by reviewing Input 1 :code:`GV52`
+	#. If the documentation includes post-indicent reviews, M1 = 1
+	#. If the documentation does not include post-incident reviews, M1 = 0
+#. Use Input 2 to determine if post-incident reviews include,  at a minimum, the following components: lessons learned and follow-up actions
+	#. For each component included, assign a value of 1. Sum the values. (M2)
 
 Measures
 --------
-* M1 = List of workforce members who have completed the security awareness training within the specified time frame (compliant list)
-* M2 = List of workforce members who have not completed the security awareness training within the specified time frame (non-compliant list)
-* M3 = Number of workforce members in the compliant list (M1)
-* M4 = Number of workforce members in the non-compliant list (M2)
-* M5 = Total number of workforce members in Input 1
+* M1 = Output of Operation 1
+* M2 = Count of components included in documentation
 
 Metrics
 -------
+* If M1 is 0, this safeguard receives a failing score. The other metrics don't apply.
 
-Coverage
-^^^^^^^^
+Completeness
+^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | What percentage of workforce members have completed the security awareness training
-	    | module within the specified timeframe?
+	  - | The percentage of components included in post-incident reviews
+	    | incident response exercises
 	* - **Calculation**
-	  - :code:`M3 / M5`
+	  - :code:`M2 / 2`
 
 .. history
 .. authors
