@@ -1,6 +1,6 @@
-15.3: Use a Wireless Intrusion Detection System
+15.3: Classify Service Providers
 =========================================================
-Use a wireless intrusion detection system (WIDS) to detect and alert on unauthorized wireless access points connected to the network.
+Classify service providers. Classification consideration may include one or more characteristics, such as data sensitivity, data volume, availability requirements, applicable regulations, inherent risk, and mitigated risk. Update and review classifications annually, or when significant enterprise changes occur that could impact this Safeguard.
 
 .. list-table::
 	:header-rows: 1
@@ -8,44 +8,54 @@ Use a wireless intrusion detection system (WIDS) to detect and alert on unauthor
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Network
-	  - Detect
+	* - N/A
+	  - Identify
 	  - 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 1.5: Maintain Asset Inventory Information
+* Safeguard 15.1: Establish and Maintain an Inventory of Service Providers
+* Safeguard 15.2: Establish and Maintain a Service Provider Management Policy
 
 Inputs
 -----------
-#. The list of approved wireless access points connected to the network
-#. The list of WIDS sensors
+#. :code:`GV44`: Service Provider Inventory List
+#. :code:`GV45`: Service Provider Management Policy
+#. :code:`GV46`: Date of last review or update to service provider inventory
+
 
 Operations
 ----------
-#. For each WIDS sensor, enumerate the approved wireless access points covered
+#. Use Input 2 :code:`GV45` to determine if the enterprise policy includes classification process of service providers by one or more characteristics
+	#. If the process exists, M1 = 1
+	#. If the process does not exist, M1 = 0 
+#. Compare date of Input 3 :code:`GV46` to current date and capture timeframe in months (M2)
+#. Review Input 1 :code:`GV45` and determine whether service providers are classified using one or more characteristic per the enterprise's policy
+	#. Identify and enumerate service providers with an assigned classification (M4)
+	#. Identify and enumerate service providers without a classification (M5)
 
 Measures
 --------
-* M1 - Count of approved wireless access points (from Input 1)
-* M2 - Count of WIDS sensors (from Input 2)
-* M3 = List of approved wireless access points covered by WIDS sensors
-* M4 = Count of M3
-* M5 = List of approved wireless access points not covered by WIDS sensors
-* M6 = Count of M5
+* M1 = Output of Operation 1
+* M2 = Timeframe since last update or review of service provider inventory
+* M3 = Count of service providers in inventory
+* M4 = Count of service providers with classification
+* M5 = Count of service providers without classification
 
 Metrics
 -------
+* If M1 is a 0, this safeguard receives a failing score. The other metrics don't apply.
+* If M2 is greater than twelve months, then this safeguard is measured at a 0 and receives a failing score. The other metrics don't apply.
 
 Coverage
 ^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | Ratio of wireless access points covered by WIDS sensors to the total number of wireless access points
+	  - | The percentage of service providers with a classification
 	* - **Calculation**
-	  - :code:`M4 / M1`
+	  - :code:`M4 / M3`
+
 
 .. history
 .. authors
