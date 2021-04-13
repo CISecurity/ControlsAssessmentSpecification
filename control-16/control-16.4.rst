@@ -1,6 +1,6 @@
-16.4: Encrypt or Hash All Authentication Credentials
+16.4: Establish and Manage an Inventory of Third-Party Software Components
 =========================================================
-Encrypt or hash with a salt all authentication credentials when stored.
+Establish and manage an updated inventory of third-party components used in development, often referred to as a “bill of materials,” as well as components slated for future use. This inventory is to include any risks that each third-party component could pose. Evaluate the list at least monthly to identify any changes or updates to these components, and validate that the component is still supported. 
 
 .. list-table::
 	:header-rows: 1
@@ -8,44 +8,53 @@ Encrypt or hash with a salt all authentication credentials when stored.
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Users
+	* - Applications
 	  - Protect
 	  - 2, 3
 
 Dependencies
 ------------
-* Sub-control 16.1: Inventory of Authentication Systems
+* Safeguard 2.1: Establish and Maintain a Software Inventory
 
 Inputs
 -----------
-#. Inventory of Authentication Systems (for each, include any related components used for credential storage for that authentication system such as any databases that require configuration independent of the authentication system)
-#. Approved configuration(s) to ensure that all credentials are encrypted and/or hashed with a salt when stored.  There may be multiple configurations to handle the different types of authentication systems used in the organization, and configurations may also be required for related components involved in storing this data (i.e. database configurations).
+#. :code:`GV47`: Inventory of Third-Party Software Components 
+#. Date of last review or update of the inventory
 
 Operations
 ----------
-#. For each authentication system provided in Input 1 (along with any listed related components), check to see if it is configured properly according to the appropriate configuration(s) provided in Input 2.
-#. Create a list of the authentication systems that are properly configured (M1)
-#. Create a list of the authentication systems that are not properly configured (M2) including the deviations from proper configuration (if any related component identified in Input 1 is not configured according to the appropriate configuration, then its associated authentication system should be considered improperly configured, and the specific component should be noted as part of the deviation from proper configuration).
+#. Determine whether Input 1 exists within the enterprise
+	#. If Input 1 exists, M1 = 1
+	#. If Input 1 does not exist, M1 = 1
+#. Use Input 1 and dermine whether each software component listed includes, at a minimum, the following information: risk associated with components, whether component is supported 
+	#. Identify and enumerate software components with complete information (M3)
+	#. Identify and enumerate software components with missing information (M4) 
+#. Compare date of Input 2 to current date and capture timeframe in days (M5)
+
 
 Measures
 --------
-* M1 = List of properly configured authentication systems (compliant list)
-* M2 = List of improperly configured authentication systems (non-compliant list)
-* M3 = Count of properly configured authentication systems (count of M1)
-* M4 = Total count of authentication systems (count of Input 1)
+* M1 = Output of Operation 1
+* M2 = Count of Input 1
+* M3 = Count of software components with complete information
+* M4 = Count of software components with missing information
+* M5 = Timeframe since last review or update of the inventory 
 
 Metrics
 -------
+* If M1 is 0, this safeguard receives a failing score. The other metrics don't apply.
+* If M5 is greater than twelve months, then this safeguard is measured at a 0 and receives a failing score. The other metrics don't apply.
 
-Coverage
-^^^^^^^^
+Completeness of Inventory
+^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of properly configured authentication systems to the total number of
-	    | authentication systems.
+	  - | The percent of components included in the secure application 
+	  - | development process
 	* - **Calculation**
-	  - :code:`M3 / M4`
+	  - :code:`M3 / M2`
+
 
 .. history
 .. authors
