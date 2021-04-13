@@ -1,6 +1,6 @@
-16.6: Maintain an Inventory of Accounts
+16.6: Establish and Maintain a Severity Rating System and Process for Application Vulnerabilities
 =========================================================
-Maintain an inventory of all accounts organized by authentication system.
+Establish and maintain a severity rating system and process for application vulnerabilities that facilitates prioritizing the order in which discovered vulnerabilities are fixed. This process includes setting a minimum level of security acceptability for releasing code or applications. Severity ratings bring a systematic way of triaging vulnerabilities that improves risk management and helps ensure the most severe bugs are fixed first. Review and update the system and process annually.
 
 .. list-table::
 	:header-rows: 1
@@ -8,43 +8,48 @@ Maintain an inventory of all accounts organized by authentication system.
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Users
-	  - Identify
+	* - Applications 
+	  - Protect
 	  - 2, 3
 
 Dependencies
 ------------
-* Sub-control 16.1: Inventory of Authentication Systems
+* Safeguard 16.2: Establish and Maintain a Process to Accept and Address Software Vulnerabilities
 
 Inputs
 -----------
-#. Authentication System Inventory
-#. The organization's current account inventory (the "to be checked" inventory)
+#. :code:`GV48`: Process to Accept and Address Software Vulnerabilities 
+#. Date of last update or review of the severity rating system and process
 
 Operations
 ----------
-#. For each authentication system in Input 1, enumerate the accounts under that authentication system.  This ground truth list of accounts organized by authentication system becomes M1.
-#. Compare the accounts listed in M1 to the accounts listed in the current account inventory (Input 2).
-#. Create a list of the correct accounts in Input 2 (which will be M2)
-#. Create a list of the incorrect accounts in Input 2 (which will be M3).
+#. Using Input 1 :code:`GV48`` determine whether the enterprise has a severity rating system and process for application vulnerabilities
+	#. If the system and process exist, M1 = 1
+	#. If the system and process do not exist, M1 = 0
+#. Review Input 1 :code:`GV48` and dermine whether it includes, at a minimum, the following components: guidance for prioritizing the order vulnerabilities are fixed, level of security acceptability for releasing code or applications
+	#. For each component included in the process, assign a value of 1.  Sum all values. (M2)
+#. Compare Input 2 to current date and capture timeframe in months (M3)
 
 Measures
 --------
-* M1 = Ground truth account inventory
-* M2 = List of correct accounts from the current (to be checked) inventory
-* M3 = List of incorrect accounts from the current (to be checked) inventory
-* M4 = Count of accounts in the ground truth account inventory (count of M1)
-* M5 = Count of correct accounts in the current (to be checked) account inventory (count of M2)
+* M1 = Output of Operation 1
+* M2 = Count of components included in the process
+* M3 = Timeframe in months since last review or update
 
 Metrics
 -------
+* If M1 is 0, this safeguard receives a failing score. The other metrics don't apply.
+* If M3 is greater than twelve months, then this safeguard is measured at a 0 and receives a failing score. The other metrics don't apply.
 
+Completeness
+^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | Calculate the accuracy of current (to be checked) account inventory
+	  - | The percent of components included in the secure application 
+	  - | development process
 	* - **Calculation**
-	  - :code:`M5 / M4`
+	  - :code:`M2 / 2`
 
 .. history
 .. authors
