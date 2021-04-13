@@ -1,6 +1,6 @@
-16.11: Lock Workstation Sessions After Inactivity
+16.11: Leverage Vetted Modules or Services for Application Security Components
 =========================================================
-Automatically lock workstation sessions after a standard period of inactivity.
+Leverage vetted modules or services for application security components, such as identity management, encryption, and auditing and logging. Using platform features in critical security functions will reduce developers’ workload and minimize the likelihood of design or implementation errors. Modern operating systems provide effective mechanisms for identification, authentication, and authorization and make those mechanisms available to applications. Use only standardized, currently accepted, and extensively reviewed encryption algorithms. Operating systems also provide mechanisms to create and maintain secure audit logs.
 
 .. list-table::
 	:header-rows: 1
@@ -8,59 +8,49 @@ Automatically lock workstation sessions after a standard period of inactivity.
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Users
+	* - Applications
 	  - Protect
-	  - 1, 2, 3
+	  - 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 1.5: Maintain Asset Inventory Information
-* Sub-control 5.1: Establish Secure Configurations
+* Safeguard 2.1: Establish and Maintain a Software Inventory
 
 Inputs
 -----------
-#. List of workstations which have enabled automatic workstation locking
-#. List of workstations
-#. The workstation configuration policy establishing the organization's workstation locking time threshold
+#. :code:`GV5`: Authorized Software Inventory
 
 Operations
 ----------
-#. For each workstation with locking enabled, collect the locking time threshold
-#. Collect the list of workstations whose locking time threshold exceeds the value specified by Input 3
+#. Use Input 1 :code:`GV5` to identify and enumerate application security components (M1)
+#. For each application security component identifed in Operation 1, determine whether custom code exists
+	#. Identify and enumerate components that contain custom code (M2)
+	#. Identify and enumerate components that do not contain custom code (M3)
+#. For each application security component identifed in Operation 2.1, determine whether vetted modules or services exist
+	#. Identify and enumerate components for which vetted modules or services exist (M4)
+	#. Identify and enumerate components for which vetted modules or services do not exist (M5)
 
 Measures
 --------
-* M1 = List of workstations
-* M2 = Count of M1
-* M3 = List of workstations having enabled automatic workstation locking
-* M4 = Count of M3
-* M5 = List of appropriately configured workstations
-* M6 = Count of M5
-* M7 = List of inappropriately configured workstations
-* M8 = Count of M7
+* M1 = Count of application security components 
+* M2 = Count of application security components containing custom code
+* M3 = Count of application security components not containing custom code
+* M4 = Count of application security components containing custom code and vetted modules or services do exist
+* M5 = Count of application security components containing custom code and vetted modules or services do not exist
 
 Metrics
 -------
 
-Misconfigured Workstations
+Compliance
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | What percentage of automatic locking enabled workstations are configured within
-	    | the locking time threshold?
+	  - | The percentage of application security components using vetted modules
+	    | or services when available
 	* - **Calculation**
-	  - :code:`M6 / M2`
+	  - :code:`(M3 + M5) / M1`
 
-Unconfigured Workstations
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. list-table::
-
-	* - **Metric**
-	  - How many workstations do *not* have automatic locking enabled?
-	* - **Calculation**
-	  - :code:`M2 - M4`
 
 .. history
 .. authors
