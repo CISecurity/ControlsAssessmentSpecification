@@ -1,6 +1,6 @@
-16.13: Alert on Account Login Behavior Deviation
+16.13: Conduct Application Penetration Testing
 =========================================================
-Alert when users deviate from normal login behavior, such as time-of-day, workstation location, and duration.
+Conduct application penetration testing. For critical applications, authenticated penetration testing is better suited to finding business logic vulnerabilities than code scanning and automated security testing. Penetration testing relies on the skill of the tester to manually manipulate an application as an authenticated and unauthenticated user. 
 
 .. list-table::
 	:header-rows: 1
@@ -8,74 +8,67 @@ Alert when users deviate from normal login behavior, such as time-of-day, workst
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Users
-	  - Detect
+	* - Applications
+	  - Protect
 	  - 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 1.5: Maintain Asset Inventory Information
-* Sub-control 2.1: Maintain Inventory of Authorized Software
-* Sub-control 2.5: Integrate Software and Hardware Asset Inventories
+* Safeguard 2.1: Establish and Maintain a Software Inventory
+
 
 Inputs
 -----------
-#. The list of endpoints
-#. The list of authorized software
+#. :code:`GV5`: Authorized Software Inventory
+#. Application Penetration Process for enterprise
 
 Operations
 ----------
-#. Enumerate user behavioral monitoring software systems
-#. Enumerate endpoints
-#. For each identified behavioral monitoring system
-	#. Enumerate endpoints covered by this behavioral monitoring system
-	#. Examine the system's configuration, noting appropriate and inappropriate configurations along the way, to ensure that it is configured to alert for at least the following deviation points:
-		#. Time of day
-		#. Workstation location
-		#. Duration
-#. Enumerate all endpoints covered by at least one behavioral monitoring system
-#. Complement covered endpoints with the list of all endpoints to enumerate the list of endpoints not covered by at least one behavioral monitoring system
-#. Enumerate all appropriately configured behavioral monitoring systems
-#. Enumerate all inappropriately configured behavioral monitoring systems
+#. Determine whether Input 2 exists for the enterprise
+	#. If the process exists, M1 = 1
+	#. If the process does not exist, M1 = 0
+#. Use Input 1 :code:`GV5` to identify and enumerate all applications within the enterprise (M2)
+#. For each application identified in Operation 2, determine whether an unauthenticated penentration test has been conducted per the process outlined in Input 2 
+	#. Identify and enumerate applications that have been tested (M3)
+	#. Identify and enumerate applications that have not been tested (M4)
+#. Use the output of Operation 2, identify and enumerate critical applications within the list of applications (M5)
+#. For each application identified in Operation 4, determine whether an authenticated penentration test has been conducted per the process outlined in Input 2 
+	#. Identify and enumerate applications that have been tested (M6)
+	#. Identify and enumerate applications that have not been tested (M7)
 
 Measures
 --------
-* M1 = List of user behavioral monitoring software systems
-* M2 = List of endpoints
-* M3 = List of endpoints covered by at least one behavioral monitoring system
-* M4 = List of endpoints not covered by at least one behavioral monitoring system
-* M5 = List of appropriately configured behavioral monitoring systems
-* M6 = List of inappropriately configured behavioral monitoring systems
-* M7 = Count of user behavioral monitoring software systems (count of M1)
-* M8 = Count of endpoints (count of M2)
-* M9 = Count of endpoints covered by at least one behavioral monitoring system (count of M3)
-* M10 = Count of endpoints not covered by at least one behavioral monitoring system (count of M4)
-* M11 = Count of appropriately configured behavioral monitoring systems (count of M5)
-* M12 = Count of inappropriately configured behavioral monitoring systems (count of M6)
+* M1 = Output of Operation 1
+* M2 = Count of applications within the enterprise
+* M3 = Count of applications that have undergone unauthenticated penetration testing per enterprise's process
+* M4 = Count of applications that have not undergone unauthenticated penetration testing per enterprise's process
+* M5 = Count of critical applications
+* M6 = Count of critical applications that have undergone authenticated penetration testing per enterprise's process
+* M7 = Count of critical applications that have not undergone authenticated penetration testing per enterprise's process
 
 Metrics
 -------
+* If M1 is 0, this safeguard receives a failing score. The other metrics don't apply.
 
-Endpoint Coverage
+Unauthenticated Penetration Testing Coverage
 ^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of endpoints covered by at least one behavioral monitoring system to the
-	    | total number of endpoints
+	  - | The percentage of applications that underwent unauthenticated penetration 
+	    | testing per enterprise's process
 	* - **Calculation**
-	  - :code:`M9 / M8`
+	  - :code:`M3 / M2`
 
-Behavioral Monitoring System Coverage
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Authenticated Penetration Testing Coverage
+^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of appropriately configured behavioral monitoring systems to the total
-	    | number of behavioral monitoring systems
+	  - | The percentage of critical applications that underwent authenticated penetration 
+	    | testing per enterprise's process
 	* - **Calculation**
-	  - :code:`M11 / M7`
+	  - :code:`M6 / M5`
 
 .. history
 .. authors
