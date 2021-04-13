@@ -1,6 +1,6 @@
-17.9: Train Workforce Members on Identifying and Reporting Incidents
+17.9: Establish and Maintain Security Incident Thresholds
 ====================================================================
-Train workforce members to be able to identify the most common indicators of an incident and be able to report such an incident.
+Establish and maintain security incident thresholds, including, at a minimum, differentiating between an incident and an event. Examples can include: abnormal activity, security vulnerability, security weakness, data breach, privacy incident, etc. Review annually, or when significant enterprise changes occur that could impact this Safeguard.
 
 .. list-table::
 	:header-rows: 1
@@ -14,38 +14,42 @@ Train workforce members to be able to identify the most common indicators of an 
 
 Dependencies
 ------------
-* None
+* Safeguard 17.4: Establish and Maintain an Incident Response Process
 
 Inputs
 -----------
-#. List of workforce members
-#. List of most recent security awareness training completion dates for each workforce member
-#. Required frequency of training (at least annually)
+#. :code:`GV52`: Incident response process
+#. Date of last update or review of the documentation
 
 Operations
 ----------
-#. For each workforce member in Input 1, check Input 2 to see if that workforce member's most recent security awareness training completion date was within the time frame specified by Input 3 (if the workforce member is not listed in Input 2, assume the workforce member is not compliant). Generate a list of compliant workforce members (M1) and a list of non-compliant workforce members (M2).
+#. Determine whether the enterprise documents security incident threshold by reviewing Input 1 :code:`GV52`
+	#. If documentation for a security incident threshold exists, M1 = 1
+	#. If documentation for a security incident threshold does not exist, M1 = 0
+#. Determine whether the documentation, at a minimum, outlines the following components: differentiates between incident and event, prioritization schema based on known or potential impact, procedure relying on this schema is used to determine status update frequency during incident handling, and procedure relying on this schema is used to determine escalation paths during incident handling
+	#. For each mechanism included, assign a value of 1. Sum the values. (M2)
+#. Compare Input 2 to current date and capture timeframe in months (M3)
 
 Measures
 --------
-* M1 = List of workforce members who have completed the security awareness training within the specified time frame (compliant list)
-* M2 = List of workforce members who have not completed the security awareness training within the specified time frame (non-compliant list)
-* M3 = Number of workforce members in the compliant list (M1)
-* M4 = Number of workforce members in the non-compliant list (M2)
-* M5 = Total number of workforce members in Input 1
+* M1 = Output of Operation 1
+* M2 = Count of components included in documentation
+* M3 = Timeframe since last update or review of documentation in months
 
 Metrics
 -------
+* If M1 is 0, this safeguard receives a failing score. The other metrics don't apply.
+* If M3 is greater than twelve months, then this safeguard is measured at a 0 and receives a failing score. The other metrics don't apply.
 
-Coverage
-^^^^^^^^
+Completeness
+^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | What percentage of workforce members have completed the security awareness training
-	    | module within the specified timeframe?
+	  - | The percentage of components included in documentation for 
+	    | security incident thresholds 
 	* - **Calculation**
-	  - :code:`M3 / M5`
+	  - :code:`M2 / 4`
 
 .. history
 .. authors
