@@ -1,6 +1,6 @@
-16.8: Disable Any Unassociated Accounts
+16.8: Separate Production and Non-Production Systems
 =========================================================
-Disable any account that cannot be associated with a business process or business owner.
+Maintain separate environments for production and non-production systems.
 
 .. list-table::
 	:header-rows: 1
@@ -8,9 +8,9 @@ Disable any account that cannot be associated with a business process or busines
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Users
-	  - Respond
-	  - 1, 2, 3
+	* - Applications
+	  - Protect
+	  - 2, 3
 
 Dependencies
 ------------
@@ -18,21 +18,20 @@ Dependencies
 
 Inputs
 -----------
-#. Inventory of accounts
-#. Inventory of business processes and/or business owners
+#. :code:`GV1`: Enterprise Asset Inventory
 
 Operations
 ----------
-#. For each account, enumerate any associated business processes or ownership
+#. Use Input 1 :code:`GV1` to identify and enumerate productions systems (M1)
+#. For each production system identified in Operation 1, use Input 1 :code:`GV1` to identify if at least one non-production system exists for the system
+	#. Identify and enumerate productions systems with at least one non-production system (M2)
+	#. Identify and enumerate productions systems without a non-production system (M3)
 
 Measures
 --------
-* M1 = List of accounts
-* M2 = Count of M1
-* M3 = List of accounts not associated with any business process or ownership
-* M4 = Count of M3
-* M5 = List of accounts associated with at least one business process or ownership
-* M6 = Count of M5
+* M1 = Count of production systems
+* M2 = Count of production systems with a non-production system to complement 
+* M3 = Count of productions systems without a non-production system to complement
 
 Metrics
 -------
@@ -42,9 +41,10 @@ Coverage
 .. list-table::
 
 	* - **Metric**
-	  - What percentage of accounts are associated with at least one business process or ownership?
+	  - | The percentage of productions systems with an existing 
+	  - | non-production system
 	* - **Calculation**
-	  - :code:`M6 / M2`
+	  - :code:`M2 / M1`
 
 .. history
 .. authors
