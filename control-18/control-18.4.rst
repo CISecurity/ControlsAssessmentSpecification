@@ -1,6 +1,6 @@
-18.4: Only Use Up-to-Date and Trusted Third-Party Components
+18.4: Validate Security Measures
 ============================================================
-Only use up-to-date and trusted third-party components for the software developed by the organization.
+Validate security measures after each penetration test. If deemed necessary, modify rulesets and capabilities to detect the techniques used during testing.
 
 .. list-table::
 	:header-rows: 1
@@ -8,49 +8,50 @@ Only use up-to-date and trusted third-party components for the software develope
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - N/A
-	  - N/A
+	* - Network
+	  - Protect
 	  - 3
 
 Dependencies
 ------------
-* Sub-control 2.1: Maintain Inventory of Authorized Software
+* Safeguard 18.1: Establish and Maintain a Penetration Testing Program
 
 Inputs
 -----------
-#. The list of authorized software
-#. Third-party component inventory (possibly from your automated build systems)
+#. :code:`GV53`: Penetration Testing Program Documentation
+#. :code:`GV54`: Most Recent External Penetration Report
+#. :code:`GV55`: Most Recent Internal Penetration Report
 
 Operations
 ----------
-#. Enumerate all third-party components in the inventory
-#. For each component, verify:
-	#. Latest component is being used
-	#. The component is explicitly trusted by the organization
-#. Enumerate compliant components
-#. Enumerate non-compliant components
+#. Check Input 1 :code:`GV53` to determine if it incluces an enterprise process for validating security measures after a penetration test
+	#. If the process exists, M1 = 1
+	#. If the process does not exist, M1 = 0
+#. Using the findings from both Input 2 :code:`GV54` an Input 3 :code:`GV55`, as applicable, identify and enumerate security measures that required modification (M2)
+#. For each security measure identified in Operation 2, check if modifications have been made
+	#. Identify and enumerate security measures that have been modified per the enterprise's defined process (M3)
+	#. Identify and enumerate security measures not yet modified per the enterprise's defined process (M4)
 
 Measures
 --------
-* M1 = List of all third-party components being used
-* M2 = List of all third-party components that are up-to-date and explicitly trusted
-* M3 = List of all third-party components that are not up-to-date or not explicitly trusted
-* M4 = Count of third-party components being used (count of M1)
-* M5 = Count of third-party components that are up-to-date and explicitly trusted (count of M2)
-* M6 = Count of third-party components that are not up-to-date or not explicitly trusted (count of M3)
+* M1 = Output of Operation 1
+* M2 = Count of security measures requiring modification
+* M3 = Count of security measures requiring modification that are properly addressed
+* M4 = Count of security measures requiring modification that are not yet addressed
 
 Metrics
 -------
+* If M1 is 0, this safeguard receives a failing score. The other metrics don't apply.
 
-Coverage
+Compliance 
 ^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of compliant third-party components to the total number of third-party components
-	    | in use
+	  - | The percentage of security measures requiring modification that have
+	    | been properly addressed
 	* - **Calculation**
-	  - :code:`M5 / M4`
+	  - :code:`M3 / M2`
 
 .. history
 .. authors
