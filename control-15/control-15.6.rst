@@ -1,6 +1,6 @@
-15.6: Disable Peer-to-Peer Wireless Network Capabilities on Wireless Clients
+15.6: Monitor Service Providers
 ============================================================================
-Disable peer-to-peer (ad hoc) wireless network capabilities on wireless clients.
+Monitor service providers consistent with the enterprise’s service provider management policy. Monitoring may include periodic reassessment of service provider compliance, monitoring service provider release notes, and dark web monitoring.
 
 .. list-table::
 	:header-rows: 1
@@ -8,45 +8,48 @@ Disable peer-to-peer (ad hoc) wireless network capabilities on wireless clients.
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Devices
-	  - Protect
-	  - 2, 3
+	* - Data
+	  - Detect
+	  - 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 1.5: Maintain Asset Inventory Information
+* Safeguard 15.1: Establish and Maintain an Inventory of Service Providers
+* Safeguard 15.2: Establish and Maintain a Service Provider Management Policy
 
 Inputs
 -----------
-#. The list of wireless clients (subset of hardware inventory)
-#. Approved configurations to disable peer-to-peer (adhoc) wireless network capabilities
+#. :code:`GV44`: Service Provider Inventory List
+#. :code:`GV45`: Service Provider Management Policy
 
 Operations
 ----------
-#. For each wireless client in Input 1, compare its configuration against the appropriate approved configuration(s) from Input 2.
-#. Make a list of wireless clients that adhere to the approved configurations (M1)
-#. Make a list of wireless clients that do not (M2), noting the deviations from the approved configurations.
+#. Use Input 2 :code:`GV45` to determine if the enterprise policy includes monitoring guidance for service providers
+	#. If the monitoring guidance exist, M1 = 1
+	#. If the monitoring guidance does not exist, M1 = 0 
+#. Use Input 1 :code:`GV44` to determine if each listed service provider has monitoring guidance provided in the policy
+	#. Identify and enumerate service providers with monitoring guidance provided (M3)
+	#. Identify and enumerate service providers without monitoring guidance provided (M4)
 
 Measures
 --------
-* M1 = List of wireless clients properly configured to disable peer-to-peer (adhoc) wireless network capabilities (compliant list)
-* M2 = List of wireless clients not properly configured to disable peer-to-peer (adhoc) wireless network capabilities (non-compliant list)
-* M3 = Count of wireless clients with peer-to peer (adhoc) wireless network capabilities disabled (count of M1)
-* M4 = Total count of wireless clients (count of Input 1)
+* M1 = Output of Operation 1
+* M2 = Count of service providers in inventory
+* M3 = Count of service providers with monitoring guidance provided
+* M4 = Count of service providers without monitoring guidance provided
 
 Metrics
 -------
+* If M1 is a 0, this safeguard receives a failing score. The other metrics don't apply.
 
-Coverage
+Compliance
 ^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of wireless clients with peer-to-peer (adhoc) wireless network capabilities
-	    | disabled
+	  - | The percentage of service providers with up to date assessments 
 	* - **Calculation**
-	  - :code:`M3 / M4`
+	  - :code:`M3 / M2`
 
 .. history
 .. authors
