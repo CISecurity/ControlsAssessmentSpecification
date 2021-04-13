@@ -1,6 +1,6 @@
-15.5: Limit Wireless Access on Client Devices
+15.5: Assess Service Providers
 =========================================================
-Configure wireless access on client machines that do have an essential wireless business purpose, to allow access only to authorized wireless networks and to restrict access to other wireless networks.
+Assess service providers consistent with the enterprise’s service provider management policy. Assessment scope may vary based on classification(s), and may include review of standardized assessment reports, such as Service Organization Control 2 (SOC 2) and Payment Card Industry (PCI) Attestation of Compliance (AoC), customized questionnaires, or other appropriately rigorous processes. Reassess service providers annually, at a minimum, or with new and renewed contracts.
 
 .. list-table::
 	:header-rows: 1
@@ -8,68 +8,50 @@ Configure wireless access on client machines that do have an essential wireless 
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Devices
-	  - Protect
+	* - N/A
+	  - Identify
 	  - 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 1.5: Maintain Asset Inventory Information
+* Safeguard 15.1: Establish and Maintain an Inventory of Service Providers
+* Safeguard 15.2: Establish and Maintain a Service Provider Management Policy
 
 Inputs
 -----------
-#. The list of endpoints
-#. The list of authorized wireless networks
+#. :code:`GV44`: Service Provider Inventory List
+#. :code:`GV45`: Service Provider Management Policy
 
 Operations
 ----------
-#. Enumerate wireless-client-capable endpoints
-#. Enumerate authorized wireless networks
-#. For each identified endpoint:
-	#. Determine whether the endpoint is identified as having a business purpose for wireless access
-	#. Examine the endpoint's configuration as follows:
-		#. Access is only allowed to authorized wireless networks
-		#. Access to any other wireless network is restricted
-#. Enumerate all endpoints having a business purpose for wireless access
-#. Enumerate all appropriately configured endpoints
-#. Enumerate all inappropriately configured endpoints
+#. Use Input 2 :code:`GV45` to determine if the enterprise policy includes monitoring guidance for service providers
+	#. If the assessment scope exist, M1 = 1
+	#. If the assessment scope does not exist, M1 = 0 
+#. Use Input 1 :code:`GV44` to determine if each listed service provider has monitoring guidance included in the policy
+	#. Identify and enumerate service providers with monitoring guidance (M3)
+	#. Identify and enumerate service providers without monitoring guidance (M4)
 
 Measures
 --------
-* M1 = List of wireless-client-capable endpoints
-* M2 = List of authorized wireless networks
-* M3 = List of endpoints authorized for wireless access
-* M4 = List of appropriately configured endpoints
-* M5 = List of inappropriately configured endpoints
-* M6 = Count of wireless-client-capable endpoints (count of M1)
-* M7 = Count of authorized wireless networks (count of M2)
-* M8 = Count of endpoints authorized for wireless access (count of M3)
-* M9 = Count of appropriately configured endpoints (count of M4)
-* M10 = Count of inappropriately configured endpoints (count of M5)
+* M1 = Output of Operation 1
+* M2 = Count of service providers in inventory
+* M3 = Count of service providers with monitoring guidance
+* M4 = Count of service providers without monitoring guidance
 
 Metrics
 -------
+* If M1 is a 0, this safeguard receives a failing score. The other metrics don't apply.
 
-Configuration Coverage
-^^^^^^^^^^^^^^^^^^^^^^
+Compliance
+^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of appropriately configured endpoints to the total number of authorized
-	    | wireless-client-capable endpoints
+	  - | The percentage of service providers with monitoring guidance
+	  - | included in policy
 	* - **Calculation**
-	  - :code:`M9 / M8`
+	  - :code:`M3 / M2`
 
-Authorization Coverage
-^^^^^^^^^^^^^^^^^^^^^^
-.. list-table::
-
-	* - **Metric**
-	  - | The ratio of authorized wireless-client-capable endpoints to the total number of
-	    | wireless-client-capable endpoints
-	* - **Calculation**
-	  - :code:`M8 / M6`
 .. history
 .. authors
 .. license
