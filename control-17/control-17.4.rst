@@ -1,6 +1,6 @@
-17.4: Update Awareness Content Frequently
+17.4: Establish and Maintain an Incident Response Process
 =========================================================
-Ensure that the organization’s security awareness program is updated frequently (at least annually) to address new technologies, threats, standards, and business requirements.
+Establish and maintain an incident response process that addresses roles and responsibilities, compliance requirements, and a communication plan. Review annually, or when significant enterprise changes occur that could impact this Safeguard.
 
 .. list-table::
 	:header-rows: 1
@@ -9,39 +9,47 @@ Ensure that the organization’s security awareness program is updated frequentl
 	  - Security Function
 	  - Implementation Groups
 	* - N/A
-	  - N/A
+	  - Respond
 	  - 2, 3
 
 Dependencies
 ------------
-* Sub-control 17.3: Implement a Security Awareness Program
+* None
 
 Inputs
 -----------
-#. Date the organization's security awareness program was last updated
-#. Maximum time allowed between updates to the organization's security awareness program
+#. :code:`GV51`: Enterprise Incident Response Documentation
+#. Date of last update or review of the documentation
 
 Operations
 ----------
-#. Verify that the maximum time allowed between updates to the security awareness program (Input 2) is one year or less and set M1 accordingly.
-#. Check the date that the security awareness program was last updated (Input 1) to make sure that it occurred within the required time frame (Input 2) and set M2 accordingly.
+#. Determine whether the enterprise documents an incident response process: :code:`GV52` by reviewing Input 1 :code:`GV51`. Input 1 can be an incident response plan or other documentation.
+	#. If documentation for an incident response process exists, M1 = 1
+	#. If documentation for an incident response process does not exist, M1 = 0
+#. Determine whether the documentation, at a minimum, outlines the following components: roles and responsibilities, compliance requirements, and a communication plan
+	#. For each component included, assign a value of 1. Sum the values. (M2)
+#. Compare Input 2 to current date and capture timeframe in months (M3)
 
 Measures
 --------
-* M1 = 1 if maximum time allowed between security awareness program updates is one year or less, 0 if greater than one year
-* M2 = 1 if the last update to the security awareness program was within the required time frame, 0 otherwise
+* M1 = Output of Operation 1
+* M2 = Count of components included for incident response process documentation
+* M3 = Timeframe since last update or review of documentation in months
 
 Metrics
 -------
+* If M1 is 0, this safeguard receives a failing score. The other metrics don't apply.
+* If M3 is greater than twelve months, then this safeguard is measured at a 0 and receives a failing score. The other metrics don't apply.
 
-Update Timeliness
-^^^^^^^^^^^^^^^^^
+Completeness
+^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | Is the organization's security awareness program updated within acceptable time frame?
+	  - | The percentage of components included in documentation for 
+	    | designated incident handling personnel 
 	* - **Calculation**
-	  - :code:`M1 AND M2`
+	  - :code:`M2 / 3`
 
 .. history
 .. authors
