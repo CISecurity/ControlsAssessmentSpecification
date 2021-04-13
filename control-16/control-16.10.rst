@@ -1,6 +1,6 @@
-16.10: Ensure All Accounts Have An Expiration Date
+16.10: Apply Secure Design Principles in Application Architectures
 =========================================================
-Ensure that all accounts have an expiration date that is monitored and enforced.
+Apply secure design principles in application architectures. Secure design principles include the concept of least privilege and enforcing mediation to validate every operation that the user makes, promoting the concept of "never trust user input." Examples include ensuring that explicit error checking is performed and documented for all input, including for size, data type, and acceptable ranges or formats. Secure design also means minimizing the application infrastructure attack surface, such as turning off unprotected ports and services, removing unnecessary programs and files, and renaming or removing default accounts.
 
 .. list-table::
 	:header-rows: 1
@@ -8,57 +8,49 @@ Ensure that all accounts have an expiration date that is monitored and enforced.
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Users
+	* - Applications
 	  - Protect
 	  - 2, 3
 
 Dependencies
 ------------
-* Sub-control 16.1: Inventory of Authentication Systems
+* Safeguard 16.1: Establish and Maintain a Secure Application Development Process
 
 Inputs
 -----------
-#. Account Inventory
-#. Authentication System Inventory
-#. Approved Configuration(s) for ensuring that account expiration dates are automatically enforced (there may be multiple configurations that vary by type of authentication system, etc.)
-#. Optional: Maximum amount of time in the future allowed for an expiration date (example: the organization may require all accounts to have an expiration date no more than 1 year in the future so that all accounts must be re-justified every year).  This time frame could be specific to certain account types (Administrator for example), or specific to certain authentication systems.
+#. :code:`GV49`: Secure Application Development Process
+#. :code:`GV50`: Application Infrastructure Components
 
 Operations
 ----------
-#. For each account in the account inventory (Input 1), check to see if that account has a valid expiration date that is in the future.  If the optional Input 4 was provided, also verify if that expiration date complies with any applicable additional time frame restrictions.  Based on these checks, create a list (M1) of accounts with valid expiration dates, and a list (M2) of accounts with invalid expiration dates (noting why the expiration date is invalid).
-#. For each authentication system in Input 2, check to see if it is configured according to the appropriate configuration(s) from Input 3.
-#. Create a list (M3) of authentication systems that are configured correctly
-#. Create a list (M4) of authentication systems that are not configured correctly (noting the deviations).
+#. Use Input 1 :code:`GV49` to determine whether the process outlines a secure software framework that includes secure design principles
+	#. If the framework exists, M1 = 1
+	#. If the framework does not exist, M1 = 0
+#. For each application infrastructure component in Input 2 :code:`GV50`, determine whether the secure design principles were applied per the framework
+	#. Identify and enumerate application infrastructure components where design principles are applied (M3)
+	#. Identify and enumerate application infrastructure components where design principles are not applied (M4)
 
 Measures
 --------
-* M1 = List of accounts with valid expiration dates
-* M2 = List of accounts with invalid expiration dates
-* M3 = List of authentication systems that are configured correctly
-* M4 = List of authentication systems that are not configured correctly
-* M5 = Count of accounts with valid expiration dates (count of M1)
-* M6 = Total count of accounts (count of Input 1)
-* M7 = Count of authentication systems that are configured correctly (count of M3)
-* M8 = Total count of authentication systems (count of Input 2)
+* M1 = Output of Operation 1
+* M2 = Count of Input 2 :code:`GV50`
+* M3 = Count of applications infrastructure components with design principles applied
+* M4 = Count of applications infrastructure components without design principles applied
 
 Metrics
 -------
+* If M1 is 0, this safeguard receives a failing score. The other metrics don't apply.
 
+Compliance
+^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of accounts with valid expiration dates to the total number of accounts
+	  - | The percentage of applications infrastructure components where 
+	  - | design principles were applied
 	* - **Calculation**
-	  - :code:`M5 / M6`
+	  - :code:`M3 / M2`
 
-
-.. list-table::
-
-	* - **Metric**
-	  - | The ratio of correctly configured authentication systems to the total number of
-	    | authentication systems
-	* - **Calculation**
-	  - :code:`M7 / M8`
 
 .. history
 .. authors
