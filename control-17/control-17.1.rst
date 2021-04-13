@@ -1,6 +1,6 @@
-17.1: Perform a Skills Gap Analysis
+17.1: Designate Personnel to Manage Incident Handling
 ===================================
-Perform a skills gap analysis to understand the skills and behaviors workforce members are not adhering to, using this information to build a baseline education roadmap.
+Designate one key person, and at least one backup, who will manage the enterprise’s incident handling process. Management personnel are responsible for the coordination and documentation of incident response and recovery efforts and can consist of employees internal to the enterprise, third-party vendors, or a hybrid approach. If using a third-party vendor, designate at least one person internal to the enterprise to oversee any third-party work. Review annually, or when significant enterprise changes occur that could impact this Safeguard.
 
 .. list-table::
 	:header-rows: 1
@@ -9,8 +9,8 @@ Perform a skills gap analysis to understand the skills and behaviors workforce m
 	  - Security Function
 	  - Implementation Groups
 	* - N/A
-	  - N/A
-	  - 2, 3
+	  - Respond
+	  - 1, 2, 3
 
 Dependencies
 ------------
@@ -18,37 +18,38 @@ Dependencies
 
 Inputs
 -----------
-#. Security awareness skill topic areas to be assessed
-#. Set of exams/exercises mapped to the topics in Input 1
-#. Minimum acceptable score
+#. :code:`GV51`: Enterprise Incident Response Documentation
+#. Date of last update or review of the documentation
 
 Operations
 ----------
-#. For each workforce member, administer the exams/exercises from Input 2
-#. Score each of the exams/exercises
-#. For each security awareness skill topic area in Input 1, average the results of the exams/exercises mapped to that topic area to generate an organizational average for that topic area.
-	#. Generate a list of topic areas and the organizational averages that are greater than or equal to the minimum acceptable score provided as Input 3 (M1).
-	#. Generate a list of topic areas and organizational averages that are below the minimum acceptable score (M2).
+#. Determine whether the enterprise documents designated personnel to manage incident handling by reviewing Input 1 :code:`GV51`. Input 1 can be an incident response plan or other documentation.
+	#. If documentation designating personnel exists, M1 = 1
+	#. If documentation designating personnel does not exist, M1 = 0
+#. Determine whether the documentation, at a minimum, outlines the following components: primary personnel, backup personnel, roles and responsibilities of each
+	#. For each component included, assign a value of 1. Sum the values. (M2)
+#. Compare Input 2 to current date and capture timeframe in months (M3)
 
 Measures
 --------
-* M1 = List of security awareness topic areas with averages in the acceptable range (compliant list)
-* M2 = List of security awareness topic areas with averages below the acceptable range (non-compliant list)
-* M3 = Count of security awareness topic areas with averages in the acceptable range (count of M1)
-* M4 = Total count of security awareness topic areas assessed (count of Input 1)
+* M1 = Output of Operation 1
+* M2 = Count of components included for designated personnel documentation
+* M3 = Timeframe since last update or review of documentation in months
 
 Metrics
 -------
+* If M1 is 0, this safeguard receives a failing score. The other metrics don't apply.
+* If M3 is greater than twelve months, then this safeguard is measured at a 0 and receives a failing score. The other metrics don't apply.
 
-Scoring
+Completeness
 ^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of security awareness topic areas with organizational averages in the 
-	    | acceptable range
+	  - | The percentage of components included in documentation for 
+	    | designated incident handling personnel 
 	* - **Calculation**
-	  - :code:`M3 / M4`
+	  - :code:`M2 / 3`
 
 .. history
 .. authors
