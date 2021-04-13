@@ -1,6 +1,6 @@
-15.4: Disable Wireless Access on Devices if Not Required
+15.4: Ensure Service Provider Contracts Include Security Requirements
 =========================================================
-Disable wireless access on devices that do not have a business purpose for wireless access.
+Ensure service provider contracts include security requirements. Example requirements may include minimum security program requirements, security incident and/or data breach notification and response, data encryption requirements, and data disposal commitments. These security requirements must be consistent with the enterprise’s service provider management policy. Review service provider contracts annually to ensure contracts are not missing security requirements.
 
 .. list-table::
 	:header-rows: 1
@@ -8,53 +8,55 @@ Disable wireless access on devices that do not have a business purpose for wirel
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Devices
+	* - N/A
 	  - Protect
-	  - 3
+	  - 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 1.5: Maintain Asset Inventory Information
+* Safeguard 15.1: Establish and Maintain an Inventory of Service Providers
+* Safeguard 15.2: Establish and Maintain a Service Provider Management Policy
 
 Inputs
 -----------
-#. The list of endpoints
+#. :code:`GV44`: Service Provider Inventory List
+#. :code:`GV45`: Service Provider Management Policy
+#. Date of last update or review of contracts
+
 
 Operations
 ----------
-#. Enumerate all wireless-access-capable endpoints
-#. For each identified endpoint:
-	#. Determine whether the device has an identified business purpose for wireless access
-	#. Examine the endpoint's configuration to determine whether wireless access is enabled
-#. Enumerate all endpoints with wireless access enabled and without an identified business purpose for wireless access
-#. Enumerate all endpoints without wireless access enabled and without an identified business purpose for wireless access
-#. Enumerate all endpoints with wireless access enabled and with an identified business purpose for wireless access
+#. Use Input 2 :code:`GV45` to determine if the enterprise policy includes security program requirements for service providers
+	#. If the security requirements exist, M1 = 1
+	#. If the security requirements do not exist, M1 = 0 
+#. Use Input 1 :code:`GV44` to determine if each listed service provider has a contract
+	#. Identify and enumerate service providers with contracts (M3)
+	#. Identify and enumerate service providers without contracts (M4)
+#. For each service provider with a contract identified in Operation 2.1, compare the date from input 3 to current date and capture timeframe in months
+	#. Identify and enumerate service providers whose contract has been reviewed within twelve months or less (M5)
+	#. Identify and enumerate service providers whose contract has been reviewed outside the twelve month window (M6)
 
 Measures
 --------
-* M1 = List of all wireless-access-capable endpoints
-* M2 = List of endpoints with wireless access enabled and without an identified business purpose for wireless access
-* M3 = List of endpoints without wireless access enabled and without an identified business purpose
-* M4 = List of endpoints with wireless access enabled and with an identified business purpose for wireless access
-* M5 = Count of wireless-access-capable endpoints (count of M1)
-* M6 = Count of endpoints with wireless access enabled and without an identified business purpose for wireless access (count of M2)
-* M7 = Count of endpoints without wireless access enabled and without an identified business purpose (count of M3)
-* M8 = Count of endpoints with wireless access enabled and with an identified business purpose for wireless access (count of M4)
-* M9 = M7 + M8
+* M1 = Output of Operation 1
+* M2 = Count of service providers in inventory
+* M3 = Count of service providers with contracts
+* M4 = Count of service providers without contracts
+* M5 = Count of service providers with up to date contracts
+* M6 = Count of service providers without out dated contracts
 
 Metrics
 -------
+* If M1 is a 0, this safeguard receives a failing score. The other metrics don't apply.
 
-Coverage
+Compliance
 ^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of appropriately configured wireless-access-capable endpoints to the total
-	    | number of wireless-access-capable endpoints
+	  - | The percentage of service providers with up to date contract 
 	* - **Calculation**
-	  - :code:`M9 / M5`
+	  - :code:`M5 / M2`
 
 .. history
 .. authors
