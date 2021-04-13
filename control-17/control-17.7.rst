@@ -1,6 +1,6 @@
-17.7: Train Workforce on Sensitive Data Handling
+17.7: Conduct Routine Incident Response Exercises
 =========================================================
-Train workforce members on how to identify and properly store, transfer, archive, and destroy sensitive information.
+Plan and conduct routine incident response exercises and scenarios for key personnel involved in the incident response process to prepare for responding to real-world incidents. Exercises need to test communication channels, decision making, and workflows. Conduct testing on an annual basis, at a minimum.
 
 .. list-table::
 	:header-rows: 1
@@ -9,43 +9,47 @@ Train workforce members on how to identify and properly store, transfer, archive
 	  - Security Function
 	  - Implementation Groups
 	* - N/A
-	  - N/A
-	  - 1, 2, 3
+	  - Recover
+	  - 2, 3
 
 Dependencies
 ------------
-* None
+* Safeguard 17.4: Establish and Maintain an Incident Response Process
 
 Inputs
 -----------
-#. List of workforce members
-#. List of most recent security awareness training completion dates for each workforce member
-#. Required frequency of training (at least annually)
+#. :code:`GV52`: Incident response process
+#. Date of last exercise or test
 
 Operations
 ----------
-#. For each workforce member in Input 1, check Input 2 to see if that workforce member's most recent security awareness training completion date was within the time frame specified by Input 3 (if the workforce member is not listed in Input 2, assume the workforce member is not compliant). Generate a list of compliant workforce members (M1) and a list of non-compliant workforce members (M2).
+#. Determine whether the enterprise's incident response process includes routine incident response exercises by reviewing Input 1 :code:`GV52`
+	#. If the documentation includes exercises, M1 = 1
+	#. If the documentation does not include exercises, M1 = 0
+#. Determine whether the documentation for exercises, at a minimum, outlines test communication channels, decision making, and workflows
+	#. For each mechanism included, assign a value of 1. Sum the values. (M2)
+#. Compare Input 2 to current date and capture timeframe in months (M3)
 
 Measures
 --------
-* M1 = List of workforce members who have completed the security awareness training within the specified time frame (compliant list)
-* M2 = List of workforce members who have not completed the security awareness training within the specified time frame (non-compliant list)
-* M3 = Number of workforce members in the compliant list (M1)
-* M4 = Number of workforce members in the non-compliant list (M2)
-* M5 = Total number of workforce members in Input 1
+* M1 = Output of Operation 1
+* M2 = Count of components included in documentation
+* M3 = Timeframe since last exercise or test in months
 
 Metrics
 -------
+* If M1 is 0, this safeguard receives a failing score. The other metrics don't apply.
+* If M3 is greater than twelve months, then this safeguard is measured at a 0 and receives a failing score. The other metrics don't apply.
 
-Coverage
-^^^^^^^^
+Completeness
+^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | What percentage of workforce members have completed the security awareness training
-	    | module within the specified timeframe?
+	  - | The percentage of components included in documentation for 
+	    | incident response exercises
 	* - **Calculation**
-	  - :code:`M3 / M5`
+	  - :code:`M2 / 3`
 
 .. history
 .. authors
