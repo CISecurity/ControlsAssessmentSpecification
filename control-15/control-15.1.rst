@@ -1,6 +1,6 @@
-15.1: Maintain an Inventory of Authorized Wireless Access Points
+15.1: Establish and Maintain an Inventory of Service Providers
 ================================================================
-Maintain an inventory of authorized wireless access points connected to the wired network.
+Establish and maintain an inventory of service providers. The inventory is to list all known service providers, include classification(s), and designate an enterprise contact for each service provider. Review and update the inventory annually, or when significant enterprise changes occur that could impact this Safeguard. 
 
 .. list-table::
 	:header-rows: 1
@@ -8,71 +8,67 @@ Maintain an inventory of authorized wireless access points connected to the wire
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Network
+	* - N/A
 	  - Identify
-	  - 2, 3
+	  - 1, 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 1.5: Maintain Asset Inventory Information
+* None
 
 Inputs
 -----------
-#. The list of wireless access points
+#. :code:`GV44`: Service Provider Inventory List
+#. :code:`GV46`: Date of last review or update of the service provider inventory
 
 Operations
 ----------
-#. Utilize a discovery tool or process to examine the network topology to collect the "ground truth" list of wireless access points connected to the wired network.
-#. Evaluate the complement of Input 1 and Operation 1 to obtain the list of non-inventoried wireless access points.
-#. Evaluate the intersection of Input 1 and Operation 1 to obtain the list of inventoried wireless access points.
-#. Compare the results of Operation 3 to the inventory to determine which access points in the inventory are noted as *not* authorized.
+#. Determine whether the enterprise maintains a service provider inventory list by checking for Input 1,
+	#. If Input 1 exists, M1 = 1
+	#. If Input 2 does not exist, M1 = 0 
+#. Review Input 1 and determine if it includes, at a minimum, the following components: service provider, classification of provider, and an enterprise contact for the provider
+	#. For each component included, assign a value of 1. Sum all values. (M2)
+#. For each service provider indentied in Input 1 :code:`GV45`, determine whether they are accurately listed
+	#. Identify and enumerate providers that are accurately listed (M4)
+	#. Identify and enumerate providers that are erroneously listed (M5)
+	#. Identify and enumerate providers that should be listed but are missing (M6)
+#. Compare the date from Input 2 with the current date and capture the time frame in months (M7) 
 
 Measures
 --------
-* M1 = Count of wireless access points in the inventory (from Input 1)
-* M2 = List of discovered wireless access points, from Operation 1
-* M3 = Count of M2
-* M4 = List of non-inventoried wireless access points, as discovered by Operation 2
-* M5 = Count of M4
-* M6 = List of inventoried wireless access points, as discovered by Operation 3
-* M7 = Count of M6
-* M8 = List of discovered, but unauthorized, wireless access points, as discovered by Operation 4
-* M9 = Count of M8
+* M1 = Output of Operation 1
+* M2 = Count of components included in the inventory
+* M3 = Count of service providers in the inventory
+* M4 = Count of accurately listed providers
+* M5 = Count of erroneously listed providers
+* M6 = Count of missing providers from list
+* M7 = Timeframe since last update or review of the inventory
 
 Metrics
 -------
+* If M1 is a 0, this safeguard receives a failing score. The other metrics don't apply.
+* If M7 is greater than twelve months, then this safeguard is measured at a 0 and receives a failing score. The other metrics don't apply.
 
-Coverage
+Completeness of Inventory
 ^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | The ratio of discovered wireless access points to the total inventoried list of
-	    | wireless access points.
+	  - | The percentage of components included in the inventory
 	* - **Calculation**
-	  - :code:`(M3 - M1) / M1`
+	  - :code:`M2 / 3`
 
 
-Inventory Gap
+Accuracy of Inventory
 ^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | Are there any discovered wireless access points that are *not* contained in the
-	    | inventory?
+	  - | The perecentage of accurately listed service providers 
+	    | in the inventory
 	* - **Calculation**
-	  - :code:`M5 > 0`
+	  - :code:`M4 / (M3 - M5 + M6)`
 
-Unauthorized Usage
-^^^^^^^^^^^^^^^^^^
-.. list-table::
-
-	* - **Metric**
-	  - | Are there any discovered wireless access points which are contained in the
-	    | inventory but are noted as *not* authorized?
-	* - **Calculation**
-	  - :code:`M9 > 0`
 
 .. history
 .. authors
