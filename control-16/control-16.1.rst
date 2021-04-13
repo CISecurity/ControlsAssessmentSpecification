@@ -1,6 +1,6 @@
-16.1: Maintain an Inventory of Authentication Systems
+16.1: Establish and Maintain a Secure Application Development Process
 =========================================================
-Maintain an inventory of each of the organization’s authentication systems, including those located on-site or at a remote service provider.
+Establish and maintain a secure application development process. In the process, address such items as: secure application design standards, secure coding practices, developer training, vulnerability management, security of third-party code, and application security testing procedures. Review and update documentation annually, or when significant enterprise changes occur that could impact this Safeguard.
 
 .. list-table::
 	:header-rows: 1
@@ -8,50 +8,50 @@ Maintain an inventory of each of the organization’s authentication systems, in
 	* - Asset Type
 	  - Security Function
 	  - Implementation Groups
-	* - Users
-	  - Identify
+	* - Applications
+	  - Protect
 	  - 2, 3
 
 Dependencies
 ------------
-* Sub-control 1.4: Maintain Detailed Asset Inventory
-* Sub-control 1.5: Maintain Asset Inventory Information
-* Sub-control 2.1: Maintain Inventory of Authorized Software
+* None
 
 Inputs
 -----------
-#. Inventory of the organization's authentication systems (including onsite and remote)
+#. :code:`GV49`: Secure Application Development Process
+#. Date of last update or review of the secure application development process
 
 Operations
 ----------
-#. Verify that the inventory of authentication systems (Input 1) was provided.  The presence or absence of this list will be indicated with M1.
-#. (Optional) Manually review Input 1 to ensure that it includes all of the authentication systems utilized by the organization, including those located onsite and by remote service providers (for instance, be sure authentication systems for any cloud services used by the organization are included).  An optional manual score can be generated from this review and provided as M2.
+#. Determine whether Input 1 exists within the enterprise
+	#. If Input 1 exists, M1 = 1
+	#. If Input 1 does not exist, M1 = 1
+#. Review Input 1 and dermine whether it includes, at a minimum, the following components: secure application design standards, secure coding practices, developer training, vulnerability management, security of third-party code, and application security testing procedures
+	#. For each component included in the process, assign a value of 1.  Sum all values. (M2)
+#. Compare Input 2 to current date and capture timeframe in months (M3)
+
 
 Measures
 --------
-* M1 = 1 if the inventory was provided, 0 if it was not provided
-* M2 = (Optional) Indicates manual review of the authentication systems inventory was performed; 0 otherwise
+* M1 = Output of Operation 1
+* M2 = Count of components included in the process
+* M3 = Timeframe in months since last review or update
 
 Metrics
 -------
+* If M1 is 0, this safeguard receives a failing score. The other metrics don't apply.
+* If M3 is greater than twelve months, then this safeguard is measured at a 0 and receives a failing score. The other metrics don't apply.
 
-Existence
+Completeness
 ^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
-	  - | Does the organization's authentication systems inventory exist?
+	  - | The percent of components included in the secure application 
+	  - | development process
 	* - **Calculation**
-	  - :code:`M1`
+	  - :code:`M2 / 6`
 
-Manual Review
-^^^^^^^^^^^^^
-.. list-table::
-
-	* - **Metric**
-	  - | Was a manual review of the organization's systems inventory performed?
-	* - **Calculation**
-	  - :code:`M2`
 
 .. history
 .. authors
