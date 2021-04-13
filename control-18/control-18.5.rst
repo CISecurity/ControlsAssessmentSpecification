@@ -1,6 +1,6 @@
-18.5: Use only Standardized and Extensively Reviewed Encryption Algorithms
+18.5: Perform Periodic Internal Penetration Tests
 ==========================================================================
-Use only standardized, currently accepted, and extensively reviewed encryption algorithms.
+Perform periodic internal penetration tests based on program requirements, no less than annually. The testing may be clear box or opaque box.
 
 .. list-table::
 	:header-rows: 1
@@ -9,43 +9,28 @@ Use only standardized, currently accepted, and extensively reviewed encryption a
 	  - Security Function
 	  - Implementation Groups
 	* - N/A
-	  - N/A
-	  - 2, 3
+	  - Identify
+	  - 3
 
 Dependencies
 ------------
-* None
+* Safeguard 18.1: Establish and Maintain a Penetration Testing Program
 
 Inputs
 -----------
-#. List of encryption algorithms used by the organization
-#. Authoritative source that identifies which encryption algorithms are standardized, currently accepted, and extensively reviewed.
+#. :code:`GV55`: Most Recent Internal Penetration Report
 
 Operations
 ----------
-#. For each encryption algorithm in Input 1, check Input 2 to see if that encryption algorithm is standardized, currently accepted, and extensively reviewed.
-	#. Create a list of the encryption algorithms that meet all of these criteria (M1)
-	#. Create a list of the encryption algorithms that do not meet all of these criteria (M2).
+#. Check Input 1 :code:`GV55` for date of most recent internal penetration test. Compare date to current date and capture timeframe in months (M1) 
 
 Measures
 --------
-* M1 = List of encryption algorithms used by the organization that are standardized, currently accepted, and extensively reviewed (compliant list)
-* M2 = List of encryption algorithms used by the organization that do not meet these criteria (non-compliant list)
-* M3 = Count of encryption algorithms used by the organization that are standardized, currently accepted, and extensively reviewed (count of M1)
-* M4 = Total count of encryption algorithms used by the organization (count of Input 1)
+* M1 = Timeframe since last internal penetration test
 
 Metrics
 -------
-
-Coverage
-^^^^^^^^
-.. list-table::
-
-	* - **Metric**
-	  - | The ratio of encryption algorithms used by the organization that are standardized, 
-	    | currently accepted, and extensively reviewed
-	* - **Calculation**
-	  - :code:`M3 / M4`
+* If M1 is greater than twelve months, then this safeguard is measured at a 0 and receives a failing score. The other metrics don't apply.
 
 .. history
 .. authors
