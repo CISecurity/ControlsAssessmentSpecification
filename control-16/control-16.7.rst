@@ -39,13 +39,13 @@ Measures
 Metrics
 -------
 
-
+Compliance
 ^^^^^^^^^^^^^^^^^^^
 .. list-table::
 
 	* - **Metric**
 	  - | The percentage of application infrastructure components that meet
-	    | industry configuratio standards
+	    | industry configuration standards
 	* - **Calculation**
 	  - :code:`M2 / M1`
 
