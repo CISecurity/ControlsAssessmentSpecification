@@ -23,7 +23,7 @@ Inputs
 ------
 #. :code:`GV7`: Software capable assets
 #. :code:`GV5`: Authorized software inventory
-#. :code:`GV3`: Approved configuration (s)
+#. :code:`GV3`: Approved configuration Standards
 #. Date of last assessment of this safeguard
 
 Operations
