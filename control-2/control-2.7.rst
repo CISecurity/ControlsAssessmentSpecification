@@ -21,7 +21,7 @@ Inputs
 ------
 #. :code:`GV5`: Authorized allowlisting software 
 #. The list of authorized scripts
-#. :code:`GV3`: Approved configuration (s) 
+#. :code:`GV3`: Approved configuration Standards 
 #. Date of last assessement of this safeguard
 
 Operations
