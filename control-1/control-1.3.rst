@@ -23,7 +23,7 @@ Inputs
 #. The list of active discovery tool(s) used by the enterprise
 #. List consisting of the union from scan results conducted using all active asset discovery tool(s) within the enterprise (discovered assets).
 #. Timeframe between two active asset discovery tool scans.
-#. :code:`GV3`: Configuration information 
+#. :code:`GV3`: Configuration Standard
 
 Assumptions
 ^^^^^^^^^^^
