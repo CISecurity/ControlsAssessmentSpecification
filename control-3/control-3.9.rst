@@ -22,7 +22,7 @@ Inputs
 ------
 #. :code:`GV1`: Enterprise asset inventory
 #. :code:`GV5`: Authorized software inventory
-#. :code:`GV3`: Configuration Information
+#. :code:`GV3`: Configuration Standards
 
 Assumptions
 ----------
