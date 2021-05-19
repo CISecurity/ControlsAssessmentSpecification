@@ -20,7 +20,7 @@ Dependencies
 Inputs
 ------
 #. :code:`GV16`: Data disposal requirement portion of data management process
-#. :coode:`GV11`: Portion of data management process addressing data sensitivity
+#. :code:`GV11`: Portion of data management process addressing data sensitivity
 #. :code:`GV17`: Count of Sensitive data types
 #. :code:`GV12`: Sensitive Data Inventory
 
