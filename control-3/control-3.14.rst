@@ -22,7 +22,7 @@ Inputs
 ------
 #. :code:`GV5`: Authorized software inventory
 #. :code:`GV19`: Enterprise assets storing sensitive data
-#. :code:`GV3`: Configuration information
+#. :code:`GV3`: Configuration Standards
 
 Operations
 ----------
