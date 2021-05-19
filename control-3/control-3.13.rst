@@ -21,7 +21,7 @@ Inputs
 ------
 #. :code:`GV18`: Enterprise assets storing, processing, or transmitting sensitive data
 #. :code:`GV5`: Authorized Software inventory
-#. :code:`GV3`: Configuration Information
+#. :code:`GV3`: Configuration Standards
 
 Operations
 ----------
