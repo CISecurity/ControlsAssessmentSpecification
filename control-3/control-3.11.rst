@@ -19,7 +19,7 @@ Dependencies
 Inputs
 ------
 #. :code:`GV12`: Sensitive data inventory
-#. :code:`GV4`: Enterprise network architecture
+#. :code:`GV4`: Enterprise Network Architecture Documentation
 #. :code:`GV18`: Enterprise assets storing sensitive data
 
 Operations
