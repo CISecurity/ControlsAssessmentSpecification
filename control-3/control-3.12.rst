@@ -20,11 +20,11 @@ Dependencies
 Inputs
 ------
 #. :code:`GV12`: Sensitive Data Inventory
-#. :code:`GV4`: Enterprise Network Architecture
+#. :code:`GV4`: Enterprise Network Architecture Documentation
 
 Assumptions
 ----------
-#. An asset’s overall sensitivity level should be the highest sensitivity level of the data it stores/processes/transmits. If a system contains any sensitive information, that asset should be treated accordingly, and should be properly separated from networks or network segments that don’t have a need to access that type of sensitive information.
+#. An assetâ€™s overall sensitivity level should be the highest sensitivity level of the data it stores/processes/transmits. If a system contains any sensitive information, that asset should be treated accordingly, and should be properly separated from networks or network segments that donâ€™t have a need to access that type of sensitive information.
 
 Operations
 ----------
