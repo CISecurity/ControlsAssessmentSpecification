@@ -20,7 +20,7 @@ Dependencies
 Inputs
 ------
 #. :code:`GV15`: Data Retention Limits outlined in the data management process
-#. :coode:`GV11`: Portion of data management process addressing data sensitivity
+#. :code:`GV11`: Portion of data management process addressing data sensitivity
 #. :code:`GV12`: Sensitive Data Inventory
 
 Operations
