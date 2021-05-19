@@ -22,7 +22,7 @@ Inputs
 ------
 #. :code:`GV12`: Sensitive Data Inventory 
 #. :code:`GV1`: Enterprise asset inventory
-#. :code:`GV3`: Configuration information
+#. :code:`GV3`: Configuration Standards
 #. :code:`GV13`: Portion of data management process addressing data owners
 #. :code:`GV14`: Portion of data management process addressing data handling
 #. :code:`GV22`: Inventory of Accounts 
