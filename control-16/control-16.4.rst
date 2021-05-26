@@ -25,7 +25,7 @@ Operations
 ----------
 #. Determine whether Input 1 exists within the enterprise
 	#. If Input 1 exists, M1 = 1
-	#. If Input 1 does not exist, M1 = 1
+	#. If Input 1 does not exist, M1 = 0
 #. Use Input 1 and dermine whether each software component listed includes, at a minimum, the following information: risk associated with components, whether component is supported 
 	#. Identify and enumerate software components with complete information (M3)
 	#. Identify and enumerate software components with missing information (M4) 
