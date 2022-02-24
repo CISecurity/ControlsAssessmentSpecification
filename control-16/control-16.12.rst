@@ -28,7 +28,7 @@ Operations
 	#. Identify and enumerate software verified by a static tool (M2)
 	#. Identify and enumerate software not verified by a static tool (M3)
 #. Use Input 1 :code:`GV5` to identify dynamic analysis tools
-#. For each software identified in Operation 1, determine if it is verified by a dynaic tool identified in Operation 4
+#. For each software identified in Operation 1, determine if it is verified by a dynamic tool identified in Operation 4
 	#. Identify and enumerate software verified by a dynamic tool (M4)
 	#. Identify and enumerate software not verified by a dynamic tool (M5)
 
