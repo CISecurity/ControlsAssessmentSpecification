@@ -4,7 +4,7 @@ About the CIS Controls Assessment Specification
 Purpose
 -------
 
-The CIS Controls provide essential best practices that organizations can implement to improve their cybersecurity posture.  In addition to implementing the CIS Controls, it is also important that organizations measure their implementations to ensure that Safeguards are in place and working properly.  The purpose of the CIS Controls Assessent Specification (CAS) is to provide a common understanding of what should be measured in order to verify that CIS Safeguards are properly implemented. The hope is that those developing related tools will then build these measures into their tools so that the CIS Controls are measured in a uniform way.
+The CIS Controls provide essential best practices that organizations can implement to improve their cybersecurity posture.  In addition to implementing the CIS Controls, it is also important that organizations measure their implementations to ensure that Safeguards are in place and working properly.  The purpose of the CIS Controls Assessment Specification (CAS) is to provide a common understanding of what should be measured in order to verify that CIS Safeguards are properly implemented. The hope is that those developing related tools will then build these measures into their tools so that the CIS Controls are measured in a uniform way.
 
 Note that the focus of CAS is on "what to measure" rather than "how to measure".  With the goal of being platform agnostic, a conscious effort was made to avoid addressing the "how to measure" in writing CAS, leaving those platform specific details to specific implementations of these measures.  Tool developers will determine the "hows" that are appropriate for their tools and use cases.
 
