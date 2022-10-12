@@ -19,7 +19,7 @@ Dependencies
 Inputs
 ------
 #. :code:`GV2`: Authorized software inventory
-#. :code:`GV1`: Enterprise asse inventory
+#. :code:`GV1`: Enterprise asset inventory
 #. :code:`GV3`: Configuration Standard: this should include any enterprise approved deviations from industry standard baselines  such as CIS benchmarks, DISA Security Technical Implementation Guides (STIGs), or U.S. government configuration baselines (USGCB).
 #. Date of last review and updat of configuration standard
 
