@@ -9,7 +9,7 @@ Establish and maintain a data recovery process. In the process, address the scop
 	  - Security Function
 	  - Implementation Groups
 	* - Data
-	  - Recovery
+	  - Recover
 	  - 1, 2, 3
 
 Dependencies
