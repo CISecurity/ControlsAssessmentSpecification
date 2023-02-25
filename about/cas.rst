@@ -52,7 +52,7 @@ This section describes the information that should be measured, generally as a r
 
 Metrics
 ^^^^^^^
-This section describes standard metrics that can be calculated from the measures, providing a description of the metricalong with the formula for calculating the metric.  In general, CAS attempts to frame metrics in a positive light - i.e., the ratio of items that are compliant with the Safeguard (as opposed to the ratio of items that are not compliant).  The provided metrics are not meant to be an exhausive list of metrics, rather it is just meant to list some examples of common metrics that are likely to be useful.  The hope is that if appropriate measures have been defined, other metrics can be built from those measures to suit different use cases.
+This section describes standard metrics that can be calculated from the measures, providing a description of the metric along with the formula for calculating the metric.  In general, CAS attempts to frame metrics in a positive light - i.e., the ratio of items that are compliant with the Safeguard (as opposed to the ratio of items that are not compliant).  The provided metrics are not meant to be an exhausive list of metrics, rather it is just meant to list some examples of common metrics that are likely to be useful.  The hope is that if appropriate measures have been defined, other metrics can be built from those measures to suit different use cases.
 
 Procedure Review
 ^^^^^^^^^^^^^^^^
