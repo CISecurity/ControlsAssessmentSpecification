@@ -26,7 +26,7 @@ Structure of a Safeguard Measurement
 
 This section describes the standard structure of a Safeguard Measurement in CAS.
 
-Basic CIS Safeguad Information
+Basic CIS Safeguard Information
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 This section includes the Safeguard number, title, description, asset type, security function, and implementation group.  This information matches the information in the CIS Controls v8.0 document.
 
@@ -56,7 +56,7 @@ This section describes standard metrics that can be calculated from the measures
 
 Procedure Review
 ^^^^^^^^^^^^^^^^
-This is an optional section that may not appear for all Safeguad measurements.  When present, this section describes a manual review of a procedure that helps fulfill the Safeguard.
+This is an optional section that may not appear for all Safeguard measurements.  When present, this section describes a manual review of a procedure that helps fulfill the Safeguard.
 
 
 Versioning
