@@ -25,7 +25,7 @@ Inputs
 
 Operations
 ----------
-#. For each asset in Input 2 :code:`GV31`, check configuraions :code:`GV3` to determine if anti-malware software is configured to autmatically update signature files
+#. For each asset in Input 2 :code:`GV31`, check configurations :code:`GV3` to determine if anti-malware software is configured to autmatically update signature files
 	#. Identify and enumerate assets properly configured for automatic updates (M2)
 	#. Identify and enumerate asets not properly configured for automatic updates (M3)
 
