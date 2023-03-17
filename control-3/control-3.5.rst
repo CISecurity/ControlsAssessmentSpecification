@@ -37,7 +37,7 @@ Measures
 --------
 * M1 = :code:`GV17`
 * M2 = Count of sensitive data types with an outlined disposal method
-* M3 = Count of sensitive data types witouth an outlined disposal method
+* M3 = Count of sensitive data types without an outlined disposal method
 * M4 = Count of data in inventory that does not comply with disposal requirement
 * M5 = Count of data in inventory that complies with disposal requirement
 * M6 = Count of items in :code:`GV12`
