@@ -29,7 +29,7 @@ Operations
 ----------
 #. Use Input 1 :code:`GV1` to identify and enumerate remote enterprise assets :code:`GV39` (M1)
 #. Use Input 1 :code:`GV1` and Input 2 :code:`GV5` to identify and enumerate all VPN devices and software (M2)
-#. Use the output of Operation 2 and Input 4 :code:`GV37`to check configuration of VPN
+#. Use the output of Operation 2 and Input 4 :code:`GV37` to check configuration of VPN
 	#. Identify and enumerate VPN devices and software properly configured to require authentication prior to granting access (M3)
 	#. Identify and enumerate VPN devices and software not properly configured to require authentication prior to granting access (M4)
 #. For each asset identified in Operation 1, check if is covered by a VPN device or software identified in Operation 3.1
