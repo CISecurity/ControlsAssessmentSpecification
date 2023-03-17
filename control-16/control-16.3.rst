@@ -25,7 +25,7 @@ Operations
 ----------
 #. Determine whether Input 1 exists within the enterprise
 	#. If Input 1 exists, M1 = 1
-	#. If Input 1 does not exist, M1 = 1
+	#. If Input 1 does not exist, M1 = 0
 #. Review Input 1 and dermine whether it includes, at a minimum, the following components: categorization of vulnerabilities, guidance for how lessons learned are incorporated into the development process 
 	#. For each component included in the process, assign a value of 1.  Sum all values. (M2)
 #. For each vulnerability addressed over the last twelve months, assess whether the root cause analysis process was followed

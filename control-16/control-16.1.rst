@@ -25,7 +25,7 @@ Operations
 ----------
 #. Determine whether Input 1 exists within the enterprise
 	#. If Input 1 exists, M1 = 1
-	#. If Input 1 does not exist, M1 = 1
+	#. If Input 1 does not exist, M1 = 0
 #. Review Input 1 and dermine whether it includes, at a minimum, the following components: secure application design standards, secure coding practices, developer training, vulnerability management, security of third-party code, and application security testing procedures
 	#. For each component included in the process, assign a value of 1.  Sum all values. (M2)
 #. Compare Input 2 to current date and capture timeframe in months (M3)

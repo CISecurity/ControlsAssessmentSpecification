@@ -27,7 +27,7 @@ Operations
 ----------
 #. Determine whether Input 1 exists within the enterprise
 	#. If Input 1 exists, M1 = 1
-	#. If Input 1 does not exist, M1 = 1
+	#. If Input 1 does not exist, M1 = 0
 #. Review Input 1 :code:`GV48` and dermine whether it includes, at a minimum, the following components: reporting process, responsible party for handling vulnerability reports, a process for intake, assignment, remediation, remediation testing, and a vulnerability tracking system
 	#. For each component included in the process, assign a value of 1.  Sum all values. (M2)
 #. Compare Input 2 to current date and capture timeframe in months (M3)
