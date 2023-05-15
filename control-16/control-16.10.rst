@@ -46,8 +46,7 @@ Compliance
 .. list-table::
 
 	* - **Metric**
-	  - | The percentage of applications infrastructure components where 
-	  - | design principles were applied
+	  - | The percentage of applications infrastructure components where design principles were applied
 	* - **Calculation**
 	  - :code:`M3 / M2`
 
