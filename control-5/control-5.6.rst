@@ -24,8 +24,8 @@ Inputs
 
 Operations
 ----------
-#. Using :code:`GV1` identify and enumerate centralized auhtentication points (M1)
-#. For each centralized authentication point indentifed in Operation 1, determine whether it is necessary or can be consolidated
+#. Using :code:`GV1` identify and enumerate centralized authentication points (M1)
+#. For each centralized authentication point identified in Operation 1, determine whether it is necessary or can be consolidated
 	#. Identify and enumerate authentication points that are unnecesary or can be consolidated (M2)
 	#. Identify and enumerate authentication points that are necesary and cannot be consolidated (M3)
 
