@@ -33,7 +33,7 @@ Operations
 	#. Otherwise M2 = 0
 #. Review the policy and determine whether it includes password guidance for accounts with MFA
 	#. If guidance is included M4 = 1
-		# Does guidance, at a minimu, require an eight character password
+		#. Does guidance, at a minimum, require an eight character password
 			#. If password guidance is eight characters or longer M5 = 1
 			#. Otherwise M5 = 0
 	#. Otherwise M3 = 0
