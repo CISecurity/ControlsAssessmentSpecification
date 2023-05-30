@@ -35,8 +35,8 @@ Operations
 	#. Identify and enumerate assets with properly configured backup software (M4)
 	#. Identify and enumerate assets with improperly configured backup software (M5)
 #. For each asset with backup software identified in Operation 2.1, examine logs to determine the most recent successful backup date. Compare that date to current date and capture timeframe in days.
-	#. Identify and enumerate assets that have been backeup within seven days or less (M6) 
-	#. Identify and enumerate assets that have been backedup outside of a sevend day window (M7)
+	#. Identify and enumerate assets that have been backed up within seven days or less (M6) 
+	#. Identify and enumerate assets that have been backed up outside of a seven days window (M7)
 
 
 Measures
