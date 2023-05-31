@@ -47,7 +47,7 @@ Coverage
 
 	* - **Metric**
 	  - | The percentage of externally exposed and third party application accounts
-	  - | properly configured for MFA
+	    | properly configured for MFA
 	* - **Calculation**
 	  - :code:`M2 / M1`
 
