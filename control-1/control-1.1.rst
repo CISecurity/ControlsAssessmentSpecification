@@ -35,7 +35,7 @@ Operations
 #. Check items in Input 1 for complete or missing detailed information
 	#. Enumerate items that have complete information (M6)
 	#. Enumerate items that do not have complete information or missing information (M7).
-#. Calculate the time (in months) since the last update to Input 1 by using current date and Input 4 (M8).
+#. Calculate the time (in months) since the last update to Input 1 by using current date and Input 3 (M8).
 
 Measures
 --------
