@@ -1,3 +1,5 @@
 #requirments.txt
 
+sphinx==latest
+
 sphinx_last_update_by_git
