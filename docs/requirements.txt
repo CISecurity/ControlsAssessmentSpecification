@@ -1,5 +1,6 @@
 #requirments.txt
 
 sphinx==2.4.1
+Jinja2==2.11.3
 
 #sphinx_last_update_by_git
