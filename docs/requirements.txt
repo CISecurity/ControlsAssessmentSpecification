@@ -2,4 +2,4 @@
 
 sphinx==2.4.1
 
-sphinx_last_update_by_git
+#sphinx_last_update_by_git
