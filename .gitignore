@@ -1,2 +1,6 @@
+docs/
+_build/
+conf.py
 
+_tmp/
 
