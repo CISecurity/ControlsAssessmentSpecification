@@ -1,11 +1,6 @@
 version: 2
 
-python:
-  #install:
-    #requirements: docs/requirements.txt
-    #method: pip
-    #  path: .
-    #  extra_requirements:
-    #   - docs
-    - method: pip
-      path: another/package
+sphinx:
+  builder: html
+  configuration: conf.py
+  fail_on_warning: true
