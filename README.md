@@ -1,5 +1,3 @@
 # CIS Controls Assessment Specification
 
-This is the working repository for the CIS Controls Assessment Specification (CAS). CAS is intended to provide details on _what_ to measure for each of the Sub-Controls found in the [CIS Controls](https://www.cisecurity.org/controls/), and is rendered as a complete document [here](https://controls-assessment-specification.readthedocs.io/en/latest/).
-
-License information is found in the [LICENSE](LICENSE.md) file, and those interested in contributing should reference the [CONTRIBUTORS](CONTRIBUTORS.md) file, both located in this repository.
+As of 3/4/2025 this repository has been archived. To view the updated repository, please visit (https://readthedocs.com/projects/cisecurity-controlsassessmentspecification-cisit-v8/)
