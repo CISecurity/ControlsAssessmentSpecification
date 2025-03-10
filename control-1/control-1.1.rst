@@ -19,7 +19,7 @@ Dependencies
 
 Inputs
 -----------
-#. :code:`GV1`: Detailed Enterprise Asset Inventory - The enterprise's list of current approved inventory to include all assests as outlined in the safeguard. This list is a mix of manual and tool-generated endpoints that includes information such as authorized, non-authorized, IP address, device type and any other information as defined by the enterprise.
+#. :code:`GV1`: Detailed Enterprise Asset Inventory - The enterprise's list of current approved inventory to include all assets as outlined in the safeguard. This list is a mix of manual and tool-generated endpoints that includes information such as authorized, non-authorized, IP address, device type and any other information as defined by the enterprise.
 #. Aggregate Enterprise Asset Inventory - The enterprise's list of all devices detected, manually or through automated scans, since the last update to :code:`GV1`. 
 #. Date of last update to the Detailed Enterprise Asset Inventory
 
@@ -35,7 +35,7 @@ Operations
 #. Check items in Input 1 for complete or missing detailed information
 	#. Enumerate items that have complete information (M6)
 	#. Enumerate items that do not have complete information or missing information (M7).
-#. Calculate the time (in months) since the last update to Input 1 by using current date and Input 4 (M8).
+#. Calculate the time (in months) since the last update to Input 1 by using current date and Input 3 (M8).
 
 Measures
 --------
@@ -69,7 +69,7 @@ Completeness Score
 	* - **Metric**
 	  - | What percentage of the current enterprise asset inventory contains necessary detailed information?
 	* - **Calculation**
-	  - :code:`M8 / M1`
+	  - :code:`M6 / M1`
 
 Procedural Review
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
