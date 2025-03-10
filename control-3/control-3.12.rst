@@ -28,7 +28,7 @@ Assumptions
 
 Operations
 ----------
-#. For each item in :code:`GV12` identify the assets that store, process, or transmit sensitive data (:code:`GV18: M1)
+#. For each item in :code:`GV12` identify the assets that store, process, or transmit sensitive data (M1)
 #. Use the output of Operation 1 and :code:`GV4` to identify networks/VLANs connected to the assets
 	#. Identify and enumerate any instances of properly seperated assets from less sensitive networks (M2)
 	#. Identify and enumerate any instances of improperly seperated assets from less sensitive networks (M3)
