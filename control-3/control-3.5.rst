@@ -28,8 +28,8 @@ Operations
 ----------
 #. For each sensitive data type covered in :code:`GV17`
 	#. Identify and enumerate each type has a disposal method and process as defined by :code:`GV16` (M2)
-	#. Identify and enumerate each type that does not have a disposal method and process as defined by :code:`GV16`(M3)
-#. For each item in :code:`GV12`determine wether they data complies with the disposal requirements outlined in :code:`GV17`
+	#. Identify and enumerate each type that does not have a disposal method and process as defined by :code:`GV16` (M3)
+#. For each item in :code:`GV12` determine wether they data complies with the disposal requirements outlined in :code:`GV17`
 	#. Enumerate data that does not comply with disposal requirements (M4)
 	#. Enumerate data that complies with disposal requirements (M5)
 
