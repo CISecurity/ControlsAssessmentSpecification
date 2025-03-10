@@ -30,8 +30,8 @@ Operations
 	#. Identify and enumerate each asset in :code:`GV18` with data loss prevention software installed (M2)
 	#. Identify and enumerate each asset in :code:`GV18` without data loss prevention software installed (M3)
 #. For assets with data loss prevention installed from Operation 2.1 check :code:`GV3` for configuration information
-	#. Identify and enumerate assets with properly configured data lass prevention software (M4)
-	#. Identify and enumerate assets with improperly configured data lass prevention software (M5)
+	#. Identify and enumerate assets with properly configured data loss prevention software (M4)
+	#. Identify and enumerate assets with improperly configured data loss prevention software (M5)
 
 
 Measures
@@ -51,7 +51,7 @@ Coverage
 
 	* - **Metric**
 	  - | The percentage of assets covered by at least one properly configured 
-	  - | data loss prevention software instance.
+	    | data loss prevention software instance.
 	* - **Calculation**
 	  - :code:`M4 / M1`
 
