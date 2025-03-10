@@ -1,6 +1,6 @@
 16.12: Implement Code-Level Security Checks
 =========================================================
-Apply static and dynamic analysis tools within the application life cycle to verify that secure coding practices are being followed.
+Apply static, dynamic, or interactive analysis tools within the application life cycle to verify that secure coding practices are being followed.
 
 .. list-table::
 	:header-rows: 1
@@ -31,7 +31,10 @@ Operations
 #. For each software identified in Operation 1, determine if it is verified by a dynamic tool identified in Operation 4
 	#. Identify and enumerate software verified by a dynamic tool (M4)
 	#. Identify and enumerate software not verified by a dynamic tool (M5)
-
+#. Use Input 1 :code:`GV5` to identify interactive analysis tools
+#. For each software identified in Operation 1, determine if it is verified by an interactive tool identified in Operation 6
+	#. Identify and enumerate software verified by an interactive tool (M6)
+	#. Identify and enumerate software not verified by an interactive tool (M7)
 Measures
 --------
 * M1 = Count of in-house developed software
@@ -39,6 +42,8 @@ Measures
 * M3 = Count of in-house developed software not verified by a static analysis tool
 * M4 = Count of in-house developed software verified by a dynamic analysis tool
 * M5 = Count of in-house developed software not verified by a dynamic analysis tool
+* M6 = Count of in-house developed software verified by an interactive analysis tool
+* M7 = Count of in-house developed software not verified by an interactive analysis tool
 
 Metrics
 -------
@@ -62,6 +67,16 @@ Dynamic Analysis Tool Coverage
 	    | dynamic analysis tool
 	* - **Calculation**
 	  - :code:`M4 / M1`
+
+Interactive Analysis Tool Coverage
+^^^^^^^^^^^^^^^^
+.. list-table::
+
+	* - **Metric**
+	  - | The percentage of in-house developed software verified by an
+	    | interactive analysis tool
+	* - **Calculation**
+	  - :code:`M6 / M1`
 
 .. history
 .. authors
