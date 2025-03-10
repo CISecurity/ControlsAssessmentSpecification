@@ -69,7 +69,7 @@ Completeness Score
 	* - **Metric**
 	  - | What percentage of the current enterprise asset inventory contains necessary detailed information?
 	* - **Calculation**
-	  - :code:`M8 / M1`
+	  - :code:`M7 / M1`
 
 Procedural Review
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
