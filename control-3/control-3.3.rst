@@ -37,7 +37,7 @@ Operations
 #. Use the data managemet process, specifically :code:`GV13` and :code:`GV14`, as guidelines to map user account to sensitive data in :code:`GV12`.
 	#. Identify and enumerate sensitive data correctly mapped to user accounts (M1)
 	#. Idenitfy and enumerate sensitive data not correctly mapped to user accounts (M2)
-#. For each enterprise asset storing sensitive data, as outlined by :code:`GV12,
+#. For each enterprise asset storing sensitive data, as outlined by :code:`GV12`,
 	#. Identify and enumerate all assets storing sensitive data (3)
 	#. Use :code:`GV3` to check and enumerate assets that are properly configured to only allow users as identified in Operation 1 (M3)
 	#. Use :code:`GV3` to check and enumerate assets that are improperly configured to only allow users as identified in Operation 1 (M4)
@@ -50,7 +50,7 @@ Measures
 * M4 = Count of properly configured assets to support data access control
 * M5 = Count of improperly configured assets to support data access control
 * M6 = Count of :code:`GV17`
-* M7 = :code:'GV13`
+* M7 = :code:`GV13`
 * M8 = :code:`GV14`
 
 Metrics
