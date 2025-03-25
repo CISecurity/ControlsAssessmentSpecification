@@ -4,17 +4,9 @@
 CIS Controls Assessment Specification
 =====================================
 
-The table of contents below and in the sidebar should let you easily access the documentation for your topic of interest. You can also use the search function in the top left corner.
+As of 3/4/2025 this repository has been archived. To view the updated repository, please visit (https://cas8.docs.cisecurity.org/)
 
-The main documentation for the site is organized into sections for each individual CIS Control.
-
-The "About the CIS Controls" section provides background information about the CIS Controls.
-
-The "About the CIS Controls Assessment Specification" provides information about the Controls Assessment Specification including its purpose, methodology, and structure.
-
-The "Terms of Use" section provides the terms of use policy.
-
-The "Contributing" section provides details on how you can contribute to the Controls Assessment Specification.
+For v8.1, visit: https://cas.docs.cisecurity.org/en/latest/
 
 .. toctree::
    :maxdepth: 1
