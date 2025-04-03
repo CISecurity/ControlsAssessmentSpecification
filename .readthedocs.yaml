@@ -2,6 +2,7 @@
 
 build:
   image: stable
+  os: ubuntu-22.04
 
 # Possible options: htmlzip, pdf, epub
 # Disable (single) htmlzip as it's way too big to be useful,
