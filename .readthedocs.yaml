@@ -1,7 +1,7 @@
 # Reference: https://docs.readthedocs.io/en/latest/yaml-config.html
 
 build:
-  image: latest
+  image: stable
 
 # Possible options: htmlzip, pdf, epub
 # Disable (single) htmlzip as it's way too big to be useful,
