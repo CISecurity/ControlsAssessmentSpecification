@@ -42,7 +42,7 @@ Coverage
 
 	* - **Metric**
 	  - | The percentage of productions systems with an existing 
-	  - | non-production system
+	    | non-production system
 	* - **Calculation**
 	  - :code:`M2 / M1`
 
