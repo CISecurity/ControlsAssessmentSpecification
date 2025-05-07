@@ -48,7 +48,7 @@ Compliance
 
 	* - **Metric**
 	  - | The percentage of software developing personnel with
-	  - | all appropriate training course in scope
+	    | all appropriate training course in scope
 	* - **Calculation**
 	  - :code:`M4 / M1`
 
