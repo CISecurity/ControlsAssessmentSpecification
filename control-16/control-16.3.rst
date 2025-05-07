@@ -51,7 +51,7 @@ Completeness of Process
 
 	* - **Metric**
 	  - | The percent of components included in the secure application 
-	  - | development process
+	    | development process
 	* - **Calculation**
 	  - :code:`M2 / 2`
 
@@ -61,7 +61,7 @@ Compliance
 
 	* - **Metric**
 	  - | The percent of vulnerabilities for which root cause analysis 
-	  - | was conducted
+	    | was conducted
 	* - **Calculation**
 	  - :code:`M4 / M3`
 
