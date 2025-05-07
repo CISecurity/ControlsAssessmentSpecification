@@ -51,7 +51,7 @@ Completeness of Inventory
 
 	* - **Metric**
 	  - | The percent of components included in the secure application 
-	  - | development process
+	    | development process
 	* - **Calculation**
 	  - :code:`M3 / M2`
 
