@@ -50,7 +50,7 @@ Completeness
 
 	* - **Metric**
 	  - | The percent of components included in the secure application 
-	  - | development process
+	    | development process
 	* - **Calculation**
 	  - :code:`M2 / 7`
 
